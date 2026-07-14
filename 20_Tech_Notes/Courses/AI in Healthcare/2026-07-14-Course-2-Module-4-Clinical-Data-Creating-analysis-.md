@@ -1,3 +1,38 @@
+\---
+
+date: 2026-07-14
+
+project: AI-in-Healthcare 
+
+status: Completed
+
+tags: `#AI-in-Healthcare`
+\---
+
+
+
+\# Objective
+
+\- 
+
+
+
+\## Key Notes / Progress
+
+\- 
+
+
+
+\## Action Items
+
+\- \[ ] 
+
+
+
+\## References / Links
+
+\-
+
 # Course 2 : Module 4: Clinical Data : Creating analysis ready datasets from patient timelines
 
 **Sources:** 18 | **Exported:** July 14, 2026

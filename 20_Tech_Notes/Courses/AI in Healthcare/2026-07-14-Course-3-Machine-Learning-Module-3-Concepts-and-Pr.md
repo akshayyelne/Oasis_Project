@@ -1,3 +1,39 @@
+\---
+
+date: 2026-07-14
+
+project: AI-in-Healthcare 
+
+status: Completed
+
+tags: `#AI-in-Healthcare`
+
+\---
+
+
+
+\# Objective
+
+\- 
+
+
+
+\## Key Notes / Progress
+
+\- 
+
+
+
+\## Action Items
+
+\- \[ ] 
+
+
+
+\## References / Links
+
+\-
+
 # Course 3 : Machine Learning : Module 3 : Concepts and Principles Part 2
 
 **Sources:** 11 | **Exported:** July 14, 2026

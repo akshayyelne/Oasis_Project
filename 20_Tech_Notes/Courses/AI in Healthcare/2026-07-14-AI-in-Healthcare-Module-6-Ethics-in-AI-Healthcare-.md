@@ -1,3 +1,38 @@
+\---
+
+date: 2026-07-14
+
+project: AI-in-Healthcare 
+
+status: Completed
+
+tags: `#AI-in-Healthcare`
+\---
+
+
+
+\# Objective
+
+\- 
+
+
+
+\## Key Notes / Progress
+
+\- 
+
+
+
+\## Action Items
+
+\- \[ ] 
+
+
+
+\## References / Links
+
+\-
+
 # AI in Healthcare - Module 6 - Ethics in AI Healthcare
 
 **Sources:** 5 | **Exported:** July 14, 2026

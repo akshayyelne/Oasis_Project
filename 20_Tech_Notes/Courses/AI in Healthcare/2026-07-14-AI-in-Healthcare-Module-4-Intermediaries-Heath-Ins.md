@@ -1,3 +1,39 @@
+\---
+
+date: 2026-07-14
+
+project: AI-in-Healthcare 
+
+status: Completed
+
+tags: `#AI-in-Healthcare`
+
+\---
+
+
+
+\# Objective
+
+\- 
+
+
+
+\## Key Notes / Progress
+
+\- 
+
+
+
+\## Action Items
+
+\- \[ ] 
+
+
+
+\## References / Links
+
+\-
+
 # AI in Healthcare - Module 4 - Intermediaries, Heath Insurance Plans and Health care Financing
 
 **Sources:** 13 | **Exported:** July 14, 2026

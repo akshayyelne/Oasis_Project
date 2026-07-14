@@ -1,3 +1,39 @@
+\---
+
+date: 2026-07-14
+
+project: AI-in-Healthcare 
+
+status: Completed
+
+tags: `#AI-in-Healthcare`
+
+\---
+
+
+
+\# Objective
+
+\- 
+
+
+
+\## Key Notes / Progress
+
+\- 
+
+
+
+\## Action Items
+
+\- \[ ] 
+
+
+
+\## References / Links
+
+\-
+
 # Course 2 : Module 5: Clinical Data : Handling structured and unstructured data
 
 **Sources:** 18 | **Exported:** July 14, 2026

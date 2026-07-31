@@ -1,0 +1,195 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Mental health AI/Steps for setup.docx
+# Characters: 7135
+# Generated: 2026-07-31T00:07:33.000Z
+
+Since you are moving from a Swarm (autonomous) to LangGraph (deterministic) architecture, Stage 1 is about establishing the "Source of Truth" and the "Safety Gate."
+
+Here are your immediate steps to execute Stage 1 using the files provided by Claude Code.
+
+
+
+Step 1: Environment Alignment
+
+Before running the logic, you must ensure your environment supports the new "State-based" flow.
+
+Update Dependencies: Your old requirements.txt likely only had autogen. Run: pip install -r "requirements (2).txt"
+
+Set your Grok API Key: Ensure your environment variable points to xAI: export OPENAI_API_BASE="https://api.x.ai/v1" export OPENAI_API_KEY="your_grok_key"
+
+
+
+Step 2: The "Safety Router" Validation
+
+This is the most critical change. In ai_mental_wellbeing_agent (1).py, you have a safety_router function.
+
+The Action: Open the file and look for CRISIS_KEYWORDS.
+
+The Test: Run a small script or use the Streamlit UI to input: "I want to end it all."
+
+Goal: Verify the graph immediately returns the crisis_response and never calls the Assessment or Action nodes. This proves your "hard-coded" safety gate works.
+
+
+
+Step 3: Launch the MCP Tool Server
+
+Since you want to showcase MCP skills, your agents cannot function without the tool server running in the background.
+
+Start the Server: In a separate terminal, run: python mcp_wellbeing_server.py
+
+Verify Connectivity: Your main agent script has USE_MCP = os.getenv("USE_MCP", "false"). For this stage, set it to True in your environment so the agent can "see" the calculate_wellness_score tool.
+
+
+
+Step 4: Transition to "State-Based" Memory
+
+In your old code, you used a list of messages. Now, you use the WellbeingState Pydantic model.
+
+The Action: Ensure your Streamlit inputs (Sleep, Stress, Mood) are correctly mapping to the initial_state = WellbeingState(...) object before graph.invoke() is called.
+
+Why: This ensures that when the "Sleep Agent" wakes up, it isn't reading the whole chat; it's looking specifically at state.sleep_hours.
+
+
+
+Step 5: Visualizing the Graph (The "Portfolio Moment")
+
+To truly validate Stage 1, you need to see the "Logic Map."
+
+Install LangGraph CLI: pip install langgraph-cli
+
+Run Studio: langgraph dev (if you have the desktop app) or use the command line to print the graph: print(workflow.get_graph().draw_ascii())
+
+Goal: You should see a clear, linear path: Start → Safety Check → Assessment → Action → Followup → End.
+
+
+
+Step 6: Recording the "Base Trace"
+
+Enable LangSmith: export LANGSMITH_TRACING=true
+
+Run a "Happy Path" Test: Enter a normal scenario (e.g., "I'm stressed about a deadline").
+
+Check the Trace: Go to LangSmith and look for the MCP Tool Call.
+
+Did the agent successfully call calculate_wellness_score?
+
+If yes, Stage 1 is complete. You have successfully decoupled Thinking (Grok) from Tools (MCP) and Logic (LangGraph).
+
+Summary of Stage 1 Success Criteria
+
+[ ] Crisis Detection: A "suicide" keyword skips all agents.
+
+[ ] Tool Use: The wellness score is calculated by the MCP server, not the LLM's imagination.
+
+[ ] Deterministic Flow: The agents always run in the order you defined.
+
+Once these 6 steps are green, you are ready for Stage 2: Persistence (Supabase), where we make this memory permanent!
+
+
+
+
+
+Stage 2 is the "Memory & Persistence" phase. In a healthcare context, this is where you move from a "one-off chat" to a "longitudinal care record."
+
+By using Supabase (which provides a managed PostgreSQL database), you demonstrate that your agent can securely store a patient's history. This allows the AI to reference a user's progress over weeks or months—a core requirement for any serious health tech product.
+
+
+
+Step 1: Provision the Database (Supabase)
+
+Since Supabase is your chosen backend, you need a place for LangGraph to save its "checkpoints" (the state of the conversation).
+
+Create a Project: Log into Supabase and create a new project.
+
+Get the Connection String: Go to Project Settings > Database and find the URI connection string.
+
+Format: postgresql://postgres:[PASSWORD]@db.[REF].supabase.co:5432/postgres
+
+Update .env: Add this string to your local .env file as DATABASE_URL.
+
+Step 2: Install the Postgres Checkpointer
+
+The standard MemorySaver only keeps data in your computer's RAM (it disappears when you stop the script). You need the persistent version.
+
+Add to Requirements: Ensure langgraph-checkpoint-postgres is in your requirements.txt.
+
+Update the Code: In ai_mental_wellbeing_agent (1).py, you will replace the temporary memory with a persistent connection.
+
+Python
+
+from langgraph.checkpoint.postgres import PostgresSaver# This establishes the link to Supabasecheckpointer = PostgresSaver.from_conn_string(os.getenv("DATABASE_URL"))# When you compile the graph, you pass the checkpointerapp = workflow.compile(checkpointer=checkpointer)
+
+Step 3: Define Thread IDs (The "Patient ID")
+
+To separate different users or different sessions, LangGraph uses thread_id.
+
+UI Change: In your Streamlit sidebar, add a "User ID" or "Session ID" input (or generate a random UUID).
+
+The Call: When you invoke the graph, you now pass a config object: app.invoke(inputs, config={"configurable": {"thread_id": "user_123"}})
+
+The Persistence Win: If you close the app, change the code, and come back with the same thread_id, the agent will already know the user's previous stress_level and mental_state.
+
+
+
+Step 4: Schema Migration
+
+LangGraph needs specific tables in your Supabase database to store the checkpoints.
+
+The Action: Usually, running checkpointer.setup() once in your script will automatically create the necessary tables (checkpoints, writes, etc.) in your Supabase project.
+
+Portfolio Tip: Show a screenshot of your Supabase Table Editor in your portfolio. Seeing the raw SQL tables populated with AI state proves you understand the "Data" layer of AI.
+
+Step 5: Validation & "Time Travel" Testing
+
+This is a sophisticated feature of LangGraph that looks great in a portfolio.
+
+The "Pause" Test: Set a breakpoint in your graph (e.g., before the Action Plan is generated).
+
+The Resume: Close the terminal. Re-open it.
+
+The Result: The graph should resume exactly at the breakpoint.
+
+Narrative: "This ensures that if a clinician needs to review a plan before it's sent to a patient, the system holds the state securely in Supabase until approved."
+
+
+
+Summary of Stage 2 Deliverables
+
+Artifact
+
+Purpose
+
+PM Portfolio Value
+
+Supabase Integration
+
+Permanent storage of patient sessions.
+
+Shows "Enterprise-Ready" thinking.
+
+Thread Management
+
+Supports multiple concurrent users.
+
+Demonstrates understanding of Multi-tenancy.
+
+State Persistence
+
+Ability to resume interrupted sessions.
+
+Highlights Reliability & Error Recovery.
+
+Export to Sheets
+
+Next Step with Claude Code
+
+Run this command to have Claude handle the heavy lifting:
+
+claude "Refactor ai_mental_wellbeing_agent (1).py to use PostgresSaver. Get the connection string from an environment variable and update the graph invocation to include a configurable thread_id from the Streamlit sidebar."
+
+Once this stage is done, you've moved from a "demo" to a persistent application. Ready to move to Stage 3: Dockerization?
+
+
+
+
+
+---

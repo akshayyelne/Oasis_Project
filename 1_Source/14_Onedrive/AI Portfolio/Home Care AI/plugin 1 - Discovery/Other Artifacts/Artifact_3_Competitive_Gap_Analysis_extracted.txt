@@ -1,0 +1,556 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/plugin 1 - Discovery/Other Artifacts/Artifact_3_Competitive_Gap_Analysis.pdf
+# Characters: 30808
+# Generated: 2026-07-31T00:07:32.949Z
+
+Artifact 3 — Competitive Gap Analysis
+Market Intelligence · Stage 2
+DOCUMENT DETAILS
+ProjectHome-Care-AIStageDiscovery → Stage 2 (Market Intelligence)
+Date2026-03-26Feeds intoArtifact  4  —  Market  Segmentation  Deep
+Dive; Opportunity Solution Tree
+Amended2026-03-26  —  Added  Gaps  4  and  5  (field  documentation  +  CC  continuity);  repositioned  AI  Trust
+Architecture as design constraint; added Capability Coverage Map
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 1 of 14
+
+Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 2Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 31. Competitors Analysed
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 32. Competitor Profiles
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3AlayaCare
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4Heidi Health
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4Lookout Way
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 53. Competitor Matrix — Three Friction Layers
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 64. Market-Level Finding: Medication Adherence Gap
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 65. Capability Coverage Map
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 76. Cross-Cutting Design Constraint: AI Trust Architecture
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 87. Top 6 High-Value Gaps — OST Opportunity Statements
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8Gap 1 — Pattern Blindness at Scale
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8Gap 2 — The Medication Adherence Market Gap
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9Gap 3 — Clinically-Interpreted Family Communication
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10Gap 4 — Field-Context Documentation Failure
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10Gap 5 — Continuity Failure from Soft-Preference Blindness
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11Gap 6 — The Invisible Care Plan
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 128. Strategic Implication
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 139. Handshake to Next Skills
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 2 of 14
+
+Project: Home-Care-AI
+Stage: Discovery → Stage 2 (Market Intelligence)
+Skill: competitive-gap-analysis
+Date: 2026-03-26
+Amended:  2026-03-26  —  Added  Gaps  4  and  5  (field  documentation  +  CC  continuity);  repositioned  AI  Trust
+Architecture as design constraint; added Capability Coverage Map
+Feeds into: Artifact 4 — Market Segmentation Deep Dive; Opportunity Solution Tree
+1. Competitors Analysed
+1. Competitors Analysed
+#CompetitorCategoryPrimary User
+1AlayaCareHome care agency EMR + AI scheduling platformAgency administrators, clinical staff
+2Heidi HealthAI medical scribe / ambient documentationClinicians (GPs, specialists, nurses)
+3Lookout WayHome care management + family monitoring platformCoordinators, families, care workers
+2. Competitor Profiles
+2. Competitor Profiles
+AlayaCare
+AlayaCare  is  a  cloud-based  home  care  agency  platform  covering  clinical  documentation,  scheduling,  billing,
+EVV (electronic visit verification), and — as of early 2026 — a suite of AI agents. Key AI releases include:
+•Layla — conversational AI agent giving staff instant access to patient summaries, care plans, and schedules
+via chat
+•Recommended  Care  Plan  Agent  —  drafts  care  plans  from  assessment  data;  claimed  50%  documentation
+time reduction
+•Vacant Visit Scheduling Agent — 24/7 automated vacancy filling; claimed 80% reduction in manual costs
+•Visit Verification Agent — resolves failed visits without back-office involvement
+•AI Form Assistant — voice-driven form completion for field staff
+Known usability failures (confirmed via reviews and AlayaCare's own FAQ)
+•Mobile app crashes and freezes during documentation — AlayaCare maintains a dedicated FAQ page for this
+failure mode
+•Data loss on form submission; nurses required to double-chart (paper backup) by some agencies
+•Escalation queue is undifferentiated — a missed medication and a potential fall look identical in the interface
+(confirmed: Priya, HCN-003)
+•Care plan templates, even with AI assistance, generate drafts; no longitudinal trend engine surfaces patterns
+across patients
+•No patient-facing access to care plans or clinical records
+•No family notification routing rule — family communication is an agency configuration, not a clinical gate
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 3 of 14
+
+Trust gaps
+•No published consent framework for AI inference on patient data
+•Layla and Smart Summary operate on PHI without documented patient consent layer
+•Notification routing (nurse-first vs. direct-to-family) is not architecturally enforced
+Heidi Health
+Heidi  is  an  AI  ambient  listening  scribe  powering  over  2  million  patient  consultations  per  week  globally.  It
+transcribes  clinical  encounters  in  real  time,  generates  structured  notes,  referral  letters,  billing  codes,  and  task
+lists. Compliance: HIPAA, Australian Privacy Principles, SOC2, ISO 27001.
+What  it  does  well:  Reduces  clinician  documentation  time  by  44–70%.  Strong  in  GP/specialist  clinic  settings.
+March 2026: launched dedicated hardware for reliable audio capture.
+What it does not do (confirmed gaps for home care context)
+•No care coordination, scheduling, monitoring, or family communication — it is a documentation tool only
+•Designed for clinic/GP encounter settings, not field visits in a patient's kitchen between appointments
+•No medication management, fall detection, or longitudinal patient monitoring
+•No care plan generation grounded in patient-specific baseline data
+•No escalation logic or alert triage
+•Android app reliability issues: transcription loss, instability (user reviews, G2/Trustpilot 2025)
+•App-only interaction — not designed for voice notes between visits in the field without active recording
+Trust gaps
+•Transcription accuracy failures in edge conditions (2+ hour sessions; poor audio environments)
+•No consent framework visible for audio capture in home settings
+•No patient access to their own transcribed notes
+Lookout Way
+Lookout  Way  is  an  Australian  home  care  management  platform  built  by  and  for  care  providers,  developed
+alongside Five Good Friends. It covers rostering, monitoring, billing, family app, and 600+ integrations including
+Services Australia. SOC 2 Type 1 certified.
+Family  app  features:  View  care  roster  (dates,  times,  carer  names),  in-app  chat  with  care  team,  remote  care
+monitoring alerts routed to care managers who then notify families, billing history.
+Known usability failures (confirmed via SoftwareAdvice reviews)
+•Care plans are basic word document templates — not dynamic, not AI-assisted
+•Care plans cannot be created or updated in the field by care workers
+•Workers cannot complete forms directly in the system
+•NDIS providers describe it as requiring "serious hacks and compromises"
+•Hidden add-on costs reported by users
+Monitoring approach gaps
+•No fall detection mentioned in any product materials or reviews
+•No medication management features identified
+•Monitoring  alerts  route  to  care  managers,  but  no  evidence  of  clinical  interpretation  layer  before  family
+notification
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 4 of 14
+
+•No patient-facing access to care plans or clinical records
+•No dignity-preserving design principles referenced for senior residents
+Trust gaps
+•No published patient consent layer for remote monitoring data collection
+•Alert routing to families not confirmed as clinician-gated
+•No  response  to  the  "performing  wellness"  problem:  seniors  who  know  they  are  monitored  may  modify
+behaviour
+3. Competitor Matrix — Three Friction Layers
+3. Competitor Matrix — Three Friction Layers
+Friction LayerAlayaCareHeidi HealthLookout Way
+UTILITY:
+Longitudinal trend
+detection
+7 Per-visit view only; no cross-patient
+trend engine
+7 Single-encounter scribe; no
+monitoring
+n Real-time alerts on changes;
+no multi-week trend synthesis
+UTILITY: Medication
+adherence
+verification
+n Documents medication
+administration; no ingestion verification
+7 Out of scopen Monitoring layer present; no
+dispensed-vs-swallowed
+verification
+UTILITY: Soft
+matching for
+scheduling
+continuity
+n Vacant Visit Agent matches on
+availability/qualifications; no
+trust/preference layer confirmed
+7 Out of scopen Rostering shows carer
+names; no preference-based
+soft matching
+UTILITY:
+Patient-facing care
+plan access
+7 No patient portal7 Out of scope7 No patient portal
+UTILITY:
+Field-context
+documentation
+n Voice form assistant; crashes on
+mobile in field conditions
+n Ambient listening;
+designed for clinic, not
+kitchen
+7 Field form completion not
+supported
+USABILITY: Mobile
+reliability
+7 Crashes, data loss — own FAQ
+acknowledges it
+7 Android instability; session
+drop reported
+n No specific field data
+USABILITY: Clinical
+interpretation before
+family alert
+7 No enforced routing rule7 Out of scopen Care manager receives alert
+first; family notification not
+confirmed as gated
+USABILITY:
+Dignity-preserving
+senior design
+7 Not addressed7 Not addressed7 Not addressed
+USABILITY:
+Escalation
+prioritisation / risk
+triage
+7 Undifferentiated queue7 Out of scopen Care manager alert; no risk
+stratification visible
+TRUST: AI inference
+consent framework
+7 No published patient consent layer
+for Layla / Smart Summary
+n Consent at clinician level;
+no patient consent for audio
+capture in home
+7 No published patient consent
+layer for remote monitoring
+inference
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 5 of 14
+
+Friction LayerAlayaCareHeidi HealthLookout Way
+TRUST: Notification
+routing (nurse-first
+rule)
+7 Not architecturally enforced7 Out of scope7 Not confirmed as
+clinician-gated
+TRUST: Data
+gaming / adversarial
+senior behaviour
+7 Not acknowledged as design
+problem
+7 Not applicable7 Not acknowledged as design
+problem
+TRUST: Audit trail /
+legal defensibility
+n Documentation exists; granularity
+and immutability not confirmed
+n AI-generated notes; field
+specificity depends on
+clinician
+7 Not detailed
+Key: n Addressed | n Partially addressed | 7 Not addressed
+4. Market-Level Finding: Medication Adherence Gap
+4. Market-Level Finding: Medication Adherence Gap
+Analyst note applied: No competitor in this set — or in the broader market — addresses medication
+adherence at the verification layer. This is a market-level gap, not a product-level gap.
+The three tiers of the medication adherence market and what each misses
+TierExample
+s
+What they addressWhat they miss
+Care
+platforms
+AlayaCar
+e,
+Lookout
+Way
+Document that medication was
+administered; track care plan
+Whether medication was ingested; double-dose interception;
+intentional gaming
+Documen
+tation AI
+Heidi
+Health
+Capture what the clinician said
+and observed
+The gap between the clinical visit and the next visit; between
+"reviewed" and "taken"
+Hardware
+dispenser
+s
+Hero, Me
+dMinder
+Compartment access;
+dispensing reminders
+Ingestion verification; adversarial gaming (Lin moves pills; Arthur
+masks non-compliance to preserve independence)
+The unsolved problem: The dispensed-to-swallowed gap exists across all three tiers. No solution addresses
+seniors who deliberately game adherence tracking systems as a rational strategy for preserving independence.
+This is not a user error — it is a design constraint the entire market has failed to account for.
+5. Capability Coverage Map
+5. Capability Coverage Map
+This  table  maps  each  product  capability  to  its  OST  opportunity  statement.  All  five  capabilities  must  have  an
+opportunity node before the OST skill runs. This map is the handshake contract between this artifact and Skill 5.
+#Product CapabilityOST GapSeverit
+y
+1Predictive risk / longitudinal pattern detectionGap 1 — Pattern Blindness at ScaleHigh
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 6 of 14
+
+#Product CapabilityOST GapSeverit
+y
+1Medication adherence verificationGap 2 — Medication Adherence Market GapCritical
+2AI-assisted care plan recommendationGap 6 — The Invisible Care PlanMedium
+3Voice-to-structured documentation in field contextGap 4 — Field-Context Documentation FailureHigh
+4Clinically-interpreted family / patient
+communication
+Gap 3 — Clinically-Interpreted Family CommunicationHigh
+5Vacant visit soft matching / continuity schedulingGap 5 — Continuity Failure from Soft-Preference
+Blindness
+High
+Note: Capability #1 maps to two gaps (Gaps 1 and 2) because the medication adherence problem is
+structurally  distinct  from  the  pattern  recognition  problem  —  different  data,  different  failure  mode,
+different solution space. Both must appear as separate OST branches.
+Note:  AI  Trust  Architecture  is  a  cross-cutting  design  constraint,  not  a  product  capability  or  OST
+opportunity. It is documented separately below and feeds ethics-trust-mapping (Stage 4) and
+agentic-safety-discovery (Stage 4), not the OST.
+6. Cross-Cutting Design Constraint: AI Trust Architecture
+6. Cross-Cutting Design Constraint: AI Trust Architecture
+This  is  not  an  OST  opportunity  statement.  It  is  a  design  constraint  that  governs  every  capability.  It
+feeds Stage 4 (ethics-trust-mapping, agentic-safety-discovery) not Stage 3 (OST). It is
+documented here because it was surfaced directly by competitor failure and customer evidence.
+The constraint: No AI inference about a senior resident's health, cognition, or behaviour may be communicated
+to a family member or third party before (a) the inference has been reviewed by a clinician, and (b) the resident
+has been informed. This is not a configuration option — it is an architectural rule.
+Why this constraint is load-bearing: All three competitors either violate this rule or leave it unspecified. The
+consequence,  validated  directly  in  discovery,  is  that  monitored  seniors  permanently  modify  their  behaviour  to
+defeat  the  system.  Once  a  senior  begins  "performing  wellness,"  the  monitoring  produces  data  that  is
+systematically less accurate than no monitoring at all. The system becomes a liability, not a safety net.
+Evidence
+"I perform wellness now. That's what I call it. I perform for the phone. They taught me to hide. If I am
+depressed one day, truly depressed, they won't know — because I'll sound exactly the same as every
+other day." — Arthur, SR-002
+"I'm not afraid of dying. I'm afraid of losing my home. Everything I do is proof I can still live here." —
+Lin, SR-001
+Feeds  into:  ethics-trust-mapping  (Red/Yellow  zone  classification),  agentic-safety-discovery
+(Level     2/3     escalation     design),     compliance-privacy-audit     (inference     privacy     risk     table),
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 7 of 14
+
+agentic-logic-spec (notification routing gates).
+7. Top 6 High-Value Gaps — OST Opportunity Statements
+7. Top 6 High-Value Gaps — OST Opportunity Statements
+Gap 1 — Pattern Blindness at Scale
+Gap 1 — Pattern Blindness at Scale
+Capability:#1 Predictive Risk | Type: Utility | Severity: High
+Opportunity statement
+"Home care nurses and clinical leads struggle to detect patient deterioration patterns when their EMR
+shows  only  one  visit  at  a  time  across  caseloads  of  10–50  patients,  leading  to  preventable
+hospitalisations — despite the warning data existing in the system."
+Evidence across competitors
+•AlayaCare:  per-visit  documentation;  no  longitudinal  trend  engine;  Layla  can  summarise  a  patient  but  not
+surface cross-patient risk rankings
+•Heidi Health: captures single encounters; no monitoring or trend function
+•Lookout Way: real-time change alerts; no multi-week trend synthesis; no cross-patient risk prioritisation
+Customer grounding
+"Margaret's hospitalisation was preventable. Every single data point was in the system. But nobody
+connected them because nobody has time to read eight weeks of visit notes side by side." — Priya,
+HCN-003
+"I spend my Sunday evenings scrolling through visit notes for fifty patients looking for the ones about
+to fall off a cliff. I catch some of them. I miss others. That's not a system — that's me being stubborn
+on my own time." — Priya, HCN-003
+"I knew something was off with Arthur. I could feel it. But when you're seeing fourteen people a week,
+you can't hold all the patterns in your head. The system should have caught that, not me." — Maria,
+HCN-001
+Gap 2 — The Medication Adherence Market Gap
+Gap 2 — The Medication Adherence Market Gap
+Capability:#1 Predictive Risk (medication branch) | Type: Utility | Severity: Critical (market level)
+Opportunity statement
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 8 of 14
+
+"Family  caregivers  and  clinical  staff  cannot  verify  whether  medications  were  ingested,  intercept
+double-doses  before  harm  occurs,  or  detect  when  seniors  are  deliberately  gaming  adherence
+tracking — because neither care management platforms, documentation AI, nor hardware dispensers
+address the dispensed-to-swallowed gap or adversarial senior behaviour."
+Evidence across competitors
+•No competitor in the analysis set addresses this gap
+•Hardware tier (Hero, MedMinder): compartment access only; no ingestion verification; no gaming detection
+•The gap is structural: all current solutions assume honest reporting by a cognitively intact, cooperative patient
+— a false premise for the target population
+Customer grounding
+"Something  that  catches  the  double  dose  before  it  happens,  not  after.  I  don't  need  a  reminder  —  I
+need an interceptor." — James, FC-002
+"The gap between dispensed and swallowed is where everything goes wrong." — Rachel, FC-003
+"I move the pills around so it looks right. It's not lying — it's managing. If I tell them every little thing,
+they'll decide I can't manage." — Lin, SR-001
+Gap 3 — Clinically-Interpreted Family Communication
+Gap 3 — Clinically-Interpreted Family Communication
+Capability:#4 Intelligence Chat (family + patient side) | Type: Usability + Utility | Severity: High
+Opportunity statement
+"Family  caregivers  abandon  monitoring  tools  and  generate  unintended  clinical  friction  when  they
+receive raw sensor data or uninterpreted alerts without a clinical triage layer, leading to false alarm
+fatigue,  nurse  overload  from  managing  family  anxiety,  and  tool  abandonment  —  because  no
+competitor routes monitoring signals through clinical interpretation before family notification."
+Evidence across competitors
+•AlayaCare: family communication is an agency configuration; no enforced nurse-first routing
+•Lookout  Way:  care  manager  receives  alert  before  family,  but  the  interpretation  and  verdict  layer  is  not  a
+product feature — it is left to the coordinator's judgement and availability
+•Heidi Health: out of scope
+Customer grounding
+"A verdict. Not a graph. Someone telling me: 'Your mother's patterns are within her normal range this
+week. Nothing to worry about.' Or: 'Something changed. Maria is looking into it.' Not a step count. A
+verdict." — Sarah, FC-001
+"It's ridiculous that I'm using the power bill to check if my mum is alive." — Sarah, FC-001
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 9 of 14
+
+"A step count drop could mean her mother's mobility is declining or it could mean it rained for three
+days." — Maria, HCN-001 (describing the nurse friction caused by raw family data)
+Gap 4 — Field-Context Documentation Failure
+Gap 4 — Field-Context Documentation Failure
+Capability:#3 Voice-to-Documentation | Type: Utility + Usability | Severity: High
+Opportunity statement
+"Home  care  nurses  making  clinical  observations  in  a  patient's  home  cannot  capture  structured,
+accurate,  legally  defensible  documentation  when  their  only  tools  are  a  crash-prone  mobile  EMR  or
+post-shift  memory  reconstruction  —  because  no  competitor  has  designed  for  the  field  context
+(standing in a kitchen, between visits, one hand free) rather than for a clinician at a desk."
+Evidence across competitors
+•AlayaCare:  AI  Form  Assistant  (voice-driven)  exists  but  the  mobile  app  crashes  and  loses  data  in  field
+conditions — confirmed by AlayaCare's own FAQ and multiple user reviews; agencies require paper backup
+double-charting
+•Heidi  Health:  ambient  listening  hardware  just  launched  (March  2026)  but  designed  for  clinic/GP  encounter
+settings, not home visit field conditions; no home-specific deployment model; Android reliability issues
+•Lookout Way: field form completion is not supported; workers cannot complete forms in the system
+The   field   context   gap:   No   competitor   has   designed   for   the   specific   constraints   of   home   care   field
+documentation:  no  desk,  one  hand  potentially  occupied,  unreliable  connectivity,  time  pressure  between  visits,
+and the legal requirement for timestamped, field-specific detail that can withstand a coroner's inquiry.
+Customer grounding
+"The mg/mL thing still keeps me up at night. If the system had flagged it — 'this medication is usually
+measured  in  mL,  did  you  mean  mg?'  —  I  would  have  caught  it  instantly.  But  there's  no  check.  No
+validation. Just a free-text field and my thumbs on a phone screen." — David, HCN-002
+"Let me just talk. Let me say what happened and have the system figure out where it goes." — David,
+HCN-002
+"I spend more time writing about care than delivering it. By the time I sit down to type up today's visits,
+I've already forgotten half the details. I'm reconstructing, not documenting." — Maria, HCN-001
+"The solicitor asked me what time I gave Gerald his insulin. I said about 8:15. He said, 'Show me.' All
+my notes said was 'morning visit.'" — Priya, HCN-003 [coroner's inquest]
+Gap 5 — Continuity Failure from Soft-Preference Blindness
+Gap 5 — Continuity Failure from Soft-Preference Blindness
+Capability:#5 Vacant Visit Smart Matching | Type: Utility | Severity: High
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 10 of 14
+
+Opportunity statement
+"Care coordinators lose clients, generate safety incidents, and spend 30–60 minutes per absence on
+phone calls when they fill vacant visits using availability and qualification matching alone — because
+the trust, preference, and continuity knowledge that prevents client distress and carer rejection exists
+only   in   coordinator   memory   and   sticky   notes,   invisible   to   any   scheduling   system   including
+AlayaCare's new Vacant Visit Agent."
+Evidence across competitors
+•AlayaCare: Vacant Visit Scheduling Agent matches on caregiver availability and qualifications — no evidence
+of trust or preference layer; the "who does this patient trust" problem is explicitly unaddressed
+•Lookout  Way:  rostering  shows  carer  names  and  matching  status;  no  soft-preference  matching  system
+identified
+•Heidi Health: out of scope
+The specific gap in AlayaCare's new agent: AlayaCare's Vacant Visit Scheduling Agent is a direct incumbent
+move in this space. But it optimises for operational efficiency (fill the slot) rather than care continuity (fill the slot
+with the right person for this patient). The first four of Angela's eleven phone calls found available staff. The next
+seven found the right person. AlayaCare's agent solves the first four calls. The next seven remain manual.
+Customer grounding
+"Last  Tuesday.  Jenny  called  in  sick  at  six-thirty  AM.  She  had  three  visits  booked  starting  at  eight.  I
+made eleven phone calls. The first four were finding availability. The next seven were finding the right
+person." — Angela, CC-001
+"If I get hit by a bus tomorrow, half the knowledge about our clients walks out the door with me. It's on
+sticky notes and in my head." — Angela, CC-001
+"It  has  to  know  the  soft  stuff.  Not  just  'who's  available'  —  'who  does  this  patient  trust.'"  —  Angela,
+CC-001
+"We lost the Hendersons. Three different carers in two weeks. Her daughter said, 'My mother doesn't
+know who's walking through her door anymore.' They moved to another agency the following week."
+— Tom, CC-002
+"Nobody's father would sit in a chair waiting for someone who isn't coming." — Tom, CC-002
+Quantified cost of this gap
+•Angela (CC-001): 45 min per incident × ~3 incidents/week = 2.25 hrs/week of reactive phone coordination
+•Tom (CC-002): 30–60 min per absence; ~20% of vacant visits end in full cancellation
+•Client loss: The Henderson family represents the compounding cost — lost revenue, reputational damage, and
+a distressed dementia patient — all attributable to continuity failure from soft-preference blindness
+Gap 6 — The Invisible Care Plan
+Gap 6 — The Invisible Care Plan
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 11 of 14
+
+Capability:#2  Care  Plan  Recommendation  (patient  visibility  dimension)  |  Type:  Utility  +  Trust  |  Severity:
+Medium
+Opportunity statement
+"Senior  residents  are  excluded  from  visibility  into  their  own  care  plans,  clinical  observations,  and
+upcoming visit schedules — because all current platforms design for care teams, not for patients as
+active    participants    —    leading    to    disengagement,    information    withholding,    and    missed
+self-management opportunities."
+Evidence across competitors
+•AlayaCare: no patient portal; care plans are internal clinical documents
+•Lookout Way: family app shows roster/schedule; no patient-facing care plan or clinical record access
+•Heidi Health: notes are the clinician's record; patients receive no access by default
+Customer grounding
+"I  don't  know  what  my  care  plan  says.  Nobody  has  ever  shown  it  to  me.  I  assume  there's  a  plan
+because people keep showing up, but what are they looking for? What am I supposed to be doing?
+I'd like to know." — Arthur, SR-002
+"Nobody asks me. I taught mathematics for thirty-five years. I can understand my own blood pressure
+numbers. I'd like to be a participant, not a subject." — Lin, SR-001
+"If I could ask my iPad, 'When is Maria coming?' or 'What did the doctor change last time?' — I'd use
+that." — Lin, SR-001
+8. Strategic Implication
+8. Strategic Implication
+The  clearest  market  whitespace  is  not  in  clinical  documentation  (AlayaCare  and  Heidi  are  racing  to  own  it)  or
+operational scheduling efficiency (AlayaCare's Vacant Visit Agent is a strong incumbent move, but it solves the
+wrong half of the problem). The whitespace is in the clinical intelligence layer that sits between the visit and
+the family — a layer that:
+•Detects patterns nurses cannot see at scale across multi-day visit gaps (Gap 1 — Capability #1)
+•Verifies what was actually ingested, not just dispensed, and detects gaming (Gap 2 — Capability #1)
+•Captures field observations accurately at the moment they happen, not reconstructed hours later (Gap 4 —
+Capability #3)
+•Fills vacant visits with the right person, not just an available person, using soft preference knowledge that
+currently lives on sticky notes (Gap 5 — Capability #5)
+•Interprets and routes signals through clinical triage before reaching families (Gap 3 — Capability #4)
+•Earns patient trust by treating residents as participants rather than data subjects (Gap 6 — Capability #2)
+No  competitor  owns  this  position  across  all  six  dimensions.  AlayaCare  is  moving  toward  it  from  the
+agency-operations side; Lookout Way approaches it from the monitoring side; Heidi Health is orthogonal. None
+has closed the loop between patient trust, clinical interpretation, field-context capture, and family communication
+in a single coherent architecture.
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 12 of 14
+
+The product that earns patient trust first will capture the most accurate data. The product with the most accurate
+data will have the best clinical outcomes. Clinical outcomes are the only durable moat in regulated healthcare.
+9. Handshake to Next Skills
+9. Handshake to Next Skills
+Handsh
+ake ID
+From this artifactTo skillWhat transfers
+HS-DIS
+C-CGA-
+01
+6 OST opportunity
+statements (Gaps 1–6)
+market-seg
+mentation-
+deep-dive
+Score HCN, FC, CC, SR segments against each gap; CC segment must be
+scored against Gap 5 evidence (20% cancellation rate, Henderson client
+loss)
+HS-DIS
+C-CGA-
+02
+Clinical intelligence
+layer whitespace
+(Section 8)
+opportunit
+y-solution
+-tree
+Use as the Desired Outcome node
+HS-DIS
+C-CGA-
+03
+AI Trust Architecture
+constraint (Section 6)
+ethics-tru
+st-mapping
+Defines Red/Yellow zone data types; wellness performance as design risk
+HS-DIS
+C-CGA-
+04
+Notification routing as
+architectural rule
+agentic-sa
+fety-disco
+very
+Nurse-first routing must be enforced at system level, not configuration
+HS-DIS
+C-CGA-
+05
+Medication adherence
+market gap (Gap 2 +
+Section 4)
+brainstorm
+-ideas-new
+No existing solution to reference; requires first-principles ideation
+HS-DIS
+C-CGA-
+06
+Capability Coverage
+Map (Section 5)
+opportunit
+y-solution
+-tree
+One opportunity node per capability; Gaps 1–6 map to Capabilities 1–5
+Artifact  3  amended.  6  OST  opportunity  statements.  All  5  product  capabilities  covered.  AI  Trust  Architecture
+repositioned   as   cross-cutting   design   constraint.   CC   persona   evidence   surfaced   in   Gap   5.   Next   step:
+market-segmentation-deep-dive  —  score  HCN,  FC,  CC,  and  SR  segments  against  Gaps  1–6  to  determine
+Beachhead Market and Right to Win.
+Home-Care-AI · Artifact 3 · Competitive Gap Analysis · 2026-03-26
+Home-Care-AI · Artifact 3 · Competitive Gap AnalysisPage 13 of 14
+
+---

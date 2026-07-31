@@ -1,0 +1,2027 @@
+# Extracted from: 14_Onedrive/AI in PM/Prompt Engineering/AI prompt engineering for PMpdf.pdf
+# Characters: 88099
+# Generated: 2026-07-31T00:07:32.908Z
+
+Talking to AI:
+GET THE FULL COURSE HERE! (click me)
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+This PDF is meant to be shared! Share the whole thing! Take 
+screen shots and share your favorite prompt formulas. Post on 
+LinkedIn or your other social channels; send it to your friend!
+Share me!
+Real Quick Before You Begin...
+Click me
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Get the full course
+Get the full experience and improve your project management 
+efficiency and effectiveness. Earn 3 PDUs and a badge from PMI.
+Watch course excerpts on YoutubeCheck out the Prompt Exchange
+Click meClick me
+2024
+2
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+CHAINING PROMPTS
+36
+Summary
+37
+How to Prompt Chain
+37
+Sustaining the Iterative Process
+37
+Examples 
+38
+Complex Task Breakdown
+38
+Brainstorming Assistance
+40
+Agile Feedback Loops
+45
+Examples
+31
+Flipped Interaction
+31
+Persona Pattern
+32
+Iterative Prompt Refinement
+33
+Tools
+34
+Checklist: How to Improve AI 
+Responses
+34
+Discussion Question
+35
+The CREATE Formula
+16
+The RTF versus CREATE Formulas
+17
+Examples
+18
+Prompts using RTF
+18
+Prompt using CREATE
+19
+RTF versus CREATE
+20
+Tools
+21
+More Prompt Formulas
+21
+Checklist: Effective Prompt 
+Components
+23
+Checklist: Ethics and Compliance
+24
+Discussion Question
+26
+Table of Contents 
+INTRODUCTION
+5
+Welcome 
+6
+Workbook Overview
+6
+Course Companion 
+6
+Sharing
+6
+Determining Whether GenAI 
+Is the Right Solution
+7
+Ethical, Secure, and Compliant Use of 
+LLMs
+10
+DESIGNING PROMPTS
+11
+Summary
+12
+What is Prompt Engineering?
+12
+Components of an Effective Prompt
+13
+The RTF Formula
+14
+REFINING PROMPTS
+27
+Summary
+28
+Undesirable Responses
+28
+Advanced Prompting Patterns
+28
+1
+2
+3
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+3
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Table of Contents (continued) 
+PROMPTING ACUMEN
+52
+Summary
+53
+The Art of Prompt Engineering
+53
+The Science of Prompt Engineering
+54
+Examples
+55
+Improving Communication
+55
+Assistance With Change Request
+56
+Tools
+57
+Checklist: Art and Science
+57
+Prompt Engineering Exchange
+59
+Tools
+47
+Documentation Spreadsheet
+47
+Podcast
+50
+Discussion Question
+51
+CONCLUSION
+60
+Applying Prompt Engineering in Daily 
+Project Management
+61
+Prompt Ideas
+62
+Tool Library
+64
+Additional Resources
+66
+4
+2024
+4
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+2024
+5
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+INTRODUCTION
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Designed to enhance your learning experience, 
+this workbook serves as a vital companion and is 
+referenced throughout the modules. It simplifies 
+complex course information into clear summaries 
+and equips project managers with practical 
+tools for prompt engineering. In the pages that 
+follow, you’ll find prompts that you can test, use, 
+and adapt in addition to various checklists and 
+templates designed for practical use. Use this 
+workbook to reinforce your knowledge, apply 
+what you’ve learned, and enhance your skills in AI 
+prompt engineering.
+Feel free to share this workbook with colleagues 
+or on social media with anyone who might 
+benefit from it. Download the templates to use 
+within your team or organization, facilitating 
+collaboration and streamlining prompt 
+engineering processes. Sharing this resource 
+empowers others to enhance their skills and 
+knowledge in AI prompt engineering. 
+This workbook mirrors the PMI x AI “Talking to 
+AI: Prompt Engineering for Project Managers” 
+course’s structure. Starting with the basics and 
+progressing to more advanced approaches, 
+it offers detailed summaries of each module, 
+practical examples, and relevant use cases. 
+Additionally, it provides an array of tools including 
+checklists, spreadsheets, and discussion questions 
+to deepen your understanding and facilitate 
+hands-on learning. 
+Workbook OverviewCourse CompanionSharing
+Welcome
+2024
+6
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Explore whether GenAI is the right solution for your project management 
+needs with this comprehensive checklist, designed to guide you through 
+key considerations and decision-making factors.
+1Identify repetitive and time-consuming tasks or tasks that 
+can use the help of a knowledgeable assistant
+2Determine if the task can be performed, improved, or 
+automated using generative AI
+3Evaluate the complexity of the problem
+4Consider if the problem requires creative solutions or ideas
+5Assess the potential benefits of using generative AI
+6Identify the limitations and risks associated with using 
+generative AI
+7Make an informed decision based on the above factors
+Checklist
+Determining Whether GenAI 
+is the Right Solution
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+7
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+• Look for tasks that you perform 
+frequently and take up a 
+significant amount of your time
+• Examples: Creating project 
+status reports, updating 
+project schedules, or 
+generating meeting minutes
+• Alternatively, look for tasks 
+where you can use the help 
+of a knowledgeable assistant 
+to provide guidance or advice 
+when you don’t have sufficient 
+expertise or knowledge.
+• Assess if the task follows a 
+consistent structure or format
+• Will the task make use of the 
+data the AI system has been 
+trained on from other sources, 
+or do you need it to only 
+interact with your own data?
+• Check if the necessary data 
+and information are available in 
+digital format, and ensure the 
+information contains no personal 
+identifiable information (PII) or 
+other content you don’t want on 
+a public large language model 
+(LLM)
+• Example: If project status 
+reports follow a template 
+and the data is available in 
+a project management tool, 
+generative AI can automate 
+the report creation process
+• Determine if the problem 
+involves analyzing large amounts 
+of data or requires considering 
+multiple variables and scenarios
+• Assess if the problem can be 
+broken down into smaller, more 
+manageable subproblems or 
+subtasks
+• Example: Analyzing project 
+risks and their impact on 
+the project timeline and 
+budget can be complex, 
+but generative AI can help 
+process the data and 
+provide insights
+• Identify if the problem can 
+benefit from brainstorming 
+sessions, novel ideas, or 
+guidance rooted in expertise 
+and knowledge from external 
+sources
+• Determine if the problem 
+requires thinking outside the 
+box or exploring unconventional 
+approaches
+• Example: Generative AI can 
+help brainstorm ideas for 
+team-building activities or 
+suggest innovative ways 
+to communicate project 
+updates to stakeholders
+Identify repetitive and 
+time-consuming tasks or 
+tasks that can use the help 
+of a knowledgeable assistant
+Step 1
+Determine if the task can 
+be performed, improved, or 
+automated using generative 
+AI
+Evaluate the complexity 
+of the problem
+Consider if the problem 
+requires creative solutions 
+or ideas
+Step 2Step 3
+Step 4
+2024
+8
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+• Evaluate if using generative 
+AI can save time, increase 
+productivity, or improve the 
+quality of your output
+• Consider if generative AI can 
+provide valuable insights, 
+support decision-making, or 
+enhance problem-solving 
+capabilities
+• Example: Using generative 
+AI to analyze project 
+performance data can 
+provide insights that help 
+optimize resource allocation 
+and improve project 
+outcomes
+• Consider the potential risks 
+related to data privacy, security, 
+and algorithmic biases
+• Determine the level of accuracy 
+required and how you’ll verify 
+the quality of outputs
+• Assess if the generated output 
+requires human oversight or 
+validation
+• Example: When using 
+generative AI to analyze 
+sensitive financial data, 
+ensure that appropriate 
+security measures are in 
+place and that a human 
+expert reviews the output
+• Weigh the potential benefits 
+against limitations and risks
+• Determine if using generative 
+AI aligns with your project goals 
+and priorities
+• Example: If the benefits of 
+automating project status 
+reports outweigh the effort 
+required to set up and 
+maintain the generative 
+AI system, proceed with 
+implementation
+Step 5Step 6Step 7
+Assess the potential 
+benefits of using 
+generative AI
+Identify the limitations 
+and risks associated with 
+using generative AI
+Make an informed decision 
+based on the above factors
+2024
+9
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Ethical, Secure, and Compliant Use of LLMs
+While AI offers immense potential for enhancing project management, it’s essential to 
+prioritize ethical, secure, and compliant use of AI tools. 
+Maintaining ethical standards and data security involves several crucial 
+considerations:
+• validation checks
+• data augmentation
+• confidentiality
+• adherence to ethical guidelines
+By implementing these strategies, project managers can mitigate risks associated 
+with AI usage and ensure that AI-powered tools contribute positively to project 
+outcomes while upholding ethical standards. 
+Be sure to reference our checklist on page 24 for a comprehensive guide to 
+implementing these considerations effectively.
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+10
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+2024
+11
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+DESIGNING 
+PROMPTS
+1
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Summary
+What is Prompt Engineering?
+In today’s rapidly evolving world of artificial intelligence and natural language 
+processing, project managers are increasingly turning to generative AI systems 
+powered by large language models (LLMs) like ChatGPT, Infinity, Gemini, and Claude 
+to streamline workflows and enhance project outcomes. These models have the 
+potential to revolutionize project management tasks, from generating documentation 
+to analyzing data and providing insights. However, to fully harness the power of these 
+models, project managers must master the art of prompt engineering.
+Prompts are your input into generative AI systems to obtain specific results. Prompt 
+engineering is a vital skill that involves the meticulous crafting, testing, and refining of 
+prompts to guide generative AI models toward accurate, relevant, and useful outputs. 
+This process is essential for optimizing workflows, boosting productivity, and driving 
+project success. Effective prompt engineering requires several key strategies: crafting 
+specific and structured prompts, providing relevant context, setting the appropriate 
+tone, including examples, experimenting and refining prompts, understanding the 
+audience, using clear language, incorporating structure, and adding reliability checks.
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+12
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+What is Prompt Engineering? (continued)
+A fundamental aspect of prompt engineering is its iterative nature. Project managers 
+continuously refine their prompts based on feedback and observations of the LLM’s 
+behavior, striving to achieve repeatable, specific outcomes. This iterative approach 
+mirrors the agile approaches often employed in project management, emphasizing 
+adaptability and continuous improvement.
+Prompt engineering empowers project managers to tailor LLM-generated responses 
+to complement existing project workflows. Whether it’s generating initial drafts 
+of project documents, conducting analyses, or facilitating communication with 
+stakeholders, well-crafted prompts can significantly enhance the efficiency and 
+effectiveness of AI-powered tools. 
+It’s important to recognize that while generative AI can be a powerful ally in project 
+management, it isn’t without its limitations. Project professionals play a crucial role in 
+overseeing AI-generated outputs, ensuring they align with project requirements and 
+objectives. While AI can automate certain tasks, it shouldn’t replace human oversight 
+entirely, especially in areas where accuracy and completeness are paramount.
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+13
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Components of an Effective Prompt
+Effective prompts serve as the blueprint for AI-generated responses, guiding the 
+model toward producing relevant and actionable outputs. 
+Effective prompts rely on several integral components:
+• specificity
+• context
+• tone
+• examples
+• experimentation and refinement
+• clarity
+• audience awareness
+By incorporating these components into their prompts, project managers can 
+maximize the utility of AI tools and streamline project workflows effectively. 
+Additionally, maintaining clarity and structure in prompts facilitates comprehension by 
+both AI models and human stakeholders, further enhancing their effectiveness. Don’t 
+forget to consult our checklist on page 23 for a comprehensive guide to crafting 
+effective prompts.
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+14
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Prompt formulas provide a structured approach to prompt engineering, offering project managers a framework 
+for crafting effective prompts. There are many formulas, each with various advantages. Check out our table of 
+various formulas, their advantages, and components on page 20. 
+Clearly define the role of 
+the AI or the prompter, 
+establishing context for 
+the task
+One such formula is the role, task, and format (RTF) formula, which simplifies the prompt into three key elements:
+Role
+Precisely state the task 
+that the AI needs to 
+accomplish
+Task
+Specify the desired 
+format or structure of the 
+AI-generated response
+Format
+The RTF Formula
+R
+The prompt:
+T
+F
+You are an experienced project manager that specializes in facility 
+renovations and construction management.
+Your task is to identify potential risks in this renovation project to 
+transform a designated wing into a functional outpatient clinic, considering 
+construction delays, budget overruns, patient safety, and uninterrupted 
+hospital operations.
+Create a risk register with the project’s potential risks in table format.
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+15
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+2024
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+The CREATE formula expands upon the RTF formula, providing a more comprehensive 
+framework for prompt engineering. It consists of six key components:
+Define the persona or role that the AI 
+should embody
+Character
+Articulate the task or tasks that the AI 
+needs to perform
+Request
+Provide relevant examples or context to 
+guide the understanding of the task
+Examples
+Specify any additional requirements or 
+constraints for the AI’s response
+Adjustments & Constraints
+Describe the desired format or structure of 
+the output
+Types of output
+Provide relevant examples or context to 
+guide the understanding of the task
+Evaluation & Steps
+By incorporating each element of the CREATE formula into prompts, 
+project managers can ensure that AI-generated responses are 
+tailored to their specific needs and objectives. This holistic approach 
+fosters clarity, precision, and alignment with project goals, ultimately 
+enhancing project outcomes.
+The CREATE Formula
+C
+R
+E
+A
+T
+E
+You are a detail-oriented experienced project manager that specializes in facility 
+renovations and construction management. You take pride in your work.
+Identify potential risks in the renovation project to transform a designated wing into 
+a functional outpatient clinic.
+I’ve uploaded tables, other projects’ completed risk register templates that identify 
+risks related to construction delays, budget overruns, patient safety, hospital 
+operations during construction, and other potential risks.
+Ensure compliance with healthcare regulations and safety standards. Consider 
+the impact on existing hosptital operations and patient care. 
+Format the risk register as a table. 
+Comprehensiveness: Ensure all relevant risks are identified, including 
+construction delays, budget overruns, patient safety, hospital operations during 
+construction, and other potential risks. Check if compliance with healthcare 
+regulations and safety standards is adequately considered.
+Accuracy: Verify the risks are accurately categorized and described. Ensure that 
+risk mitigation strategies are realistic and actionable.
+The prompt:
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+16
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Comparing the RTF and CREATE formulas 
+highlights the strengths and applications of 
+each approach in prompt engineering. 
+While the RTF formula offers simplicity and 
+efficiency for straightforward tasks, the 
+CREATE formula provides a more robust 
+framework for managing complex scenarios. 
+Project managers may choose the appropriate 
+formula based on the nature and complexity 
+of the task at hand, ensuring that prompts 
+effectively guide AI models toward generating 
+relevant and accurate responses.
+Experimenting with different prompting 
+approaches and personas enriches the 
+interaction with AI, enabling project managers 
+to explore diverse paths and refine their 
+prompts iteratively. By leveraging the strengths 
+of both the RTF and CREATE formulas, project 
+managers can harness the full potential of AI to 
+drive project success.
+RTF versus CREATE
+Using the RTF formula
+Using the CREATE formula
+2024
+17
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+You’re an experienced project 
+manager.
+Provide a concise status 
+update on the current progress 
+of the XYZ project, including 
+key milestones achieved, 
+current tasks in progress, 
+any blockers, and upcoming 
+deadlines.
+Deliver the update in bullet 
+points with each point starting 
+with the relevant aspect 
+(Milestones, In Progress, 
+Blockers, Deadlines).
+Role:
+Task: 
+Format: 
+R
+T
+F
+You are a seasoned project 
+coordinator.
+Develop a communication 
+plan for the DEF project, 
+outlining the communication 
+goals, target audience, key 
+messages, communication 
+methods, and frequency of 
+updates.
+Present the plan in a structured 
+format with headings for 
+Communication Goals, Target 
+Audience, Key Messages, 
+Communication Methods, and 
+Frequency of Updates.
+Role:
+Task: 
+Format: 
+R
+T
+F
+You are a skilled resource 
+manager.
+Create a resource allocation 
+plan for the GHI project, 
+specifying team members, 
+their roles, assigned tasks, 
+and allocation percentage. 
+Include any potential resource 
+constraints and plans to 
+address them.
+Deliver the plan in a table 
+format with columns for Team 
+Member, Role, Assigned 
+Tasks, Allocation Percentage, 
+Potential Constraints, and 
+Mitigation Plan.
+Role:
+Task: 
+Format: 
+R
+T
+F
+Examples
+Prompts using RTF
+1
+2024
+18
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+You’re a healthcare project manager with experience in facility renovations and construction 
+management. 
+Character: 
+Identify potential risks in the renovation project to transform a designated wing into a 
+functional outpatient clinic. 
+Request:
+• Identify risks related to construction delays
+• Identify risks associated with budget overruns
+• Identify risks impacting patient safety and hospital operations during construction
+• Identify any other potential major risks
+• Review the attached documentation from a past project and use the same format
+Examples:
+Ensure compliance with healthcare regulations and safety standards. Consider the impact 
+on existing hospital operations and patient care.
+Adjustments and constraints:
+Risk assessment report, risk mitigation plans, and a risk register
+Types of output:
+• Timeliness: Ensure the risk assessment is completed at the project planning stage
+• Quality: Ensure all significant risks are identified and evaluated for impact and 
+probability
+• Stakeholder satisfaction: Confirm the risk mitigation plans are acceptable to hospital 
+administration and staff 
+Evaluation and steps:
+C
+R
+E
+A
+T
+E
+Prompt using CREATE
+2
+2024
+19
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+RTF versus CREATE
+3
+You’re a seasoned project 
+manager with experience in 
+software development.
+Generate a project timeline 
+for an upcoming software 
+development project.
+Deliver the timeline in 
+chronological order with key 
+milestones marked.
+Role:
+Task: 
+Format: 
+R
+T
+F
+You’re a seasoned project manager with experience in software development.
+Character: 
+Generate a comprehensive project timeline for an upcoming software development project, 
+including key phases, deliverables, and deadlines.
+Request:
+The project involves three main phases: planning, development, and testing. Key 
+milestones include project kickoff, completion of wireframes, alpha release, and final 
+product delivery.
+Examples:
+Ensure that the timeline accounts for a two-week buffer for unexpected delays.
+Adjustments and constraints:
+Provide the timeline in Gantt-chart format, clearly indicating the duration of each phase and 
+milestone.
+Types of output:
+Evaluate the timeline based on its alignment with project objectives, feasibility, and potential 
+risks. Break down the task into steps such as gathering project requirements, drafting the 
+timeline, and reviewing for accuracy.
+Evaluation and steps:
+C
+R
+E
+A
+T
+E
+2024
+20
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Prompt FormulaAdvantagesFormula Components
+RTFFacilitates clear assignment 
+of project roles and tasks, 
+enhancing team clarity
+Role: Specify the role of the project manager or AI clearly. 
+Task: Detail the specific task or objective that needs to be accomplished. 
+Format: Specify the desired format or presentation style for the output.
+CREATEGuides comprehensive 
+prompt creation, ensuring 
+all essential aspects are 
+addressed
+Character: Clearly define the role of the project manager or AI in the prompt. 
+Request: Specify the task or objective that needs to be fulfilled by the AI. 
+Examples: Provide relevant examples or references to guide the AI in completing the task. 
+Adjustments and constraints: Outline any adjustments or additional requirements considering 
+constraints. 
+Types of output: Specify the format or type of output expected from the AI. 
+Evaluation and steps: Define criteria for success and break down the task into actionable steps 
+for the AI.
+SMARTEnsures project objectives 
+are specific and 
+measurable, guiding project 
+success
+Specific: Clearly state the specific objective or goal for the AI to achieve.  
+Measurable: Define how the AI’s progress or output will be measured. 
+Achievable: Ensure the task assigned to the AI is realistic and feasible. 
+Relevant: Align the AI’s task with the project’s overall goals and objectives.
+Time-bound: Set a deadline or timeline for the AI to complete the task.
+More Prompt Formulas
+Tools
+2024
+21
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Prompt FormulaAdvantagesFormula Components
+STA RStructures behavioral 
+interview questions, aiding 
+in candidate evaluation
+Situation: Describe the context or scenario the AI should consider. 
+Task: Specify the task or role the AI needs to fulfill within the given situation. 
+Action: Detail the specific actions the AI should take. 
+Result: Describe the expected outcomes or results of the AI’s actions.
+ABCDAnalyzes project-related 
+behaviors and decisions, 
+aiding in problem-solving
+Antecedent: Describe the event or circumstance preceding the prompt for the AI’s understanding. 
+Behavior: Specify the actions or behavior the AI should exhibit in response.  
+Consequences: Explain the potential consequences or outcomes of the AI’s behavior. 
+Decision: Describe the decision-making process the AI should follow.
+PEARFacilitates structured 
+reflection, aiding in 
+project evaluation and 
+improvement
+Problem: Identify the problem or challenge the AI needs to address. 
+Experience: Describe relevant experiences or knowledge the AI can draw upon to tackle the 
+problem. 
+Action: Specify the actions the AI should take to resolve the problem. 
+Result: Describe the expected outcomes or results of the AI’s actions.
+SCARFAddresses team dynamics 
+and motivation, fostering 
+better collaboration
+Status: Provide an assessment of relevant factors such as team dynamics or project status. 
+Challenges: Identify challenges or obstacles the AI may encounter. 
+Actions: Specify actions or strategies for the AI to overcome challenges or improve the situation. 
+Results: Anticipate the expected results or outcomes of the AI’s actions.
+Feelings: Consider the emotional impact or response relevant to the task assigned to the AI.
+More Prompt Formulas (continued)
+2024
+22
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Checklist: Effective Prompt Characteristics
+This checklist outlines key characteristics essential for crafting effective prompts, ensuring clarity, 
+relevance, and reliability in AI responses.
+Specificity
+Is the prompt specific and clear in its instructions?
+Context
+Does the prompt provide enough relevant 
+information for the AI to understand the task at 
+hand without overwhelming it with unnecessary 
+details?
+Role
+Does the prompt provide a role or character that 
+will help the AI system identify the most relevant 
+data from its training to apply to your task?
+Tone
+Is the tone of the prompt appropriate for the 
+desired output, whether it’s professional, casual, 
+friendly, and so on?
+Examples
+Are examples included to help the AI better 
+understand the prompt and align its responses 
+with expectations?
+Experimentation and Refinement
+Have you experimented with different prompts and 
+refined them based on the AI’s responses and evolving 
+goals?
+Audience Tailoring
+Is the prompt tailored to the audience’s understanding 
+and needs, including your own understanding if you’re 
+the audience?
+Clarity
+Is the prompt free from jargon, acronyms, and 
+ambiguous language to prevent misunderstandings?
+Structure
+Is the tone of the prompt appropriate for the desired 
+output, whether it’s professional, casual, friendly, and 
+so on?
+Reliability Check
+Have you incorporated a reliability check by asking 
+for references or sources to ensure the generated 
+content meets accuracy and reliability standards? 
+2024
+23
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Validation check
+Ensure prompts include a validation check to mitigate “LLM hallucination,” where the LLM generates 
+factually incorrect information. Request citations and spot-checking against known facts.
+Augment data
+Augment LLM data with reliable sources to address noncurrent or incomplete training data, ensuring 
+comprehensive and accurate outputs.
+Confidentiality
+Handle confidential, secure, and protected data with care, avoiding sharing such information with LLMs, 
+especially those hosted by external companies or vendors.
+Ethical use
+Adhere to ethical guidelines when using LLMs, avoiding the temptation to push boundaries that may 
+violate trustworthy or ethical AI standards.
+Validation strategies
+• Establish a verification system to compare outputs with trustworthy sources or have field experts 
+assess them.
+• Deploy automated systems to match responses with authoritative databases.
+• Conduct controlled experiments using synthetic or anonymized data to evaluate LLM performance 
+across various scenarios.
+• Promote regular feedback among teams to maintain and enhance output accuracy and quality.
+Checklist: Ethics and Compliance
+Use this checklist as a guideline for maintaining ethical, secure, and compliant practices while 
+optimizing the accuracy and quality of outputs.
+2024
+24
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Compliance check
+Ensure that LLM usage complies with relevant laws, regulations, and organizational policies 
+regarding data privacy, security, and ethical AI.
+Security measures
+Implement robust security measures to safeguard LLM usage, including encryption of sensitive 
+data, access controls, and regular security audits.
+Transparency
+Foster transparency in LLM usage by documenting processes, algorithms, and decision-making 
+criteria to ensure accountability and trustworthiness.
+Bias mitigation
+Implement measures to mitigate biases in LLM outputs, such as diverse training data, bias 
+detection algorithms, and regular bias assessments.
+Continuous monitoring
+Establish mechanisms for continuous monitoring and evaluation of LLM performance, ethics, and 
+security, adapting practices as needed to address emerging challenges or issues.
+Checklist: Ethics and Compliance (continued)
+2024
+25
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Discussion Question
+Join the conversation on our communities 
+page at ProjectManagement.com as we 
+delve into the ongoing debate between 
+commoditization and differentiation in 
+project management. Discover insights 
+from others and share your perspective 
+on whether the widespread adoption of 
+prompt engineering diminishes the value 
+of project management skills or presents 
+an opportunity for project managers to 
+distinguish themselves and command 
+higher value.
+Q:  Will the widespread adoption of 
+prompt engineering commoditize 
+project management skills, or can it 
+help PMs differentiate themselves 
+and command higher value?
+>> GO TO CONVERSATION
+?
+?
+?
+?
+?
+Click this link to visit 
+the discussion 
+on projectmanagent.com
+2024
+26
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+2024
+27
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+REFINING 
+PROMPTS
+2
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+When interacting with LLMs, encountering undesirable responses is common. 
+These may stem from vague or unstructured prompts, outdated model knowledge, 
+reliance on AI assumptions, conflicting requests, or prompt overloading. To improve 
+responses, provide specific and structured prompts, ensure relevant model 
+knowledge, avoid assumptions, resolve conflicts, and avoid overloading prompts. 
+Refining prompts iteratively and implementing a refusal breaker pattern, which 
+asks the LLM to explain or reword a prompt when it refuses to produce an answer, 
+can also enhance AI interactions. Use our table on page 33 to see a list of common 
+prompt pitfalls and suggestions on how to fix them. 
+Undesirable Responses 
+Advanced Prompting Patterns
+Prompting patterns are techniques that can be mixed and matched to fine-tune 
+prompts, similar to ingredients in a recipe. Some common examples include chain-
+of-thought, tree-of-thought, and flipped interaction. Experimenting with these 
+patterns can help adapt and optimize inputs based on how the AI responds. For 
+more patterns with their suggested uses and examples, refer to our advanced 
+prompt pattern table.
+Summary
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+28
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+PatternWhen to UsePractical Application Examples
+Chain-of-thought (CoT)
+Ideal for tackling complex problems by breaking 
+them down into manageable subtasks, clarifying 
+the thought process for both the AI and project 
+stakeholders.
+Break down a project management plan into 
+phases: initiation, planning, execution, monitoring, 
+and closure.
+Chain of feedbackUseful in project management for continuous 
+alignment with project objectives, integrating 
+iterative feedback within each step. 
+In a software development project, evaluate each 
+iteration’s performance based on feedback from 
+stakeholders and adjust the development plan 
+accordingly.
+Tree-of-thoughtSuitable for exploring multiple pathways of 
+thought or solutions simultaneously, facilitating 
+thorough exploration of complex scenarios, 
+similar to creating a decision tree. 
+When developing a Project Risk Management 
+plan, consider various risk-response strategies 
+concurrently for comprehensive risk mitigation.
+Persona
+(example below)
+ 
+Valuable for steering the AI’s responses to fit a 
+particular style or expertise, generating solutions 
+or ideas that align with specific project needs or 
+stakeholder expectations. 
+Customize project status reports for different 
+stakeholder groups such as executives, team 
+members, and clients to ensure relevance and 
+effectiveness.
+Flipped interaction (example 
+below)
+Effective for gathering detailed project 
+requirements and specifications from 
+stakeholders and ensuring project alignment, 
+especially when the steps aren’t fully understood.
+In project kickoff meetings, prompt stakeholders 
+to provide specific project requirements and 
+expectations to guide project planning and 
+execution.
+Question refinementHelpful for refining project-related inquiries to 
+elicit more accurate and useful responses from 
+the AI.
+Refine project risk assessment questions to ensure 
+comprehensive coverage of potential risks and 
+improve risk management effectiveness.
+Advanced Prompting Patterns
+2024
+29
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+PatternWhen to UsePractical Application Examples
+Self-consistencyUtilized to ensure consistency in project-related 
+logic and outputs across different project 
+stages or instances. 
+Validate project scheduling assumptions 
+by asking the AI to confirm task durations 
+and dependencies, ensuring project timeline 
+consistency.
+ReActEngage AI in exploring hypothetical project 
+scenarios to anticipate and prepare for 
+potential project challenges.
+Simulate different project delivery scenarios (e.g., 
+early delivery, delayed delivery) and seek AI insights 
+on potential risks and mitigation strategies for 
+each scenario.
+Scenario explorationEngage AI in exploring hypothetical project 
+scenarios to anticipate and prepare for 
+potential project challenges.
+Simulate different project delivery scenarios (e.g., 
+early delivery, delayed delivery) and seek AI insights 
+on potential risks and mitigation strategies for 
+each scenario.
+Risk assessment matrix
+ 
+ 
+Helps project teams identify, assess, and 
+prioritize project risks, enabling proactive risk-
+management efforts.
+Assess project risks using a probability-impact 
+matrix and seek AI recommendations for 
+prioritizing risk-response actions to minimize 
+project risks.
+Cognitive verifierEnsures project-related logic and outputs 
+align with established guidelines, standards, or 
+best practices, enhancing project quality and 
+compliance. 
+Validate project documentation against industry 
+standards and seek AI feedback on areas needing 
+improvement to ensure project deliverables meet 
+quality expectations.
+Advanced Prompting Patterns (continued)
+2024
+30
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Flipped Interaction
+The flipped-interaction pattern reverses usual roles 
+to help a user get the response they’re seeking when 
+they might not know what to prompt the LLM. Instead 
+of responding to a question or performing a task, the 
+LLM is prompted to proactively question the user 
+to draw out more detailed information. The system 
+does this until it’s confident enough to provide a 
+relevant result that’s customized to the user’s specific 
+context and needs. 
+This pattern is best when you don’t know all the steps 
+needed for a task/project and is most effective 
+for gathering detailed project requirements and 
+specifications from stakeholders, ensuring project 
+alignment.
+1
+Examples
+You are a project manager creating a project management plan for Project Triton, a fitness 
+tracking mobile app development project. You and I will work together to create a project 
+management plan that includes: 
+• A work breakdown structure (WBS) that outlines the key deliverables and tasks for 
+each project phase 
+• A timeline with specific milestones and dependencies, considering the 8-month project 
+duration and the beta release in Month 6 
+• A resource allocation plan that identifies the roles and responsibilities of each team 
+member, including the software development team, UI/UX design team, data analytics 
+team, and external stakeholders 
+• A risk management plan that addresses the potential risks identified in the project 
+background, as well as any additional risks that may arise during the project 
+• A stakeholder communications management plan that outlines the frequency and 
+methods of communication with key stakeholders, including focus groups, fitness 
+experts, and nutritionists 
+I have collected and attached the deliverables document (deliverables.pdf), a team charter 
+(teamCharter.doc), the current identified risks (risks.pdf), and the stakeholder register 
+(stakeholders.pdf)  
+Walk me through how to create the project plan in a well-structured format, using bullet 
+points and tables where appropriate. I would like you to ask me questions to create a 
+suitable project plan draft, which I will adjust and change according to the project nuances. 
+You should ask questions until this condition is met or to achieve this goal. Ask me 
+questions about the project plan until you have enough information to generate a suitable 
+result from which to generate a draft. 
+We also need to include any assumptions or dependencies that may impact the project’s 
+success. The plan should be comprehensive yet concise, enabling the project team to 
+understand their roles and responsibilities clearly and execute the project effectively. 
+Let’s start with creating the WBS together.
+2024
+31
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Persona Pattern
+2
+Generative AI systems are trained on vast amounts of 
+data, and you don’t necessarily want responses that 
+pull from all of that information. If you’re looking for 
+content tailored to project management, for example, 
+content geared toward elementary school students 
+wouldn’t be sufficient. That’s why you’ll use the persona 
+prompt pattern. 
+By guiding the generative AI system to assume a 
+particular role or character, you’re telling the LLM 
+to focus the data it’s using to understand your prompt 
+and generate outputs that most closely match the 
+sort of outputs that particular role or character would 
+produce. The more specific guidance you provide to 
+the persona, the more detailed and relevant your 
+output will be.
+Act as a project manager for Project Insight. You have 25+ years of specialization in data-
+driven decision-making. You are tasked with leading data-driven marketing optimization 
+efforts for a product called FoodNova, a fast-growing, mobile-based food delivery app. The 
+objectives for this project are:  
+• Develop a data analysis framework that can process and analyze diverse datasets from 
+various sources, ensuring data quality and compliance with privacy regulations 
+• Streamline the efforts of a cross-functional team to extract valuable insights from 
+customer data, identifying key segments, preferences, and behavior patterns 
+• Evaluate the performance of past marketing campaigns and provide data-driven 
+recommendations to optimize future campaigns across different channels and platforms 
+• Manage stakeholder expectations and communication, ensuring that insights and 
+recommendations are actionable and aligned with FoodNova’s business objectives 
+• Foster a culture of continuous improvement and innovation within the project team 
+while focusing on delivering measurable results and business value 
+You will create a data analysis framework that allows team members to process and 
+analyze diverse datasets from various sources, ensuring data quality and compliance with 
+privacy regulations. First, create and present an outline or blueprint of the plan. You will be 
+presenting this to a nontechnical audience of directors, who will have to approve the plan 
+before you and your team move forward. 
+The directors are primarily concerned with the strategic alignment and business impact of 
+the project. Refer to these strategic objectives for the project to tailor your presentation.
+2024
+32
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Iterative Prompt Refinement
+3
+Iterative prompt refinement allows you to interact 
+with your LLM and adapt your input in response 
+to the AI’s output. This technique comes in handy 
+when you’d like your prompt results to build off of 
+previous responses in the conversation. You can 
+respond iteratively, where each response informs the 
+next question. Refine and modify the responses to 
+address any issues with the previous response. You 
+also can adjust the prompt wording, provide additional 
+context, or add instructions and further details as 
+needed to work your way to desired results. You can 
+use iterative prompting for question-and-answering, 
+content generation, data analysis, or language 
+translation. 
+I am a project manager at a mid-sized tech company. Identify 10 potential risks of 
+introducing a new software tool. Focus on a general software implementation scenario. We 
+expect a brief initial list of generic risks.  
+The Generative AI system will provide a high-level response lacking specifics tied to 
+the company’s unique constraints and budget-specific risks. 
+Sample prompt #1:
+Let’s expand on these risks. See attached challenges with the 2019 software upgrade. The 
+risks should include potential disruptions in our existing workflows and budget overruns. 
+Please provide a detailed report with bullet points. Assess whether each risk is detailed and 
+directly applicable to our scenario.
+Sample prompt #2:
+The next response from the generative AI system will build on the previous response 
+to include specifics about financial risks and references the example of the 2019 
+upgrade. 
+This response is closer to providing the precise, actionable insights that can directly 
+influence project planning and risk management strategies. 
+Now, focus specifically on operational risks and mitigation strategies and refer to ongoing 
+projects that might be affected. List mitigation strategies and provide actionable strategies 
+for highlighted risks in a prioritized list. Ensure that mitigation strategies are realistic and 
+tailored to our operational context.
+Sample prompt #3:
+2024
+33
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Provide more detail
+Provide specific and clear instructions to the LLM
+Use more structure
+Use a structured prompt formula like RTF or CREATE, or select a different one that fits your situation
+Provide additional context and eliminate irrelevant or      
+inconsistent information
+Provide sufficient context, avoid referencing irrelevant data, or consider using alternate LLMs
+Ask for more specific responses
+Ensure the prompt includes all necessary information, and avoid asking AI to draw conclusions broadly
+Eliminate too many or conflicting requests
+Review the prompt for conflicting instructions and remove or clarify them to prevent misinterpretation.
+Use multiple steps
+Refine the prompt iteratively, providing additional context and clarifying the desired outcome
+Avoid rejected responses
+Include a refusal breaker pattern in the prompt to ask the AI to explain why it can’t answer and suggest 
+alternatives
+Checklist: How to Improve AI Responses
+Tools
+2024
+34
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Discussion Question
+We invite you to share your insights on 
+the best practices for ensuring 
+accuracy, relevance, and alignment with 
+original goals. Join the conversation on 
+our communities page at  
+ProjectManagement.com and contribute 
+your expertise to this crucial discussion.
+Q:  When using AI systems, what are 
+some best practices for ensuring 
+the results you receive are accu-
+rate, relevant, and aligned with your 
+original goals?
+>> GO TO DISCUSSION
+?
+?
+?
+?
+?
+Click this link to visit 
+the discussion 
+on projectmanagent.com
+2024
+35
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+2024
+36
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+CHAINING 
+PROMPTS
+3
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+The concept of prompt chaining involves breaking down complex tasks into smaller subtasks, 
+allowing for more efficient management of requests made to language models like LLMs. 
+By structuring prompts to focus on one or two tasks at a time, you can enhance the AI’s 
+comprehension and output quality. For instance, a prompt initially requesting several tasks 
+may result in incomplete or unsatisfactory responses. Refining the prompt using the CREATE 
+formula, which involves specifying tasks step by step, can improve results
+How to Prompt Chain
+When refining prompts, it’s essential to document each prompt for future reference and 
+improvement. A prompt refinement template can streamline this process, aiding in the 
+identification of effective strategies and facilitating knowledge sharing among team members. 
+This template typically includes sections for detailing the task, patterns used, LLM model 
+and version, prompt techniques (such as prompt chaining), and metrics for evaluating output 
+quality. Regular review and updating of this documentation are necessary to adapt to 
+changes in LLM performance and to identify trends and best practices. Feel free to use and 
+share ours on pages 48 and 49 of this workbook. 
+Sustaining the Iterative Process
+Summary
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+37
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Complex 
+Task Breakdown
+If you have a complex prompt with multiple parts or 
+asks, it’s best to use prompt chaining, breaking large, 
+detailed tasks into subtasks. You can then ask the LLM 
+to complete one or a few tasks at a time through 
+subsequent prompts to maximize the AI’s output 
+quality. 
+1
+Examples
+You are the project manager for our digital learning product team. 
+I need your help with organizing and optimizing our project team’s structure and 
+responsibilities. Here are the tasks I need your assistance with: 
+• Analyze the job descriptions and task assignments below. 
+• Summarize the key responsibilities for each team member. 
+• Create a RACI chart based on the job descriptions and task assignments. 
+• Identify any overlaps or gaps in responsibilities. 
+• Provide a detailed explanation of how you constructed the RACI chart and any 
+recommendations for optimizing team roles and improving efficiency. 
+Team MemberJob TitleTasks
+Alice JonesProject ManagerManage projects, ...
+Bob BrownDeveloperWrite code, ...
+Team MemberJob TitleKey Responsibilities
+Alice JonesProject ManagerManage, coordinate, ...
+Bob BrownDeveloperWrite code, debug, ...
+Job Description Input:
+Summarized Responsibilities Output:
+Feel free to use any additional context or details you find in the job descriptions and task 
+assignments to enhance your analysis and outputs. 
+• Analysis of job descriptions and task assignments 
+• Summaries of key responsibilities 
+• RACI chart 
+• Identification of overlaps and gaps 
+• Explanation and recommendations 
+Review the outputs for completeness, accuracy, and clarity. The recommendations should 
+be actionable and aimed at optimizing team roles and improving efficiency.
+2024
+38
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Complex Task Breakdown (continued)
+Analyze the job descriptions and task assignments from the provided spreadsheets, and 
+align each team member with their respective job duties.
+Files Provided:
+Job_Descriptions.xlsx
+Task_Assignments.xlsx
+Chained prompt #1:   makes one ask to align team members with job duties
+Using the aligned team members and their job duties from the previous task, summarize 
+the key responsibilities for each team member.
+Chained prompt #2:   summarize key responsibilities
+With the summarized responsibilities, create a RACI chart to delineate who is Responsible, 
+Accountable, Consulted, and Informed for each task.
+Chained prompt #3:   create RACI chart
+Analyze the RACI chart and the summarized responsibilities to identify any overlaps or 
+gaps in responsibilities among team members
+Chained prompt #4:   identify overlaps and gaps
+2024
+39
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Brainstorming Assistance
+2
+You can use generative AI to help you gather 
+ideas from sources you might not have previously 
+considered, or expand the range of topics you’re 
+considering as part of a brainstorming exercise.  
+However, effective brainstorming is an iterative task 
+best suited for back-and-forth interaction, not just a 
+single prompt. 
+You are a project manager at a midsized tech company. 
+Help us brainstorm and give us ideas for selecting a new project management tool.
+We currently use a tool that doesn’t integrate well with other software and lacks agile 
+support. We need something with good reporting features and user-friendly interfaces.
+Focus on tools that are within a reasonable budget and offer both cloud-based and on-
+premise options.
+Provide a list of potential tools and their features.
+Success is determined by identifying several potential project management tools that meet 
+our initial criteria.
+This prompt is ineffective because it’s too general and lacks enough detail for a 
+tailored response. Additionally, it misses the mark with true brainstorming and 
+just asks for a general list.
+2024
+40
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Brainstorming Assistance (continued)
+You are a consultant specializing in project management tools.
+We want to have a conversation with you to help us select a new project management tool. 
+Please ask us questions to understand our needs better and arrive at a solution.
+Chained prompt #1
+Could you describe the main functionalities and integrations you currently use and 
+need in a project management tool? Are there any specific pain points or limitations 
+with your current tool that you’d like to address?
+AI Response
+Our current tool doesn’t integrate well with our CRM and doesn’t support agile approaches. 
+We need something that offers robust task tracking, easy-to-generate reports, and 
+integrates with tools like Slack, Google Workspace, and our CRM.
+Chained prompt #2
+Got it. Do you have a preference for a cloud-based or on-premise solution? Also, 
+what is your budget range for this new tool?
+AI Response
+We prefer a cloud-based solution for its accessibility and ease of updates. Our budget is 
+around $10,000 annually.
+Chained prompt #3
+Thanks for the details. Can you tell me about the size of your team and their technical 
+proficiency? Are they familiar with agile practices, or would they need some training?
+AI Response
+2024
+41
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Brainstorming Assistance (continued)
+We have a team of about 50 people. Most are familiar with agile practices, but some might 
+need a bit of training. Technical proficiency varies, so the tool should be user-friendly.
+Chained prompt #4
+That’s helpful. Among the features you mentioned, which ones are absolute must-
+haves, and which ones are nice to have but not critical?
+AI Response
+Must-haves include integration with our CRM and Slack, agile support, and good reporting 
+features. Nice-to-haves are time tracking and Gantt charts.
+Chained prompt #5
+Based on your requirements, here are a few options: Asana, Trello, and Monday.com. Do any of these stand 
+out to you, or are there other tools you’ve heard of that you’d like me to include in the comparison?
+AI Response
+Those all sound good. Please also include Jira in the comparison.
+Chained prompt #6
+2024
+42
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+FeatureJiraAsanaTrelloMonday.com
+IntegrationExcellentGoodFairExcellent
+Agile SupportExcellentGoodFairGood
+ReportingExcellentGoodFairGood
+User-FriendlyModerateExcellentExcellentGood
+BudgetWithin budgetWithin budgetWithin budgetWithin budget
+Time TrackingYe sNoNoYe s
+Gantt ChartsYe sYe sNoYe s
+Brainstorming Assistance (continued)
+Certainly. Here’s a comparison table of Jira, Asana, Trello, and Monday.com based on your criteria:
+AI Response
+Please review this table and let me know your thoughts. Are there any features or factors that need further exploration?
+This table is very helpful. We are leaning towards Jira and Monday.com. Could you provide 
+a more detailed comparison of these two, focusing on user experience and customer 
+support?
+Chained prompt #7
+2024
+43
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Brainstorming Assistance (continued)
+Certainly. Here’s a more detailed comparison of Jira and Monday.com regarding user experience and customer support:
+AI Response
+AspectJiraMonday.com
+User ExperienceModerate learning curve, very 
+powerful once mastered
+Intuitive and user-friendly from the 
+start
+Customer Support24/7 support, extensive 
+documentation, community forums
+Excellent support with dedicated 
+account managers, extensive 
+tutorials
+Monday.com seems to align better with our team’s need for an intuitive user interface and 
+excellent support. We’ll proceed with a trial of Monday.com. 
+Chained prompt #8
+Based on this detailed comparison, which tool aligns better with your team’s needs and preferences?
+2024
+44
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Agile Feedback Loops
+3
+You are a project manager overseeing the development of a mobile-banking application.
+Please develop a new feature for the banking app that allows users to set up recurring 
+bill payments. Requirements will evolve continually in response to stakeholder and user 
+feedback. 
+Describe how a user would set up a recurring bill payment, including frequency options and 
+payment methods.
+Ensure the prompt includes all necessary information, and avoid asking AI to draw 
+conclusions broadly.
+Please include text descriptions, user interface mockups, and flow diagrams.
+Review the updated documentation and sentiment from the executive team regarding the 
+new recurring bill payment feature. Compare it to the current features to ensure alignment 
+with the app’s scope.
+The executive team wants to emphasize the simplicity of the bill payment setup process, 
+ensuring it’s intuitive for users across different age groups and tech-savviness levels.
+Chained prompt #1
+You can use generative AI to enhance agile feedback 
+loops by iteratively refining ideas and solutions based 
+on continuous input from users and stakeholders. This 
+process benefits from the structured and interactive 
+nature of prompt chaining, which allows for detailed 
+exploration and improvement of features or processes. 
+However, effective agile feedback requires a series 
+of iterative prompts, not just a single request, to fully 
+capture evolving requirements and drive continuous 
+improvement.
+2024
+45
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Agile Feedback Loops (continued)
+Incorporate feedback from the UI/UX team and conduct a usability analysis of the recurring 
+bill payment feature.
+The UI/UX team suggests adding tool tips for first-time users to guide them through the 
+setup process smoothly.
+Chained prompt #2
+Next, optimize the backend infrastructure to handle recurring transactions securely and 
+efficiently for the new bill payment feature.
+The development team advises implementing a scheduling algorithm to ensure timely and 
+accurate bill payments without overloading the server.
+Chained prompt #3
+Review the updated documentation and sentiment from the executive team regarding the 
+new recurring bill payment feature. Compare it to the current features to ensure alignment 
+with the app’s scope.
+The marketing department emphasizes highlighting the convenience and peace of mind 
+users will experience by automating their bill payments through the app.
+Chained prompt #4
+Conduct A/B testing on the recurring bill payment feature to gather user feedback and 
+optimize its performance.
+The QA team suggests testing different variations of the user interface and payment 
+scheduling options to determine the most preferred setup among users.
+Chained prompt #5
+2024
+46
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Documentation Spreadsheet
+Create a documentation spreadsheet that 
+tracks the prompts you’re using to address 
+specific tasks. The spreadsheet should be 
+easy to find, accessible to all, editable, and 
+iterated on often. The spreadsheet is only 
+beneficial if it’s updated, so feel free to 
+iterate and update this daily.
+Depending on the needs of your organization 
+and the use cases for prompts, you may 
+have specific needs around documentation. 
+Each spreadsheet may look different. 
+However, if you’re looking to get started 
+setting one up, some of the columns you 
+may want to include in your documentation 
+spreadsheet include:     
+Tools
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+47
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Task
+What’s the specific task the prompt addresses?
+Prompt
+Provide the specific prompt used for the task.
+Formula
+Describe any specific formula used (such as CREATE or RTF).
+Pattern or Prompt Chaining
+Detail any prompt patterns used (chain-of-thought, feedback loops, and so on).
+LLM (including version)
+Note the model and its version used for generating responses, as performance can vary with updates.
+Response
+Provide an example of the response generated by the LLM for the given prompt.
+Results Metrics
+a. Accuracy
+Rate the output from 1 (poor) to 5 (best).
+b. Relevance
+On a scale of 1–5, assess if there’s too little output, too much, or if the amount is just right in terms of 
+relevance.
+c. Conciseness
+Evaluate the output’s length as too short, too long, or just right (scale of 1–5).
+d. Follow-Up Needs
+Indicate if additional prompts were needed to refine or expand upon the initial response.
+e. Refusals and Incompletions
+Record any instances of refusals or incomplete responses encountered.
+Notes
+Document any interesting findings, quirks, or tips related to the prompt or the LLM's response.
+2024
+48
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+TASKFORMULAS / PATTERNSLLM & VERSIONACCURACYRELEVANCECONCISENESSFOLLOW-UPSREFUSALSINCOMPLETENOTES
+Project Update ReportRTFInfinity544101Often times out
+ChatGPT 4.0554201Performs best with tipping
+Claude 3443211Performance varies widely on timing
+CoPilot 4-turbo433212Servers get overloaded
+Gemini 1.5445311Often gets stuck
+TASKFORMULAS / PATTERNSLLM & VERSIONACCURACYRELEVANCECONCISENESSFOLLOW-UPSREFUSALSINCOMPLETENOTES
+Project Update ReportRTFInfinity443212Servers get overloaded
+ChatGPT 4.0354201Performs best with tipping
+Claude 3454102Best with negative feedback
+CoPilot 4-turbo543111Not focused
+Gemini 1.5445201More detailed yielded better results
+PROMPT v1: You are an experienced project manager. Draft a project update report for stakeholders covering project status, 
+key achievements, challenges and risks, and next steps. Provide the report in a structured format with the folowing sections: 
+(1) Executive Summary (2) Progress Overview (3) Challenges and Risks (4) Next Steps (5) Conclusion
+PROMPT v2: You are an experienced project manager with extensive experience in software development projects. Create a 
+detailed project update report for stakeholders. The report should include the current project status, significant 
+achievements, any challenges and risks encountered, adn planned next steps. Please provide a structured report with the 
+following sections (1) Executive Summary - brief overview of current project status and key highlights (2) Progress Overview - 
+summarize milestones reached and tasks completed since last update (3) Challenges and Risks - detail any issues faced, 
+potential impact, and mitigation strategies (4) Next Steps - outline upcomint tasks and milestones  (5) Conclusion - summary 
+of overall project health and final remarks.
+2024
+49
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Want to learn more about the documentation 
+technique? Listen to Cognilytica’s AI Today 
+podcast, “Prompt Engineering Best Practices,” 
+which goes over an essential prompt engineering 
+best practice—diligent documentation. Hosts 
+Kathleen Walch and Ron Schmelzer emphasize 
+why keeping meticulous logs of the prompts 
+you try, the language models used, techniques 
+like prompt chaining, and performance results 
+over time are crucial. Discovering which prompts 
+work best is an iterative process of constant 
+experimentation and refinement. Tune in for tips 
+on systematically documenting your way to 
+more accurate and capable AI outputs through 
+this collaborative method.
+AI Today Podcast
+2024
+50
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Discussion Question
+With Generative AI, iteratively refining and 
+optimizing prompts can lead to better 
+AI-generated results. This may involve 
+adjusting the specificity or clarity of the 
+prompt to increase relevance and accu-
+racy of results. 
+Q:  What examples do you have of 
+how improving a prompt drastically 
+changed the output quality? What 
+specific changes did you make that led 
+to the improvement?
+>> GO TO DISCUSSION
+?
+?
+?
+?
+?
+Click this link to visit 
+the discussion 
+on projectmanagent.com
+2024
+51
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+2024
+52
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+PROMPTING 
+ACUMEN
+4
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Prompt engineering starts with creativity and intuition. To enhance AI responses, creatively develop 
+prompts and tailor them for specific tasks. This intuition is honed through problem-solving, recognizing 
+patterns, and continuous improvement. Creative problem-solving helps devise solutions using generative 
+AI, while pattern recognition facilitates smoother experimentation. Continuous improvement practices 
+translate into effective prompt building, acknowledging that LLMs respond differently based on their 
+programming and version.
+Experimentation is crucial for developing prompt engineering skills. Documenting prompts and their 
+processes enables systematic learning and adaptation. Use our documentation template to document 
+your prompts and share them within the community, fostering collaboration. Recognize and document 
+prompt patterns that yield high-quality outputs, and utilize advanced features of generative AI such as 
+plug-ins and APIs, ensuring data cleanliness and security. Overcoming a fear of mistakes is essential; view 
+each prompt as a learning opportunity. Experiment with different tasks, and draw inspiration from the Use 
+Case library.
+Experimenting with various prompt patterns reveals effective approaches across scenarios. This trial-and-
+error process clarifies LLM limitations and capabilities, promoting efficient prompting strategies. Adopt a 
+growth mindset, viewing LLMs as tools for accelerating work. Seek peer feedback to refine prompts and 
+generate new ideas. Patience and persistence are key, as there’s no penalty for failure, only rewards for 
+success.
+Summary
+The Art of Prompt Engineering
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+53
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+The Science of Prompt Engineering
+You’ve learned fundamental skills and best practices in prompt engineering to 
+enhance project success. Effective prompting requires clarity, specificity, context, 
+examples, relevant background, and clear output instructions. You’ve learned the RTF 
+(role, task, format) formula for simple requests and the CREATE (Character definition, 
+specific Requests, Examples, Adjustments, output Types, and Evaluation steps) 
+formula for more complex inquiries.
+For advanced requests, use prompt-chaining techniques to facilitate detailed, 
+interactive exchanges with the LLM, allowing for iterative outputs and deeper 
+inquiries. Use templates for consistency and automation scripts for repetitive tasks. 
+Enhance prompt quality with error and 
+fact-checking approaches as well as the “explainer” method. Systematically 
+document, analyze, and refine prompts to improve outcomes, share successes, and 
+discover innovative applications.
+Track metrics like effectiveness and conciseness in prompt documentation templates. 
+Be clear and specific in prompts, testing both simple and detailed versions to find the 
+optimal level of detail
+Ensure ethical AI usage by validating outputs, protecting sensitive data, and adhering 
+to ethical guidelines. Be aware of LLM limitations and potential inaccuracies, always 
+verifying results.
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+54
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Improving Communication
+As a project professional, leveraging generative AI can 
+significantly enhance and augment your soft skills, 
+including critical thinking, communication, collaboration, 
+problem-solving, and more. You can use your critical 
+thinking skills by approaching problems systematically, 
+evaluating responses from LLMs, and questioning 
+assumptions.
+Using documentation spreadsheets helps you hone 
+your collaboration skills. Generative AI can also improve 
+communication skills. Project managers excel at 
+conveying information clearly and succinctly, and this 
+skill comes in handy when creating prompts and using 
+the generated results. Project managers are often 
+tasked with generating clear, concise update emails 
+for project stakeholders. Using the soft skills mentioned 
+above, you can use LLMs to create templates for email 
+communication. 
+In this example, you’re using AI to help you better 
+communicate with various stakeholders—as well as 
+keep emails clear, concise, and in a specific format—to 
+make sure you don’t miss any critical updates.
+1
+Examples
+Act as an experienced project manager who is skilled at writing clear, concise emails for 
+weekly project updates. 
+Create an email template that can be used throughout the entire project for a project 
+manager to send out on a weekly basis to update all stakeholders working on the project 
+on what happened that previous week. 
+Make sure that the email uses simple wording, is not overly verbose, and provides a clear 
+template any project manager can use to send out on a weekly basis. 
+The best examples of emails can be found on the PMI.org website and any content from 
+the Project Management Institute. Only reference materials and data from PMI, not 
+from other blogs or websites.    
+2024
+55
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Assistance With Change Request
+2
+Project professionals often rely on their problem-
+solving skills to tackle unforeseen problems during 
+project execution. Generative AI can provide 
+assistance with change requests, improving your 
+soft skills of problem-solving, communication, and 
+collaboration.
+In this example, you’re a project professional who is 
+new to managing projects. This is the first project 
+you’re managing, and some changes have been 
+requested. You need help understanding the change-
+request process. Using your soft skills, you turn to LLMs 
+to help you better understand this process.
+Act as an experienced project manager. 
+Explain to a junior project manager what a change request is, why it’s needed, and the 
+general steps involved in submitting a change request. 
+Create a document that can be shared with all junior project managers. 
+The best examples of project change requests can be found on the PMI.org website 
+and any content from the Project Management Institute. Only reference change 
+management guides and data from PMI, not from other blogs or websites.
+2024
+56
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+1. Develop Intuition
+• Cultivate creative problem-solving and pattern recognition skills
+• Continuously practice and improve prompting techniques
+2. Expand Your Creative Problem-Solving
+• Experiment with innovative ideas and document the process
+• Share prompts within a community for collaborative learning
+3. Enhance Pattern Recognition
+• Notice and document effective prompt patterns
+• Experiment with these patterns to push boundaries
+4. Utilize Advanced Features
+• Use plug-ins, file uploads, computer vision, text-to-speech, APIs, and so on
+• Experiment with different tasks to explore LLM capabilities
+5. Overcome Fear of Mistakes
+• View each prompt as a learning opportunity
+• Understand how to handle prompt rejections and undesired responses
+6. Continuous Improvement
+• Adopt a trial-and-error mindset and use metrics to assess effectiveness
+• Seek and incorporate feedback from peers
+Checklist: Art
+Use this checklist to master the art and science of prompt engineering, ensuring effective, creative, and responsible use of AI tools.
+Tools
+2024
+57
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+1. Follow General Good Practices
+• Ensure clarity, specificity, context, examples, and clear output instructions
+• Ensure data is clean and has consistent, nonconflicting instructions
+2. Use Prompt Patterns
+• Apply the RTF formula for simple requests
+• Utilize the CREATE pattern for complex tasks
+3. Employ Prompt Chaining
+• Use prompt-chaining techniques for detailed, iterative exchanges
+• Utilize the CREATE pattern for complex tasks
+4. Advanced Techniques
+• Use templates for consistency and flipped interactions for unknown details
+• Implement automation scripts and employ error/fact-checking approaches
+5. Iterative Refinement
+• Systematically document and analyze prompt effectiveness
+• Share successful prompts and explore new applications
+6. Ensure Ethical and Responsible Use
+• Validate outputs and protect sensitive data
+• Follow ethical guidelines and verify results
+The Science (Principles and Skills) of Prompt Engineering
+Checklist: Science
+Use this checklist to master the art and science of prompt engineering, ensuring effective, creative, and responsible use of AI tools.
+2024
+58
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Prompt Engineering Exchange
+Do you have a great prompt (or prompt 
+chain) that you’ve tested and performs 
+well? Share the wealth with your fellow 
+PMs and add it to the Prompt Engineer-
+ing Exchange. Post your prompts, try 
+others’ prompts, comment on them, and 
+upvote the particularly effective ones. 
+Don’t forget to remove any personal or 
+proprietary information before you post!
+>> GO TO THE PROMPT 
+     ENGINEERING EXCHANGE 
+?
+?
+?
+?
+?
+Click this link to visit the 
+Prompt Engineering Exchange 
+on projectmanagent.com
+2024
+59
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course. Get the course here.
+
+2024
+60
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+CONCLUSION
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Applying Prompt Engineering in Daily Project Management
+Applying prompt engineering in daily project management can significantly enhance 
+efficiency and decision-making. By leveraging well-crafted prompts, project 
+managers optimize communication with AI tools to offload routine tasks, generate 
+insightful reports, and predict project risks. 
+For instance, specific prompts can be designed to analyze project timelines, identify 
+potential bottlenecks, and suggest resource reallocations. This approach ensures that 
+the AI outputs are tailored to the project’s unique needs, enabling managers to make 
+data-driven decisions swiftly. 
+Additionally, prompt engineering can facilitate better team collaboration by 
+generating clear and concise updates, thus keeping all stakeholders informed 
+and aligned with project goals. This strategic use of prompts not only streamlines 
+workflows but also empowers project managers to focus on high-priority tasks that 
+require human judgment and creativity.
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+61
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Prompt Ideas
+INITIATION AND PLANNING
+• Generating a project charter
+• Defining project scope and objectives
+• Conducting a feasibility study
+• Establishing project governance
+• Performing stakeholder analysis
+• Developing a project communications management plan
+• Facilitating project kickoff meetings
+• Developing a procurement management plan
+EXECUTION
+• Creating a work breakdown structure (WBS)
+• Developing a project schedule
+• Allocating and managing resources
+• Conducting a sprint retrospective
+• Sprint planning
+• Daily coordination meeting
+• User story writing
+• Developing a project budget and financial forecast
+• Managing project constraints (scope, time, cost)
+• Implementing earned value management (EVM)
+Discover topics designed to inspire and enhance your project management process at every stage, from initiation to closure. These topics 
+serve as starting points, sparking ideas on how to leverage generative AI to streamline your tasks and improve efficiency. Feel free to adapt 
+and refine these suggestions using your intuition and the skills you’ve developed in this class to meet the unique needs of your project.
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+62
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Prompt Ideas (continued)
+MONITORING AND CONTROLLING
+• Identifying project risks and mitigation strategies
+• Generating status reports
+• Tracking and managing project dependencies
+• Assessing and prioritizing risks
+• Developing a quality management plan
+• Managing change requests 
+• Developing an issue management plan
+CLOSURE 
+•  Conducting project closure and postmortem 
+analysis
+• Performing benefit realization analysis
+• Refining backlog
+• Creating a stakeholder engagement and 
+communications management plan
+• Designing a change management strategy
+• Creating a team development plan
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+63
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Tool Library
+Customized LLM Platform 
+for Project Management
+• Infinity (PMI)
+Multimodal LLM Platforms
+• ChatGPT (OpenAI)
+• Copilot (Microsoft 365)
+• Gemini (Google)
+• Grok (X)
+• Claude (Anthropic)
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+64
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+New plug-ins are created regularly. These can help with a variety of 
+different tasks, so identify what you need help with and then determine 
+which plug-in can help. Below is just a sampling of available plug-ins.
+Customized Plug-ins
+Tool Library (continued)
+• Consensus: AI research assistant
+• Scholar GPT: Enhance research efforts
+• Supernormal: Meeting transcription
+• Fireflies: Conversation intelligence
+• Monday.com: Project plans
+• Tom’s Planner: Project plans
+• Asana: Automated status updates
+• Reclaim.AI: Intelligent scheduling
+• Clockwise: Intelligent scheduling
+• Loom: Intelligent walkthroughs
+• Autodesk Fusion 360: Prototyping 
+• Smartsheet: Time and cost management
+• Wrike: Control management
+• Clickup Brain: Workflow management and automation
+• Perplexity AI: AI-powered Q&A
+• Jasper: AI-powered writing assistant
+• Scholarcy: AI-powered text summarization
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+65
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+Additional Resources
+• PMI Thought Leadership Talking to the Machine: Prompt Engineering Essentials 
+for Project Professionals
+• PMI Thought Leadership: First Movers’ Advantage: The Immediate Benefits of 
+Adopting Generative AI For Project Management
+• AI Today podcast by Cognilytica
+ ĴPrompt Engineering Best Practices: The Soft Skills of Prompting
+ ĴPrompt Engineering Best Practices:  “Hack and Track”
+ ĴPrompt Engineering Best Practices: Using Plug-ins
+ ĴPrompt Engineering Best Practices: Using Custom Instructions
+ ĴPrompt Engineering Best Practices: Use a Prompt Pattern
+ ĴWho is on the AI Team?
+ ĴDetermining AI Project Costs
+ ĴScoping AI Projects
+ ĴRetrieval-Augmented Generation (RAG)
+ ĴThe Critical AI and Data Skills You Need as a Project Manager
+ ĴWhen to Do Automation versus AI
+ ĴHow to Avoid Getting Screwed with Generative AI
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+66
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+ ĴThe Drawbacks and Challenges of Generative AI
+ ĴFoundation Models, Fine-Tuning, and Domain-Specific LLMs
+ ĴDiffusion Models and Image Generation
+ ĴGenerative AI/LLM—How Does It Work?
+ ĴGlossary Series: Structured Data, Unstructured Data, Semistructured Data
+ ĴGlossary Series: Data, Dataset, Big Data, DIKUW Pyramid
+ ĴGlossary Series: Data Preparation, Data Cleaning, Data Splitting, Data 
+Multiplication, Data Transformation
+ ĴGlossary Series: OpenAI, GPT, DALL-E, Stable Diffusion
+• Articles: Putting AI into Your Projects
+ ĴWho Is on the AI Team?
+ ĴKeeping AI Projects In Check: Scoping AI Projects
+ ĴDetermining AI Project Costs 
+ ĴWhat Skills Do you Need to Be an AI Project Manager?
+ ĴAre You Making These Deadly Mistakes with Your AI Projects?
+ ĴThe One Practice That Is Separating the AI Successes From the Failures
+ ĴThe Worst AI Advice You’ll Ever Hear
+Additional Resources (continued)
+https://www.pmi.org/shop/p-/elearning/talking-to-ai-prompt-engineering-for-project-managers/el128
+2024
+67
+© 2024 Project Management Institute, Inc. All rights reserved. This material is being provided as part of a PMI© course.
+
+---

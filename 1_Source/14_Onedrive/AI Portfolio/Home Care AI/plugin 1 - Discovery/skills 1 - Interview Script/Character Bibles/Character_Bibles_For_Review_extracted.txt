@@ -1,0 +1,704 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/plugin 1 - Discovery/skills 1 - Interview Script/Character Bibles/Character_Bibles_For_Review.docx
+# Characters: 31671
+# Generated: 2026-07-31T00:07:32.976Z
+
+CHARACTER BIBLES
+
+Synthetic Interview Personas
+
+Home-Care-AI  |  Discovery Stage 1  |  8 Interviewees across 3 Personas
+
+Review these backstories before synthetic interviews are generated.
+Each person should feel distinct, real, and internally consistent.
+
+DOCUMENT STATUS: FOR REVIEW
+
+Overview: All 8 Interviewees
+
+Three personas, weighted by importance. Each interviewee has a unique situation, personality, and set of incidents that will drive their interview responses.
+
+ID
+
+Name
+
+Persona
+
+Age / Role
+
+Key Situation
+
+Capabilities Surfaced
+
+HCN-001
+
+Maria Santos
+
+Home Care Nurse
+
+39, RN, 8 yrs exp
+
+Manages 14 patients, drowning in paperwork, missed a risk signal
+
+#1 Risk, #2 Care Plan, #3 Voice, #4 Chat
+
+HCN-002
+
+David Nguyen
+
+Home Care Nurse
+
+28, RN, 2 yrs exp
+
+New nurse, overwhelmed by care plan complexity, made a documentation error
+
+#2 Care Plan, #3 Voice, #4 Chat
+
+HCN-003
+
+Priya Sharma
+
+Home Care Nurse
+
+45, Senior RN
+
+Team lead, sees systemic failures, lost a patient to preventable hospitalisation
+
+#1 Risk, #3 Voice, #4 Chat
+
+FC-001
+
+Sarah Chen
+
+Family Caregiver
+
+47, marketing mgr
+
+Mother (78) fell at 2 AM, wasn't found for 5 hours. Medication confusion.
+
+#1 Risk, #4 Chat, #5 Vacant Visit
+
+FC-002
+
+James Okafor
+
+Family Caregiver
+
+52, IT consultant
+
+Father (81) has early dementia, double-dosed metformin, ER visit
+
+#1 Risk, #4 Chat, #5 Vacant Visit
+
+FC-003
+
+Rachel Torres
+
+Family Caregiver
+
+44, teacher
+
+Mother (74) has COPD, 9 medications, fell and fractured wrist
+
+#1 Risk, #4 Chat, #5 Vacant Visit
+
+CC-001
+
+Angela Morrison
+
+Care Coordinator
+
+51, 12 yrs exp
+
+Manages 60+ clients, 3 call-outs last week, compliance audit coming
+
+#4 Chat, #5 Vacant Visit, #1 Risk
+
+CC-002
+
+Tom Bradley
+
+Care Coordinator
+
+34, 4 yrs exp
+
+Smaller agency, wears many hats, lost a client due to continuity failure
+
+#5 Vacant Visit, #4 Chat
+
+Persona: Home Care Nurse (HCN)
+
+The clinical decision-maker. Owns patient assessments, care plans, medication management, and escalation judgment. Spends 40-60% of time on documentation. Sees 4-8 patients per day.
+
+
+
+HCN-001: Maria Santos
+
+Age / Gender
+
+39, Female
+
+Experience
+
+8 years in home care nursing, previously 4 years hospital (ED)
+
+Employer
+
+CareBridge Home Health — mid-size agency, 85 clients, 12 field nurses
+
+Caseload
+
+14 active patients across eastern Melbourne suburbs
+
+Personality
+
+Pragmatic, direct, slightly cynical about management promises. Deeply caring but burning out. Swears under her breath. Gives detailed, specific answers.
+
+Tech comfort
+
+Moderate. Uses the agency's EMR (basic web app) but calls it 'digital paperwork'. Prefers voice notes on her phone.
+
+Backstory
+
+Maria left ED nursing because she wanted to build relationships with patients rather than treating them as numbers. She loves home care but is drowning in documentation — she estimates 2-3 hours per day typing up visit notes after shifts, often at 10 PM at her kitchen table. Her agency recently adopted a new EMR but it's worse than the old one: more fields, slower interface, crashes on mobile.
+
+Three weeks ago, one of her patients (Arthur, 82, diabetes + heart failure) was hospitalised for acute decompensation. When Maria reviewed the file, she realised the warning signs had been accumulating across her last four visits — slightly elevated BP, increased ankle swelling, missed medication doses — but she hadn't connected the dots because the information was scattered across separate visit notes. There was no summary view, no trend line, no flag. She feels guilty.
+
+Maria does care plans manually — she pulls up the assessment, opens a blank template, and writes goals and interventions from memory and clinical judgment. It takes 30-45 minutes per patient. When a patient's condition changes, updating the care plan is another 20 minutes she doesn't have. She often falls behind, and some care plans are weeks out of date.
+
+Key Incidents for Interview
+
+• Arthur's preventable hospitalisation (3 weeks ago) — missed accumulating risk signals across visits. Surfaces #1 Predictive Risk.
+
+• Documentation backlog — 2-3 hours/day after shifts typing notes. Often gets home at 6 PM and starts documentation at 8 PM. Surfaces #3 Voice-to-Docs.
+
+• Care plan creation bottleneck — 30-45 minutes per care plan from scratch after assessment. Some plans are weeks out of date. Surfaces #2 Care Plan Recommendation.
+
+• Walking into a patient's home blind — she often can't remember what happened last visit or what another nurse documented. Reads notes in the car outside. Surfaces #4 Intelligence Chat.
+
+Predicted Verbatim Quotes (for interview realism)
+
+“I knew something was off with Arthur. I could feel it. But when you're seeing fourteen people a week, you can't hold all the patterns in your head. The system should have caught that, not me.”
+
+“I spend more time writing about care than delivering it. By the time I sit down to type up today's visits, I've already forgotten half the details. I'm reconstructing, not documenting.”
+
+“Every care plan I write starts from scratch. I look at the assessment, I think about what Mrs. Patel needs, and I type it all out. There's no starting point, no suggestion, nothing. Just me and a blank page.”
+
+“I'd kill for something that just told me: 'Here's what's changed since your last visit. Here's what to watch for today.' Five sentences. That's all I need before I walk through the door.”
+
+Capabilities Surfaced
+
+● #1 Predictive Risk Intelligence — Arthur's missed signals
+
+● #2 Care Plan Recommendation — blank-page problem
+
+● #3 Voice-to-Documentation — 2-3 hours/day typing
+
+● #4 Care Intelligence Chat — walking in blind
+
+HCN-002: David Nguyen
+
+Age / Gender
+
+28, Male
+
+Experience
+
+2 years in home care, graduated nursing 3 years ago
+
+Employer
+
+Same agency as Maria (CareBridge Home Health)
+
+Caseload
+
+10 active patients — lighter load as a newer nurse
+
+Personality
+
+Eager, conscientious, slightly anxious about making mistakes. Asks a lot of questions. Over-documents to compensate for uncertainty. Gives honest, self-aware answers.
+
+Tech comfort
+
+High. Grew up with technology. Frustrated that the agency's tools feel like they're from 2010.
+
+Backstory
+
+David is Maria's junior colleague. He chose home care because he wanted autonomy but quickly discovered it means making clinical decisions alone, often without enough context. In the hospital, there was always a senior nurse or doctor nearby. In a patient's living room, it's just him.
+
+Two months ago, David completed an assessment for a new patient (Dorothy, 76, post-stroke) and had to write her first care plan. It took him over 90 minutes. He wasn't sure which interventions were appropriate for her level of mobility, whether certain goals conflicted with her medications, or how aggressive to be with rehab targets. He asked Maria for help, but she was with her own patients. He submitted the plan, and the supervising clinician sent it back with 6 corrections.
+
+David also made a documentation error last month — he recorded a medication dose in the wrong field (mg instead of mL for a liquid medication). The pharmacy flagged it during reconciliation, and it was caught before any harm occurred, but it shook his confidence. He now triple-checks every medication entry, which adds 15-20 minutes to his documentation time.
+
+He often wishes he could just talk through his visit notes and have them appear correctly in the system, rather than typing on a tiny phone screen while standing in a hallway.
+
+Key Incidents for Interview
+
+• Dorothy's care plan rejection (2 months ago) — 90 minutes of work, 6 corrections. No clinical decision support. Surfaces #2 Care Plan Recommendation.
+
+• Medication documentation error — mg/mL mix-up caught by pharmacy. Now triple-checks everything. Surfaces #3 Voice-to-Docs (verification layer).
+
+• Clinical isolation — making decisions alone without easy access to patient history or colleague input. Surfaces #4 Intelligence Chat.
+
+• Typing on a phone screen — small screen, fat fingers, abbreviations that lead to errors. Surfaces #3 Voice-to-Docs.
+
+Predicted Verbatim Quotes
+
+“I stared at that blank care plan template for twenty minutes before I started typing. I knew what Dorothy needed in general, but the specifics — which mobility goal, which intervention frequency, whether her blood thinners contraindicated certain exercises — I just didn't have the confidence.”
+
+“The mg/mL thing still keeps me up at night. Nobody was hurt, but it could have been. If the system had flagged it — 'Hey, this medication is usually measured in mL, did you mean to write mg?' — I would have caught it instantly.”
+
+“I'm typing notes on a phone screen in someone's kitchen while their cat is trying to sit on my lap. Of course I make mistakes. Let me just say what happened and have the system figure out where it goes.”
+
+“I'd love to be able to ask the system, 'What did the last nurse document about this patient's wound?' instead of scrolling through three months of visit notes trying to find it.”
+
+Capabilities Surfaced
+
+● #2 Care Plan Recommendation — 90-minute blank-page struggle
+
+● #3 Voice-to-Documentation — phone typing errors + verification need
+
+● #4 Care Intelligence Chat — clinical isolation, can't find info
+
+HCN-003: Priya Sharma
+
+Age / Gender
+
+45, Female
+
+Experience
+
+18 years nursing, 11 in home care. Team lead for CareBridge eastern region.
+
+Employer
+
+CareBridge Home Health — same agency, but Priya oversees 5 nurses
+
+Caseload
+
+8 patients of her own + clinical oversight of 5 nurses' caseloads (~50 patients)
+
+Personality
+
+Calm, authoritative, systems-thinker. Sees patterns others miss. Frustrated by lack of data, not lack of effort. Speaks in structured paragraphs.
+
+Tech comfort
+
+Moderate-high. Has used 4 different EMR systems over her career. Knows what good looks like and knows this isn't it.
+
+Backstory
+
+Priya is the most experienced nurse at CareBridge. She does clinical oversight for the eastern team — reviewing care plans, mentoring juniors like David, and handling complex cases. She sees the systemic failures that individual nurses can't: the same types of errors repeating across different nurses, the same types of patients deteriorating in predictable patterns, the same documentation gaps showing up in audits.
+
+Six months ago, a patient named Margaret (79, COPD + heart failure) was hospitalised with pneumonia. Priya reviewed the case and found that Margaret's visit notes over the preceding 8 weeks showed a clear pattern: declining oxygen saturation readings, increasing fatigue reported by the patient, two missed GP appointments, and a new medication that wasn't reconciled with her existing prescriptions. No single visit note was alarming. The trend was.
+
+Priya brought this to management and proposed a weekly risk review meeting. Management said they didn't have the resources. Priya now does informal risk reviews herself, scrolling through visit notes for her 50-patient oversight panel every Sunday evening. It takes 3-4 hours and she catches maybe 60% of what she should.
+
+She also spends significant time reviewing and correcting care plans written by junior nurses. She estimates 30% of care plans she reviews need material corrections — wrong intervention frequencies, goals that conflict with the patient's actual condition, missing safety considerations.
+
+Key Incidents for Interview
+
+• Margaret's preventable hospitalisation (6 months ago) — pattern visible across 8 weeks of visit notes, but no system to surface it. Surfaces #1 Predictive Risk.
+
+• Sunday evening risk reviews — 3-4 hours manually scrolling through notes for 50 patients. Catches 60% at best. Surfaces #1 Predictive Risk + #4 Intelligence Chat.
+
+• Care plan quality problem — 30% of junior nurses' plans need corrections. Same mistakes repeating. Surfaces #2 Care Plan Recommendation.
+
+• Documentation review burden — auditing notes for compliance, finding gaps, chasing corrections. Surfaces #3 Voice-to-Docs (quality angle).
+
+Predicted Verbatim Quotes
+
+“Margaret's hospitalisation was preventable. Every single data point was in the system. The oxygen readings were there. The fatigue notes were there. The missed appointments were there. But nobody connected them because nobody has time to read eight weeks of visit notes side by side.”
+
+“I spend my Sunday evenings scrolling through visit notes for fifty patients looking for the ones who are about to fall off a cliff. I catch some of them. I miss others. That's not a system — that's me being stubborn on my own time.”
+
+“If junior nurses had a starting point for care plans — even just 'based on this assessment, here are the recommended goals and interventions' — I'd spend my time refining good drafts instead of rewriting bad ones from scratch.”
+
+“I don't need a system that replaces clinical judgment. I need a system that does the pattern recognition I can't do at scale, and then puts the pattern in front of me so I can make the judgment call.”
+
+Capabilities Surfaced
+
+● #1 Predictive Risk Intelligence — Margaret's pattern, Sunday reviews
+
+● #2 Care Plan Recommendation — junior nurse quality problem
+
+● #3 Voice-to-Documentation — quality and compliance angle
+
+● #4 Care Intelligence Chat — 50-patient oversight at scale
+
+Persona: Family Caregiver (FC)
+
+The emotional driver and often the buyer. Bears the coordination burden between clinicians, agencies, and the senior. Lives with constant anxiety about what they don't know. Typically 40-65, employed, managing care from a distance.
+
+
+
+FC-001: Sarah Chen
+
+Age / Gender
+
+47, Female
+
+Occupation
+
+Marketing manager, full-time, Melbourne CBD
+
+Care recipient
+
+Lin Chen, 78, mother, lives alone 40 minutes away in eastern suburbs
+
+Conditions
+
+Osteoporosis, mild cognitive decline, hypertension. 5 medications.
+
+Personality
+
+Organised, anxious, guilt-driven. Over-prepares. Speaks quickly with emotional intensity. Will go on tangents about specific incidents.
+
+Support network
+
+Brother David (interstate, sends money). Visiting nurse Maria (HCN-001) once weekly.
+
+Backstory
+
+Sarah's mother Lin fell in her hallway at 2 AM four months ago. Lin couldn't reach her phone and lay on the floor for five hours until Sarah's morning call at 7 AM went unanswered. Sarah drove over in a panic and found her mother on the floor, dehydrated and frightened. Lin had a bruised hip but no fracture. Sarah's life changed that day.
+
+Sarah bought a pendant alarm but Lin refuses to wear it — 'It makes me feel old.' Sarah now calls twice daily and has started tracking her mother's electricity usage as a proxy for activity. She manages medications via a paper chart on the fridge that the visiting nurse checks weekly, but she finds wrong days empty or double-filled regularly.
+
+Last month, a different nurse showed up for Lin's visit because Maria was sick. Lin was confused and upset — she didn't recognise the replacement and refused to let her check blood pressure. Sarah wasn't informed of the change until she called that evening. She's furious that nobody told her, and worried about what happens when 'strangers' show up.
+
+Key Incidents for Interview
+
+• The 2 AM fall (4 months ago) — 5 hours on the floor, pendant alarm unworn. Surfaces #1 Predictive Risk (prevention angle, not detection).
+
+• Medication chart chaos — wrong days empty, can't tell if pills were taken or skipped. Surfaces #4 Intelligence Chat ("is mum okay right now?").
+
+• Replacement nurse incident — no notification, mother upset, care disrupted. Surfaces #5 Vacant Visit Agent.
+
+• Electricity usage tracking — using power bill as activity proxy. Surfaces #4 Intelligence Chat + #1 Risk (how desperate families are for any signal).
+
+Predicted Verbatim Quotes
+
+“I didn't know my mum was on the floor for five hours. Five hours. I was asleep in my bed forty minutes away and she was just lying there.”
+
+“I check her pill organiser every Sunday and half the time the wrong day is empty. She gets confused and then she gets angry at me for asking.”
+
+“A stranger showed up at my mother's door and nobody told me. My mother was frightened. She wouldn't let the nurse in. I found out eight hours later.”
+
+“I track my mum's electricity usage. If the power consumption is too low by 9 AM, I call her. It's ridiculous that I'm using the power bill to check if my mum is alive.”
+
+Capabilities Surfaced
+
+● #1 Predictive Risk — fall prevention, desperation for signals
+
+● #4 Care Intelligence Chat — 'is she okay right now?'
+
+● #5 Vacant Visit Agent — replacement nurse nightmare
+
+FC-002: James Okafor
+
+Age / Gender
+
+52, Male
+
+Occupation
+
+IT consultant, works from home
+
+Care recipient
+
+Emmanuel Okafor, 81, father, lives in granny flat attached to James's house
+
+Conditions
+
+Early-stage dementia, Type 2 diabetes, hypertension. 7 medications.
+
+Personality
+
+Analytical, patient, deeply sad about the role reversal. Speaks methodically but pauses at emotional moments. Internally processes before answering.
+
+Support network
+
+Wife Adama (helps with daily care, burning out). Geriatrician quarterly. No other family nearby.
+
+Backstory
+
+Emmanuel was a pharmacist for 40 years. The cruel irony is that he now can't remember if he took his own pills twenty minutes ago. James pre-fills a weekly pill organiser every Sunday and his wife checks at lunch. They use a baby monitor at night (Emmanuel doesn't know).
+
+Last month, Emmanuel took his metformin twice in one morning. His blood sugar crashed, he was sweating and confused, and James thought he was having a stroke. They went to emergency and waited six hours. The geriatrician adjusted the dose and suggested a medication management service, but nothing has changed about the daily routine.
+
+James brings handwritten notes to quarterly geriatrician appointments — his best guess at what happened over three months. He knows the data is incomplete and often inaccurate. He wishes the doctor could see actual patterns, not his scribbled summaries.
+
+His wife Adama told him last week: 'I love your dad, but I can't keep doing this.' James knows they need systematic help, not another app with big flashing buttons that treats his father like a child.
+
+Key Incidents for Interview
+
+• Double-dose metformin ER visit (last month) — the system should have intercepted, not James. Surfaces #1 Predictive Risk (medication pattern monitoring).
+
+• Handwritten notes to geriatrician — 3 months of guessing on paper. Surfaces #4 Intelligence Chat (care summary generation).
+
+• Wife's burnout declaration — the human cost of manual care coordination. Surfaces operational pain broadly.
+
+• Emmanuel's professional pride — rejects patronising technology. Surfaces design constraint (dignity-preserving interfaces).
+
+Predicted Verbatim Quotes
+
+“He was a pharmacist for forty years. He filled prescriptions for other people his whole career. Now he can't remember if he took his own pills twenty minutes ago. The look on his face when I have to ask him — it's humiliating for both of us.”
+
+“Last month he took his metformin twice. His blood sugar crashed. We sat in emergency for six hours. All because of one extra pill.”
+
+“I want the geriatrician to see real data, not my scribbled notes from three months of guessing. Actual patterns. What's his blood sugar been doing? How many doses did he actually miss?”
+
+“My wife said to me last week, 'I love your dad, but I can't keep doing this.' That's when I knew we need real help. Not another app that beeps.”
+
+Capabilities Surfaced
+
+● #1 Predictive Risk — medication pattern monitoring
+
+● #4 Care Intelligence Chat — longitudinal data for clinicians
+
+● #5 Vacant Visit Agent — (indirect) care continuity matters deeply
+
+FC-003: Rachel Torres
+
+Age / Gender
+
+44, Female
+
+Occupation
+
+Part-time secondary school teacher
+
+Care recipient
+
+Gloria Torres, 74, mother, lives alone 20 minutes away
+
+Conditions
+
+COPD, arthritis, mild anxiety. 9 medications (3x daily, complex interactions).
+
+Personality
+
+Exhausted, sardonic humour as a coping mechanism. The 'responsible sibling' — two siblings overseas. Direct and specific in answers. Gets frustrated quickly.
+
+Support network
+
+Sole local caregiver. Brother in London (sends money). Sister in Auckland (occasional calls). Pharmacy auto-refill. Physiotherapist weekly.
+
+Backstory
+
+Rachel is the only nearby family member for her mother Gloria, who has COPD and takes 9 medications daily with complex interactions — two can't be taken together, one needs food, one needs an empty stomach. Gloria fell in the bathroom 6 weeks ago and fractured her wrist, setting her mobility back significantly. The physiotherapist warned that the next fracture could be a hip.
+
+Rachel visits every other day. She created a colour-coded medication chart in Excel that she prints weekly. Gloria has a medical alert necklace, but it was dead when she fell — she'd forgotten to charge it for three days. Rachel found out because Gloria managed to crawl to her phone after 90 minutes on the bathroom floor.
+
+Rachel keeps a physical binder of medical records she carries to every appointment. The pharmacy's auto-refill is her most reliable tool, but it only tells her medications were picked up, not taken. She describes the gap between 'dispensed' and 'swallowed' as where everything goes wrong.
+
+Her brother sends money from London. Rachel's response: 'Money doesn't check if she took her pills.' She evaluated a fall detection watch last year but it had too many false alarms and Gloria stopped wearing it within three weeks.
+
+Key Incidents for Interview
+
+• Bathroom fall with dead alert necklace (6 weeks ago) — 90 minutes on floor, device failure. Surfaces #1 Risk (prevention, not detection).
+
+• 9-medication complexity — interactions, timing constraints, nobody knows if taken. Surfaces #1 Risk + #4 Chat.
+
+• Physical binder of records — carries paper to every appointment. Surfaces #4 Intelligence Chat.
+
+• 'Dispensed vs swallowed' gap — pharmacy auto-refill doesn't confirm adherence. Surfaces #1 Risk (data insight).
+
+Predicted Verbatim Quotes
+
+“The necklace was dead when she fell. Dead. She'd forgotten to charge it for three days. I found out because she managed to crawl to her phone after ninety minutes on the bathroom floor.”
+
+“Nine medications. Three times a day. Two of them can't be taken together. One has to be taken with food, one on an empty stomach. I have a university degree and I can barely keep track.”
+
+“My brother sends money from London. Money doesn't check if she took her pills.”
+
+“The pharmacy tells me the prescription was picked up. Great. But the gap between dispensed and swallowed is where everything goes wrong.”
+
+“Every time my phone rings after 9 PM, my heart stops. Every single time. That's not a way to live.”
+
+Capabilities Surfaced
+
+● #1 Predictive Risk — medication complexity, fall risk
+
+● #4 Care Intelligence Chat — replacing the paper binder
+
+● #5 Vacant Visit Agent — (indirect) care continuity anxiety
+
+Persona: Care Coordinator (CC)
+
+Manages multi-patient schedules, staff assignments, compliance, and client relationships. The person who 'makes the trains run on time.' Sees systemic failures across the entire operation. Primary user for scheduling and workforce management.
+
+
+
+CC-001: Angela Morrison
+
+Age / Gender
+
+51, Female
+
+Experience
+
+12 years as care coordinator, previously aged care facility admin
+
+Employer
+
+CareBridge Home Health (same agency as nurses)
+
+Responsibility
+
+Scheduling and coordination for 60+ clients, 12 field nurses, 8 care workers
+
+Personality
+
+Unflappable under pressure, darkly humorous, encyclopedic knowledge of every client and staff member. Speaks in rapid-fire operational detail. Hates waste and chaos equally.
+
+Tech comfort
+
+Uses scheduling software, spreadsheets, WhatsApp groups, and sticky notes simultaneously. Pragmatic about tools — uses whatever works.
+
+Backstory
+
+Angela is the operational backbone of CareBridge. She handles scheduling for 60+ clients, manages call-outs and replacements, coordinates with families, and keeps the compliance documentation up to date. Last week alone, she had three staff call in sick — one at 6:30 AM for an 8 AM visit. She spent 45 minutes on the phone finding a replacement, calling the client to inform them, and updating the schedule. Two of those clients specifically requested continuity of carer.
+
+Angela keeps a mental model of which nurses are skilled for which patients, who lives near whom (for travel efficiency), and which clients have specific preferences or needs (Mrs. Kim only wants female carers, Mr. O'Brien needs someone who speaks slowly). None of this is in the system — it's in Angela's head and on sticky notes around her monitor.
+
+A compliance audit is coming in 6 weeks. Angela is worried about documentation gaps in visit verification, care plan currency, and staff credential tracking. She knows the gaps exist because she's been too busy fighting daily fires to fix the underlying systems.
+
+She also receives calls from anxious family members — especially Sarah Chen (FC-001) — asking about visit times, carer changes, and whether their loved one is okay. She doesn't always have answers immediately because the information is scattered across multiple systems.
+
+Key Incidents for Interview
+
+• Three call-outs in one week — 45 minutes per replacement, manual phone calls, no automated matching. Surfaces #5 Vacant Visit Agent.
+
+• Client preference knowledge in her head — if Angela is sick, nobody knows Mrs. Kim's preferences. Surfaces #4 Intelligence Chat + #5 Vacant Visit.
+
+• Family member calls she can't answer — information scattered across systems. Surfaces #4 Intelligence Chat.
+
+• Upcoming compliance audit — documentation gaps, care plan currency. Surfaces #1 Risk (systemic view) + #2 Care Plan (currency problem).
+
+Predicted Verbatim Quotes
+
+“Last Tuesday, Jenny called in sick at six-thirty AM. She had three visits booked starting at eight. I had forty-five minutes to find someone who was qualified, available, lived close enough, and — ideally — had met at least one of those clients before. I made eleven phone calls.”
+
+“If I get hit by a bus tomorrow, half the knowledge about our clients walks out the door with me. Which nurse works well with which patient, who needs a female carer, who gets anxious with new people — none of that is in any system. It's on sticky notes and in my head.”
+
+“Sarah Chen calls me twice a week asking if her mother's visit happened and who went. I don't blame her. But sometimes I can't answer because I'm looking at three different screens trying to piece it together.”
+
+“I can feel the audit coming like a train. I know where the gaps are. I just haven't had time to fix them because every day is another fire.”
+
+Capabilities Surfaced
+
+● #5 Vacant Visit Scheduling Agent — primary pain point
+
+● #4 Care Intelligence Chat — answering family calls, knowledge capture
+
+● #1 Predictive Risk — systemic view, compliance angle
+
+CC-002: Tom Bradley
+
+Age / Gender
+
+34, Male
+
+Experience
+
+4 years as coordinator, previously disability support worker
+
+Employer
+
+HomeFirst Care — smaller agency, 25 clients, 6 field staff
+
+Responsibility
+
+Scheduling, intake, family liaison, staff rostering. Wears many hats.
+
+Personality
+
+Friendly, stretched thin, self-deprecating. Admits mistakes openly. Less operational polish than Angela — more heart, less system. Gives rambling but honest answers.
+
+Tech comfort
+
+Uses Google Sheets for scheduling, WhatsApp for staff communication, paper forms for some clients.
+
+Backstory
+
+Tom works at a smaller agency where he's the only coordinator. He does intake, scheduling, family communication, staff rostering, and sometimes fills in for care workers when nobody else is available. He's spread across too many roles and nothing gets his full attention.
+
+Three months ago, Tom lost a client — the family moved their mother to a competitor. The reason: three different carers in two weeks because of sick leave and scheduling gaps. The family said their mother was distressed by the lack of continuity and didn't trust the new faces. Tom knew it was coming but couldn't prevent it because he didn't have staff to maintain consistency.
+
+Tom's scheduling is done in Google Sheets. When someone calls in sick, he scrolls through the sheet, mentally filters for who's available and qualified, and starts texting. He estimates it takes 30-60 minutes to fill a vacant visit, and about 20% of the time he can't find anyone and has to cancel the visit entirely. Client families are not always informed of cancellations in time.
+
+He's also struggling with care plan reviews — the agency's quality framework requires care plans to be reviewed every 8 weeks, but he doesn't have a system that flags when reviews are due. He relies on memory and a calendar reminder that he often snoozes.
+
+Key Incidents for Interview
+
+• Lost client to competitor (3 months ago) — three carers in two weeks, family lost trust. Surfaces #5 Vacant Visit Agent (continuity).
+
+• Google Sheets scheduling — 30-60 minutes to fill a vacant visit, 20% cancellation rate. Surfaces #5 Vacant Visit Agent.
+
+• Uninformed cancellations — families find out when nobody shows up. Surfaces #5 Vacant Visit Agent (notification).
+
+• Care plan review overdue — no system flags, relies on memory. Surfaces #1 Risk (compliance) + #2 Care Plan (currency).
+
+Predicted Verbatim Quotes
+
+“We lost the Hendersons. Three different carers in two weeks because of sick leave. Mrs. Henderson's daughter called me and said, 'My mother doesn't know who's walking through her door anymore.' I couldn't argue with her. She was right.”
+
+“When someone calls in sick, I open the Google Sheet, I look at who's free, I start texting. Sometimes I find someone in ten minutes. Sometimes it takes an hour. And sometimes I just have to cancel the visit and hope the family understands.”
+
+“I had a family call me at 9 AM asking why nobody came for their father's visit. I didn't even know it had been cancelled — the carer had texted me at 6 AM but I was dealing with another fire. Nobody told the family.”
+
+“I know there are care plans overdue for review. I can feel it. But I don't have a list, I don't have a flag, I just have this vague anxiety that something's slipping through.”
+
+Capabilities Surfaced
+
+● #5 Vacant Visit Scheduling Agent — primary and urgent pain
+
+● #4 Care Intelligence Chat — multi-system information access
+
+● #1 Predictive Risk — compliance gaps, overdue reviews
+
+Review Checklist
+
+Before approving these character bibles for interview generation, check:
+
+Check
+
+What to Look For
+
+Diversity
+
+Do the characters represent different ages, genders, experience levels, and tech comfort? No two people should feel interchangeable.
+
+Internal consistency
+
+Does each person's backstory, personality, and predicted quotes align? Would Maria really say that? Would David?
+
+Capability coverage
+
+Does every capability (#1-#5) get surfaced by at least 3 different interviewees? Check the overview table.
+
+Operational + Intelligence
+
+Does each character have both operational complaints (tools, coordination) AND intelligence gaps (uncertainty, missed patterns)?
+
+Realism
+
+Do some characters mention problems you're NOT solving? (e.g., loneliness, nutrition, transport). Are any answers too convenient?
+
+Emotional range
+
+Is there genuine emotion — guilt, fear, frustration, resignation, dark humour — not just clinical descriptions of problems?
+
+Cross-references
+
+Do characters from the same agency (HCN-001, HCN-002, HCN-003, CC-001) reference the same events and patients consistently?
+
+Persona balance
+
+Are HCN interviews clinical and specific? Are FC interviews emotional and specific? Are CC interviews operational and systemic?
+
+Once approved, these bibles become the foundation for 8 full synthetic interviews.
+
+
+
+---

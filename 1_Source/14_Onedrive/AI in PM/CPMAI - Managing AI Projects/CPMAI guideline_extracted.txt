@@ -1,0 +1,1166 @@
+# Extracted from: 14_Onedrive/AI in PM/CPMAI - Managing AI Projects/CPMAI guideline.pdf
+# Characters: 75344
+# Generated: 2026-07-31T00:07:32.902Z
+
+CPMAI Methodology 
+Overview 
+A GUIDE TO RUNNING & MANAGING  
+AI PROJECTS SUCCESSFULLY       
+ 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 1 of 32 
+Executive Summary: Why Is CPMAI Necessary? 
+The Cognitive Project Management for AI (CPMAI) methodology is a vendor-neutral, iterative, 
+and data-centric framework designed to ensure the success of artificial intelligence (AI) and 
+machine learning (ML) projects. As AI adoption continues to rise across industries, organizations 
+face a high failure rate—often exceeding 80%—due to poor project management, misaligned 
+business objectives, and inadequate data preparation. The CPMAI methodology directly 
+addresses these challenges by integrating AI-specific project management principles that focus 
+on business understanding, data feasibility, and iterative development. 
+The Need for an Approach to Successfully Run and Manage AI Projects 
+Traditional project management and application development methodologies do not fully address 
+the complexities of AI projects. AI solutions are data-driven, not just software-driven, requiring a 
+systematic approach that ensures: 
+● Alignment with business objectives and ROI 
+● Proper data preparation and governance 
+● Robust model evaluation and operationalization 
+● Iterative development to adapt to changing data and needs 
+Addressing AI Project Failures With CPMAI 
+AI projects often fail because organizations approach them with traditional software 
+development methodologies that do not account for the data-centric nature of AI. The CPMAI 
+framework is specifically designed to mitigate these risks by ensuring business alignment, data 
+feasibility, real-world AI system evaluation and operationalization, and iterative development. 
+Business alignment ensures that AI initiatives have a clear purpose and measurable ROI. Many 
+AI projects fail because they do not adequately define the problem they are solving or fail to 
+demonstrate sustained business value. CPMAI helps organizations establish realistic goals, 
+success criteria, and stakeholder buy-in before development begins. 
+Data feasibility is another critical factor in AI success. AI models are only as good as the data 
+they are trained on, yet many projects proceed without ensuring data availability, quality, and 
+governance. CPMAI emphasizes early-stage data assessments to prevent downstream issues that 
+can derail AI initiatives. 
+Additionally, CPMAI ensures real-world AI system evaluation and operationalization, 
+addressing a key challenge that causes AI projects to underperform or fail post-deployment. The 
+framework incorporates rigorous testing, continuous monitoring, and governance mechanisms to 
+detect model drift, data inconsistencies, and performance degradation over time. By embedding 
+best practices in AI, CPMAI helps organizations transition from proof-of-concept models to 
+scalable, production-ready AI systems that deliver sustainable business value. 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 2 of 32 
+Finally, iterative development allows teams to continuously refine and adapt AI models based on 
+real-world feedback. Unlike traditional software, AI systems evolve as data changes. CPMAI's 
+iterative methodology ensures that models are regularly evaluated, updated, and monitored to 
+maintain performance and business relevance. 
+Purpose of the CPMAI Overview Guide 
+This guide serves as an introduction to CPMAI, providing organizations and AI practitioners 
+with the necessary structure to plan, manage, and execute AI initiatives successfully. It highlights 
+the CPMAI framework’s core phases, best practices, and alignment with real-world AI 
+challenges. 
+For deeper expertise, CPMAI certification provides comprehensive training in AI project 
+management, ensuring professionals have the skills needed to navigate today’s AI-driven 
+landscape effectively. 
+The PMI CPMAI Training Course offers an in-depth exploration of the CPMAI methodology, 
+equipping professionals with the tools to effectively manage AI and data-centric projects. The 
+training covers all six CPMAI phases, real-world case studies, and best practices for mitigating 
+AI project risks. 
+Earning a CPMAI certification demonstrates proficiency in AI project management and a 
+commitment to industry best practices. Certified professionals gain a competitive advantage by 
+showcasing expertise in aligning AI initiatives with business objectives, managing data 
+requirements, and ensuring iterative success. Organizations benefit by having trained personnel 
+who can lead AI initiatives with confidence, reducing failure rates and improving project 
+outcomes. 
+This guide serves the needs of project management professionals and organizations by providing 
+insight into the CPMAI methodology as well as a foundation for those pursuing CPMAI 
+certification, reinforcing the critical knowledge areas assessed in the CPMAI course and 
+certification. 
+  
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 3 of 32 
+Table of Contents 
+EXECUTIVE SUMMARY: WHY IS CPMAI NECESSARY? 1 
+The Need for an Approach to Successfully Run and Manage AI Projects 1 
+Addressing AI Project Failures With CPMAI 1 
+Purpose of the CPMAI Overview Guide 2 
+TABLE OF CONTENTS 5 
+ADDRESSING THE HIGH RATE OF FAILURE OF AI PROJECTS 6 
+Context: High Failure Rate of AI Projects 6 
+Challenges With Traditional Project Management and Application Development Approaches for AI 6 
+Value Proposition of CPMAI: How CPMAI Addresses These Challenges 7 
+THE SEVEN PATTERNS OF AI 8 
+Overview of Each Pattern 9 
+Conversational & Human Interaction 9 
+Recognition 9 
+Patterns & Anomalies 10 
+Predictive Analytics & Decision Support 10 
+Hyperpersonalization 10 
+Autonomous Systems 10 
+Goal-Driven Systems 11 
+How These Patterns Align With CPMAI 11 
+THE SIX PHASES OF CPMAI 12 
+CPMAI PHASE I: BUSINESS UNDERSTANDING 13 
+Establishing the Business Problem That AI Can Address 13 
+Defining Success Criteria and Scope 13 
+AI Patterns and Project Fit 14 
+Potential Pitfalls to Be Aware of in CPMAI Phase I 14 
+CPMAI PHASE II: DATA UNDERSTANDING 15 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 4 of 32 
+Data Source Inventory and Quality 15 
+Addressing The “V’s” of Big Data 15 
+Key Data Governance and Privacy Considerations 16 
+Feasibility Checks 17 
+CPMAI PHASE III: DATA PREPARATION 17 
+Addressing Needs for Data Wrangling and Cleaning 18 
+Performing Data Labeling and Annotation 18 
+Development of Data Pipelines 19 
+Avoiding Common Pitfalls in Data Preparation for AI 19 
+CPMAI PHASE IV: MODEL DEVELOPMENT 20 
+Algorithm and Tool Selection 20 
+AI Approach Trade-Offs 21 
+Leveraging Off-the-Shelf Models, Pretrained Models, and Transfer Learning 21 
+Model Training and Tuning 22 
+CPMAI PHASE V: MODEL EVALUATION 23 
+Why Evaluate and Test AI Solutions Before Deployment 23 
+Performing Technical and Business Performance Metrics 24 
+Technical Performance Metrics 24 
+Business Metrics and KPIs 24 
+Model Governance and Monitoring Approach 25 
+Deciding on Go/No-Go for Deployment 25 
+CPMAI PHASE VI: MODEL OPERATIONALIZATION 26 
+Determining Deployment Environments 26 
+Real-Time Monitoring of AI Solutions 27 
+Versioning and Retraining Pipelines 27 
+Ready for the Next Iteration! 28 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 5 of 32 
+MAKING AI PROJECTS NOT ONLY SUCCESSFUL BUT ALSO TRUSTWORTHY 28 
+Core Principles of Trustworthy AI 28 
+Embedding Trustworthy AI in Every CPMAI Phase 28 
+ORGANIZATIONAL ROLES AND SKILLS NEEDED FOR AI SUCCESS 29 
+Key Roles in AI Projects 30 
+Soft Skills and AI Culture 30 
+Executive Sponsorship 31 
+TAKING THE NEXT STEPS WITH CPMAI 31 
+Embrace the Data-Centric, Iterative AI-Specific Nature of CPMAI 31 
+Recommendations for Further Study 32 
+ 
+ 
+  
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 6 of 32 
+Addressing the High Rate of Failure of AI Projects 
+Context: High Failure Rate of AI Projects 
+Despite the transformative potential of artificial intelligence (AI), most AI initiatives do not meet 
+expectations. Research consistently shows that 80% or more of AI projects fail to deliver the 
+promised impact or never move beyond prototypes. These failures are not usually caused by the 
+underlying AI technology itself but rather by how AI projects are planned, managed, and aligned 
+to real business needs. 
+Several common pitfalls explain this high failure rate: 
+● Lack of clear business alignment: Projects often begin with excitement about AI’s 
+capabilities but lack specific ROI goals, success metrics, or stakeholder buy-in. Without a 
+concrete problem definition, AI solutions may fail to solve any pressing need. 
+● Neglecting data feasibility: Many teams jump straight into development without 
+validating whether they have the right data, both in quantity and quality, to train reliable 
+AI models. When data is incomplete, poorly labeled, or biased, the resulting AI system 
+underperforms or produces flawed insights. 
+● No plan for continuous updates: AI models require ongoing maintenance because data 
+and business environments shift over time. If organizations treat AI like a one-time 
+project without processes for monitoring, retraining, or versioning the model, 
+performance can quickly degrade (known as data or model drift). 
+The net result is a significant waste of resources, missed opportunities for innovation, and 
+organizational frustration. This reality has created a strong need for a structured, data-centric 
+approach to help teams identify and mitigate AI-specific risks, ensure business alignment, and 
+increase success rates. 
+Challenges With Traditional Project Management and Application 
+Development Approaches for AI 
+Historically, organizations have relied on established predictive, adaptive, or hybrid approaches 
+to project management and applications development. While each approach has strengths, all of 
+them fall short on critical AI-specific requirements: 
+1. AI projects are highly data-driven: 
+Traditional software development focuses on code and functional specifications. In 
+contrast, AI systems “learn” from data. If the data is absent, incomplete, or of poor 
+quality, no amount of coding can compensate. Most traditional methods do not address 
+data feasibility checks or continuous data readiness with the rigor AI requires. 
+2. Iterative rechecking of data and models: 
+Agile methods emphasize iterative sprints, which works well for feature development, 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 7 of 32 
+but they typically assume a stable set of requirements. AI projects require iteration not 
+just on features but on the data itself: collecting new data, cleaning and labeling it, 
+experimenting with different modeling approaches, and retraining. This process must be 
+embedded at every phase—not as a one-time step. 
+3. Continuous monitoring and updates: 
+Typical IT projects often have a deployment milestone after which the product is 
+considered complete. In AI, deployment is a starting point for ongoing monitoring to 
+detect model drift, performance decay, or data changes. Without a built-in loop for 
+retraining and operational oversight, sometimes referred to as machine learning 
+operations (MLOps), AI models become stale, inaccurate, or even noncompliant with 
+evolving regulations. 
+4. Data-analytics-focused methodologies have gaps for modern AI: 
+The Cross-Industry Standard Process for Data Mining (CRISP-DM) framework was once 
+popular for data-centric projects. However, it has not been actively updated for modern 
+AI and does not fully address organizational adoption, continuous retraining, or 
+integration with agile/DevOps. The CRISP-DM framework also lacks guidance on the 
+governance, explainability, and trust concerns that now accompany AI. 
+While existing approaches for general project management principles have greatly advanced the 
+practice of application and project management, none of these existing approaches fully capture 
+the nuanced needs of AI projects. Factors like data ownership, privacy, bias, ethics, governance, 
+and ROI-based feasibility are often overlooked or treated as afterthoughts. 
+Value Proposition of CPMAI: How CPMAI Addresses These Challenges 
+CPMAI was designed to close these gaps and reduce the high rate of AI project failures. The 
+CPMAI methodology extends familiar, proven approaches—like agile and data-focused 
+frameworks—with AI-specific best practices. Its benefits include: 
+1. Iterative, data-centric focus 
+CPMAI weaves data readiness into every step. From Phase I (Business Understanding) 
+onward, teams verify whether the problem truly needs AI, whether the data is sufficient 
+and high-quality, and whether stakeholders agree on success metrics. By returning to 
+earlier phases as needed, CPMAI ensures that data issues or business misalignments are 
+caught early. 
+2. Structured feasibility checks 
+CPMAI prescribes an “AI Go/No-Go” process that looks at business feasibility, data 
+feasibility, and implementation feasibility. If critical pieces such as a reliable data 
+pipeline or buy-in from senior leaders are missing, the methodology advises revisiting 
+earlier phases or readjusting the project scope rather than pushing forward blindly. 
+3. Integration with existing organizational practices 
+CPMAI’s vendor-neutral, iterative structure meshes well with standard project 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 8 of 32 
+management offices. It does not force teams to abandon predictive, adaptive, or hybrid 
+approaches but rather augments them with best practices unique to AI, such as continuous 
+data validation, model versioning, and monitoring for bias or drift. 
+4. Ongoing model monitoring and governance 
+Instead of “one-and-done” deployments, CPMAI emphasizes MLOps: a life cycle 
+approach ensuring that AI models remain updated, accurate, and compliant over time. 
+This includes establishing monitoring dashboards, triggers for retraining, and version 
+control to roll back to prior models if needed. 
+5. Real-world ROI and trustworthiness 
+Because CPMAI starts with business understanding, it focuses on quantifiable ROI or 
+productivity objectives. CPMAI also embeds guidelines for ensuring data security, ethical 
+considerations, and transparent model decisions—key ingredients for building trust, both 
+internally and externally. 
+By blending data-centric AI practices with iterative project management, CPMAI offers a clearer 
+path to managing the complexities that often derail AI initiatives. This combination dramatically 
+improves the odds that AI projects will deliver tangible value, avoid common pitfalls, and remain 
+viable over the long run. 
+The Seven Patterns of AI 
+While many applications fall generally under the umbrella of “artificial intelligence,” these AI 
+solutions can often look wildly different in practice. One AI system might detect fraudulent 
+transactions, another might pilot a self-driving car, and a third might personalize 
+recommendations on a shopping app. These may all be generally AI applications, but they differ 
+in many substantial ways. 
+To address these differences, AI projects fit within seven main “patterns” of AI. Each pattern 
+comes with its own data requirements, risks, and considerations. By mapping an AI project to 
+one or more of these patterns, you can shortcut technology decisions, more accurately gauge 
+required data, and better scope the project to address your specific AI project needs. 
+Below is a visual representation of the seven patterns of AI: 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 9 of 32 
+ 
+Overview of Each Pattern 
+Conversational & Human Interaction 
+● Goal: Enable AI systems to interact via natural language, typed or spoken, with human 
+users. 
+● Examples: Chatbots for customer service, virtual assistants (e.g., internal help desk bots), 
+voice-controlled assistants. 
+● Data requirements: Large volumes of text transcripts, audio data, or both; labeled for 
+language-specific intent and entities. 
+● Key pitfalls: These include language ambiguity, domain-specific jargon, and a 
+continuous need for updated training data (new slang, product lines, etc.). 
+Recognition 
+● Goal: Classify or extract meaningful information from unstructured inputs such as 
+images, audio, or documents. 
+● Examples: Image recognition (detecting objects or faces), speech-to-text, handwriting 
+extraction. 
+● Data requirements: Large, labeled data sets of images, audio snippets, or text. Must 
+handle real-world variability (e.g., different lighting conditions, multiple accents). 
+● Key pitfalls: Data bias can occur if training images or audio clips do not reflect real-
+world diversity; privacy and ethical concerns also exist (e.g., facial recognition). 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 10 of 32 
+Patterns & Anomalies 
+● Goal: Identify when data points deviate from the norm or discover hidden patterns in 
+data without predefined labels. 
+● Examples: Fraud detection in banking, sensor-based anomaly detection in 
+manufacturing, network intrusion detection. 
+● Data requirements: Historical or streaming data showing “normal” versus “abnormal” 
+conditions. Often unsupervised or semi-supervised machine learning. 
+● Key pitfalls: Rare or evolving anomalies can lead to high false positives; in real-time 
+settings, fast processing pipelines are critical. 
+Predictive Analytics & Decision Support 
+● Goal: Forecast outcomes or trends using historical data and support human decision-
+making with data-driven insights. 
+● Examples: Sales forecasting, churn prediction, demand planning, revenue projections. 
+● Data requirements: Sizable historical data sets with relevant features (e.g., time series 
+data, demographic data), plus continuous updates for retraining. 
+● Key pitfalls: Data drift can occur if external conditions (market changes, seasonality) 
+shift; overreliance on the model without human judgment can cause poor decisions. 
+Hyperpersonalization 
+● Goal: Personalize content or recommendations for each individual or user based on past 
+behavior and context in near-real time. 
+● Examples: Product recommendations on e-commerce sites, personalized media streams 
+on music/video platforms, dynamic website content. 
+● Data requirements: Detailed user histories (clickstreams, purchase data, watch or listen 
+histories) and robust privacy protections. 
+● Key pitfalls: Privacy violations can happen if personal data is over-collected; model bias 
+or stale recommendations can surface if retraining is not frequent. 
+Autonomous Systems 
+● Goal: Systems or agents operate with minimal human intervention and adapt in real time 
+to dynamic environments. 
+● Examples: Self-driving vehicles, robots in warehouses, autonomous drones, automated 
+process agents. 
+● Data requirements: Real-time sensor data—LiDAR, cameras, Internet of Things (IoT) 
+sensors—plus robust simulation data for training and testing. 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 11 of 32 
+● Key pitfalls: Autonomous systems are high stakes (safety-critical, requires extensive 
+testing), can have unpredictable performance in rare/edge conditions, with potentially 
+significant regulatory compliance requirements. 
+Goal-Driven Systems 
+● Goal: Optimize toward a defined objective under constraints, often by searching or 
+planning possible strategies. 
+● Examples: Scheduling and routing optimizations, advanced gameplay (chess, Go), 
+dynamic resource allocation. Sometimes this pattern uses reinforcement learning. 
+● Data requirements: Accurate representations of the environment, constraints, and 
+objective function(s).  
+● Key pitfalls: Complexity can skyrocket with many variables and constraints; ensuring 
+real-world feasibility of solutions can be tricky. 
+How These Patterns Align With CPMAI 
+Each of these seven patterns, from a simple chatbot to an advanced autonomous drone, will still 
+follow the CPMAI life cycle: from clarifying a business need in Phase I (e.g., reduce call center 
+load), to checking data feasibility in Phase II (Do we have enough user conversation logs?), 
+through data preparation (data labeling, data cleaning) in Phase III, and on to model 
+development, evaluation, and operationalization for Phases VI, V, and VI. 
+We can also use the seven patterns of AI to identify and clarify: 
+● Different data requirements. For instance, a recognition project might need carefully 
+labeled images, while a predictive analytics project likely focuses on structured historical 
+records. By identifying your pattern early, you will be clearer about the data you need. 
+● Scope and complexity. Projects in certain patterns, like autonomous systems, tend to be 
+higher risk and require more advanced infrastructure. By contrasting patterns, you can 
+gauge if a minimum viable product (MVP) or pilot is realistic in the short term—  
+for example, an anomaly detection pilot versus full autonomy. 
+● Iteration cycle. CPMAI emphasizes that you revisit earlier phases when you hit data or 
+modeling gaps. Recognizing which AI pattern you are dealing with helps you anticipate 
+the next iteration or pivot, such as collecting more images for a recognition pattern 
+project if the model is underperforming. 
+● Pitfalls and risks. Each pattern has typical pitfalls that many experience in that particular 
+pattern—for example, issues of bias in hyperpersonalization, sensitivity to noise in 
+patterns and anomalies, or safety in autonomous systems. CPMAI phases ensure that you 
+detect these issues early. By mapping the pattern, you can incorporate relevant 
+trustworthiness, governance, and stakeholder concerns more precisely. 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 12 of 32 
+Ultimately, the seven AI patterns provide a conceptual shortcut: They let you understand up front 
+the likely data, resources, and methods needed for success. CPMAI’s disciplined, data-first 
+methodology helps ensure that whichever pattern(s) you adopt, you will systematically validate 
+business needs, assess data feasibility, and deliver AI in an iterative, well-managed way. 
+The Six Phases of CPMAI 
+CPMAI organizes AI projects into six iterative phases: Business Understanding, Data 
+Understanding, Data Preparation, Model Development, Model Evaluation, and Model 
+Operationalization. Each phase focuses on specific tasks essential to AI success. Central to all 
+phases is the necessity of data.  
+Far from a linear checklist, these phases form a loop that incorporates ongoing feedback, 
+continuous learning, and alignment with business objectives. These phases can be visualized as 
+an iterative cycle: 
+ 
+Because AI is inherently data-driven, the methodology begins by defining the business problem 
+and data requirements up front, then proceeds through iterative cycles of data wrangling, model 
+building, and rigorous validation. Each new iteration of the AI project delivers concrete short-
+term value and builds a foundation for long-term success. 
+This iterative design allows teams to discover and mitigate risks early, refine their models based 
+on evolving data or business conditions, and maintain consistent alignment with stakeholder 
+needs. By grounding every phase in data feasibility and measurable ROI, CPMAI ensures that AI 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 13 of 32 
+projects systematically progress from concept to real-world impact while avoiding many of the 
+pitfalls that cause traditional technology efforts to fail.  
+CPMAI Phase I: Business Understanding 
+Establishing the right foundation for an AI project starts with clearly defining the business 
+problem you intend to solve. In CPMAI Phase I, the project team determines why AI is needed, 
+sets success metrics, identifies the relevant pattern(s) of AI, clarifies scope, determines whether 
+the AI project can proceed, and ensures that stakeholders agree on goals. Without this phase’s 
+thorough preparation, AI efforts risk failing later due to misalignment between the solution, the 
+data, and the real needs of the organization. 
+Establishing the Business Problem That AI Can Address 
+A central element of CPMAI Phase I is ensuring that the problem you plan to solve is well-suited 
+for AI. Not all challenges require advanced machine learning or AI. Some are more efficiently 
+addressed with conventional automation. During this stage, the project manager must: 
+● Pinpoint the true need: Identify the most pressing pain point or opportunity within the 
+organization. Examples include reducing manual effort in a high-volume process, 
+personalizing product recommendations, or detecting fraud in near-real time. Consequent 
+to this is determining which pattern(s) of AI can facilitate that need. 
+● Confirm that AI is justified: Make sure AI adds tangible value. AI is especially helpful 
+in scenarios where rules are difficult to encode by hand or where scaling with people or 
+static rules has proven too costly or inefficient. 
+● Engage stakeholders early: Collaborative input from the line-of-business owners, 
+subject matter experts, and executive sponsors helps clarify exactly where an AI solution 
+can deliver the highest return on investment. If there is insufficient buy-in, the project 
+may stall due to budget constraints or organizational resistance. 
+At the end of this step, the team should have a succinct and well-supported statement of the 
+business problem to be solved by AI, along with initial alignment from key stakeholders. 
+Defining Success Criteria and Scope 
+Defining success up front helps prevent “moving the goalposts” once an AI project is underway. 
+This activity includes: 
+● ROI and key metrics: Identify what success looks like, whether it is cost reduction, 
+revenue growth, time savings, or risk minimization. For example, a chatbot project might 
+aim to reduce live call center volume by 20%. A predictive analytics model might seek to 
+improve forecast accuracy from 70% to 85%. 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 14 of 32 
+● AI Go/No-Go feasibility checks: Ask questions regarding the project’s business 
+feasibility, data feasibility, and implementation feasibility. Even if there is high 
+enthusiasm, you should pause or adjust scope if data is unavailable, the cost to prepare 
+data is too high, or the organization lacks the infrastructure to deploy the model. 
+● Scope boundaries and MVP: Identify an initial “must-have” deliverable—something 
+you can pilot in a real environment to show genuine value. This helps avoid large, 
+multiyear initiatives without demonstrable progress. 
+Documenting success criteria in Phase I ensures that later you can test whether the AI system 
+actually delivers its promised business value. 
+AI Patterns and Project Fit 
+Selecting the right AI pattern can accelerate planning, clarify data requirements, and help the 
+team pick suitable tools. As introduced in this guide, these seven patterns—Conversational, 
+Recognition, Patterns & Anomalies, Predictive Analytics, Hyperpersonalization, Autonomous 
+Systems, and Goal-Driven Systems—offer shortcuts for solution design. 
+For instance, a recognition pattern might demand abundant labeled image data, whereas 
+predictive analytics places emphasis on large, historical data sets for forecasting. By matching 
+the business objective to the correct AI pattern(s) in Phase I, you reduce the risk of misapplying 
+technology. This, in turn, informs your feasibility checks, as each pattern has specific data, 
+scope, and infrastructure needs. 
+Potential Pitfalls to Be Aware of in CPMAI Phase I 
+Although Phase I is meant to mitigate many common problems, a few pitfalls can still derail a 
+project if not managed carefully: 
+1. Overpromising: Stakeholders often desire unrealistic “magical” AI capabilities before 
+confirming data quality, or lacking clarity on whether AI even solves the real problem. 
+2. Undefined problem statement: If stakeholders cannot describe a quantifiable goal (e.g., 
+a measurable metric for success), the project risks scope creep and confusion. 
+3. Poor stakeholder alignment: Without buy-in from those who fund, use, or depend on 
+the solution, you may face budget cuts, contradictory requirements, or organizational 
+friction. 
+4. Skipping feasibility questions: Ignoring the AI Go/No-Go checklist can push the team 
+into building solutions it cannot implement due to missing resources or data. 
+Properly executed, CPMAI Phase I ensures your AI initiative targets the right challenge, has 
+clear buy-in, and is framed for measurable outcomes before you proceed to data-related 
+activities. By marrying the right AI pattern with well-articulated business needs, you set the stage 
+for an initiative that can genuinely deliver ROI and avoid the fate of so many underperforming 
+AI projects. 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 15 of 32 
+CPMAI Phase II: Data Understanding 
+Once a project team has established why an AI solution should be pursued in CPMAI Phase I 
+(Business Understanding), the next step is determining what data is needed and whether it is 
+sufficient in quantity and quality.  
+This is the focus of CPMAI Phase II: Data Understanding. Successful AI efforts depend on 
+having the right data, at the right time, in the right format—and Phase II is designed to confirm 
+that such data is actually available, feasible to work with, and suitable for solving the stated 
+business problems.  
+Data Source Inventory and Quality 
+A key first task in Phase II is identifying the data sources you intend to use and assessing how 
+“ready” those data sources are for your AI project. In many organizations, data can be scattered 
+across different systems and formats including internal databases, cloud storage, partner APIs, or 
+even public data sets.  
+In this part of CPMAI Phase II, your team should: 
+1. List potential sources 
+Catalog relevant data repositories, application programming interfaces (APIs), files, and 
+any partner or third-party data assets that might address the objectives defined in Phase I. 
+This inventory should clarify who owns each data set, where it resides, and how it can be 
+accessed.  
+2. Check data quality 
+Evaluate completeness (Are all necessary fields present?), consistency (Do formats and 
+naming conventions match?), and accuracy (How reliable are these records?). AI 
+solutions need robust, clean data; otherwise, the downstream models may produce 
+misleading or untrustworthy results. Data that is disorganized or incomplete here signals 
+potential risk for the entire project. 
+3. Explore data gaps 
+If certain data types are missing or inaccessible, you may need to revisit Phase I either to 
+scale back the project scope or to explore how to acquire or create the missing data. This 
+inventory process may also reveal that a simpler approach or even a non-AI solution 
+suffices if data gaps cannot be addressed.  
+Addressing The “V’s” of Big Data 
+Even if your organization has identified where data lives, the nature of that data can create 
+unique challenges. AI projects often deal with “big data,” commonly described by the Four 
+V’s—Volume, Variety, Velocity, and Veracity.  
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 16 of 32 
+● Volume: How much data is available? Some AI solutions require vast data sets to train 
+reliably, but large volumes can introduce processing and storage complexities. 
+● Variety: In what formats does data arrive (images, text, sensor data, logs, etc.)? Many 
+organizations discover that structured tables are only a fraction of what they have. 
+Unstructured data such as emails, images, videos, or documents comprise most real-
+world data. AI can excel at extracting insights from unstructured sources but only if your 
+team has planned for that. 
+● Velocity: Are you dealing with real-time data streams, or is batch data updated every 
+week or month? Projects that need up-to-the-second results for applications such as fraud 
+detection or autonomous systems must ensure real-time data pipelines and low-latency 
+processing. 
+● Veracity: Is your data trustworthy? Even with large volumes, data riddled with errors, 
+missing values, or biased samples will hamper your model’s accuracy. Veracity also 
+relates to data provenance—knowing who created or owns the data and whether it has 
+been altered. 
+By carefully evaluating these “V’s,” teams can plan how best to handle data ingestion, storage, 
+transformation, and ongoing maintenance, a crucial step before investing further resources in 
+model building. 
+Key Data Governance and Privacy Considerations 
+Proper governance is critical once you know what data you plan to use. In AI projects, 
+governance and compliance are not mere afterthoughts; they are essential guardrails preventing 
+ethical, legal, or reputational harm.  
+In CPMAI Phase II: Data Understanding, we need to address the following considerations: 
+1. Ownership and permissions 
+Confirm that you have the right to use each data set for AI experimentation and eventual 
+production use. Some data may include personally identifiable information (PII). Your 
+organization must follow relevant regulations such as the General Data Protection 
+Regulation (GDPR) or California Consumer Privacy Act. 
+2. Security and access control 
+Especially for sensitive data, ensure you have robust security protocols for data in transit 
+and at rest. Missteps here can lead to data breaches that undermine business goals and 
+damage trust. 
+3. Privacy compliance 
+De-identify or anonymize data where required. AI systems often need large, varied data 
+sets, but that does not override privacy obligations. A healthy AI practice respects users’ 
+data rights from the outset, mitigating risk of unethical or unlawful data use. 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 17 of 32 
+4. Potential bias 
+If data is unrepresentative of certain groups or conditions, the resulting AI model could 
+produce biased outputs. Begin scanning for major distributional skews or missing 
+demographics now. Uncovering bias during Phase II can save large rework costs later. 
+Feasibility Checks 
+Just as Phase I included an AI Go/No-Go business feasibility step, Phase II provides a data 
+feasibility check. We need to ask, “Do we truly have the data and governance structures needed 
+to support this AI project?”  
+Additional questions to address in CPMAI Phase II: Data Understanding include: 
+● Understanding of sufficient quantity and quality of data 
+If data is sparse, outdated, or of questionable quality, the model may fail to deliver 
+results. Determine whether it is possible to fill in gaps, purchase external data, or refine 
+scope. 
+● Complexity of data preparation 
+Certain data formats such as images or free-text documents require more extensive 
+cleaning or labeling. If these tasks are too expensive or time-consuming, it might affect 
+the project’s ROI or timeline. 
+● Alignment with Phase I goals 
+Does the data identified here support the specific success criteria defined earlier? If not, 
+you may need to adjust goals or revisit Phase I. This is normal in an iterative approach. 
+Finding a mismatch early prevents investing in a project that cannot succeed. 
+If major obstacles remain unsolved, it can be prudent to pause or adjust scope before moving 
+ahead. Otherwise, your AI solution is likely to fail if the underlying data is not up to the task. By 
+the end of CPMAI Phase II, your team should know which data sources it can rely on, how 
+feasible it is to obtain or prepare them, and what critical issues may hinder success. 
+Remember, Phase II is often where an AI project’s potential pitfalls are first exposed. Lack of 
+data, data privacy concerns, or uncertainty over data ownership can derail the best-intended 
+plans. Identifying and solving these issues now dramatically increases the likelihood of success 
+in later phases.  
+CPMAI Phase III: Data Preparation 
+By the time you reach CPMAI Phase III: Data Preparation, your organization has already 
+confirmed that the business problem warrants an AI solution (Phase I) and that you have 
+identified and inventoried the data needed to power that solution (Phase II). Now comes the 
+phase where the bulk of practical effort often occurs.  
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 18 of 32 
+Many teams discover that 80% or more of their time on AI projects is spent preparing data rather 
+than coding or modeling. By systematically planning and executing data preparation, you 
+maximize the chances that your AI project will succeed. 
+Addressing Needs for Data Wrangling and Cleaning 
+Before you can train or deploy AI models, you must ensure that the data is reliable and 
+appropriately structured. Common data preparation tasks in CPMAI Phase III include: 
+● Consolidating sources: If data originates from multiple locations such as relational 
+databases, data warehouses, or web APIs, you need to merge these sources in a consistent 
+format. 
+● Parsing and transforming: Convert dates, times, addresses, or text fields into 
+standardized formats. For instance, ensure all dates follow specific formatting rules. 
+● Cleansing and repairing: Remove duplicates or erroneous records, handle missing 
+values, and fix inconsistent labels. If data is incomplete or exhibits major gaps, this can 
+reduce model accuracy or introduce bias. 
+● Normalization and standardization: Ensure numeric fields use consistent units and 
+scales. Text must be consistently encoded or tokenized. 
+Even if you have a large quantity of data, poor data quality can derail the entire project. Make 
+time and budget allowances for thorough cleaning, merging, and testing of data integrity. A 
+robust approach might involve automated workflows that scan for data anomalies, such as 
+abnormally large values or mismatched field lengths, and flag them for manual or semi-
+automated review. 
+Performing Data Labeling and Annotation 
+Many AI techniques, especially supervised learning, require well-labeled data for training and 
+validation. For example, an image recognition system cannot learn to distinguish “plant” from 
+“weed” unless images are labeled correctly as “plant” or “weed.” Key considerations: 
+● Labeling strategies: 
+○ In-house manual annotation: Existing employees or newly hired data annotators 
+tag the data. This is often expensive but can be highly accurate if done by domain 
+experts. 
+○ External labeling services: Third-party labeling firms can handle large data sets 
+more quickly, although you may need strong quality control processes to ensure 
+consistency. 
+○ Crowdsourcing: Platforms like Amazon Mechanical Turk (or similar) can 
+rapidly label data but can introduce quality challenges if tasks are not clearly 
+specified and validated. 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 19 of 32 
+○ Synthetic data or augmentation: Generating new examples or transforming 
+existing data such as flipping or rotating images, or adding noise can improve 
+model robustness if real data is limited. 
+● Balancing quantity and quality: More data is not always better if it is mislabeled or 
+inconsistent. For instance, a mislabeled data point can confuse a model far more than a 
+missing data point. 
+Data labeling must be integrated into your data pipeline so that if you iterate later and gather new 
+data, you can continue labeling seamlessly. Implementing version control or a labeling 
+“playbook” can help maintain consistency across different teams and time periods. 
+Development of Data Pipelines 
+A major output of Phase III is a reliable, repeatable pipeline that transforms raw inputs into 
+analysis-ready data sets. In many AI projects, you will build two types of pipelines: a training 
+data pipeline that gathers historical or static data from identified sources for training purposes, 
+and an inference (or “production”) pipeline that handles incoming real-time or batch data once 
+the AI model is operational. 
+Key best practices include: 
+● Automation: Use extract, transform, load (ETL) or extract, load, transform (ELT) 
+processes to reduce manual tasks. 
+● Documentation: Track each cleaning or transformation step, ensuring you can reproduce 
+results and troubleshoot issues. 
+● Version control: Keep track of data transformations as thoroughly as you track code 
+changes. This is especially important if you need to revisit or audit data in future 
+iterations. 
+● Security and compliance: If data is personally identifiable (PII) or otherwise sensitive, 
+incorporate anonymization or encryption at appropriate pipeline stages. 
+Avoiding Common Pitfalls in Data Preparation for AI 
+Despite seeming straightforward, CPMAI Phase III is where AI teams most frequently run into 
+trouble. Here are common pitfalls and how to avoid them: 
+1. Underestimating time and complexity 
+○ Teams often assume data is “ready to go” after an initial pass. In reality, data 
+preparation can take much longer than anticipated. Document constraints up front 
+and set realistic timelines. 
+2. Lack of anonymization or governance 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 20 of 32 
+○ Failing to address privacy or compliance issues can halt a project midstream. If 
+data includes personal or sensitive information, have robust procedures for 
+masking or anonymizing it. 
+3. Forgetting future data pipelines 
+○ Building a one-off script for data cleaning might work for a prototype, but 
+production systems require stable, maintainable pipelines that handle ongoing 
+data flows consistently. 
+4. Improper labeling or low-quality annotation 
+○ Inconsistent or inaccurate labels can distort model outputs. Establish quality 
+assurance processes such as random sampling and double-checking of labels by 
+experts to ensure correctness. 
+5. Overlooking data drift 
+○ Even if your data is consistent today, real-world conditions change. Phase III 
+should include plans for refreshing data, updating labels, and rechecking 
+relevancy as you move into operationalization. 
+By addressing these potential problems, you give your AI initiative a stable foundation. 
+Thoughtful data preparation reduces downstream rework, improves model accuracy, and creates 
+maintainable workflows that handle new data well after deployment. 
+CPMAI Phase IV: Model Development 
+Once your team has a clear business case, knows exactly what data it needs, and has prepared 
+that data in a usable form, you are ready to move into CPMAI Phase IV: Model Development. At 
+this point, your AI project transitions from the foundational data-centric work of the earlier 
+phases toward creating, testing, and refining a working AI or ML model. This phase includes 
+selecting the right tools and algorithm(s), training and tuning the model, deciding how best to 
+leverage off-the-shelf or pretrained models if needed, and systematically tracking experiments so 
+you can iterate effectively. 
+Algorithm and Tool Selection 
+Selecting the right approach and technology platform can make the difference between a 
+streamlined, successful AI project and one that quickly becomes unmanageable. By CPMAI 
+Phase IV, you already understand: 
+● The AI pattern you plan to implement (e.g., recognition, predictive analytics, 
+hyperpersonalization). 
+● The type, structure, and volume of data available (including any labeling, 
+transformations, or third-party data sources). 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 21 of 32 
+Armed with this information, you can match algorithm types (e.g., decision trees, random 
+forests, gradient-boosted models, or neural networks) to the problem requirements. Key 
+considerations for algorithm and tool selection include: 
+● Complexity versus interpretability: Highly complex algorithms such as deep learning 
+neural networks can generate powerful results but are harder to interpret. Less complex 
+methods such as linear or logistic regression may be more transparent but might not 
+capture every nuance in large, unstructured data sets. 
+● Data constraints: Some algorithms such as deep learning neural nets require large 
+amounts of data, whereas simpler algorithms such as Naive Bayes and basic decision 
+trees can perform well even with smaller training sets. 
+● Computational resources: The choice of on-premises versus cloud compute, central 
+processing unit (CPU) versus graphics processing unit (GPU), or specialized hardware 
+depends on the scale of training and the time/budget you have for development and 
+iteration. 
+● Existing ecosystem: In many organizations, teams already use specific tools or cloud 
+platforms. Aligning with existing tools can simplify collaboration and speed up 
+development. 
+Keep in mind that CPMAI Phase IV does not necessarily mean starting from scratch. If a 
+commercial or open-source package suits your needs, or if your organization already has an AI 
+platform in place, explore those first to save time and avoid reinventing the wheel. 
+AI Approach Trade-Offs 
+In this part of CPMAI Phase IV, you will choose specific tools and modeling approaches suited 
+to your data and project constraints. Here are some factors to balance: 
+● Training time and cost: Neural networks, especially deep learning, can require days or 
+weeks of GPU/tensor processing unit time, whereas simpler techniques may train in 
+minutes on a single machine. 
+● Interpretability versus accuracy: Highly accurate deep learning models may be “black 
+boxes,” making it challenging to explain decisions. Simpler models such as Naïve Bayes 
+or ensemble methods might sacrifice a bit of performance for clearer explanations. 
+● Data availability and quality: If data volume is limited, complex algorithms may 
+overfit, while simpler methods can generalize well. Conversely, if you have a massive 
+labeled data set, advanced approaches might yield impressive accuracy. 
+Leveraging Off-the-Shelf Models, Pretrained Models, and Transfer 
+Learning 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 22 of 32 
+In many AI domains such as computer vision or language models, there are numerous pretrained 
+neural networks and open-source solutions. Large language models (LLMs) and foundational 
+models are quite powerful and, in many instances, can be used off the shelf without modification. 
+These can jump-start development when: 
+● You lack large, labeled data sets to train from scratch. 
+● Time to market is critical, and you want to adapt an existing model quickly. 
+● Specialized domain knowledge is embedded in a reputable third-party solution. 
+Common strategies include: 
+● Off-the-shelf services: For tasks like speech to text, sentiment analysis, or image 
+detection, vendors may offer reliable APIs that handle the core ML workload. Always 
+verify data ownership, privacy, and licensing constraints before you adopt them. 
+● Transfer learning and fine-tuning: Take an existing network trained on a broad data set 
+and fine-tune it with your domain-specific data. This greatly reduces the volume of 
+labeled data and training time needed. 
+Before building your first AI solution, confirm the following: 
+● Feasibility with existing platforms: Check if you can use existing libraries or off-the-
+shelf services. 
+● Deployment environment: If the model must run on low-power edge devices, large 
+neural networks might be impractical unless carefully optimized. Conversely, if you plan 
+to scale on robust cloud infrastructure, you can handle more computationally intensive 
+approaches. 
+● Training versus inference requirements: Plan for differences between the training 
+pipeline (often batch, large-scale) and the inference pipeline (potentially real-time or 
+streaming). 
+Model Training and Tuning 
+If you have determined that building a model in house is the best approach, you will train the 
+model using the cleaned, prepared data from Phase III. Typical steps include: 
+1. Splitting data: Partition your data set into training, validation, and test sets (e.g., 
+70/15/15) to prevent overfitting and measure real-world performance. 
+2. Iterative training: Train an initial model, evaluate on validation data, adjust 
+hyperparameters (learning rate, number of layers, etc.), and retrain as needed. 
+3. Early stopping and regularization: Guard against overfitting by halting training when 
+validation performance plateaus or by applying regularization (e.g., L2, dropout). 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 23 of 32 
+4. Performance checks: Track metrics such as precision, recall, F1-score, root mean square 
+error (RMSE), or other key performance indicators (KPIs) relevant to your project’s 
+success criteria. 
+Because AI projects are iterative, it is crucial to track the details of each training run and 
+experiment. Important facets of experiment tracking include: 
+● Hyperparameter records: Keep a log of how each combination of hyperparameters, 
+such as learning rate and batch size, affects results. 
+● Model versioning: Assign version numbers or tags to each trained model so your team 
+can reproduce or roll back to previous variants. 
+● Metrics dashboard: Monitoring accuracy, loss, or other relevant KPIs across many 
+training runs helps you identify the best path forward. 
+CPMAI Phase IV: Model Development is where you convert well-defined business needs and 
+carefully prepared data into working AI solutions. By balancing algorithm complexity, available 
+data, computational resources, and interpretability, you can develop a model that truly solves 
+your organization’s problem.  
+Keep your approach iterative: Train, test, and refine. If you discover new data requirements or a 
+mismatch with business goals, do not hesitate to circle back to earlier phases (Data 
+Understanding or Data Preparation) before moving on to formal evaluation and eventual 
+deployment.  
+CPMAI Phase V: Model Evaluation 
+Once a preliminary AI solution has been developed, it is critical to determine whether it truly 
+meets the needs defined earlier in the project CPMAI phases and can reliably deliver value in the 
+real world. In CPMAI Phase V, teams rigorously evaluate the AI solution’s performance from 
+both a technical and business perspective before deciding if it is ready for large-scale 
+deployment. This phase ensures that the AI solution is accurate, aligned with organizational 
+goals, and robust enough to handle changing data or conditions over time. 
+Why Evaluate and Test AI Solutions Before Deployment 
+1. Ensuring reliability and accuracy: Unlike traditional software, AI systems learn 
+patterns from data and produce probabilistic outputs. Even a small misalignment between 
+training and real-world data can significantly reduce accuracy. Rigorous evaluation, 
+including checks for data or model drift, helps confirm that the model performs 
+consistently and meets the project’s technical and business needs. 
+2. Validating business objectives and ROI: In CPMAI Phase I, the team established the 
+project’s success criteria and ROI expectations. Phase V is where you confirm that the AI 
+solution meets or exceeds those goals. A model that is technically accurate but does not 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 24 of 32 
+deliver measurable business value will not be considered successful within the CPMAI 
+framework. 
+3. Preventing negative impacts: Models that produce incorrect or biased outcomes can 
+harm productivity, damage stakeholder trust, or create legal and ethical risks. Thorough 
+testing and validation help catch these issues early, minimizing the risk of deploying an 
+AI system that harms users or fails to meet compliance requirements. 
+4. Meeting ethical and regulatory requirements: Organizations may need to comply with 
+industry-specific guidelines or data privacy regulations (e.g., GDPR). Phase V is the 
+checkpoint for verifying that the AI solution’s outputs, data usage, and decision processes 
+satisfy these regulations and ethical considerations. 
+Performing Technical and Business Performance Metrics 
+To perform those evaluation steps, we will perform various checks for performance and business 
+metrics in CPMAI Phase V. 
+Technical Performance Metrics 
+1. Determining model accuracy, precision, and recall: For classification tasks, standard 
+metrics like accuracy, precision, recall, and F1-score measure how well the model 
+predicts correct labels versus false positives or negatives. 
+2. Regression, clustering, or other metrics: If your project involves predicting continuous 
+variables such as sales forecasts, metrics such as RMSE or mean absolute error (MAE) 
+can reveal how closely predictions match real values. Clustering or pattern detection 
+projects might require specialized metrics. 
+3. Overfitting and underfitting checks: To confirm that the model generalizes well 
+beyond the training data, use validation curves or cross-validation to detect overfitting 
+(model clings too closely to training data) or underfitting (model fails to capture patterns 
+in the data). Techniques like confusion matrices, learning curves, and holdout test sets are 
+vital for diagnosing these issues. 
+4. Operational effectiveness: Some AI systems must meet strict throughput or latency 
+requirements. For example, a real-time anomaly detection model in a manufacturing plant 
+must reliably process sensor data at high speed. Phase V testing should confirm that these 
+operational requirements are being met consistently. 
+Business Metrics and KPIs 
+1. ROI and cost-benefit analysis: Model success goes beyond raw accuracy. Align 
+performance metrics with the ROI or cost-benefit criteria outlined in Phase I. For 
+instance, if your objective is to reduce customer service call volume, track metrics like 
+shorter average handling time or lower call transfer rates. 
+2. User adoption and satisfaction: An AI project is only successful if end users or 
+customers trust and adopt the solution. Gather user feedback, usability reports, or 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 25 of 32 
+stakeholder interviews to confirm that the AI system is easy to use and adds measurable 
+value to daily workflows. 
+3. Risk management and compliance: Check that the model addresses internal risk 
+thresholds, for example, no more than a 2% false negative rate in a fraud detection 
+scenario. Evaluate compliance with relevant governance and legal frameworks. 
+Model Governance and Monitoring Approach 
+In CPMAI Phase V, we will also implement approaches to guarantee that AI solutions continue 
+to meet business, compliance, and governance requirements over time. 
+1. Detecting model drift and data drift: Even if a model performs well initially, real-
+world data can change over time. For example, customer behaviors might evolve, or 
+sensor data might shift due to seasonal changes. Phase V lays the groundwork for 
+ongoing monitoring to detect performance deterioration (“model drift”) or shifts in data 
+distribution (“data drift”). 
+2. MLOps foundations: To maintain continuous alignment between model development 
+and deployment, many organizations implement MLOps practices similar to DevOps but 
+adapted for AI. This includes continuous integration (CI) for regularly merging updated 
+code or data pipelines, continuous delivery (CD) for deploying model updates into 
+production after passing validation tests, and model versioning to ensure each update is 
+tracked, tested, and can be rolled back if performance issues arise. 
+3. Compliance, security, and ethics checks: Organizations often need a governance 
+framework that outlines how models are approved, audited, and updated. Activities might 
+include ethical reviews for bias or unintended discriminatory behavior, security measures 
+to prevent unauthorized access to model artifacts or training data, and transparent 
+decision logs for accountability and stakeholder trust. 
+4. Post-deployment planning: Plan for how the model will be monitored once it goes live. 
+Define automatic triggers or performance thresholds that prompt alerts for retraining, 
+additional data collection, or a potential rollback to a previous model version. 
+Deciding on Go/No-Go for Deployment 
+In CPMAI Phase V, we make the final determination if the AI solution is ready for use in the real 
+world. That determination is made based on a few factors: 
+1. Meeting performance thresholds: If the model does not reach agreed-upon technical 
+and business targets, the team may choose to iterate further to prior phases before 
+prematurely releasing an AI solution that does not meet organizational needs. This might 
+involve returning to Phase II (Data Understanding) or Phase III (Data Preparation) to 
+address shortcomings in data quality or scope. 
+2. Stakeholder confidence and approval: Gather input from key decision-makers, domain 
+experts, and end users. If major concerns arise, such as ethical red flags or unacceptable 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 26 of 32 
+trade-offs, additional refinements or scope changes may be required before 
+operationalizing. 
+3. Determination of rollout strategy: If the model clears all validation gates, the team 
+proceeds to Phase VI: Operationalization, with a well-defined rollout plan. This plan 
+should include user training, performance monitoring, and a well-documented 
+governance process to ensure the model remains effective and aligned with the 
+organization’s objectives. 
+One of CPMAI’s guiding principles is that nothing is set in stone. If you discover model 
+limitations or new business requirements in Phase V, do not hesitate to loop back to earlier 
+phases. This iterative mindset helps refine data, adjust modeling decisions, or even pivot to a 
+different AI solution if needed. 
+With the model thoroughly vetted in Phase V, you can move on to CPMAI Phase VI: Model 
+Operationalization, confident that your AI solution is both effective and aligned with 
+organizational goals yet always prepared to iterate as new data, challenges, or requirements 
+emerge. 
+CPMAI Phase VI: Model Operationalization 
+Even the best, most accurate AI solution delivers no real value until it is successfully deployed 
+and used in a production environment. In CPMAI Phase VI: Model Operationalization, teams 
+integrate their validated AI solutions into the organization’s systems and workflows, ensuring the 
+AI solution consistently delivers value and can adapt to inevitable changes in data, objectives, or 
+real-world conditions. The process is sometimes referred to as “putting AI into operation or 
+production” or simply “deployment,” but CPMAI goes further by addressing continuous 
+integration, monitoring, governance, and user adoption needs. 
+Determining Deployment Environments 
+A key question in CPMAI Phase VI: Operationalization is where and how the AI model will run: 
+● On-premises: The model may need to live on a company’s internal servers due to 
+compliance, security, or latency constraints. 
+● Public/private cloud: Cloud deployment can provide flexible scaling for large volumes 
+of data or sudden demand spikes. 
+● Edge devices: Models can run on mobile phones, robots, IoT sensors, or other edge 
+hardware. These deployments demand careful optimization such as a smaller footprint 
+and potentially limited internet connectivity to ensure the model performs reliably in real 
+time. 
+During this step, AI project teams consider performance criteria including prediction speed, 
+concurrency limits, cost targets (e.g., GPU versus CPU usage), and data transfer constraints. If 
+the application must respond instantly, such as in a real-time production line fault detector, on-
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 27 of 32 
+device or low-latency configurations may be crucial. If daily or weekly batch outputs are 
+sufficient, a server-based or cloud batch deployment can be more cost-effective. 
+Real-Time Monitoring of AI Solutions 
+● Automated testing and monitoring: Models are tested against defined performance and 
+functional metrics before, during, and after deployment. If a new model version 
+underperforms, CI/CD pipelines can quickly revert to the prior version. 
+● Resource monitoring: Teams watch CPU/GPU usage, memory constraints, and cost 
+metrics, ensuring that scale-ups or optimizations are handled proactively. 
+Versioning and Retraining Pipelines 
+Once in production, an AI model must keep pace with evolving realities. Business conditions 
+may shift, user behaviors might change, or fresh data can reveal new patterns. CPMAI Phase VI 
+addresses these needs through requiring consideration of model versioning and retraining 
+pipelines. 
+Likewise, CPMAI Phase VI does not consider operationalization as just a one-time “launch.” 
+Operationalization involves continuous cycles of monitoring, user adoption, feedback loops, and 
+governance: 
+● Stakeholder training and adoption: Models that introduce new AI capabilities, such as 
+assisting call center agents or automating document review, must integrate smoothly with 
+existing workflows. Users need confidence that these solutions will improve (rather than 
+complicate) their daily tasks. Proper training, clear documentation, and user-friendly 
+tools all help drive adoption. 
+● Ethical, regulatory, and compliance requirements: Deployed AI can be subject to 
+privacy, security, or fairness regulations, especially if it processes personal data or 
+automates decisions affecting users. Ongoing checks for bias, compliance with data-
+handling regulations, and robust data governance policies reduce the risk of ethical or 
+legal pitfalls. 
+● Monitoring business value and ROI: Over time, continuous evaluation confirms 
+whether the model still meets success criteria defined in Phase I (e.g., cost savings, 
+operational efficiency, user satisfaction). If not, teams should revisit previous CPMAI 
+phases to refine scope, update the model, or adjust data sources. 
+● Scaling and future iterations: Many AI initiatives expand after a successful pilot, 
+adding new features or covering broader use cases. This expansion becomes simpler if 
+model operationalization—and its associated data and monitoring pipelines—was set up 
+correctly from the start. 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 28 of 32 
+Ready for the Next Iteration! 
+At this point, an AI solution is considered fully deployed and “live.” However, AI systems are 
+never truly finished: Data, environments, and user requirements evolve, and so must the solution. 
+Once Phase VI is complete for the first iteration, the CPMAI process circles back to Phase I: 
+Business Understanding, beginning the next iteration of continuous AI improvement. 
+Making AI Projects Not Only Successful but Also 
+Trustworthy 
+AI systems can deliver significant business value but only when built and deployed in a way that 
+instills confidence and mitigates risk. Trustworthy AI encompasses a set of principles and 
+practices that ensure your AI solutions are fair, reliable, transparent, and aligned with 
+organizational and societal values. When integrated with the CPMAI methodology, trustworthy 
+AI initiatives help reduce the risk of unintended harm, reputational damage, and compliance 
+violations while fostering user acceptance and stakeholder buy-in. 
+Core Principles of Trustworthy AI 
+1. Ethical AI: Strives to avoid harm, respect user privacy, and employ data responsibly. 
+Requires clear guidelines on how and why AI-driven decisions are made, ensuring they 
+align with organizational and societal values. 
+2. Responsible AI: Maintains accountability for outcomes—intended or otherwise. Defines 
+who is responsible for the system’s decisions and ensures a human chain of 
+accountability is in place. 
+3. Transparent AI: Provides insight into AI behaviors, data use, and decision logic. 
+Minimizes black box scenarios by making AI processes discoverable and comprehensible 
+to relevant stakeholders and provides visibility into system behavior, data configuration, 
+user consent, bias mitigation, and disclosure and consent.  
+4. Governed AI: Enforces organizational policies and processes for AI oversight, including 
+audits and compliance checks. Involves robust data governance, model versioning, 
+approval processes, and guidelines on allowable uses of AI. 
+5. Explainable AI: Gives end users and key stakeholders understandable rationale behind 
+model outputs. Even if the algorithm itself is highly complex (such as is the case with 
+deep learning neural networks), teams should provide interpretability layers (such as 
+model explanation frameworks or surrogate models) to clarify why decisions are made. 
+Integrating these dimensions into your CPMAI process ensures AI systems are designed and 
+deployed in alignment with ethical, legal, and societal standards, ultimately building trust with 
+customers, employees, and regulators. 
+Embedding Trustworthy AI in Every CPMAI Phase 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 29 of 32 
+These various concepts of trustworthy AI are implemented throughout CPMAI phases to ensure 
+that AI solutions delivered through CPMAI methodologies are trustworthy. 
+● Business Understanding (Phase I):  
+○ Identify safety-critical use cases, such as autonomous vehicles or medical 
+diagnostics, where system reliability is paramount. 
+○ Establish trust-related requirements early, such as the need for explainability,  
+scope of responsible data usage, or ethical considerations of an AI use case. 
+● Data Understanding (Phase II):  
+○ Check for disproportionate representation of certain groups or missing 
+demographic segments. 
+○ Check for biased, incomplete, or sensitive data. Address privacy and consent 
+issues before collecting or using personal data. 
+● Data Preparation (Phase III):  
+○ Remediate or rebalance training data to mitigate bias issues (oversample 
+underrepresented groups, remove or anonymize sensitive attributes). 
+○ Anonymize or securely handle PII. Correct known biases or labeling errors before 
+training. 
+● Model Development (Phase IV):  
+○ Evaluate the trade-off between performance and robustness. For instance, a highly 
+accurate but extremely sensitive model could misbehave with slight data shifts. 
+○ Pick algorithms and tool setups that allow you to meet fairness or transparency 
+goals. If needed, leverage interpretable models or incorporate explainability 
+frameworks. 
+● Model Evaluation (Phase V):  
+○ Test for edge cases, outliers, or adversarial inputs. 
+○ Use fairness metrics alongside traditional metrics to ensure balanced performance 
+across different subpopulations. Document findings in a transparent manner. 
+● Model Operationalization (Phase VI): 
+○ Put real-time monitoring and automated failover strategies in place, especially for 
+systems that make rapid or high-impact decisions. 
+○ Implement governance measures (model version control, monitoring for 
+model/data drift) and offer ways for users or stakeholders to contest or question 
+AI-driven decisions. 
+By embedding trustworthy AI at every stage, from business justification to ongoing monitoring, 
+organizations enhance user trust, reduce business risk, and promote solutions that are as ethical 
+and beneficial as they are innovative. 
+Organizational Roles and Skills Needed for AI Success 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 30 of 32 
+Successfully delivering AI initiatives requires more than just technology and tools. It involves a 
+cross-functional team, a culture that embraces data-centric thinking, and committed executive 
+sponsorship. CPMAI recognizes that AI projects are iterative, data-driven efforts and, as such, 
+organizations need to align the right people, skill sets, and leadership support to execute these 
+projects effectively. 
+Key Roles in AI Projects 
+● Project Manager/AI Project Lead: Oversees the entire AI initiative, ensuring it follows 
+the CPMAI phases. This role coordinates timelines, manages risks, liaises with 
+stakeholders, and keeps the project aligned with business goals. 
+● Data Engineer: Constructs the data pipelines and architecture that feed AI systems. They 
+handle tasks like data ingestion, integration, cleaning, transformation, and ensuring data 
+flows are robust, scalable, and secure, critical for smooth model development and 
+operationalization. 
+● Business Analyst/Domain Expert: Ensures that the AI solution matches real business 
+objectives and domain-specific needs. They help define success criteria, interpret results, 
+and translate AI insights into actions that stakeholders and end users can adopt. 
+● MLOps/DevOps Engineer: Bridges the gap between model development and production 
+deployment, managing version control, CI/CD, and ongoing performance monitoring. 
+● Executive Sponsor: Champions the AI project at the leadership level, allocates 
+resources, and helps align the AI initiative with broader organizational strategy. 
+● Data Scientist: If an ML model needs to be developed from scratch, or fine-tuning is 
+needed to extend existing models, organizations might also require a data scientist on the 
+team. This role focuses on building and validating models. The data scientist brings 
+expertise in statistics, machine learning algorithms, and model experimentation. They 
+must translate business needs into technical requirements and guide modeling decisions 
+accordingly. 
+Soft Skills and AI Culture 
+Beyond technical abilities, an AI-focused organization must foster a culture of experimentation 
+and continuous learning: 
+● Critical thinking and problem-solving: AI projects are inherently experimental, so 
+teams must be able to conceptualize approaches, test solutions quickly, and iterate. 
+● Communication and storytelling: Stakeholders need clear explanations of complex AI 
+outcomes, whether to justify resource allocation or address user concerns. 
+● Collaboration and cross-functionality: AI projects span data, engineering, and business 
+domains. Seamless teamwork and mutual understanding across departments are essential. 
+● Adaptability and tolerance for ambiguity: Because models evolve and data changes, 
+teams must be comfortable with iterative cycles and the possibility of rework. 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 31 of 32 
+Executive Sponsorship 
+AI initiatives often involve organizational change, can require substantial budgets, and 
+necessitate cross-departmental collaboration. Strong executive sponsorship helps to: 
+● Secure resources: AI projects require robust data infrastructure, skilled personnel, and 
+time to iterate. 
+● Champion adoption: Leadership alignment ensures the AI solution will be embraced 
+and integrated into daily workflows. 
+● Manage risk and compliance: Executives can help navigate data privacy, regulatory, 
+and ethical considerations, especially as AI systems influence critical decisions. 
+CPMAI-driven AI success depends on assembling the right team and equipping it with both the 
+technical and soft skills needed for iterative, data-centric work. Equally important is executive 
+buy-in, which ensures the entire organization is aligned on goals, resources, and strategic support 
+for the AI project’s duration and beyond. 
+Taking the Next Steps With CPMAI 
+As you have seen throughout this overview, CPMAI provides a structured yet flexible, data-
+centric, and iterative approach for managing AI projects, so they deliver meaningful, measurable 
+value. By emphasizing business alignment, data feasibility, trustworthy model development, and 
+continuous evaluation, CPMAI helps teams avoid many of the common pitfalls that doom AI 
+initiatives. 
+Below are a few key ways you can build on what you have learned and fully embrace the 
+CPMAI methodology: 
+Embrace the Data-Centric, Iterative AI-Specific Nature of CPMAI 
+● CPMAI’s six phases: From Business Understanding (Phase I) through Model 
+Operationalization (Phase VI), each phase ensures you tackle the right problems, have the 
+right data, develop AI responsibly, and confirm that real-world needs are met. 
+● Iterative, data-centric approach: AI projects are not static. They require iterative loops 
+of data preparation, model refinement, and stakeholder feedback to stay relevant and 
+avoid drift. 
+● Integration with organizational processes: CPMAI’s phases overlay effectively on top 
+of familiar project management practices (including agile and DevOps/MLOps), 
+supplying the AI-specific guardrails needed for success. 
+● Trustworthy AI: Ethical, responsible, and transparent development practices are integral 
+to long-term AI adoption. CPMAI highlights bias detection, governance, and stakeholder 
+buy-in at every step. 
+
+   
+ 
+©Copyright 2025 Project Management Institute, Inc. All rights reserved. Page 32 of 32 
+● Team and culture: AI success depends on the right roles—data engineers, data 
+scientists, analysts, domain experts, and project managers—working together with a 
+flexible, learn-as-you-go mindset. 
+Recommendations for Further Study 
+● CPMAI certification training: To gain deeper, hands-on knowledge of each phase, 
+enroll in more in-depth CPMAI training. You will learn the practical tasks, insights, and 
+approaches used by successful AI teams worldwide. 
+● Supplemental learning on AI patterns: Delve into how each of the seven AI patterns 
+(Conversational, Recognition, Patterns & Anomalies, Predictive Analytics & Decision 
+Support, Hyperpersonalization, Autonomous Systems, and Goal-Driven Systems) 
+impacts data needs, development approaches, ROI, and risk factors. 
+● Trustworthy AI framework: Build familiarity with fairness, ethics, and compliance 
+frameworks (e.g., model bias audits, privacy regulations) to ensure your AI projects 
+maintain stakeholder trust and meet regulatory requirements. 
+● Get CPMAI certified: Become a recognized AI project leader by earning your CPMAI 
+certification. You will deepen your skill set and demonstrate your commitment to AI best 
+practices. 
+● Evangelize internally: Share CPMAI’s core tenets with business stakeholders, data 
+teams, and leadership. Encourage a culture of iterative learning and data awareness so 
+future AI endeavors can thrive. 
+By adopting CPMAI and nurturing a data-driven, agile mindset, your organization can 
+systematically turn ambitious AI ideas into impactful, long-lasting solutions. When you are ready 
+to take the next step, deepen your learning with the CPMAI certification program and continue to 
+iterate, refine, and expand your AI initiatives, one successful project at a time. 
+ 
+ 
+
+---

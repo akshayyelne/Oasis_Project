@@ -1,0 +1,80 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] What is AI Agent.pdf
+# Characters: 1224
+# Generated: 2026-07-31T00:07:33.322Z
+
+What is an AI Agent?
+Ov
+ersigh
+t
+Sense
+June, 2025 
+Nov, 2024 
+Tools
+Apps 
+Traits
+Code 
+Web 
+MCP Data 
+Memory
+Short-term
+(e.g., episodic,
+working) 
+Long-term
+(e.g., vector,
+SQL, file) 
+Lead agent
+(orchestrator)
+Citations 
+subagent
+Search 
+subagent
+Search 
+subagent
+Search
+subagent
+Memory
+Claude
+Desktop
+“Your n8n workflows
+are not autonomous
+enough. Stop calling
+them AI agents 1.0.”
+“Those are AI agents,
+not agentic AI. Only
+agentic AI can be fully
+agentic.”
+Act 
+Delegate 
+Plan Reason Learn
+Adapt 
+System 
+Prompt 
+Tasks 
+Goals 
+Human, 
+an orchestration layer, 
+or another AI agent 
+Environment 
+My take: Don’t waste time on academic debates. AI
+agents are becoming increasingly autonomous.
+What matters to users is actual behavior.
+In 2024, we all agreed: AI agents were agentic. Then
+came “agentic AI.” It might be confusing.
+1. How Does an AI Agent Work?  
+2. AI Agents vs. Agentic AI
+Functions 
+3. Types and Architectures
+For technical discussions, we often say about “multi-
+agent systems,” where multiple AI agents may
+collaborate or work without central orchestration.
+Claude Multi-Agent
+Research System
+Sequential
+Collaborative
+Competing
+AI Agent Types 
+AI Agent Architectures 
+Hierarchical
+Read the full post 
+
+---

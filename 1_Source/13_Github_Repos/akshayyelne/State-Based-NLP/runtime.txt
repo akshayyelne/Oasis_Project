@@ -1,0 +1,4 @@
+# Extracted from: akshayyelne/State-Based-NLP/runtime.txt
+# Generated: 2026-07-31T00:49:45.429Z
+
+python-3.11

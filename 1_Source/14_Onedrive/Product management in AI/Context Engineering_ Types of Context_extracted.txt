@@ -1,0 +1,5 @@
+# Extracted from: 14_Onedrive/Product management in AI/Context Engineering_ Types of Context.pdf
+# Characters: 3
+# Generated: 2026-07-31T00:07:33.300Z
+
+---

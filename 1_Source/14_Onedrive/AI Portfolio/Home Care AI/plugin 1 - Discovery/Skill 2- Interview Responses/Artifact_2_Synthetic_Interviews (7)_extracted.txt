@@ -1,0 +1,1557 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/plugin 1 - Discovery/Skill 2- Interview Responses/Artifact_2_Synthetic_Interviews (7).docx
+# Characters: 94458
+# Generated: 2026-07-31T00:07:32.960Z
+
+SYNTHETIC INTERVIEW DATA
+
+Home-Care-AI  |  Discovery Stage 1  |  Artifact 2
+
+10 Interviews  |  4 Personas  |  Following Artifact 1 Interview Script v1.0
+
+Each interview includes: Narrative Transcript + Filled Note Template
+
+Next Step: Run /summarize-interview per persona group (3+ sessions)
+
+Output feeds: competitive-gap-analysis + market-segmentation-deep-dive
+
+
+
+Interview 1 of 10: HCN-001 — Maria Santos
+
+Persona: Home Care Nurse  |  Date: 2026-03-25  |  Duration: 42 min  |  Interviewer: PM Lead
+
+Location: CareBridge agency office, after shift  |  Setting: Face-to-face, coffee provided
+
+
+
+Part A: Narrative Transcript
+
+Opening & Warm-Up
+
+Q: Tell me about your role — what does a typical week look like for you?
+
+I see fourteen patients a week, give or take. Monday to Friday, four or five visits a day across the eastern suburbs. I do clinical assessments, wound care, medication reviews, care plan updates. But honestly, the visits are maybe sixty percent of my week. The other forty is documentation. Writing up notes, updating care plans, chasing referrals. I probably spend two to three hours every evening after I get home typing up what happened during the day.
+
+Q: Two to three hours every evening? Walk me through that.
+
+I get home around six. I have dinner, put the kids to bed, and then around eight I open my laptop and start typing up the day's visits. I try to do it in the car between visits but the app crashes on mobile and the screen is tiny. So I make voice notes on my phone and then transcribe them at night. I'm usually done by ten, ten-thirty.
+
+[Emotional note] Maria said this matter-of-factly, but her jaw tightened. This is clearly a sore point.
+
+Q: What tools does your agency currently use to track patient status?
+
+We have an EMR — they upgraded it last year. It's worse than the old one. More fields, slower interface. The mobile version crashes constantly. I also use WhatsApp to message families and the coordinator. Paper wound charts for some patients because the EMR doesn't handle images well. And honestly, my own memory. I remember things about my patients that aren't in any system.
+
+Block 1: Falls
+
+Q: Walk me through the last time someone you care for had a fall, or you were concerned they might.
+
+Three weeks ago. Arthur — he's eighty-two, diabetes and heart failure. But it wasn't a fall exactly. He was hospitalised for acute decompensation. When I reviewed his file afterwards, I could see the warning signs. His blood pressure had been creeping up over four visits. His ankles were more swollen each time I saw him. He'd missed two medication doses that I know of. But I didn't connect it in the moment because each visit felt like its own thing. The information was scattered across separate notes.
+
+[Probe] What information did you wish you had that you didn't?
+
+A trend line. Anything. If someone had shown me 'Maria, here's Arthur's blood pressure over the last four weeks, and here's his ankle measurement, and here's his medication adherence' — on one screen, side by side — I would have seen it. I knew something was off. I could feel it. But when you're seeing fourteen people a week, you can't hold all the patterns in your head. The system should have caught that, not me.
+
+[Emotional note] Voice dropped. Genuine guilt. This is a wound.
+
+Q: Have you ever been concerned about a fall specifically?
+
+I worry about falls with at least half my patients. But I don't know when they happen unless someone calls me or I see a bruise at the next visit. Mrs. Chen — Sarah's mother — she fell at two in the morning four months ago and nobody knew until seven AM. I visit her once a week. If she falls on a Tuesday and I don't come until Thursday, that's two days of potential injury progression that nobody sees.
+
+Block 2: Medications
+
+Q: Tell me about the last time there was a problem with a medication.
+
+Arthur again. He was on a diuretic and his potassium supplement. The diuretic dose was increased by his cardiologist, but the potassium wasn't adjusted. I noticed his potassium level was low at my next visit because I happened to check. But the dose change was buried in a hospital discharge summary that I didn't see until three days after it was issued. Nobody flagged it.
+
+[Probe] What's the most frustrating part of keeping track of medications across fourteen patients?
+
+The reconciliation. Every patient has a different GP, a different specialist, a different pharmacy. Changes happen and I find out last. I'm supposed to be the one coordinating, but I'm the last person in the chain to know when something changes. I spend thirty minutes per patient per month just reconciling medication lists. That's seven hours a month on medication admin.
+
+Block 3: Communication & Escalation
+
+Q: When something concerning happens with a patient, how does that information get to you?
+
+It doesn't, usually. I find things out when I walk through the door. Family members sometimes text me on WhatsApp — Sarah Chen texts me constantly — but that's informal. There's no system that says 'Maria, something happened with your patient since your last visit.' I'm always walking in blind.
+
+Q: You said Sarah texts you constantly. Tell me more about that.
+
+Sarah is lovely but she was sending me screenshots of her mother's step count and sleep data from a wristband app. Every week: 'Her steps are down forty percent, is something wrong?' 'She slept less than four hours Tuesday.' Each one added ten or fifteen minutes to my day because I'd have to look at the data, compare it with what I observed, and then respond carefully so I didn't escalate Sarah's anxiety. The data wasn't wrong, it just had no clinical context. A step count drop could mean her mother's mobility is declining or it could mean it rained for three days. I eventually asked Sarah to trust the clinical team to flag concerns. She took it badly. I felt terrible about it.
+
+[Emotional note] Maria paused for several seconds here. Clearly conflicted — empathises with Sarah but felt overwhelmed.
+
+Block 4: Tools & Workarounds
+
+Q: What tools do you currently use to monitor or coordinate care?
+
+The EMR for official documentation. WhatsApp for quick messages. My phone's voice recorder for notes between visits. A paper notebook for wound measurements because the EMR doesn't support photos well. Google Maps for routing — the scheduling system doesn't optimise drive times. And my memory for everything the system doesn't capture.
+
+Q: Have you tried anything new in the last year?
+
+The agency tried a new care plan template six months ago. It was supposed to make care plans faster. It actually made them slower because it had more mandatory fields. I now spend thirty to forty-five minutes per care plan, starting from a blank template every time. There's no intelligence — no 'based on this assessment, here are recommended goals.' Just blank fields and my brain.
+
+I spend more time writing about care than delivering it. By the time I sit down to type up today's visits, I've already forgotten half the details. I'm reconstructing, not documenting.
+
+Block 5: Willingness to Prioritize
+
+Q: How much time per week do you estimate you spend on coordination and communication?
+
+Fifteen to eighteen hours a week on documentation, coordination, and admin. That's on top of the twenty-five hours of actual patient visits. My contract says thirty-eight hours. I work closer to fifty.
+
+Q: If a tool solved the pattern-recognition problem you described with Arthur, what would a fair price look like?
+
+I'd kill for something that just told me: 'Here's what's changed since your last visit. Here's what to watch for today.' Five sentences. That's all I need before I walk through the door. Fair price? I don't care about price — the agency pays for tools. What I care about is whether it actually works on my phone between visits without crashing. Every system we've tried was designed for someone sitting at a desk, not someone standing in a patient's kitchen.
+
+Wrap-Up
+
+Q: Is there anything I didn't ask about that you think is important?
+
+Time. Nobody asks about time. Every new system, every new form, every new process takes more time. I don't need more features. I need my time back. If your system adds thirty seconds to every visit, that's four minutes a day, twenty minutes a week, an hour and a half a month. That's a patient visit I'm losing to admin. Whatever you build, make it faster than what I do now, not slower.
+
+Q: Who else should I talk to?
+
+Priya Sharma — she's our team lead. She sees the systemic stuff I can't. And talk to the patients themselves. Mrs. Chen won't tell you what she tells me, and she definitely won't tell Sarah what she tells me. There's a whole layer of what patients hide that nobody is designing for.
+
+
+
+Part B: Filled Note Template
+
+Participant ID
+
+HCN-001
+
+Persona
+
+HCN
+
+Date
+
+2026-03-25
+
+Duration (min)
+
+42
+
+Interviewer(s)
+
+PM Lead
+
+KEY JOBS
+
+Deliver quality clinical care to 14 patients weekly. Accurately document every visit. Reconcile medications across multiple providers. Identify deterioration patterns before they become emergencies. Coordinate between families, GPs, specialists, and the agency.
+
+CURRENT SOLUTION
+
+Agency EMR (crashes on mobile, slow). WhatsApp for family/coordinator messages. Voice recorder on phone for between-visit notes. Paper notebook for wound measurements. Google Maps for routing. Memory for patient context the system doesn't capture.
+
+BIGGEST PAIN(verbatim)
+
+“I knew something was off with Arthur. I could feel it. But when you’re seeing fourteen people a week, you can’t hold all the patterns in your head. The system should have caught that, not me.”“I spend more time writing about care than delivering it. By the time I sit down to type up today’s visits, I’ve already forgotten half the details. I’m reconstructing, not documenting.”“Every care plan I write starts from scratch. No starting point, no suggestion, nothing. Just me and a blank page.”
+
+DESIRED OUTCOME(verbatim)
+
+“I’d kill for something that just told me: ‘Here’s what’s changed since your last visit. Here’s what to watch for today.’ Five sentences. That’s all I need before I walk through the door.”
+
+WILLINGNESS
+
+15-18 hrs/week on documentation + coordination (unpaid overtime). Agency pays for tools. Previously rejected: new care plan template (slower, more fields). Key criterion: must work on mobile between visits without crashing. Price is not the barrier — usability is.
+
+EMOTIONAL INTENSITY
+
+Genuine guilt about Arthur’s hospitalisation — voice dropped, long pause. Jaw tightened when discussing documentation burden. Conflicted about pushing back on Sarah Chen’s data requests. Frustration at management for rejecting Priya’s risk review proposal.
+
+ESCALATION BEHAVIOR
+
+Finds out about problems when she walks through the door — no proactive alerting. Relies on intuition and visual observation, not data trends. Information chain: patient/family → WhatsApp → Maria → GP (if she decides to escalate). Weakest link: time delay between events and Maria’s next visit.
+
+SURPRISE FINDING
+
+Sarah Chen’s ‘data parent’ behaviour — health data without clinical context created 10-15 min extra work per visit. Maria diplomatically pushed back and felt terrible about it. Raw data to families creates professional friction, not better outcomes.
+
+TOOL MENTIONS
+
+Agency EMR (unnamed, crashes on mobile). WhatsApp. Google Maps. Phone voice recorder. Paper wound charts. New care plan template (failed, 6 mo ago).
+
+REFERRAL
+
+Priya Sharma (team lead, systemic view). Patients themselves — ‘there’s a whole layer of what patients hide that nobody is designing for.’
+
+FOLLOW-UP ACTIONS
+
+[ ] Interview Priya Sharma (HCN-003)[ ] Investigate mobile EMR usability as adoption barrier[ ] Quantify documentation time across agency nurses
+
+
+
+Interview 2 of 10: HCN-002 — David Nguyen
+
+Persona: Home Care Nurse  |  Date: 2026-03-26  |  Duration: 38 min  |  Interviewer: PM Lead
+
+Location: Café near David's last patient visit  |  Setting: Face-to-face, informal
+
+
+
+Part A: Narrative Transcript
+
+Opening & Warm-Up
+
+Q: Tell me about your role — what does a typical week look like for you?
+
+I've been doing home care for about two years now. I graduated nursing three years ago. I see ten patients a week, which is lighter than the senior nurses because I'm still building up. A typical day is four visits, driving between them, and then documentation. I probably spend an hour and a half every evening typing up notes on my phone.
+
+Q: You type on your phone, not a laptop?
+
+Yeah, I don't want to carry a laptop around. The EMR technically works on the phone but the fields are tiny. I use a lot of abbreviations and then go back and expand them later. Sometimes I forget what the abbreviation meant. Last week I wrote 'pt c/o SOB w/ ex' and when I went back to expand it that evening I couldn't remember if the exertion was climbing stairs or getting out of the bath. Different clinical context entirely.
+
+Block 1: Falls
+
+Q: Walk me through the last time someone you care for had a fall, or you were concerned they might.
+
+Mrs. Patterson, about six weeks ago. She's seventy-four, post-hip replacement. I arrived for my Thursday visit and she had a bruise on her forearm that wasn't there on Tuesday. I asked what happened and she said she 'bumped into the door.' I checked the area and it looked more like a fall impact than a door bump. But she insisted she was fine.
+
+[Probe] What did you do next?
+
+I documented it and flagged it for Priya to review. But honestly, I wasn't sure if I was overreacting. Is a bruise on a forearm a fall? Or did she actually bump into a door? In the hospital, I'd ask a senior. Here, I'm on my own, standing in someone's lounge room trying to make a clinical judgment with no second opinion available.
+
+Q: How long did it take for Priya to see your flag?
+
+Three days. She reviews notes on Sundays. By then, I'd already done another visit and the bruise was fading. If it had been a fall, three days is a long time to wait for a clinical review.
+
+Block 2: Medications
+
+Q: Tell me about the last time there was a problem with a medication.
+
+This one I don't like talking about. Last month I was documenting a medication administration for a patient who takes a liquid blood thinner. The dose was 5 millilitres. I was typing on my phone in the kitchen and I entered '5 mg' instead of '5 mL.' The pharmacy caught it during reconciliation — nobody was hurt — but the pharmacist called my manager and there was a whole incident report.
+
+[Probe] Tell me more about that feeling. What was at stake?
+
+Everything. My registration, my confidence, a patient's safety. The thing is, I knew it was mL. My brain knew it was mL. My fingers typed mg because that's the default unit on the form and I was trying to enter it quickly while standing up in someone's kitchen. If the system had said 'This medication is usually measured in millilitres — did you mean mL?' I would have caught it instantly. But there's no check. No validation. Just a free-text field and my thumbs on a phone screen.
+
+[Emotional note] David's hands were shaking slightly when he described this. He said 'it still keeps me up at night.'
+
+Now I triple-check every medication entry. That adds fifteen to twenty minutes to my documentation every day. So the error didn't just cost me confidence — it costs me time, every single day, because the system doesn't help me get it right the first time.
+
+Block 3: Communication & Escalation
+
+Q: When something concerning happens with a patient, how does that information get to you?
+
+It mostly doesn't until I arrive. I check the EMR before a visit but half the time the last note is from my own previous visit. If another nurse saw my patient, their note might not be uploaded yet. I've walked into situations where a family member says 'the nurse on Monday changed the dressing' and I have no record of it. So I'm standing there guessing what was done and what supplies were used.
+
+Q: Have you ever made a decision — to escalate or not — that you later second-guessed?
+
+Mrs. Patterson's bruise. I flagged it but didn't escalate to the GP. If she'd had another fall in those three days before Priya reviewed it, that would have been on me. But if I escalate everything that might be a fall, the GPs stop taking my calls. It's a balance I haven't figured out yet. In the hospital, someone else made that call. Here, it's just me.
+
+Block 4: Tools & Workarounds
+
+Q: Walk me through how you create a care plan.
+
+It's painful. I did my first care plan for Dorothy — she's seventy-six, post-stroke — about two months ago. I opened the template and it was completely blank. No suggestions, no guidance, nothing. I spent ninety minutes trying to figure out: what mobility goals are appropriate for her level of function? Does her blood thinner contraindicate certain exercises? How aggressive should the rehab targets be? I submitted it and Priya sent it back with six corrections.
+
+[Probe] What would have helped?
+
+If the system had said: 'Based on Dorothy's assessment, here are the recommended goals and interventions for her condition profile.' Even a starting point. I'd still review everything and adjust based on clinical judgment, but at least I wouldn't be staring at a blank page wondering where to begin. I stared at that template for twenty minutes before I typed a single word.
+
+Block 5: Willingness to Prioritize
+
+Q: How much time per week do you spend on coordination and documentation?
+
+Probably ten to twelve hours. I'm slower than the senior nurses because I double-check and triple-check everything. Especially since the mg/mL thing.
+
+Q: If a tool solved the documentation accuracy problem, what would that look like?
+
+Let me just talk. I'm standing in someone's kitchen, I've just done a wound assessment. Let me say: 'Wound on left lower leg, three centimetres by two centimetres, edges granulating, no signs of infection, redressed with Mepilex border, patient reports pain level two out of ten.' And have the system put that in the right fields. Not me typing on a phone screen with autocorrect fighting me. Let me say what happened and have the system figure out where it goes.
+
+Wrap-Up
+
+Q: Is there anything I didn't ask about that's important?
+
+Loneliness. Mine, I mean. Not the patients'. Being a home care nurse is lonely. You're making clinical decisions by yourself all day. There's no one to ask 'Does this look right to you?' I'd love to be able to ask the system, 'What did the last nurse document about this patient's wound?' instead of scrolling through three months of visit notes trying to find it.
+
+Q: Who else should I talk to?
+
+Maria Santos — she's the nurse I want to be in ten years. And any patient family who's dealt with a care plan they didn't understand. They receive these plans and I don't think anyone explains what the goals actually mean.
+
+
+
+Part B: Filled Note Template
+
+Participant ID
+
+HCN-002
+
+Persona
+
+HCN
+
+Date
+
+2026-03-26
+
+Duration (min)
+
+38
+
+Interviewer(s)
+
+PM Lead
+
+KEY JOBS
+
+Deliver safe clinical care to 10 patients. Document accurately. Write care plans (first year doing them). Build clinical confidence as a junior nurse making solo decisions. Avoid medication errors.
+
+CURRENT SOLUTION
+
+Agency EMR (mobile, tiny fields, no validation). Phone abbreviations expanded later. Triple-checking medication entries (post-error habit). Asking Priya for care plan review (3-day delay). Voice-to-self notes that sometimes lose context.
+
+BIGGEST PAIN(verbatim)
+
+“I stared at that blank care plan template for twenty minutes before I started typing. I knew what Dorothy needed in general, but the specifics — I just didn’t have the confidence.”“The mg/mL thing still keeps me up at night. If the system had flagged it — ‘this medication is usually measured in mL, did you mean mg?’ — I would have caught it instantly.”“I’m typing notes on a phone screen in someone’s kitchen while their cat sits on my lap. Of course I make mistakes.”
+
+DESIRED OUTCOME(verbatim)
+
+“Let me just talk. Let me say what happened and have the system figure out where it goes.”“If the system had said: ‘Based on Dorothy’s assessment, here are the recommended goals.’ Even a starting point.”
+
+WILLINGNESS
+
+10-12 hrs/week on documentation (slower due to triple-checking). Would trade 15-20 min/day of triple-checking for automated validation. Key criterion: voice input that works in a patient’s home. No current personal tech spend.
+
+EMOTIONAL INTENSITY
+
+Hands shaking when describing mg/mL error. ‘Still keeps me up at night.’ Anxiety about making solo clinical decisions without senior support. Frustration at blank care plan template — stared at it for 20 min. Loneliness of home care nursing surfaced unprompted.
+
+ESCALATION BEHAVIOR
+
+Flags concerns for Priya (3-day review cycle). Doesn’t escalate directly to GP — afraid of ‘crying wolf.’ Mrs. Patterson bruise: flagged but didn’t escalate, second-guessed for days. Balance between over-escalating and under-escalating not yet calibrated.
+
+SURPRISE FINDING
+
+Clinical loneliness — home care nurses make solo decisions all day with no one to consult. The ‘Does this look right to you?’ moment doesn’t exist in home care. Also: abbreviation memory loss (‘SOB w/ ex’ — stairs or bath?) as a documentation quality issue.
+
+TOOL MENTIONS
+
+Agency EMR (mobile, crashes, no validation). Phone abbreviations. Priya’s Sunday review cycle.
+
+REFERRAL
+
+Maria Santos (senior nurse, role model). Patient families who receive care plans they don’t understand.
+
+FOLLOW-UP ACTIONS
+
+[ ] Investigate medication field validation as safety feature[ ] Quantify care plan creation time for junior vs senior nurses[ ] Explore voice-to-structured-form as documentation approach
+
+
+
+Interview 3 of 10: HCN-003 — Priya Sharma
+
+Persona: Home Care Nurse (Team Lead)  |  Date: 2026-03-27  |  Duration: 48 min  |  Interviewer: PM Lead
+
+Location: CareBridge office, private meeting room  |  Setting: Face-to-face, door closed
+
+
+
+Part A: Narrative Transcript
+
+Opening & Warm-Up
+
+Q: Tell me about your role — what does a typical week look like for you?
+
+I'm the clinical team lead for the eastern region. I see eight patients of my own, and I do clinical oversight for five nurses and their caseloads — that's about fifty patients total. Oversight means I review care plans, audit documentation, handle complex clinical escalations, and mentor junior nurses like David. A typical week is split: three days of my own patient visits, two days of admin, review, and firefighting.
+
+Q: What tools does your agency currently use?
+
+The same EMR everyone complains about. I also maintain a personal spreadsheet where I track risk indicators for my oversight panel — things the EMR doesn't flag. Blood pressure trends, medication changes, missed appointments. I update it Sunday evenings by reading through the week's visit notes. It takes three to four hours.
+
+Block 1: Falls
+
+Q: Walk me through a time when a patient's condition deteriorated and you wish the system had caught it earlier.
+
+Margaret. Six months ago. Seventy-nine, COPD and heart failure. She was hospitalised with pneumonia. When I reviewed her file afterwards, the pattern was screaming at me. Her oxygen saturation had dropped slightly at each of the last six visits — ninety-six, ninety-five, ninety-four, ninety-three. Her fatigue scores were climbing. She'd missed two GP appointments. A new medication hadn't been reconciled with her existing prescriptions. No single visit note was alarming. The trend was.
+
+[Probe] Why didn't anyone catch it?
+
+Because the system shows you one visit at a time. There's no trend view, no longitudinal dashboard, no flag that says 'This patient's oxygen has declined four percent over six weeks.' You'd have to open six separate visit notes, compare the numbers manually, and connect the dots yourself. Nobody has time for that across a full caseload. I tried. I proposed a weekly risk review meeting. Management said they didn't have resources.
+
+So I do it myself. Every Sunday evening, three to four hours, scrolling through fifty patients' notes looking for the ones who are about to fall off a cliff. I catch some of them. I miss others. That's not a system — that's me being stubborn on my own time.
+
+[Emotional note] Priya was calm throughout but her voice hardened here. This is frustration compressed into quiet determination.
+
+Block 2: Medications
+
+Q: Have you seen medication-related problems across your oversight panel?
+
+Constantly. Medication reconciliation failures are probably our highest-frequency clinical risk. Changes happen at hospital discharge, at GP visits, at specialist appointments. By the time the information reaches us, the patient has already been on the wrong dose for days. And our documentation doesn't help — the notes say 'medications reviewed, consistent with care plan.' That tells me nothing. What medications? What was the review finding? Was anything changed?
+
+This is where my history comes in. Two years ago, before CareBridge, I had to testify at a coroner's inquest. A patient at my previous agency — Gerald, eighty-four, diabetes — died from complications following a missed insulin dose. I had given him his insulin that day. I gave it at approximately eight-fifteen in the morning, left upper arm, BGL was six point two beforehand.
+
+[Probe] What happened at the inquest?
+
+The solicitor asked me what time I administered the insulin. I said about eight-fifteen. He said, 'Show me.' I looked at my notes and all they said was 'morning visit.' That could mean seven AM or eleven AM. He asked the blood glucose level. My notes said 'BGL checked, within normal limits.' Not a number. A summary. He asked the injection site. Not recorded.
+
+I was telling the truth. I provided competent care. But I couldn't prove it. The documentation system I was using at the time didn't require — or even support — that level of granularity. The coroner found no neglect, but I will never forget sitting in that room unable to answer basic questions about care I know I delivered.
+
+[Emotional note] Priya's voice was absolutely steady but she was gripping the edge of the table. This experience clearly defined her professional identity.
+
+I carry a notebook now. Every visit, I write: the time, the reading, the exact words the patient uses. Then I go home and type it all into the EMR. It takes me twice as long to document as any other nurse. But I will never sit in that room again unable to answer a simple question about what I did and when.
+
+I tell David: if you can't point to a timestamp and a number in your notes, then as far as the law is concerned, you didn't do it. He thinks I'm being dramatic. I think I'm keeping him out of a coroner's court.
+
+Block 3: Communication & Escalation
+
+Q: How do you decide when something is an emergency vs. a watch-and-wait situation?
+
+That's the hardest part of my job. And it's the part I can't delegate. When David flagged Mrs. Patterson's bruise, it sat in my review queue for three days. Three days. If that bruise was from a fall, three days is too long. But if I reviewed every flag in real time, I'd never see my own patients. The system puts everything in the same queue with the same priority. A missed medication and a potential fall look identical in the interface.
+
+Block 4: Tools & Workarounds
+
+Q: You mentioned reviewing junior nurses' care plans. What do you find?
+
+About thirty percent of care plans I review need material corrections. Wrong intervention frequencies, goals that conflict with the patient's actual condition, missing safety considerations. The same mistakes repeat across different nurses because there's no decision support. If the system said 'Based on this assessment, here are recommended goals and interventions, adjusted for this patient's medication contraindications' — I'd spend my time refining good drafts instead of rewriting bad ones from scratch.
+
+I don't need a system that replaces clinical judgment. I need a system that does the pattern recognition I can't do at scale, and then puts the pattern in front of me so I can make the judgment call.
+
+Block 5: Willingness to Prioritize
+
+Q: How much time per week do you spend on oversight and review?
+
+Twelve to fifteen hours. Three to four on Sunday reviews, four to five reviewing care plans, three to four on documentation audits and junior mentoring. That's on top of my own patient visits. I'm not complaining — it's my job. But I'm doing pattern recognition that a machine should do, and I'm doing documentation review that a structured input system would prevent.
+
+Q: If a system could do the pattern recognition for your fifty patients, what would change?
+
+I'd get my Sundays back. And more importantly, I'd catch things I currently miss. I estimate I catch sixty percent of the meaningful trends in my Sunday reviews. Sixty percent is not good enough. Margaret was in the forty percent.
+
+Wrap-Up
+
+Q: Who else should I talk to?
+
+Angela Morrison — she's our coordinator. She holds the whole operational picture. And talk to the patients who refuse things. The ones who don't wear the pendant, who don't take their pills, who don't tell us what's really going on. That's where the real complexity lives.
+
+
+
+Part B: Filled Note Template
+
+Participant ID
+
+HCN-003
+
+Persona
+
+HCN
+
+Date
+
+2026-03-27
+
+Duration (min)
+
+48
+
+Interviewer(s)
+
+PM Lead
+
+KEY JOBS
+
+Clinical oversight for 50 patients across 5 nurses. Identify deterioration patterns before crises. Review and correct care plans. Mentor junior nurses. Audit documentation for compliance. Manage her own caseload of 8 patients.
+
+CURRENT SOLUTION
+
+Agency EMR (no trend views, no longitudinal dashboard). Personal spreadsheet updated Sunday evenings (3-4 hrs). Personal notebook for timestamped clinical details (doubling documentation time). Manual care plan review of all junior nurses’ work.
+
+BIGGEST PAIN(verbatim)
+
+“Margaret’s hospitalisation was preventable. Every single data point was in the system. But nobody connected them because nobody has time to read eight weeks of visit notes side by side.”“The solicitor asked me what time I gave Gerald his insulin. I said about 8:15. He said, ‘Show me.’ All my notes said was ‘morning visit.’”“I spend my Sunday evenings scrolling through visit notes for fifty patients looking for the ones about to fall off a cliff. I catch some of them. I miss others. That’s not a system — that’s me being stubborn on my own time.”
+
+DESIRED OUTCOME(verbatim)
+
+“I don’t need a system that replaces clinical judgment. I need a system that does the pattern recognition I can’t do at scale, and then puts the pattern in front of me so I can make the judgment call.”
+
+WILLINGNESS
+
+12-15 hrs/week on oversight. Sunday reviews are unpaid personal time. Would immediately adopt any system that surfaces longitudinal patient trends. Key criterion: clinical credibility — must show real data patterns, not simplistic alerts.
+
+EMOTIONAL INTENSITY
+
+Coroner’s inquest testimony: gripping table edge, steady voice. Defining professional experience. Margaret’s hospitalisation: hardened voice, compressed frustration. Sunday reviews: quiet determination mixed with resentment that management rejected her proposal.
+
+ESCALATION BEHAVIOR
+
+Owns the escalation queue for 5 nurses. Reviews flags on Sundays (3-day delay). Cannot triage in real time without abandoning own patients. System treats all flags with equal priority — missed med and potential fall look identical. Relies on clinical intuition built over 18 years.
+
+SURPRISE FINDING
+
+AUDIT TRAUMA: Priya’s coroner’s inquest experience fundamentally shaped her documentation practice. She now double-documents (notebook + EMR) at significant personal time cost. This experience justifies structured, timestamped, field-specific documentation — not for efficiency, but for legal protection.
+
+TOOL MENTIONS
+
+Agency EMR (no trend views). Personal spreadsheet. Personal notebook. Sunday review process.
+
+REFERRAL
+
+Angela Morrison (coordinator, operational view). Patients who refuse things — ‘that’s where the real complexity lives.’
+
+FOLLOW-UP ACTIONS
+
+[ ] Interview Angela Morrison (CC-001)[ ] Quantify ‘missed patterns’ rate across agency[ ] Investigate audit log requirements for legal defensibility[ ] Explore care plan recommendation engine to reduce 30% correction rate
+
+
+
+Interview 4 of 10: FC-001 — Sarah Chen
+
+Persona: Family Caregiver  |  Date: 2026-03-28  |  Duration: 45 min  |  Interviewer: PM Lead
+
+Location: Video call (Sarah at her office)  |  Setting: Remote, camera on
+
+
+
+Part A: Narrative Transcript
+
+Opening & Warm-Up
+
+Q: Tell me about your role — what does a typical week look like for you caring for your mother?
+
+I work full-time as a marketing manager in the CBD. My mum, Lin, is seventy-eight and lives alone about forty minutes from me. I call her twice a day — eight AM and seven PM. I visit twice a week, usually Wednesday evening and Saturday morning. The rest of the time I'm trying to coordinate between her visiting nurse Maria, her GP, the pharmacy, and my brother David who lives interstate and mostly just sends money.
+
+Q: Are you the primary contact, or are there other family members involved?
+
+I'm it. David is in Brisbane. He means well — he transfers money every month for mum's expenses. But money doesn't check if she took her pills. Money doesn't drive over when she doesn't answer the phone. I don't resent him, exactly, but I do sometimes wonder what it's like to care about someone from a distance without the daily weight of it.
+
+Block 1: Falls
+
+Q: Walk me through the last time your mother had a fall, or you were concerned she might.
+
+Four months ago. Two AM. Mum got up to use the bathroom and tripped on the hallway rug. She fell on her hip. She couldn't get up. Her phone was in the bedroom. The pendant alarm I bought her was in the kitchen drawer — she stopped wearing it after two days because, and I quote, 'it makes me feel like an invalid.'
+
+She lay on that hallway floor for five hours. Five hours. Until my seven AM call went unanswered. I called again at seven-fifteen. Nothing. I drove there in a panic. Found her on the floor, dehydrated, frightened, with a bruised hip. No fracture, thank God.
+
+[Emotional note] Sarah's voice cracked. She paused, took a breath, and said 'Sorry' before continuing. This is clearly the defining event.
+
+[Probe] What was the hardest part of that situation?
+
+The five hours. Not the fall itself. The five hours where I was asleep in my bed and my mother was on the floor calling out and nobody heard her. I was forty minutes away. I could have been there in forty minutes if I'd known. But I didn't know. That's the thing that wakes me up at three AM now — the not knowing.
+
+Q: Have you ever gotten a false alarm — thought something was wrong and it wasn't?
+
+Yes. About two months after the fall, mum didn't answer my evening call. I called three times. Nothing. I drove over — forty minutes, rush hour, I was a mess. She was at the neighbour's house having tea. Forgot her phone. I cried in the car outside her house for ten minutes before going in. She was annoyed that I 'made a fuss.'
+
+Block 2: Medications
+
+Q: Tell me about the last time there was a problem with a medication.
+
+It's not one incident. It's constant. Mum takes five medications. I fill her pill organiser every Sunday. And every Sunday, something's wrong. The wrong day is empty, or two days are empty when only one should be. She can't tell me what happened. She gets confused, then she gets angry at me for asking.
+
+[Probe] Have you had a situation where you weren't sure whether a dose was taken?
+
+Every week. And here's the thing I only found out recently — she's been gaming the organiser. Last month I came over on a Wednesday and the Tuesday compartment was empty, like it should be. But something felt off, so I counted the remaining pills. The numbers didn't add up. When I gently asked her, she eventually admitted she'd moved pills from Thursday to Tuesday to make it look right because she'd forgotten Tuesday's dose. She said she 'didn't want me to worry.'
+
+She's a retired maths teacher. She's not confused about this — she's deliberately covering her tracks. She moved her walking shoes to a different spot so Maria would think she'd been walking. She's managing the data, not managing her health. And I have no way to know what's real.
+
+[Emotional note] Sarah alternated between frustration and grudging admiration: 'She's smarter than the system I set up for her.'
+
+Block 3: Communication & Escalation
+
+Q: When something concerning happens, how does information get to you?
+
+It doesn't, unless I find it myself. Maria visits once a week. If something happens Monday evening and Maria doesn't come until Thursday, I don't know for three days. I text Maria on WhatsApp sometimes but she's overloaded with fourteen patients and I can tell I'm adding to her burden.
+
+For a while I tried using a wristband app that tracked mum's step count and sleep. I was sending Maria screenshots every week. 'Her steps are down forty percent.' 'She slept less than four hours.' Maria eventually told me, very nicely, to trust the clinical team. She was right — the data was creating anxiety, not insight. A step count without clinical context is just a number that makes you panic. I stopped using it.
+
+Q: What would you actually need instead of raw data?
+
+A verdict. Not a graph. Someone — or something — telling me: 'Your mother's patterns are within her normal range this week. Nothing to worry about.' Or: 'Something changed. Maria is looking into it.' That's it. Not a step count. Not a heart rate graph. A verdict from someone who knows what the numbers mean.
+
+Block 4: Tools & Workarounds
+
+Q: What tools do you currently use to monitor or coordinate care?
+
+Two phone calls a day. A paper medication chart on the fridge. A pendant alarm that lives in a drawer. A WhatsApp group with Maria and my brother that my brother barely reads. A Google Doc where I track GP appointments. And — this is the ridiculous one — I track my mum's electricity usage through the energy company app. If usage is abnormally low by nine AM, it means she hasn't turned on the kettle, which means she might not be up, which means I call. It's absurd that I'm using the power bill to check if my mum is alive.
+
+[Emotional note] Sardonic laugh here, but the underlying fear was audible.
+
+Block 5: Willingness to Prioritize
+
+Q: How much time per week do you spend on coordination?
+
+Eight to ten hours. Fourteen phone calls, two visits, texting Maria, managing the pharmacy, the GP appointments, the Google Doc. That's on top of my full-time job and two teenagers.
+
+Q: You mentioned you pay for the pendant. Have you evaluated other tools?
+
+The pendant is eighty-five dollars a month. Unused. I tried the wristband app — free, but the false alarm anxiety was worse than no data. I looked at a smart home system last year but the setup was ridiculous and the test alarms went off every time mum's cat walked past the sensor. We lasted a week. I would pay a hundred and fifty to two hundred a month without thinking for something that actually worked. My brother offered to split costs.
+
+Wrap-Up
+
+Q: Is there anything I didn't ask that's important?
+
+Talk to my mum. She won't tell you what she tells me — actually, she tells me less than she tells Maria. But the real story is what she's hiding from all of us. The pills she moves around, the dizziness she doesn't mention, the GP appointment she cancelled because she didn't want them to 'find something.' She's not confused. She's strategic. And whatever you build has to account for that.
+
+Q: Who else should I talk to?
+
+My mum, Lin. Maria Santos, her nurse. Angela Morrison at the agency — I call her twice a week and I'm sure she dreads seeing my number. And any other family caregiver who's been through the false alarm cycle — where you had data and it made things worse, not better.
+
+
+
+Part B: Filled Note Template
+
+Participant ID
+
+FC-001
+
+Persona
+
+FC
+
+Date
+
+2026-03-28
+
+Duration (min)
+
+45
+
+Interviewer(s)
+
+PM Lead
+
+KEY JOBS
+
+Keep mother safe while living 40 min away. Know immediately when something goes wrong. Coordinate between mother, nurse, GP, pharmacy, and brother. Manage her own guilt and anxiety about not being physically present. Decode what’s actually happening vs what mum reports.
+
+CURRENT SOLUTION
+
+2x daily phone calls. Paper medication chart on fridge. Pendant alarm (unused, $85/mo). WhatsApp group (brother barely reads). Google Doc for GP appointments. Energy company app as activity proxy. Previously: wristband step/sleep tracker (abandoned — data without context created anxiety + nurse friction).
+
+BIGGEST PAIN(verbatim)
+
+“I didn’t know my mum was on the floor for five hours. Five hours. I was asleep in my bed forty minutes away and she was just lying there.”“She’s been gaming the organiser. She moved pills from Thursday to Tuesday to make it look right because she’d forgotten Tuesday’s dose.”“A stranger showed up at my mother’s door and nobody told me. My mother was frightened.”“It’s ridiculous that I’m using the power bill to check if my mum is alive.”
+
+DESIRED OUTCOME(verbatim)
+
+“A verdict. Not a graph. Someone telling me: ‘Your mother’s patterns are within her normal range this week. Nothing to worry about.’ Or: ‘Something changed. Maria is looking into it.’ Not a step count. A verdict.”
+
+WILLINGNESS
+
+8-10 hrs/week on coordination. $85/mo on unused pendant. Previously spent on wristband app (free but abandoned). Would pay $150-200/mo. Brother offered to split. Key criterion: clinically interpreted information, not raw data.
+
+EMOTIONAL INTENSITY
+
+Voice cracked describing the 5-hour fall. Cried in car after false alarm drive. Sardonic about electricity tracking but underlying fear was real. Alternated frustration and admiration about mum’s pill gaming: ‘She’s smarter than the system I set up for her.’
+
+ESCALATION BEHAVIOR
+
+Calls twice daily. If no answer on second call, drives over (40 min). Called 000 once (false alarm — mum at neighbour’s). Paralysed between ‘overreacting’ and ‘under-reacting.’ The one time she waited, mum was on the floor.
+
+SURPRISE FINDING
+
+DATA GAMING: Lin deliberately manipulates the pill organiser to fake adherence. Also moves walking shoes to fake activity. Sarah’s raw data from wristband created friction with nurse Maria (10-15 min extra work per visit) — ‘data parent’ behaviour. Abandoned monitoring because data without clinical context made everything worse.
+
+TOOL MENTIONS
+
+Pendant alarm ($85/mo, unused). Wristband app (abandoned). Smart home system (abandoned after 1 week, cat triggered sensors). Energy company app (proxy). WhatsApp. Google Docs. Paper medication chart.
+
+REFERRAL
+
+Lin Chen (mother, SR-001). Maria Santos (nurse, HCN-001). Angela Morrison (coordinator, CC-001). Other caregivers who had the ‘false alarm cycle.’
+
+FOLLOW-UP ACTIONS
+
+[ ] Interview Lin Chen (SR-001) — the ‘other side’ of Sarah’s stories[ ] Investigate data gaming as a design constraint[ ] Explore role-specific alert thresholds (clinical vs family)
+
+
+
+Interview 5 of 10: FC-002 — James Okafor
+
+Persona: Family Caregiver  |  Date: 2026-03-29  |  Duration: 38 min  |  Interviewer: PM Lead
+
+Location: James's home office (granny flat visible through window)  |  Setting: Face-to-face
+
+
+
+Part A: Narrative Transcript
+
+Opening & Warm-Up
+
+Q: Tell me about your role — what does a typical week look like caring for your father?
+
+My father Emmanuel is eighty-one. Early-stage dementia, Type 2 diabetes, hypertension. Seven medications. He lives in the granny flat attached to our house — about ten steps from our back door. I work from home as an IT consultant, so I'm nearby all day. My wife Adama helps with daily care — she checks on him at lunch, makes sure he's eaten. We're both doing this full time on top of our actual jobs.
+
+Block 2: Medications
+
+Q: Tell me about the last time there was a problem with a medication.
+
+Last month. My father took his metformin twice in one morning. I fill the weekly organiser every Sunday. He opens it, takes the morning pills, closes it. But that day — I don't know if he forgot he'd taken them or if he thought it was the afternoon dose — he opened it again and took the same dose. His blood sugar crashed. He was sweating, confused, couldn't stand. I thought he was having a stroke.
+
+We went to emergency. Sat there for six hours. They gave him glucose, monitored him, adjusted his dose. The geriatrician said we should look into a medication management service. But nothing has actually changed about the daily routine. It's still me and the pill organiser and hope.
+
+[Probe] What information did you wish you had?
+
+Something that catches the double dose before it happens, not after. I don't need a reminder — he knows he needs to take pills. I need an interceptor. Something that says 'This dose was already taken thirty minutes ago' before he opens that compartment a second time.
+
+Block 1: Falls
+
+Q: Has your father had any falls or near-falls?
+
+He hasn't fallen yet. But I can see it coming. He gets up from his chair too quickly and wobbles. He shuffles more than he used to. The granny flat has a step between the living area and the bathroom that I've been meaning to get ramped for months. He won't use a walking frame — same pride issue as the medication thing. He was a pharmacist for forty years. He sees himself as the expert, not the patient.
+
+The cruel irony is he filled prescriptions for other people his whole career. He knew every interaction, every contraindication. Now he can't remember if he took his own pills twenty minutes ago. The look on his face when I have to ask him — it's humiliating for both of us.
+
+[Emotional note] James paused for 15 seconds here. Longest silence in the interview. Processing.
+
+Block 3: Communication & Escalation
+
+Q: How does information about your father's health get to his geriatrician?
+
+I bring handwritten notes to the quarterly appointment. My best guess at what happened over three months. I write down things as they occur — 'Tuesday: seemed more confused than usual,' 'Friday: didn't finish dinner,' 'Monday: took metformin twice.' But by the appointment, I've lost half the details and the ones I kept might not be the ones that matter clinically.
+
+I want the geriatrician to see real data. Not my scribbled notes from three months of guessing. Actual patterns. What's his blood sugar been doing? How many doses did he actually miss? When does the confusion peak — morning or evening? I can't track that manually with enough consistency.
+
+Block 4: Tools & Workarounds
+
+Q: What tools do you currently use?
+
+Pill organiser. Whiteboard in his kitchen with the daily schedule. A baby monitor at night — he doesn't know about that one, and I feel guilty every time I look at it. My wife checks at lunch. iPhone calendar reminders for his appointments. Handwritten notes for the geriatrician.
+
+Q: Have you tried any technology solutions?
+
+Two medication reminder apps. Both failed. Big flashing buttons. Loud alarms. Patronising voice messages: 'It's time to take your medication!' My father is a retired pharmacist, not a toddler. He looked at the first one and said, 'Who designed this, someone who's never met an adult?' He's right. If the technology looked like a clinical tool instead of a toy, he'd actually use it.
+
+Block 5: Willingness to Prioritize
+
+Q: How much time per week do you spend on care coordination?
+
+Twelve hours, minimum. Plus the emotional overhead. My wife Adama said to me last week, 'I love your dad, but I can't keep doing this.' That's when I knew we need systematic help. Not another app that beeps. Real help.
+
+Q: What would a fair price look like?
+
+Two hundred, two-fifty a month. Without hesitation. The ER visit from the double dose probably cost the healthcare system five thousand dollars. One tool that prevents that pays for itself in a single incident.
+
+Wrap-Up
+
+Q: Who else should I talk to?
+
+My father. But approach him as a former healthcare professional, not as a patient. Ask him what he would have designed when he was a pharmacist. He'll engage with that conversation. He won't engage with 'How do you feel about your memory?'
+
+
+
+Part B: Filled Note Template
+
+Participant ID
+
+FC-002
+
+Persona
+
+FC
+
+Date
+
+2026-03-29
+
+Duration (min)
+
+38
+
+Interviewer(s)
+
+PM Lead
+
+KEY JOBS
+
+Prevent medication errors that could hospitalise father. Maintain dignity and independence. Provide accurate longitudinal data to geriatrician. Keep marriage intact under caregiving burden.
+
+CURRENT SOLUTION
+
+Weekly pill organiser. Kitchen whiteboard. Baby monitor (secret). Wife checks at lunch. iPhone calendar. Handwritten notes for quarterly geriatrician. Previously: 2 medication apps (both rejected for being patronising).
+
+BIGGEST PAIN(verbatim)
+
+“He was a pharmacist for forty years. He filled prescriptions for other people his whole career. Now he can’t remember if he took his own pills twenty minutes ago.”“Last month he took his metformin twice. His blood sugar crashed. We sat in emergency for six hours. All because of one extra pill.”“My wife said, ‘I love your dad, but I can’t keep doing this.’”
+
+DESIRED OUTCOME(verbatim)
+
+“Something that catches the double dose before it happens, not after. I don’t need a reminder — I need an interceptor.”“I want the geriatrician to see real data, not my scribbled notes from three months of guessing.”
+
+WILLINGNESS
+
+12+ hrs/week. Would pay $200-250/mo. ER visit cost ~$5,000 — one prevented incident pays for the tool. Rejected 2 apps for patronising design. Key: must feel like a clinical tool, not a toy.
+
+EMOTIONAL INTENSITY
+
+15-second silence when describing role reversal. Deep sadness about father’s lost professional identity. Strained marriage was most emotionally charged moment. Guilt about secret baby monitor.
+
+ESCALATION BEHAVIOR
+
+Checks pill organiser 3x daily (8 AM, noon, 6 PM). Called geriatrician after-hours twice in 6 months: once for double-dose, once for 2-day medication refusal. Doesn’t know when to push through father’s resistance vs escalate.
+
+SURPRISE FINDING
+
+Father will engage with technology that feels ‘professional’ — he reads pharmaceutical journals on his iPad. Apps that failed were patronising. A clinical interface would get adoption. Also: dignity-preserving design is not a feature — it’s a prerequisite.
+
+TOOL MENTIONS
+
+Pill organiser. Whiteboard. Baby monitor. 2 medication apps (rejected). iPhone calendar.
+
+REFERRAL
+
+Emmanuel (father) — ‘approach him as a former healthcare professional.’ The geriatrician.
+
+FOLLOW-UP ACTIONS
+
+[ ] Explore ‘interceptor’ concept for double-dose prevention[ ] Design for dignity: clinical aesthetic, not consumer toy[ ] Quantify ER cost avoidance as value proposition
+
+
+
+Interview 6 of 10: FC-003 — Rachel Torres
+
+Persona: Family Caregiver  |  Date: 2026-03-30  |  Duration: 35 min  |  Interviewer: PM Lead
+
+Location: Phone call (Rachel between school drop-off and mother’s visit)  |  Setting: Remote, voice only
+
+
+
+Part A: Narrative Transcript
+
+Opening & Warm-Up
+
+Q: Tell me about your role caring for your mother.
+
+I'm the everything person. My mum Gloria is seventy-four — COPD, arthritis, anxiety, nine medications daily. She lives alone, twenty minutes from me. My brother's in London, my sister's in Auckland. They call occasionally. I visit every other day, manage all the medical appointments, coordinate the pharmacy, deal with the physio. I'm a part-time teacher so my schedule is flexible-ish, but 'flexible' just means I do two jobs instead of one.
+
+Block 1: Falls
+
+Q: Walk me through the last time your mother had a fall.
+
+Six weeks ago. Bathroom. She slipped getting out of the shower and fractured her wrist. Her medical alert necklace was dead — she'd forgotten to charge it for three days. I found out because she managed to crawl from the bathroom to the hallway table, pull the phone down by the cord, and call me. Ninety minutes after the fall.
+
+The physio told me afterwards: 'The next fracture could be a hip. And that's a different conversation entirely.' I knew what she meant. A hip fracture at seventy-four with COPD — that's a hospital stay, potential pneumonia, maybe she never comes home.
+
+[Probe] What information did you wish you had?
+
+That the necklace was dead. Something that tells ME when the battery is low — not her, me. She forgot. She'll always forget. The system should know that and tell the person who can actually do something about it.
+
+Block 2: Medications
+
+Q: Tell me about managing nine medications.
+
+Nine medications. Three times a day. Two of them can't be taken together. One has to be taken with food, one on an empty stomach. I have a university degree and I can barely keep track. I made a colour-coded chart in Excel — it takes me forty-five minutes to print and laminate a new one each week. And the pharmacy auto-refill is my most reliable tool, but it only tells me medications were picked up, not taken. The gap between dispensed and swallowed is where everything goes wrong.
+
+Q: What would 'perfectly managed' look like?
+
+One place where I can see: did she take her pills, has she moved around today, is anyone else checking on her today. One place, not five apps and a binder. I carry a physical binder of medical records to every appointment. The binder weighs more than my handbag. It shouldn't be this hard.
+
+Block 3: Communication & Escalation
+
+Q: How do you decide when something is an emergency versus watch-and-wait?
+
+I don't know. That's the honest answer. I called 000 for the fall because obviously. But last month she had a dizzy spell and I drove over and she was fine — dehydration. Before that she was short of breath for two days and I didn't take her in because I thought it was the COPD, but the GP later said it was a mild chest infection and we should have come in sooner. I'm guessing every time. I don't know what's an emergency and what's just being seventy-four.
+
+Block 5: Willingness to Prioritize
+
+Q: How much time per week do you spend on care coordination?
+
+Ten hours, easily. Plus the mental load, which never stops. Every time my phone rings after nine PM, my heart stops. Every single time. That's not a way to live.
+
+I pay sixty-five dollars a month for the medical alert necklace. Thirty a month on printed charts and binder supplies. I'd pay a hundred and eighty a month for something reliable. I evaluated a fall detection watch last year — too many false alarms, mum stopped wearing it after three weeks.
+
+Wrap-Up
+
+Q: Who else should I talk to?
+
+The pharmacist at the chemist near mum's place — she knows more about mum's actual medication habits than anyone. And my friend Kate who works in aged care. She's seen the inside of the system from the other side.
+
+
+
+Part B: Filled Note Template
+
+Participant ID
+
+FC-003
+
+Persona
+
+FC
+
+Date
+
+2026-03-30
+
+Duration (min)
+
+35
+
+Interviewer(s)
+
+PM Lead
+
+KEY JOBS
+
+Prevent another fall (next could be hip). Manage 9 medications with complex interactions. Be the communication bridge between mother, GP, physio, pharmacy. Keep own sanity as sole local caregiver.
+
+CURRENT SOLUTION
+
+Visits every other day. Colour-coded Excel medication chart (printed weekly, 45 min). Medical alert necklace ($65/mo, was dead during fall). Physical binder of records carried to every appointment. Pharmacy auto-refill. Previously: fall detection watch (abandoned, false alarms).
+
+BIGGEST PAIN(verbatim)
+
+“The necklace was dead when she fell. Dead. She’d forgotten to charge it for three days.”“Nine medications. Three times a day. Two can’t be taken together. I have a university degree and I can barely keep track.”“The gap between dispensed and swallowed is where everything goes wrong.”“Every time my phone rings after nine PM, my heart stops.”
+
+DESIRED OUTCOME(verbatim)
+
+“One place where I can see: did she take her pills, has she moved around today, is anyone checking on her today. One place, not five apps and a binder.”
+
+WILLINGNESS
+
+10+ hrs/week. $65/mo alert necklace + $30/mo supplies. Would pay $180/mo for reliable system. Rejected fall detection watch (false alarms, 3 weeks). Key: reliability over features.
+
+EMOTIONAL INTENSITY
+
+Rapid-fire delivery, time-pressured (between errands). Dark humour: ‘The binder weighs more than my handbag.’ Genuine fear about hip fracture scenario. ‘Heart stops after 9 PM’ said flatly, as established fact.
+
+ESCALATION BEHAVIOR
+
+Guessing every time. Called 000 for fall (right). Missed chest infection (wrong). Drove over for dehydration dizzy spell (overreaction). No framework for emergency vs normal aging.
+
+SURPRISE FINDING
+
+Pharmacy auto-refill is most reliable tool but only confirms ‘dispensed’ not ‘swallowed.’ The dispensed-to-swallowed gap is her framing of the core adherence problem. Also: battery status of alert device should notify the caregiver, not the patient.
+
+TOOL MENTIONS
+
+Medical alert necklace ($65/mo). Excel medication chart. Physical binder. Pharmacy auto-refill. Fall detection watch (abandoned). Phone calls.
+
+REFERRAL
+
+Local pharmacist. Friend Kate in aged care.
+
+FOLLOW-UP ACTIONS
+
+[ ] Investigate ‘dispensed vs swallowed’ as adherence gap framing[ ] Battery/device status alerting to caregiver not patient[ ] ‘One place’ dashboard concept validation
+
+
+
+Interview 7 of 10: CC-001 — Angela Morrison
+
+Persona: Care Coordinator  |  Date: 2026-03-31  |  Duration: 44 min  |  Interviewer: PM Lead
+
+Location: CareBridge office, Angela’s desk (sticky notes visible everywhere)  |  Setting: Face-to-face
+
+
+
+Part A: Narrative Transcript
+
+Opening & Warm-Up
+
+Q: Tell me about your role — what does a typical week look like for you?
+
+I coordinate care for sixty-plus clients and manage the schedules for twelve nurses and eight care workers. A typical week: I process about fifteen to twenty schedule changes, handle three to five staff absences, field forty-odd calls from families, run two team briefings, and try to stay on top of compliance documentation. Last week I also had to cover a care worker visit myself because absolutely nobody was available.
+
+Q: What tools does your agency currently use?
+
+A scheduling system that's basically a glorified calendar. The EMR that the nurses hate. WhatsApp groups for everything urgent. Spreadsheets for credential tracking. And sticky notes. I know it's embarrassing, but half the critical knowledge about our clients is on sticky notes around my monitor. Which nurse works well with which patient, who needs a female carer, who gets anxious with new people, who has a dog that bites. None of that is in any system.
+
+Block 1 — adapted for CC: Staffing Disruptions
+
+Q: Walk me through the last time a staff absence caused a problem.
+
+Last Tuesday. Jenny called in sick at six-thirty AM. She had three visits booked starting at eight. I had forty-five minutes to find someone who was qualified for all three patients, available, lived close enough to get there by eight, and — ideally — had met at least one of those clients before. I made eleven phone calls. I found a replacement for two of the three visits. The third had to be cancelled.
+
+[Probe] What happened with the cancelled visit?
+
+The client's daughter called me at nine AM asking why nobody came. I didn't even know the cancellation hadn't been communicated — I'd been dealing with the other two replacements. So she found out when nobody showed up at the door. Her father had been waiting in his chair, dressed and ready. He gets anxious when the routine changes. She was furious, and she was right to be.
+
+Q: How do you decide who to send as a replacement?
+
+It's all in my head. I know that Mrs. Kim only wants female carers. I know that Arthur Kovacs doesn't like new people but will accept them if they're briefed about not moving his things. I know that Lin Chen will refuse entry to anyone she doesn't recognise. None of this is documented anywhere. If I get hit by a bus tomorrow, half the knowledge about our clients walks out the door with me.
+
+[Emotional note] Angela said this with dark humour but immediately followed with: 'Actually, that scares me.'
+
+Block 3: Communication & Escalation
+
+Q: When families call you with questions, can you always answer them?
+
+No. Sarah Chen calls me twice a week. 'Did mum's visit happen? Who went? What did they find?' Sometimes I can answer from the scheduling system. Sometimes I have to check the EMR, which takes five minutes of loading and searching. Sometimes the nurse hasn't uploaded their notes yet so I'm guessing. I don't blame Sarah. If it were my mum, I'd call every day.
+
+Block 5: Willingness to Prioritize
+
+Q: If a system could handle vacant visit replacements automatically, what would that change for you?
+
+I'd get my mornings back. The six-thirty AM phone calls are the worst part of my job. If the system could detect the absence, find the best available replacement based on qualifications, proximity, and client preferences, propose it to me for approval, and then notify everyone — the replacement carer, the client, and the family — that would save me forty-five minutes per incident. Three incidents a week, that's over two hours of panicked phone calls I don't have to make.
+
+But it has to know the soft stuff. Not just 'who's available' — 'who does this patient trust.' That's what takes me eleven phone calls. The first four calls are finding availability. The next seven are finding the right person.
+
+Wrap-Up
+
+Q: Is there anything I didn't ask?
+
+The compliance audit. It's in six weeks and I'm terrified. I know there are care plans overdue for review. I know there are documentation gaps. I can feel where the holes are but I can't quantify them because the system doesn't flag overdue items. I'd love something that just told me: 'Here are the seventeen things that are out of compliance. Here are the five that are critical.' Give me a list and I'll fix it. Right now I'm guessing and hoping the auditor doesn't find what I haven't found yet.
+
+
+
+Part B: Filled Note Template
+
+Participant ID
+
+CC-001
+
+Persona
+
+CC
+
+Date
+
+2026-03-31
+
+Duration (min)
+
+44
+
+Interviewer(s)
+
+PM Lead
+
+KEY JOBS
+
+Schedule 60+ clients across 20 staff. Handle 3-5 absences/week. Field 40+ family calls. Maintain compliance documentation. Preserve institutional knowledge about client preferences. Prepare for compliance audit.
+
+CURRENT SOLUTION
+
+Scheduling calendar system. EMR (slow). WhatsApp for urgent comms. Spreadsheets for credentials. Sticky notes for client preferences. Her memory for everything else. Phone calls (11 per vacant visit).
+
+BIGGEST PAIN(verbatim)
+
+“Last Tuesday, Jenny called in sick at six-thirty AM. She had three visits at eight. I made eleven phone calls.”“If I get hit by a bus tomorrow, half the knowledge about our clients walks out the door with me. It’s on sticky notes and in my head.”“Sarah Chen calls me twice a week asking if her mother’s visit happened. Sometimes I can’t answer.”
+
+DESIRED OUTCOME(verbatim)
+
+“If the system could detect the absence, find the best replacement based on qualifications, proximity, and client preferences, propose it to me, and notify everyone — that would save me forty-five minutes per incident.”“But it has to know the soft stuff. Not just ‘who’s available’ — ‘who does this patient trust.’”
+
+WILLINGNESS
+
+45 min per vacant visit replacement x 3/week = 2.25 hrs of panicked phone calls. Agency would immediately invest in automation. Key criterion: must include ‘soft’ matching (trust, preferences, continuity) not just skills + proximity.
+
+EMOTIONAL INTENSITY
+
+Dark humour about bus scenario, immediately followed by genuine fear. Dread about compliance audit. Frustration at being the single point of failure. Empathy for Sarah Chen’s calls.
+
+ESCALATION BEHAVIOR
+
+Angela IS the escalation system. Nurses call her, families call her, management calls her. No automated triage. She mentally triages: client safety > family anxiety > compliance documentation. When overwhelmed, compliance slips.
+
+SURPRISE FINDING
+
+Sticky note knowledge: critical client preferences exist nowhere but Angela’s desk and memory. Also: the compliance audit fear — she can’t quantify her own gaps because the system doesn’t flag overdue items. She’s managing risk by intuition.
+
+TOOL MENTIONS
+
+Scheduling system (basic calendar). EMR. WhatsApp. Spreadsheets. Sticky notes. Phone.
+
+REFERRAL
+
+Tom Bradley at HomeFirst (smaller agency, same problems at scale). Priya Sharma (clinical view of the same agency).
+
+FOLLOW-UP ACTIONS
+
+[ ] Interview Tom Bradley (CC-002)[ ] Investigate ‘soft matching’ criteria for vacant visit algorithm[ ] Compliance gap detection as product feature
+
+
+
+Interview 8 of 10: CC-002 — Tom Bradley
+
+Persona: Care Coordinator  |  Date: 2026-04-01  |  Duration: 36 min  |  Interviewer: PM Lead
+
+Location: HomeFirst Care office (small, one-room)  |  Setting: Face-to-face
+
+
+
+Part A: Narrative Transcript
+
+Opening & Warm-Up
+
+Q: Tell me about your role — what does a typical week look like?
+
+I'm the only coordinator at HomeFirst. Twenty-five clients, six field staff. I do intake, scheduling, family communication, rostering, quality assurance, and — when nobody else is available — I fill in as a care worker myself. Last month I did that three times. My job title says coordinator but my actual role is 'person who does whatever needs doing.'
+
+Block 1 — Staffing Disruptions
+
+Q: Walk me through the last time you lost a client.
+
+Three months ago. The Hendersons. Mrs. Henderson is eighty-one, moderate dementia. Her regular carer went on leave, the backup got sick, and I had to send three different people in two weeks. Mrs. Henderson didn't recognise any of them. She was distressed. She kept asking where Carol was. Her daughter called me and said, 'My mother doesn't know who's walking through her door anymore.' They moved her to another agency the following week.
+
+[Probe] Could you have prevented it?
+
+If I'd had a system that automatically found the best available replacement — someone Mrs. Henderson had met before, or at least someone with dementia experience who'd been briefed on her specific needs — maybe. But I'm in Google Sheets. When someone calls sick, I scroll the sheet, mentally filter for who's qualified, who's available, who lives nearby, and start texting. Sometimes I find someone in ten minutes. Sometimes it takes an hour. And about twenty percent of the time, I can't find anyone and I have to cancel entirely.
+
+Block 3: Communication
+
+Q: When a visit gets cancelled, how do families find out?
+
+This is the part I'm ashamed of. Sometimes they find out because nobody shows up. A family called me at nine AM asking why nobody came for their father's eight AM visit. I didn't even know it was cancelled. The carer had texted me at six AM but I was dealing with another fire. Nobody told the family. Their father had been sitting in his chair, dressed and ready, waiting. That image stays with me.
+
+[Emotional note] Tom's voice dropped. This clearly haunts him.
+
+Block 5: Willingness to Prioritize
+
+Q: If a system could handle vacant visit automation, what would change?
+
+Everything. I spend thirty to sixty minutes per absence on phone calls, texts, and schedule juggling. If the system detected the absence, found replacements ranked by match quality, sent me one approval click, and then notified the carer, the client, and the family — I'd have my mornings back. I'd probably keep clients we're currently losing. And nobody's father would sit in a chair waiting for someone who isn't coming.
+
+Q: Are there care plans in your system that are overdue for review?
+
+Almost certainly. The quality framework says every eight weeks. I don't have a system that flags when they're due. I have a calendar reminder that I snooze more often than I act on. I can feel things slipping through but I can't see them. It's a vague anxiety with no specifics.
+
+
+
+Part B: Filled Note Template
+
+Participant ID
+
+CC-002
+
+Persona
+
+CC
+
+Date
+
+2026-04-01
+
+Duration (min)
+
+36
+
+Interviewer(s)
+
+PM Lead
+
+KEY JOBS
+
+Schedule 25 clients across 6 staff. Handle absences (sole coordinator). Maintain client relationships and continuity. Quality assurance. Fill in as care worker when needed.
+
+CURRENT SOLUTION
+
+Google Sheets for scheduling. WhatsApp for staff comms. Calendar reminders (frequently snoozed). Paper forms for some clients. Himself as backup care worker.
+
+BIGGEST PAIN(verbatim)
+
+“We lost the Hendersons. Three different carers in two weeks. Her daughter said, ‘My mother doesn’t know who’s walking through her door anymore.’ I couldn’t argue with her.”“A family called at 9 AM asking why nobody came. The carer texted me at 6 AM but I was dealing with another fire. Nobody told the family.”“I know there are care plans overdue for review. I can feel it. But I don’t have a list, I don’t have a flag, just vague anxiety.”
+
+DESIRED OUTCOME(verbatim)
+
+“If the system detected the absence, found replacements ranked by match quality, sent me one approval click, and notified everyone — nobody’s father would sit in a chair waiting for someone who isn’t coming.”
+
+WILLINGNESS
+
+30-60 min per absence. 20% of vacant visits end in cancellation (lost revenue + client risk). Lost Henderson family = lost revenue + reputation damage. Agency would immediately invest.
+
+EMOTIONAL INTENSITY
+
+Voice dropped describing father waiting in chair. Shame about uninformed cancellations. ‘Vague anxiety’ about compliance gaps. Self-deprecating about wearing too many hats.
+
+ESCALATION BEHAVIOR
+
+Tom is a one-person operation. No escalation chain — he IS the chain. When overwhelmed, visits get cancelled without notification. Quality documentation slips first when fires are burning.
+
+SURPRISE FINDING
+
+20% cancellation rate for vacant visits — quantifiable revenue and safety loss. Also: care plan review overdue problem is universal but invisible (no flags, no lists, just ‘vague anxiety’).
+
+TOOL MENTIONS
+
+Google Sheets. WhatsApp. Calendar reminders (snoozed). Paper forms.
+
+REFERRAL
+
+Angela Morrison (larger agency, same problems at bigger scale).
+
+FOLLOW-UP ACTIONS
+
+[ ] Quantify vacancy-to-cancellation rate across agencies[ ] Overdue care plan flagging as compliance feature[ ] Client loss attribution to continuity failures
+
+
+
+Interview 9 of 10: SR-001 — Lin Chen
+
+Persona: Senior Resident  |  Date: 2026-04-02  |  Duration: 40 min  |  Interviewer: PM Lead
+
+Location: Lin’s home, kitchen table (tea served, biscuits)  |  Setting: Face-to-face, conversational
+
+[Note: Questions adapted for SR persona — asking about Lin’s own experience, not caring for others]
+
+
+
+Part A: Narrative Transcript
+
+Opening & Warm-Up
+
+Q: Tell me about your daily routine — what does a typical day look like for you?
+
+I get up at six-thirty, make tea, have breakfast. I used to walk around the block at seven-thirty every morning but I haven't done that for a while now. The weather hasn't been great. I read the news on my iPad, do the crossword. Maria comes on Thursdays — she's my nurse. Sarah comes Wednesdays and Saturdays. The rest of the time I'm here. I watch television. I read. I talk to the grandchildren on Sunday — they video call me on the iPad.
+
+[Probe] You mentioned you haven't been walking. How long has it been?
+
+A few weeks maybe. The footpath near the corner is uneven and I don't trust my balance the way I used to. But I'm fine inside. I hold onto the kitchen bench and the hallway wall. It's just being careful. Everyone makes a fuss about nothing.
+
+[Emotional note] Dismissive tone, but Lin unconsciously gripped the table edge as she spoke. Demonstrates the gap between what she says and what she does.
+
+Block 1: Falls (adapted for SR)
+
+Q: Can you tell me about the fall you had a few months ago?
+
+I tripped on the rug. Two in the morning, going to the bathroom. Caught my foot and went down on my hip. Stupid thing. I should have thrown that rug out years ago. I couldn't get up — the phone was in the bedroom and I couldn't reach it. So I waited until Sarah called in the morning.
+
+[Probe] What was going through your mind during those hours?
+
+I was angry. Mostly at myself. And cold — the hallway floor is tiles. I wasn't scared exactly. More... frustrated. I kept thinking, 'I can handle this. I just need to wait.' I wasn't going to call an ambulance for a bruised hip. By the time Sarah called and I couldn't answer, she came over. Made a big fuss. Bought me that pendant thing.
+
+Q: The pendant alarm — I understand you stopped wearing it?
+
+I wore it for two days. Then I caught myself in the bathroom mirror wearing this plastic thing around my neck and I looked like a hospital patient. In my own home. In my own bathroom. I took it off and put it in the drawer. Sarah was upset but I told her I'd wear it at night. I don't wear it at night.
+
+Here's the thing nobody understands: everything I do is proof that I can still live here. Every pill I take on time, every morning I make my own tea, every walk around the block. The moment I start wearing emergency buttons and setting alarms for my medication, I've admitted something I'm not ready to admit.
+
+[Emotional note] Lin said this with absolute clarity and conviction. This is not confusion — this is a calculated strategy for maintaining independence.
+
+Block 2: Medications (adapted for SR)
+
+Q: How do you manage your medications?
+
+Sarah fills the pill organiser on Sundays. I take the morning ones with breakfast, the afternoon ones after lunch, the evening ones after dinner. It's straightforward.
+
+[Probe] Has there ever been a time you weren't sure if you'd taken a dose?
+
+Sometimes. If I get distracted — the phone rings or something's on the television — I can't always remember if I took them or not. If I'm not sure, I usually skip it. Better safe than sorry. Once or twice I've taken them again just in case. It's not ideal but it's manageable.
+
+Q: Has Sarah ever found the organiser didn't look right?
+
+[Pause] She checks it every time she comes. She counts things. She notices if the wrong day is empty. [Longer pause] I sometimes... adjust it. If I realise I've missed a dose before she visits, I move the pills around so it looks right. It's not lying — it's managing. If I tell her every little thing, she'll decide I can't manage. And then it starts. The conversations about moving, about more help, about not living alone. I'm not ready for that.
+
+[Emotional note] Lin maintained eye contact throughout. This was not a confession — it was an explanation. She sees this as rational self-preservation.
+
+I move my walking shoes too. Maria checks things like that. If the shoes are in the same spot every week, she'll know I haven't been out. So I move them to different places by the door. It's not much, but it buys me time.
+
+Block 3: Communication (adapted for SR)
+
+Q: When decisions are made about your care, how are you involved?
+
+I'm not. Sarah talks to Maria. Maria talks to the doctor. Then Sarah calls me and tells me what they decided. I'm right here. Nobody asks me. I taught mathematics for thirty-five years. I can understand my own blood pressure numbers, thank you. I'd like to know what my care plan says. I'd like to know when my next visit is without calling Sarah. I'd like to be a participant, not a subject.
+
+Block 4: Tools & Trust (adapted for SR)
+
+Q: When Maria visits, what's that experience like?
+
+Maria is wonderful. She comes in, she sits down, she accepts a cup of tea, she asks about the grandchildren. Then she does her nurse things. She's a person first and a nurse second. That matters to me.
+
+But once — about a month ago — a different nurse came. Maria was sick. This woman I'd never seen walked up to my door and said she was my nurse for today. I didn't let her in. How am I supposed to know who she is? Anyone could say that. Maria, I know. This person, I don't. I told Sarah the nurse didn't come. I didn't tell her I'd turned someone away.
+
+[Probe] What would have needed to be different for you to let her in?
+
+If Maria had called me the day before and said, 'Lin, I'm not feeling well. Karen is going to come instead of me. She's very nice. She knows you like tea first.' Something human. Not a stranger appearing at my door unannounced.
+
+Q: Some nurses use their phones a lot during visits. What's your experience?
+
+The one I turned away — when she came back the next week with a proper introduction, she spent the whole visit typing on her phone. Didn't look at me. Asked me questions like I was at a drive-through. Tick tick tick on her phone. I'm not a checklist. Maria never does that. She looks at me when I talk.
+
+Block 5: Willingness to Prioritize (adapted for SR)
+
+Q: If there were a way to see your own care information — when your next visit is, what your care plan says — would you use that?
+
+Yes. I don't want another gadget. I don't want anything around my neck or on my wrist. But if I could ask my iPad, 'When is Maria coming?' or 'What did the doctor change last time?' — I'd use that. I use the iPad for everything else. Why not this?
+
+Q: What about something that monitors your health passively?
+
+Define 'monitors.' If you mean something that watches me and reports to Sarah — no. Absolutely not. I'm not a prisoner. But if it meant that Maria had better information when she visits — she already checks my blood pressure, she might as well have a history of it — I could live with that. As long as it's for her work, not Sarah's anxiety.
+
+Q: You mentioned the GP appointment you cancelled. Can you tell me about that?
+
+I cancelled the doctor because I didn't want them to find something that would give Sarah ammunition. If the doctor says my blood pressure is high or my balance isn't what it was, Sarah finds out, and then it starts. I'm not afraid of dying. I'm afraid of losing my home. Everything I do is proof I can still live here. The moment I can't prove that, they'll move me.
+
+
+
+Part B: Filled Note Template
+
+Participant ID
+
+SR-001
+
+Persona
+
+SR
+
+Date
+
+2026-04-02
+
+Duration (min)
+
+40
+
+Interviewer(s)
+
+PM Lead
+
+KEY JOBS
+
+Maintain independence and remain in own home. Prove to Sarah and the system that she can self-manage. Preserve dignity and agency. Manage health enough to avoid the ‘care home conversation.’
+
+CURRENT SOLUTION
+
+Pill organiser (filled by Sarah, gamed by Lin). Morning routine as self-proof of capability. Tea with Maria as the human anchor of care. iPad for grandchildren/news. Strategic management of information flow to Sarah.
+
+BIGGEST PAIN(verbatim)
+
+“I wore it for two days and caught myself in the mirror looking like a hospital patient. In my own home. I took it off.”“I move the pills around so it looks right. It’s not lying — it’s managing. If I tell them every little thing, they’ll decide I can’t manage.”“Nobody asks me. I taught mathematics for thirty-five years. I can understand my own blood pressure numbers.”“I’m not afraid of dying. I’m afraid of losing my home.”
+
+DESIRED OUTCOME(verbatim)
+
+“If I could ask my iPad, ‘When is Maria coming?’ or ‘What did the doctor change last time?’ — I’d use that.”“As long as it’s for Maria’s work, not Sarah’s anxiety.”
+
+WILLINGNESS
+
+Would use iPad-based access to own care info. Would accept passive monitoring IF data serves the nurse, not the daughter. Will not wear anything. Will not use anything that feels like surveillance. Will actively sabotage any system that threatens her independence.
+
+EMOTIONAL INTENSITY
+
+Absolute clarity when explaining pill gaming — rational, not confused. Conviction about independence: ‘everything I do is proof.’ Dismissive about falls but gripped table edge unconsciously. Controlled anger about being excluded from care decisions.
+
+ESCALATION BEHAVIOR
+
+Lin DE-ESCALATES. She conceals symptoms to prevent escalation by others. Hidden dizzy spells (3 months). Skipped GP to avoid diagnosis. Games pill organiser to prevent Sarah’s concern. This is REVERSE escalation — the patient actively suppresses signals.
+
+SURPRISE FINDING
+
+DATA GAMING: Lin deliberately manipulates pill organiser and walking shoes to fake adherence + activity. This is strategic, not confused. Also: skipped GP to avoid giving Sarah ‘ammunition.’ Also: receptive to iPad-based care info access — wants to be a participant, not a subject. Also: the replacement nurse refusal was about trust and introduction, not capability.
+
+TOOL MENTIONS
+
+Pill organiser (gamed). Pendant alarm (drawer). iPad (video calls, news, crossword — receptive to care info). Walking shoes (repositioned).
+
+REFERRAL
+
+Maria Santos (‘she’s the only one I trust’). Her neighbour Pat (‘she checks on me too, informally’).
+
+FOLLOW-UP ACTIONS
+
+[ ] Design for signal suppression: absence of data as a risk signal[ ] Patient-facing care info access via familiar device (iPad)[ ] Trust-based carer matching + advance introduction protocol[ ] Distinguish monitoring-for-nurse vs monitoring-for-family in data access
+
+
+
+Interview 10 of 10: SR-002 — Arthur Kovacs
+
+Persona: Senior Resident  |  Date: 2026-04-03  |  Duration: 52 min  |  Interviewer: PM Lead
+
+Location: Arthur’s apartment (small, tidy, photos of wife Elena everywhere)  |  Setting: Face-to-face, slow pace
+
+[Note: Arthur speaks slowly and carefully. Interview ran longer because he wanted to talk. Do not rush.]
+
+
+
+Part A: Narrative Transcript
+
+Opening & Warm-Up
+
+Q: Tell me about your daily routine — what does a typical day look like?
+
+I wake up around seven. Elena always woke up first and made coffee. Now I make it myself. It takes longer because my hands aren't as steady. The nurse comes Monday and Thursday. The care worker comes Monday, Wednesday, and Friday for bathing and tidying. Michael — my son — comes on Sundays. Meals on Wheels delivers lunch on weekdays. The rest of the time... I'm here. I watch the cricket if it's on. I read engineering journals sometimes. I sit.
+
+[Probe] How long has it been since Elena passed?
+
+Eighteen months. She had pancreatic cancer. Six weeks from diagnosis to... [pause] She managed everything. The house, the bills, my medications, our social life. When she died, I didn't just lose my wife. I lost my whole system. She used to lay out my pills every morning in a little cup on the counter at seven o'clock. Now I have the organiser the nurse fills. But I can't always remember what day it is, especially on weekends when nobody comes. All the days feel the same.
+
+[Emotional note] Arthur's eyes filled but he didn't cry. He touched the photo frame on the table next to him. The grief is integrated, not raw, but present in everything.
+
+Block 1: Falls (adapted for SR)
+
+Q: Can you tell me about the falls you've had?
+
+Twice, both in the bathroom. The first time, about eight months ago, I slipped getting out of the bath. I grabbed the rail and managed to get up after about twenty minutes on the floor. Didn't tell anyone. It was embarrassing more than anything. I just thought, 'I need to be more careful.'
+
+The second time was four months ago. Same thing — getting out of the bath. But this time I couldn't get up. I pressed the emergency button on the wall — the agency installed it. And I waited. On the wet floor. Cold. For thirty-five minutes. Wondering if the button actually worked or if I was just going to lie there until someone noticed I was missing.
+
+[Probe] What was going through your mind during those thirty-five minutes?
+
+Frank. My neighbour across the hall. He died eight months ago. His daughter found him on a Tuesday. The neighbours said they hadn't seen him since Saturday. Three days. That's what I was thinking about on the bathroom floor. Whether I was going to be Frank.
+
+I sleep with the phone on my pillow now. And the hallway light stays on all night. I'm not afraid of dying. I'm afraid of dying and nobody finding me for three days.
+
+[Emotional note] Steady voice but his hand trembled on the table. This fear is present every night.
+
+I don't bathe on days when nobody's scheduled to come. If I fall on a Saturday, the next visit isn't until Monday morning. Thirty-six hours. So I only bathe when the care worker is coming.
+
+Block 2: Medications (adapted for SR)
+
+Q: How do you manage your medications?
+
+The nurse fills the organiser. Elena used to put the pills in a cup — just the morning ones, right there on the counter when I came to the kitchen. I never missed a dose when she was here. Now I open the organiser and sometimes I can't remember if today is Wednesday or Thursday. On weekdays it's easier because someone usually comes — the nurse, the care worker, Meals on Wheels. That anchors the day. Weekends are the worst. Nobody comes. Every day feels like every other day.
+
+Q: Have you ever taken a dose twice or skipped one?
+
+Both, probably. I try to be careful but I can't always be sure. My son Michael set an alarm on the tablet he gave me but I don't always hear it. And sometimes I hear it and I think, 'Did I already take them, or is this the alarm telling me to take them?' It's confusing. I don't tell Michael because he worries enough as it is. He works hard. He has his own problems.
+
+Block 3: Communication & Information (adapted for SR)
+
+Q: When you notice something about your health, what do you do?
+
+I told the nurse last month that my ankles seemed more swollen than usual. She wrote it down. Two weeks later, my doctor mentioned it at the regular visit as if it was new information. So what was the point of me saying anything? If the information I give the nurse doesn't reach the doctor, then I'm talking into a void. I might as well tell the wall.
+
+[Probe] How did that make you feel?
+
+Like I don't matter in my own care. The nurse writes it down, the note sits in a system somewhere, and the doctor sees whatever the doctor sees. I don't know what my care plan says. Nobody has ever shown it to me. I assume there's a plan because people keep showing up, but what are they looking for? What am I supposed to be doing? I'd like to know.
+
+Block 3b: Trust in Technology (adapted for SR — Amendment A3)
+
+Q: Has technology ever been used to help monitor your health?
+
+Yes, and it went badly. My previous agency — about eight months ago — they had some kind of AI system that listened to phone calls. 'Wellness monitoring,' they called it. After two weeks, my son got a call saying the system detected signs of depression in my voice. The system. Not a person. A computer listened to how I talked on the phone and decided I was depressed.
+
+I wasn't depressed. I was exhausted. There was construction noise upstairs — three nights of jackhammering. Of course I sounded flat. Of course I was speaking slowly. But did anyone call to ask, 'Arthur, you sound tired, everything okay?' No. They went straight from 'computer says he's depressed' to 'tell his son and his GP.'
+
+Michael called me in a panic. 'Dad, are you okay? The system says you might be depressed.' I was furious. Absolutely furious. A machine told my son I was mentally ill before it told me. Before anyone asked me. The GP discussed it at the next appointment. She wrote 'AI flag reviewed and clinically dismissed.' But it's still there in my record. Every new nurse who opens my file sees 'Mental Health: AI-flagged depressive indicators.' What do you think they see first — the flag or the dismissal?
+
+[Emotional note] Arthur's hand was flat on the table, pressing down. Controlled anger, not frustration — this felt like a violation to him.
+
+Now when the nurse calls me for a check-in, I make sure I sound cheerful. I speak clearly. I say I'm fine even when I'm not. Because if I sound tired again, who knows what the computer will decide about me this time.
+
+[Probe] So the monitoring changed how you communicate?
+
+It did. I perform wellness now. That's what I call it. I perform for the phone. And the worst part is — the system was supposed to detect when something's wrong, but now I'll never let it detect anything. So it's actually made things worse. If I am depressed one day, truly depressed, they won't know, because I'll sound exactly the same as every other day. They taught me to hide.
+
+Block 4: Care Worker Continuity (adapted for SR)
+
+Q: How many different care workers have visited you recently?
+
+Three different people in the last two months. My regular is Lisa. She knows where everything is, she knows I don't like the bathroom rearranged, she knows I take my coffee black with one sugar. When Lisa doesn't come, someone else comes. Last time, the replacement moved my soap and my towel to different hooks. Elena put those there. I didn't say anything but I moved them back after she left.
+
+Nobody briefs them about me. They come in, they do the checklist, they leave. Lisa sits down for five minutes and asks about the cricket. The others do the job. There's a difference between being cared for and being processed.
+
+Block 5: Willingness (adapted for SR)
+
+Q: If there were something that helped your care team know you better, would you be open to that?
+
+Depends what it is. If it's another machine that listens to me and makes decisions about my mental health — absolutely not. They call it 'wellbeing monitoring.' I call it a machine that listens to how you talk and then tells people you're sick. There's a word for that. It's not 'care.'
+
+But if it meant that when a new care worker comes, they already know: Arthur takes his coffee black, don't move the bathroom things, ask about the cricket, and by the way he's a former mechanical engineer so don't talk to him like he's a child — that would be good. That would be care.
+
+Wrap-Up
+
+Q: Is there anything I didn't ask that's important?
+
+Ask about loneliness. Nobody does. The care workers come and go. Michael comes on Sundays. The rest of the time, it's me and Elena's photos. I'm not asking for company — I know people are busy. But when the nurse comes and spends the entire visit on her phone, that half hour was supposed to be human contact. And instead it was someone checking boxes in my living room while I watched.
+
+Whatever you build, make it so the people who come to my home can look at me when they talk to me. That's all I'm asking. Give them whatever they need before they walk through my door so they don't have to spend my visit typing. Give me that half hour back as a human being, not a data point.
+
+
+
+Part B: Filled Note Template
+
+Participant ID
+
+SR-002
+
+Persona
+
+SR
+
+Date
+
+2026-04-03
+
+Duration (min)
+
+52
+
+Interviewer(s)
+
+PM Lead
+
+KEY JOBS
+
+Survive safely in his apartment. Not be forgotten. Maintain connection to Elena’s memory. Be treated as a person, not a checklist. Get through weekends alone. Not become Frank.
+
+CURRENT SOLUTION
+
+Emergency button (response: 35 min). Pill organiser (confusion on weekends). Meals on Wheels (weekday anchor). Care workers 3x/week. Son on Sundays. Phone on pillow. Hallway light on all night. Only bathes on visit days.
+
+BIGGEST PAIN(verbatim)
+
+“I told the nurse my ankles were more swollen. She wrote it down. Two weeks later the doctor mentioned it like it was news. So what was the point of me saying anything?”“Some computer decided I was depressed because I was talking slowly. I wasn’t depressed. I was tired. But they told my son and my doctor before they told me.”“I sleep with the phone on my pillow and the hallway light on. I’m not afraid of dying. I’m afraid of dying and nobody finding me for three days.”“I perform wellness now. If I am depressed one day, truly depressed, they won’t know.”
+
+DESIRED OUTCOME(verbatim)
+
+“I don’t know what my care plan says. Nobody has ever shown it to me. I’d like to know.”“When a new care worker comes, they should already know: Arthur takes his coffee black, don’t move the bathroom things, ask about the cricket.”“Give them whatever they need before they walk through my door so they don’t have to spend my visit typing. Give me that half hour back as a human being.”
+
+WILLINGNESS
+
+Open to systems that help care workers know him better. Open to seeing own care plan. NOT open to any voice/mood monitoring. NOT open to systems that notify family before him. Key: technology should increase human presence during visits, not replace it.
+
+EMOTIONAL INTENSITY
+
+Eyes filled but didn’t cry when discussing Elena. Hand trembled describing Frank. Controlled anger about AI depression flag (‘violation’). Grief-integrated loneliness throughout. Final request about human connection was the emotional peak.
+
+ESCALATION BEHAVIOR
+
+Doesn’t escalate. Doesn’t tell son about missed appointments, dizziness, eating problems (‘he has his own problems’). Reported swollen ankles once — info was lost — concluded reporting is pointless. Now performs wellness on phone calls. Avoids bathing on non-visit days (risk avoidance, not risk reporting).
+
+SURPRISE FINDING
+
+PERFORMS WELLNESS: Arthur deliberately sounds cheerful on check-in calls because a previous AI system falsely flagged him as depressed. AI monitoring degraded data quality. Also: ‘Frank story’ — neighbour found dead 3 days later is the emotional anchor. Also: reported data (swollen ankles) was lost between nurse and GP. Also: care plan is invisible to the patient it’s written for.
+
+TOOL MENTIONS
+
+Emergency wall button (35 min response). Pill organiser. Tablet (unused, gifted by son). Previous AI wellness monitoring system (negative experience). Phone (on pillow).
+
+REFERRAL
+
+Lisa (regular care worker — ‘she’s the only one who asks about the cricket’). Michael (son — ‘but he’ll tell you I’m fine because he needs to believe that’).
+
+FOLLOW-UP ACTIONS
+
+[ ] Design patient-visible care plan in accessible language[ ] Care worker briefing system with patient preferences + sensitivities[ ] Investigate ‘performing wellness’ as data quality degradation risk[ ] Ensure all health inferences pass L2 clinical review before ANY notification[ ] Weekend isolation as medication drift risk factor
+
+
+
+Handshake Forward
+
+This document (Artifact 2) contains 10 complete synthetic interviews across 4 personas. Per the Interview Script (Artifact 1), the next step is:
+
+/summarize-interview
+
+Run summarize-interview once per persona group (3+ sessions). Feed all raw note templates for that persona.
+
+
+
+Persona Group
+
+Interviews to Feed
+
+Expected Output
+
+HCN (Nurse)
+
+HCN-001, HCN-002, HCN-003
+
+JTBD map, verbatim quote bank,pain signal ranking
+
+FC (Family Caregiver)
+
+FC-001, FC-002, FC-003
+
+JTBD map, verbatim quote bank,pain signal ranking
+
+CC (Care Coordinator)
+
+CC-001, CC-002
+
+JTBD map, verbatim quote bank,pain signal ranking
+
+SR (Senior Resident)
+
+SR-001, SR-002
+
+JTBD map, verbatim quote bank,pain signal ranking
+
+
+
+Rule: Key Insights and Problems sections of the summary must use exact customer words. No paraphrasing. Synthesis goes below the quote — never instead of it.
+
+Output feeds: competitive-gap-analysis + market-segmentation-deep-dive
+
+
+
+---

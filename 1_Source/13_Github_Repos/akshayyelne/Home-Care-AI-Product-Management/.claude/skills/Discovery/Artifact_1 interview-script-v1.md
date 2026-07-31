@@ -1,0 +1,225 @@
+# Extracted from: akshayyelne/Home-Care-AI-Product-Management/.claude/skills/Discovery/Artifact_1 interview-script-v1.md
+# Generated: 2026-07-31T00:49:45.109Z
+
+**Version:** 1.0
+**Date:** 2026-03-24
+**Plugin Stage:** Discovery → Stage 1 (Customer Research)
+**Next Step:** `summarize-interview` after each session
+
+
+
+| # | Question | Decision It Informs |
+|---|---|---|
+| 1 | What is the real workflow a family caregiver or RN follows when a senior shows a fall or medication concern? | Feature scope and alert triage logic |
+| 2 | Where do current tools (paper logs, phone calls, EMR) break down? | Competitive gap + OST opportunity statements |
+| 3 | How do caregivers and clinicians handle uncertainty — do they escalate or wait? | HITL threshold calibration |
+| 4 | What is the emotional cost of a missed event vs. a false alarm? | Alert confidence thresholds + dispatch policy |
+| 5 | Who is involved in the decision chain from detection to action? | Agentic Control Matrix (L1/L2/L3) role assignments |
+
+
+
+| Code | Persona | Why Interview Them |
+|---|---|---|
+| **FC** | Family Caregiver (adult child, 40–65) | Primary emotional driver; bears coordination burden |
+| **HCN** | Home Care Nurse / RN | Clinical decision-maker; owns escalation judgment |
+| **CC** | Care Coordinator / Agency Dispatcher | Manages multi-patient schedules; sees systemic failures |
+| **MD** | Attending Physician / Geriatrician | Final escalation authority; defines clinical thresholds |
+| **SR** | Senior Resident (65+, moderate independence) | End subject of care; source of acceptance or resistance |
+
+
+
+> "Hi [Name], thank you so much for making time today. My name is [Your Name] and I'm on a team researching how families and care professionals manage day-to-day care for seniors at home. We're not here to sell you anything — we're here to learn from your real experience.
+>
+> There are no right or wrong answers. The more honest and specific you are, the more useful this is for us.
+>
+> Is it okay if I take notes? *(If recording: Is it okay if I record this session? It stays within our team and is deleted after we process it.)*
+>
+> We have about [30 / 45 / 60] minutes. Does that still work for you?"
+
+
+
+> "Before we get into specifics, I'd love to understand your situation a bit."
+
+- **"Tell me about your role — what does a typical week look like for you?"**
+- **"How long have you been [caring for / working with] seniors at home?"**
+- **"How many people are you responsible for right now, roughly?"**
+- *(For FC only)* **"Are you the primary contact, or are there other family members involved?"**
+- *(For HCN/CC only)* **"What tools does your agency currently use to track patient status?"**
+
+*Goal: Establish context. Note: number of people involved, tenure, tools already in use.*
+
+
+
+### Block 1 — Falls
+
+> "Let's talk about falls specifically."
+
+**Past behavior (specific incident):**
+- **"Walk me through the last time someone you care for had a fall, or you were concerned they might. What happened — from the very beginning?"**
+- **"What did you do first? Then what?"**
+- **"Who else was involved? How did they find out?"**
+- **"How long did the whole response take, from when you first knew something was wrong?"**
+
+**Pain points:**
+- **"What was the hardest part of that situation?"**
+- **"What information did you wish you had that you didn't?"**
+- **"Was there a moment where you weren't sure whether to call 911 or wait? Tell me about that."**
+- **"Have you ever gotten a false alarm — thought something was wrong and it wasn't? What happened?"**
+
+**Desired outcome:**
+- **"What would have made that situation easier or safer?"**
+- **"How would you know, in the future, that you handled it well?"**
+
+
+### Block 2 — Medication Adherence
+
+> "Now let's shift to medications."
+
+**Past behavior:**
+- **"Tell me about the last time there was a problem with a medication — missed dose, wrong dose, confusion about instructions. Walk me through it."**
+- **"How did you find out? How long after it happened?"**
+- **"What did you do? Who else was looped in?"**
+
+**Pain points:**
+- **"What's the most frustrating part of keeping track of medications across [one person / multiple patients]?"**
+- **"What do you use today to manage this? How does it break down?"**
+- **"Have you had a situation where you weren't sure whether a dose was taken or not? What did you do?"**
+
+**Desired outcome:**
+- **"If this worked perfectly, what would that look like for you day to day?"**
+- **"What's the single thing that would make you feel confident medications are being managed safely?"**
+
+
+### Block 3 — Communication & Escalation
+
+> "Let's talk about how information flows between everyone involved."
+
+- **"When something concerning happens with a patient, how does that information get to you? Walk me through the chain."**
+- **"What's the weakest link in that chain — where does information get lost or delayed?"**
+- **"Have you ever made a decision — to escalate or not escalate — that you later second-guessed? Tell me about that."**
+- **"How do you decide when something is an emergency vs. a watch-and-wait situation?"**
+- *(For HCN/MD)* **"When you get an alert from a device or system, how much do you trust it? Has it ever been wrong? What happened?"**
+
+
+### Block 4 — Current Tools & Workarounds
+
+- **"What tools or systems do you currently use to monitor or coordinate care? *(probe: apps, devices, EMR, paper, phone)*"**
+- **"Walk me through how you used [tool] last week."**
+- **"What does it do well? Where does it fall short?"**
+- **"Have you tried anything new in the last year to solve any of these problems? What happened?"**
+- **"What would you give up to have a system that actually worked the way you need?"**
+
+
+### Block 5 — Willingness to Prioritize / Skin in the Game
+
+*(Do not pitch. Ask about current spend and behavior only.)*
+
+- **"How much time per week do you estimate you spend on coordination and communication around care?"**
+- **"Does your agency / family currently pay for any monitoring technology? What?"**
+- **"Have you or your organization ever evaluated a new care coordination tool and decided not to buy? What made you say no?"**
+- **"If a tool solved [biggest pain stated earlier], what would a fair price look like to you — or would your organization even budget for that?"**
+
+
+
+Use these throughout — do not skip past emotional or surprising answers:
+
+| Trigger | Probe to Use |
+|---|---|
+| Vague answer | "Can you give me a specific example of when that happened?" |
+| Strong emotion (frustration, fear, relief) | "Tell me more about that feeling. What was at stake?" |
+| Surface answer | "Why?" *(ask gently, up to 3 times)* |
+| Story stops short | "What happened next?" |
+| Mentions someone else | "Who is [that person]? How did they fit in?" |
+| Mentions a workaround | "How long have you been doing it that way? What would have to be true to stop?" |
+
+
+
+- Ask about **their life**, not your idea.
+- Ask about **the past** — never "Would you use X?"
+- **Talk less, listen more** — target 80/20 split.
+- **Never pitch** during the interview.
+- **Compliments are noise** — "That sounds useful!" tells you nothing.
+- Strong emotions = **real signal**. Dig in immediately.
+
+
+
+> "We're almost out of time. A couple of final questions:"
+
+- **"Is there anything I didn't ask about that you think is important for us to understand?"**
+- **"Who else should I talk to — someone who sees this problem from a different angle?"**
+- **"Can I follow up with you if we have more questions?"**
+
+> "Thank you so much. This was genuinely helpful. We'll use what we learned to [improve how we understand this problem / shape what we build next]. I'll share results with you when we have them."
+
+
+
+*(Fill in during or immediately after each session)*
+
+```
+─────────────────────────────────────────────
+INTERVIEW NOTES — Home-Care-AI
+─────────────────────────────────────────────
+Participant ID:       [e.g., FC-001 — never store real name]
+Persona:              [FC / HCN / CC / MD / SR]
+Date:                 2026-03-24
+Duration (min):       ___
+Interviewer(s):       ___
+
+KEY JOBS
+What are they fundamentally trying to accomplish?
+→
+
+CURRENT SOLUTION
+What do they use today (tools, workarounds, people)?
+→
+
+BIGGEST PAIN (verbatim quote — exact words only)
+→ "                                                 "
+→ "                                                 "
+
+DESIRED OUTCOME (verbatim)
+What does "good" look like in their own words?
+→ "                                                 "
+
+WILLINGNESS TO PRIORITIZE
+Time/money currently spent? Have they paid for anything similar?
+→
+
+EMOTIONAL INTENSITY
+Moments of strong frustration, fear, relief, or resignation:
+→
+
+ESCALATION BEHAVIOR
+How/when do they decide to escalate vs. wait?
+→
+
+SURPRISE FINDING
+Something unexpected or that challenges an assumption:
+→
+
+TOOL MENTIONS
+Any specific products, apps, or systems named:
+→
+
+REFERRAL
+Who else did they suggest we talk to?
+→
+
+FOLLOW-UP ACTIONS
+→ [ ]
+→ [ ]
+─────────────────────────────────────────────
+```
+
+
+
+After **3+ sessions** with the same persona, run:
+
+```
+/summarize-interview
+```
+
+Input: raw transcripts + note templates above.
+Output: JTBD map, verbatim quote bank, pain signal ranking — feeds `competitive-gap-analysis` and `market-segmentation-deep-dive`.
+
+> **Rule:** Key Insights and Problems sections of the summary must use exact customer words. No paraphrasing. Synthesis goes *below* the quote — never instead of it.

@@ -1,0 +1,57 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] How to Build a Vector RAG.pdf
+# Characters: 1161
+# Generated: 2026-07-31T00:07:33.312Z
+
+Document DBs
+How to Build a Vector RAG?
+The Product Compass Newsletter                                           The original post                                        productcompass.pm
+1. Ingest (Collect) & Preprocess Data 
+6. Orchestrate the Pipeline
+AI Search
+Watson Discovery
+2. Split Into Chunks
+3. Generate Embeddings
+llama-text-embed-v2
+text-embedding-3-large
+e5-large-v2
+4. Store in Vector DB & Index
++
+Vector DBs
+bge-reranker-v2-m3
+cohere-rerank-3.5
+pinecone-sparse-english-v0
+Faiss
+nltk
+Best Practice
+Use semantic-aware splitting first, then apply token-aware
+constraints. That’s how you preserve meaning and avoid
+token overflow.
+5. Retrieve
+onefilellm
+Firecrawl
+Knowledge Graphs
+Weaviate
+Weaviate
+Vector (dense, semantic) and/or docs (sparse) retrieval:
+Vertex AI
+7. Select LLMs for Generation
+Helpful algorithms
+BM25 (Best Matching 25) - for vector match
+Reciprocal Rank Fusion (RRF) - to combine multiple
+ranked lists
+Llama
+Claude
+DeepSeek
+ChatGPTMistral
+8. Add Observability
+Helicone
+Phoenix (Arize)
+LLM Gateways
+traceloop
+9. Evaluate Retrieval & Generation
+Evaluating generation (LLMs):
+Standard retrieval metrics: 
+Precision(K)
+Recall(K)
+
+---

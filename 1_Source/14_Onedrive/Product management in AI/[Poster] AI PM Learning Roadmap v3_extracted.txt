@@ -1,0 +1,142 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] AI PM Learning Roadmap v3.pdf
+# Characters: 2415
+# Generated: 2026-07-31T00:07:33.308Z
+
+Machine Learning:
+Supervised Learning
+Unsupervised Learning
+Reinforcement Learning
+Deep Learning
+Neural Networks
+Transformers
+LLMs
+Unit Tests
+Error Analysis
+LLM Judge
+Human Eval
+Tool use
+Agent Architectures
+MCP
+A2A
+RAG
+OpenRouter
+LLMLCMLAMMoE
+VLMSLMMLMSAM
+Vector DB vs. Document DB
+AutoGen
+Methods:
+Supervised (SFT)
+Preference-based (DPO, ORPO, KTO)
+Terms:
+Training data
+Validation data
+Epoch
+Batch size
+Learning rate 
+Beta (for DPO)
+Key Metric
+Training Loss ↓
+Training Accuracy ↑
+Validation Loss ↓ 
+Validation Accuracy ↑
+What it Tells You
+The model is learning from data.
+Better at predicting tokens it has seen.
+It’s generalizing well to new data.
+It’s predicting new tokens well.
+Model Eval
+TNRTPR
+Free guides & courses:
+GPT-4.1, GPT-5 Prompting Guides
+Anthropic Prompt Eng.
+Prompt Eng. by Google
+System prompt, Claude 4
+Anthropic Prompt Generator
+Anthropic Prompt Library
+Anthropic Prompting Course
+CoT
+Roles
+Examples
+Step-by-Step
+Persist
+Reflect
+XML #
+Constraints
+Chain prompts
+Autonomy
+Use vector store to store embeddings and perform fast semantic
+search over chunks. Use document DB to store the full content and
+metadata (e.g., document url, author, date).
+Weaviate
+Weaviate
+AI PM Learning Roadmap
+Llama
+Claude
+DeepSeek
+ChatGPT
+Mistral
+7. Foundational Models
+5. AI Agents & Agentic Workflows
+Techniques:
+Architectures:
+Vector DBs
+Document DBs
+8. AI Evaluation Systems
+No-code first:
+Lovable
+Databutton
+Bolt
+Firebase
+IDE-first:
+Replit
+v0
+Windsurf
+Cursor
+Infrastructure Tools
+Techniques:
+4. RAG (Retrieval-Augmented Gen.)
+Knowledge graphs
+Error Analysis:
++
+Models:
+Best tools:
+3. Fine-Tuning
+OpenAI Platform
+Hugging Face AutoTrain
+LLaMA-Factory
+Free reports:
+Google Agent Companion
+Anthropic Building Agents
+IBM Agentic Process Automation
+Jules
+Codex
+AI copilots /
+IDE extensions:
+GitHub
+Copilot
+AI PRD: A free template
+Generative AI Guide
+ChatLLM (abacus.ai):
+MCP.so: Huge collection
+Anthropic MCP Servers
+microsoft/markitdown
+Free resources:
+WTF is AI Product Manager
+LLM Visualization
+Mastering AI Evals: A Free, Complete Guide for PMs
+AI Evals: How to Find The Right AI Product Metrics
+The Guide to AI Observability and Evaluation Platforms
+Techniques:
+2. Prompt Engineering
+1. Basic Concepts
+6. AI Prototyping & Building
+v 3.0, October 2025
+9. Other Resources
+The AI Strategic Lens Framework
+Building AI Product Strategy
+AI Product Distribution Framework
+How to Build an AI Product Team
+Claude
+code
+
+---

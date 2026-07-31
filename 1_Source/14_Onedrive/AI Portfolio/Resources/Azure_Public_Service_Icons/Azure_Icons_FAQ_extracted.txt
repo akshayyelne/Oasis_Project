@@ -1,0 +1,48 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Resources/Azure_Public_Service_Icons/Azure_Icons_FAQ.pdf
+# Characters: 1631
+# Generated: 2026-07-31T00:07:33.000Z
+
+What file formats are available for icons? 
+Our icon files are in Scalable Vector Graphic (SVG) format, so you can  resize them without hurting 
+quality. 
+  
+  
+Do they work in PowerPoint? 
+SVGs work in Office 365 versions of PowerPoint. Use them the same same way you use JPGs, PNGs and 
+other image files.  
+  
+ 
+How can see all the icons at once? 
+While not quite available yet, we plan to offer a PPT version of the icons in a future release through 
+Azure Architecture Center.  
+ 
+  
+Are these icon assets available in Visio or as VSS files? 
+Not yet, but they will be very soon. We are working with the Visio product team. In the meantime, you 
+can use the Import function in Visio. Learn more about importing icons to Visio. 
+  
+ 
+What if I need a different size? 
+You can resize these files to any size. See question 1 at the top of the page. 
+ 
+  
+Why can’t I find an icon? 
+We try to be complete, but omissions happen. If you can’t find an icon, please email 
+CnESymbols@microsoft.com. 
+ 
+  
+Can I modify these icons? 
+ Icons may not be cropped, flipped or rotated, and their shape may not be distorted or changed. Please 
+visit the Azure Architecture Center where you downloaded these icons to understand the Azure Brand 
+guidelines and legal use agreement. 
+ 
+  
+Do the icons need to be labeled? 
+Yes, the full name of the service should always appear near the icon, but not so close that it looks like 
+it’s overlapping the icon. 
+ 
+  
+Can I use these icons as part of representative images for my product or service? 
+No, Azure icons may only be used to represent the Microsoft product that it was designed for. 
+
+---

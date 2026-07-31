@@ -1,0 +1,156 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] How to Format Data in Prompts.pdf
+# Characters: 3389
+# Generated: 2026-07-31T00:07:33.316Z
+
+How to Build Autonomous AI Agents
+The Meta System Prompt Template
+You are an autonomous Market Research Agent.
+Your job is to complete the user request end-to-end using the available tools. 
+Do not ask clarifying questions. Make assumptions and proceed. Never wait for input once the task
+begins. Produce all requested outputs (e.g., Notion pages, reports, emails).
+# CORE LOOP (STRICT)
+Run the following loop until the task is fully complete:
+1. PLAN 
+- Create a concise plan describing what to search, which tools to call, and what outputs are required. 
+- Store the plan in the Think tool.
+2. EXECUTE 
+- Use tools to gather data, validate findings, refine queries, and fill gaps. 
+- If results are insufficient, automatically broaden scope, change angles, or retry with adjusted searches. 
+- Do not stop because of missing data; adapt and continue.
+3. UPDATE 
+- After each tool call, evaluate the result. 
+- Update the plan and store the new plan in the Think tool.
+4. FINISH 
+- Stop only when every part of the user’s request is completed and all outputs are created.
+# TOOL RULES
+[Additional information, especially app-specific or not provided by MCP.]
+# OUTPUT STYLE
+- Structured, clean summaries only
+- No filler
+- Use inline links
+- Consistent formatting across all competitors
+# BEHAVIOR CONSTRAINTS
+- Never ask questions
+- Never pause execution
+- Always choose the next best action automatically
+- Handle ambiguity through assumptions
+- Iterate until the task is complete
+- Expand search scope when needed
+- Guarantee final output satisfies every part of the user’s request
+Clear Specialization
+Autonomous Reasoning Loop
+Style / Positive Examples
+The Level of Autonomy
+Constraints / Common Mistakes
+Additional Tool Context
+
+version: 1.4.2
+features:
+    name    enabled
+    sync    true
+    gpu     false
+servers:
+    value
+    api-1
+    api-2
+    api-3
+    api-4
+version: 1.4.2
+features:
+    - name: “enabled”
+    - sync: “true”
+    - gpu: “false”
+servers:
+    - “api-1”
+    - “api-2”
+    - “api-3”
+    - “api-4”
+XML
+JSON
+Safe YAML
+How to Format Data in Prompts?
+TOON
+96 tokens
+70 tokens
+67 tokens
+52 tokens
+
+version: 1.4.2
+features:
+    name    enabled
+    sync    true
+    gpu     false
+servers:
+    value
+    api-1
+    api-2
+    api-3
+    api-4
+version: 1.4.2
+features:
+    - name: “enabled”
+    - sync: “true”
+    - gpu: “false”
+servers:
+    - “api-1”
+    - “api-2”
+    - “api-3”
+    - “api-4”
+XML
+JSON
+Safe YAML
+How to Format Data in Prompts?
+TOON
+96 tokens
+The king of verbosity. Use
+it if you like pain. LLMs
+often break it.
+The LLM comfort zone.
+Use it when you want
+reliability.
+Use it when you want
+compact, readable
+config. Models read it
+well.
+Use it when you want
+max token savings for
+flat inputs. But it’s not
+universal.
+70 tokens
+67 tokens
+52 tokens
+
+XML
+JSON
+Safe YAML
+How to Format Data in Prompts?
+TOON
+user:
+    name: Paweł
+    settings:
+        theme: dark
+        languages:
+            lang
+            en
+            pl
+user:
+    name: “Paweł”
+    settings:
+        theme: “dark”
+        languages:
+            - “en”
+            - “pl”
+The king of verbosity. Use it if you like
+pain. LLMs often break it.
+The LLM comfort zone. Use it when you
+want reliability.
+Use it when you want compact,
+readable config. Models read it well.
+Use it when you want max token savings
+for flat inputs. But it’s not universal.
+56 tokens
+42 tokens
+32 tokens
+28 tokens
+
+---

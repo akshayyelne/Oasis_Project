@@ -1,0 +1,51 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] 100+ AI PM Jobs Analyzed.pdf
+# Characters: 1370
+# Generated: 2026-07-31T00:07:33.302Z
+
+1. AI Product Lifecycle
+Example: Owning product strategy, vision, and go-to-market (AWS)
+Start here:
+How to Create an AI Product Strategy
+How to Design a Value Proposition
+5 GTM Principles You Should Know as a PM
+A Complete Guide to AI Evals for PMs
+2. Cross-Functional Collaboration
+Example: Collaborate with cross-functional teams, including engineering, 
+UX/UI, and business stakeholders (Google)
+Start here:
+WTF is an AI Product Manager
+What is Product Discovery
+AI Prototyping
+Experiments Library
+AI PRD Template
+Product Discovery Masterclass
+3. Gen AI, LLMs, and AI Frameworks
+Example: Experience with Generative AI or LLMs (T-Mobile)
+Start here:
+Neural Networks, Transformers, and LLMs
+AI PM Glossary
+11 AI Agent Prompting Principles
+Context Engineering for PMs
+Fine-tuning
+RAG simulator
+AI Agent Architectures
+4. Data-Analytics for AI
+Example: Define and track key performance indicators (KPIs) for product success (ZnA)
+Start here:
+How to Find The Right AI Product Metrics
+Cohort Analysis
+Funnel Analysis
+AARRR Metrics
+North Star Metric
+5. AI-Driven Customer Experience
+Example: Create conversational experiences that are personalized, relevant, and grounded in trusted
+information (ServiceNow)
+Develop an AI intuition. Build a RAG chatbot, AI voice agent, or multi-agent research system.
+100+ AI PM Jobs Analyzed. They’re looking for:
+82%
+76%
+69% 
+67%
+48%
+
+---

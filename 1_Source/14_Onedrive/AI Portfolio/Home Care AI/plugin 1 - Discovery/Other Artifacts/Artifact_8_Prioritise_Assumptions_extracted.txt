@@ -1,0 +1,750 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/plugin 1 - Discovery/Other Artifacts/Artifact_8_Prioritise_Assumptions.pdf
+# Characters: 27052
+# Generated: 2026-07-31T00:07:32.955Z
+
+Artifact 8 — Prioritise Assumptions
+Risk & Ethics Gating · Stage 4
+DOCUMENT DETAILS
+ProjectHome-Care-AIStageDiscovery   →   Stage   4   (Risk   &   Ethics
+Gating)
+Date2026-03-26BeachheadCare Coordinator (CC)
+MethodologyICE scoring (Impact × Confidence × Ease) → Impact × Risk matrix → Experiment queue
+InputArtifact 7 — 45 assumptions across 8 categories
+Feeds intoArtifact 9 — Ethics Trust Mapping (Skill 9); Artifact 11 — Brainstorm Experiments (Skill 11)
+Amended2026-03-26  —  Fix  1:  removed  duplicate  V-2  row;  Fix  2:  corrected  GTM-4  ICE  math  in  Section  5
+(Confidence 9→8, score 648→576); Fix 3: removed E-3 from Q2 table (Confidence=8 places it in Q4 only)
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 1 of 14
+
+Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 2Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 31. Scoring Framework
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3ICE Formula
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3Impact × Risk Matrix
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 32. Full ICE Scoring — All 45 Assumptions
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 63. Impact × Risk Matrix — Summary
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6Q1 — High Impact + High Risk → DESIGN EXPERIMENT NOW
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6Q2 — High Impact + Medium Risk → DESIGN EXPERIMENT (lower urgency)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7Q3 — Medium Impact → MONITOR DURING E1/E2/E3 OR DEFER
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8Q4 — High Confidence → PROCEED (no experiment needed)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 84. Priority Experiment Queue
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8Tier 1 — Before Any Code Is Written (Immediate)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9Tier 2 — Week 1–2 (Launch E1 + E2 + E3 Concurrently)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9Tier 3 — Alongside E1/E2/E3 (Parallel Research)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 105. ICE Math — Key Assumptions (Top 20, Shown in Full)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 106. Critical Path Summary
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 117. Assumptions Explicitly Deferred
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 118. Downstream Feed
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 129. Handshake Table
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 1210. Action Items
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 2 of 14
+
+1. Scoring Framework
+1. Scoring Framework
+ICE Formula
+ICE = Impact × Confidence × Ease
+All dimensions rated 1–10. Raw ICE score range: 1–1,000.
+DimensionDefinitionScale
+ImpactConsequence of this assumption being wrong — how much does it affect the
+product's ability to deliver value, reach product-market fit, or avoid legal/ethical
+harm?
+10 = product cannot ship /
+collapses; 1 = negligible
+ConfidenceCurrent confidence that this assumption is correct, based on evidence from Artifacts
+2a–2d and 3
+Low = 2–3; Medium = 5–6;
+High = 8–9
+EaseHow quickly and cheaply can this assumption be tested?10 = 1 day, near-zero cost; 1
+= requires 6+ months or
+prohibitive cost
+Impact × Risk Matrix
+Risk is the inverse of Confidence: High Risk = Low Confidence (unknown = risky).
+QuadrantImpactRiskAction
+Q1 — Design
+Experiment
+High (8–10)High (Low
+confidence,
+≤ 4)
+Build an experiment immediately — critical unknowns blocking progress
+Q2 —
+Experiment
+(lower
+urgency)
+High (8–10)Medium
+(Confidence
+5–6)
+Design an experiment — important, plausible, but not at maximum urgency
+Q3 — Monitor
+or Research
+Medium
+(6–7)
+AnyResearch, observe during E1/E2/E3, or defer until Q1/Q2 resolved
+Q4 —
+Proceed
+AnyLow (High
+confidence,
+≥ 7)
+No experiment needed — treat as confirmed; implement the mitigation
+2. Full ICE Scoring — All 45 Assumptions
+2. Full ICE Scoring — All 45 Assumptions
+IDCategoryAssumption (Short)ImpactConfidenc
+e
+Eas
+e
+ICEQuadrant
+E-1EthicsSPP matching does not create
+discriminatory carer selection
+1034120Q1 nn CRITICAL
+E-3EthicsFamily notification never precedes
+patient notification
+1085400Q4 nn CRITICAL —
+Structural gate
+V-2ValueCoordinator trusts machine ranking
+without calling to verify
+957315Q2
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 3 of 14
+
+IDCategoryAssumption (Short)ImpactConfidenc
+e
+Eas
+e
+ICEQuadrant
+U-1Usability3-tap flow completable at 6:30 AM
+without training
+958360Q2
+VI-4ViabilityAPP 8 resolved by design + privacy
+notice (not per-client consent)
+955225Q2 nn CRITICAL
+V-1ValueSPP match produces better
+clinical/relational outcomes vs.
+availability-only
+955225Q2
+F-1FeasibilityStaff update availability reliably in app
+(vs. calling coordinator)
+937189Q1
+VI-1ViabilityAgencies pay for standalone tool
+without EMR integration at launch
+935135Q1 nn CRITICAL
+S-1StrategyAlayaCare does not add soft
+preference matching within 12–18
+months
+957315Q2
+GTM
+-1
+Go-to-MarketCC is both champion and veto player
+for agency purchase
+888512Q4
+GTM
+-4
+Go-to-Market30-day trial includes enough incidents
+for genuine evaluation
+889576Q4
+T-4TeamAngela + Tom engagement
+sustainable for 4+ months
+858320Q2
+GTM
+-3
+Go-to-MarketE1 participants become willing
+reference customers
+857280Q2
+F-2FeasibilityRule-based SPP score correlates with
+coordinator judgment r > 0.70
+856240Q2
+E-5EthicsSPP fields classified correctly under
+APP (personal/sensitive information)
+855200Q2
+S-2StrategyCC beachhead unlocks HCN/FC
+without separate sales motion
+855200Q2
+VI-2ViabilityPer-agency subscription covers COGS
+at target margin
+836144Q1
+VI-3ViabilityAustralian home care market large
+enough for 24-month growth
+836144Q1
+E-2EthicsMatching algorithm does not amplify
+coordinator bias in SPP data
+836144Q1
+S-3StrategySPP data moat is deep enough to
+prevent switching after 6 months
+836144Q1
+V-5ValueAgency owners perceive coordinator
+departure as material business risk
+835120Q1
+GTM
+-6
+Go-to-MarketConcierge-to-product transition does
+not erode coordinator trust
+835120Q1
+T-2TeamBuild Lambda + SPP + WhatsApp to
+prototype in 8 weeks
+837168Q1
+VI-5ViabilitySPP moat drives monthly churn < 2%
+post-3 months
+83248Q1 — Defer (not
+testable pre-launch)
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 4 of 14
+
+IDCategoryAssumption (Short)ImpactConfidenc
+e
+Eas
+e
+ICEQuadrant
+E-4EthicsCarer availability/location data ≠ GPS
+surveillance under APP
+755175Q3
+V-3ValueSPP has standalone value before
+matching engine is built
+757245Q3
+U-2Usability3 candidates is the right decision
+surface (not 1, not 5)
+758280Q3
+U-3UsabilityFamiliarity flag is the trust-producing
+field on the candidate card
+758280Q3
+F-5FeasibilityWhatsApp reply parsing reliable for
+single-character approval commands
+757245Q3
+T-1TeamDomain knowledge sufficient without
+dedicated clinical advisor
+757245Q3
+GTM
+-2
+Go-to-MarketPeer referral is primary acquisition
+channel for agency owners
+757245Q3
+S-5StrategyProduct positioned as clinical
+intelligence layer, not scheduling tool
+789504Q4
+T-3TeamPrivacy counsel available on retainer
+basis (no full-time hire required)
+789504Q4
+V-4ValueCarer briefing notification reduces
+post-assignment phone calls
+737147Q3
+U-5UsabilityOnboarding wizard produces accurate
+SPP without high correction rate
+736126Q3
+V-6ValueFamily notification prevents client
+churn at agency level
+756210Q3
+U-4UsabilityTom and Angela served by same
+interface without product variants
+657210Q3
+VI-6ViabilityNDIS compliance doesn't create
+adoption-blocking burden
+636108Q3
+F-3FeasibilityGoogle Maps API accurate for regional
+Australian matching
+689432Q4
+F-4FeasibilityDynamoDB SPP query < 200ms at
+60-client scale
+689432Q4
+F-6FeasibilityTwilio SMS reliable for international
+family contacts
+578280Q4
+S-4StrategyRegulatory environment stable for
+24-month build horizon
+655150Q3
+E-6EthicsSPP does not create "performing
+wellness" dynamic for clients
+65390Q3 — Defer
+GTM
+-5
+Go-to-Market"Bus-proof" messaging resonates
+more than efficiency messaging
+63590Q3 — Defer
+T-5TeamTeam applies 75% failure rate
+honestly to experiment results
+73484Q3 — Defer
+3. Impact × Risk Matrix — Summary
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 5 of 14
+
+3. Impact × Risk Matrix — Summary
+Q1 — High Impact + High Risk → DESIGN EXPERIMENT NOW
+Q1 — High Impact + High Risk → DESIGN EXPERIMENT NOW
+These are the most dangerous unknowns. High consequence of being wrong; low current confidence.
+Priorit
+y
+IDAssumptionICEExperiment
+1E-1 nnSPP matching ≠ discriminatory
+carer selection
+120Legal opinion — anti-discrimination law (Sex Discrimination Act,
+Disability Discrimination Act) + employment law review
+2VI-1 nnAgencies pay without EMR
+integration at launch
+135Interview 2 agency owners — past behaviour: "Tell me about the
+last tool you adopted without integration"
+3F-1Staff update availability reliably
+in app
+189E1 observation — track how many absences are self-reported vs.
+coordinator-discovered
+4T-2Build prototype in 8 weeks168Sprint 0 sizing — engineering 3-point estimate for ENG-1 + ENG-3
+5VI-2Per-agency subscription covers
+COGS
+144Unit economics model — AWS Lambda + DynamoDB + Twilio cost
+at 3 incidents/week/agency
+6VI-3Australian home care market
+large enough
+144Secondary research — ACFA report, NDIS provider register, My
+Aged Care data
+7E-2Matching doesn't amplify
+coordinator bias
+144E2 probe — for each SPP entry, ask: "Did Mrs. Kim tell you this, or
+is this your inference?"
+8S-3SPP moat deep enough to
+prevent switching
+144E2 rebuild probe — "If we deleted the SPP tomorrow, how long to
+rebuild?"
+9V-5Agency owners see coordinator
+departure as material risk
+120Interview 2 agency owners — Mom Test: "When did you last lose a
+coordinator? What happened?"
+10GTM-6Concierge-to-product transition
+doesn't erode trust
+120Blind transition test at E1 week 3 — replace human team with
+algorithm, observe acceptance rate
+—VI-5SPP moat drives churn < 2%48nn DEFERRED — not testable before 6 months of live data.
+Design 6-month cohort metric at launch
+Q2 — High Impact + Medium Risk → DESIGN EXPERIMENT (lower urgency)
+Q2 — High Impact + Medium Risk → DESIGN EXPERIMENT (lower urgency)
+Important assumptions with plausible evidence — test after Q1 experiments are running.
+Priorit
+y
+IDAssumptionICEExperiment
+1GTM-430-day trial has enough
+incidents
+576Confirmed by CC interviews. Track incident rate during E1. No
+separate experiment needed.
+2GTM-1CC is champion and veto player512Confirmed by CC interviews. Observe in E1. No separate
+experiment needed.
+3U-13-tap flow completable at 6:30
+AM without training
+360E3 (Figma prototype) — unguided walkthrough, 5 scenarios,
+measure time-to-completion
+4T-4Angela + Tom engagement
+sustainable 4+ months
+320Obtain written consent from coordinator + agency management
+before E1 begins
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 6 of 14
+
+Priorit
+y
+IDAssumptionICEExperiment
+5V-2Coordinator trusts machine
+ranking to approve
+315E3 (Figma prototype) — observe acceptance rate of top-ranked
+candidate
+6S-1AlayaCare doesn't add soft
+preference in 12–18 months
+315Competitive intelligence — monitor AlayaCare product updates
+every 6 weeks
+7GTM-3E1 participants become
+reference customers
+280Ask at E1 end: "Would you speak with other coordinators about
+your experience?"
+8F-2Rule-based SPP score
+correlates with coordinator
+judgment r > 0.70
+240E1 — compare algorithm ranking to coordinator's manual choice for
+each incident
+9VI-4 nnAPP 8 resolved by design +
+privacy notice
+225Privacy counsel review — 2-hour retainer: classify data flows,
+confirm notice-vs-consent path
+10V-1SPP match produces better
+outcomes than availability-only
+225E1 — track distress events, refusals, complaints during
+SPP-matched vs. unmatched periods
+11E-5SPP fields classified correctly
+under APP
+200Privacy counsel review — classify each SPP field as
+personal/sensitive/operational under APP 3
+12S-2CC beachhead unlocks
+HCN/FC without separate sales
+motion
+200Ask Angela + Tom at 3-month E1 review: "Would you want nurses
+to use this? How would you sell it?"
+Q3 — Medium Impact → MONITOR DURING E1/E2/E3 OR DEFER
+Q3 — Medium Impact → MONITOR DURING E1/E2/E3 OR DEFER
+Worthwhile to track; not worth a dedicated experiment at this stage.
+IDAssumptionICEAction
+V-3SPP standalone value before matching
+engine
+245Probe during E2 — WTP question at session end
+U-23 candidates right decision surface280E3 variant test — run 3 vs. 5 candidates in 2 scenario sets
+U-3Familiarity flag is trust-producing field280E3 think-aloud — "What do you look at first?"
+F-5WhatsApp reply parsing reliable245Technical spike — 50 synthetic reply variants
+T-1Domain knowledge sufficient without
+clinical advisor
+245E2 probe — ask Angela: "Are there SPP fields this template
+misses?"
+GTM-
+2
+Peer referral primary acquisition channel245Ask in E1 — "How did you find the last tool you adopted?"
+E-4Carer location data ≠ GPS surveillance175Legal/HR review — brief opinion on Fair Work + Privacy Act
+V-4Briefing notification reduces phone calls147E1 observation — does coordinator call carer after notification sent?
+U-5Onboarding wizard NLP accuracy126E2 comparison — paper form vs. NLP extraction on same clients
+V-6Family notification prevents churn210E1 follow-up — track retention of notified families over 4 weeks
+U-4Same interface for Tom and Angela210E1 observation — note any workflow differences between
+coordinators
+VI-6NDIS compliance doesn't block adoption1081 interview — ask 1 NDIS-registered agency manager about
+software compliance checks
+S-4Regulatory environment stable 24 months150Regulatory briefing — 1-hour with aged care compliance consultant
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 7 of 14
+
+IDAssumptionICEAction
+E-6No "performing wellness" dynamic for
+clients
+90nn DEFERRED — longitudinal indicator only; check at 6-month
+review
+GTM-
+5
+"Bus-proof" messaging resonates more
+than efficiency
+90nn DEFERRED — landing page A/B test when product is closer to
+launch
+T-5Team applies 75% failure rate honestly84nn DEFERRED — observable only after experiment results come in
+Q4 — High Confidence → PROCEED (no experiment needed)
+Q4 — High Confidence → PROCEED (no experiment needed)
+Confirmed by evidence or are structural requirements. Implement the mitigation directly.
+IDAssumptionICERequired Action
+GTM-
+4
+30-day trial has enough incidents576Track incident rate during E1 — confirmed by CC interview frequency
+data
+GTM-
+1
+CC is champion and veto player512Design product and sales motion around coordinator as champion —
+confirmed by CC personas
+S-5Clinical intelligence framing, not
+scheduling tool
+504Internal alignment check every sprint — confirmed by Artifact 3
+strategic implication
+T-3Privacy counsel on retainer basis504Obtain 3 quotes from Australian APP health data privacy firms this
+week
+F-3Google Maps API accurate for regional
+AU
+432Technical spike — 10 address pairs — confirmed expectation; spike
+is a formality
+F-4DynamoDB SPP query < 200ms at
+60-client scale
+432Technical spike — confirm; trivial at this scale
+E-3Family notification never precedes patient400nn Structural gate — not an experiment. Must appear in
+agentic-logic-spec pseudocode as an explicit
+coordinator_approved = true prerequisite gate. Cannot be
+overridden by any user request.
+F-6Twilio SMS reliable for international
+contacts
+280Twilio documentation review + pricing model — confirm UK/NZ
+delivery and rates
+4. Priority Experiment Queue
+4. Priority Experiment Queue
+Ranked  by  ICE  score  within  each  urgency  tier.  This  is  the  sequence  in  which  experiments  should  be  designed  and
+launched.
+Tier 1 — Before Any Code Is Written (Immediate)
+Tier 1 — Before Any Code Is Written (Immediate)
+#IDAssumption to TestMethodTimelineSuccess Threshold
+1E-1SPP matching ≠
+discriminatory carer
+assignment
+Legal opinion —
+Anti-Discrimination Act +
+employment law
+1 weekWritten legal opinion: matching on
+client preference is lawful personal
+care exception OR specifies
+mitigation required
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 8 of 14
+
+#IDAssumption to TestMethodTimelineSuccess Threshold
+2VI-4 +
+E-5
+APP 8 + SPP data
+classification
+Privacy counsel retainer
+review (2 hrs)
+1 week(a) Privacy notice update sufficient
+for APP 8; (b) each SPP field
+classified as
+personal/sensitive/operational
+3T-3Privacy counsel available on
+retainer
+Obtain 3 quotes from AU
+privacy law firms
+3 days≥ 1 firm confirms availability + cost
+< $5,000 AUD for initial review
+4T-4Angela + Tom 4-month
+engagement
+Written consent from
+coordinator + agency
+management
+Before E1
+start
+Signed consent from both
+coordinators and their agency
+owners
+5T-28-week build timeline
+achievable
+Sprint 0 — engineering 3-point
+estimate (ENG-1 + ENG-3)
+3 daysLikely estimate ≤ 6 weeks for
+ENG-1 + ENG-3; if > 6 weeks,
+revise scope
+Tier 2 — Week 1–2 (Launch E1 + E2 + E3 Concurrently)
+Tier 2 — Week 1–2 (Launch E1 + E2 + E3 Concurrently)
+#IDAssumption to TestMethodTimelineSuccess Threshold
+6F-1Staff update availability
+reliably
+E1 — track absence
+self-report rate vs.
+coordinator-discovered
+2 weeks≥ 70% of absences reported by
+carer proactively; < 30%
+discovered by coordinator
+7V-1 +
+V-2
+SPP match quality +
+coordinator trust
+E1 — track distress events; E3
+— top-candidate acceptance
+rate
+2 weeks / 1
+day
+E1: 0 Henderson-equivalent events
+in matched cohort; E3: ≥ 70%
+top-candidate acceptance
+8V-5 +
+VI-1
+Agency owner bus risk +
+standalone WTP
+Interview 2 agency owners
+(Mom Test)
+1 week≥ 1 owner confirms coordinator
+departure is a "significant risk"
+unprompted; ≥ 1 confirms
+willingness to trial without EMR
+integration
+9E-2SPP bias source (direct vs.
+inferred)
+E2 — for each SPP entry, ask:
+"Did [client] tell you this
+directly?"
+During E2≥ 80% of SPP entries are direct
+client statements, not coordinator
+inference
+10F-2Rule-based score correlates
+with judgment
+E1 — show algorithm ranking
+to coordinator post-match;
+measure divergence
+2 weeks≥ 70% algorithm top pick matches
+coordinator's manual choice
+Tier 3 — Alongside E1/E2/E3 (Parallel Research)
+Tier 3 — Alongside E1/E2/E3 (Parallel Research)
+#IDAssumption to TestMethodTimelineSuccess Threshold
+11VI-2 +
+VI-3
+Unit economics + market
+size
+Cost model build + secondary
+research (ACFA, NDIS data)
+1 weekGross margin > 60% at target
+subscription price; ≥ 500 agencies
+in AU at 20–200 client scale
+12S-3SPP moat depthE2 rebuild probe: "How long to
+rebuild this knowledge without
+the system?"
+During E2Answer > 4 weeks = deep moat; <
+2 weeks = shallow moat requiring
+revised strategy
+13GTM-6Concierge-to-product trust
+transition
+E1 week 3 blind transition —
+replace human team with
+algorithm
+Week 3Coordinator acceptance rate does
+not drop by > 10 percentage points
+post-transition
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 9 of 14
+
+#IDAssumption to TestMethodTimelineSuccess Threshold
+14S-1AlayaCare competitive
+window
+Monitor AlayaCare release
+notes, conference
+announcements
+Ongoing
+(every 6
+weeks)
+No soft preference feature
+announcement within 12 months =
+window confirmed
+15GTM-3E1 participants as reference
+customers
+Ask at E1 close: "Would you
+speak with other coordinators
+about your experience?"
+End of E1≥ 1 coordinator confirms
+willingness to be a named
+reference
+5. ICE Math — Key Assumptions (Top 20, Shown in Full)
+5. ICE Math — Key Assumptions (Top 20, Shown in Full)
+Per CLAUDE.md Article III: "show ICE math."
+IDImpact×Confidence×Ease=ICEQuadrant
+GTM-48×8×9=576Q4 — Proceed
+GTM-18×8×8=512Q4 — Proceed
+S-57×8×9=504Q4 — Proceed
+T-37×8×9=504Q4 — Proceed
+F-36×8×9=432Q4 — Proceed
+F-46×8×9=432Q4 — Proceed
+E-310×8×5=400Q4 — Structural gate
+U-19×5×8=360Q2 — Experiment
+T-48×5×8=320Q2 — Experiment
+V-29×5×7=315Q2 — Experiment
+S-19×5×7=315Q2 — Monitor
+GTM-38×5×7=280Q2 — Experiment
+F-28×5×6=240Q2 — Experiment
+V-37×5×7=245Q3 — Probe
+VI-49×5×5=225Q2 — Legal review
+V-19×5×5=225Q2 — Experiment
+F-19×3×7=189Q1 — Experiment
+T-28×3×7=168Q1 — Sprint 0
+VI-28×3×6=144Q1 — Model
+E-110×3×4=120Q1 — Legal opinion
+Note: E-1 scores 120 (low ICE) despite being CRITICAL because Ease = 4 (legal opinion takes time and cost). Low
+ICE  ≠  low  urgency  for  Critical  items  —  the  matrix  quadrant  (Q1:  High  Impact  +  High  Risk)  governs  priority,  not  ICE
+score alone.
+6. Critical Path Summary
+6. Critical Path Summary
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 10 of 14
+
+The 4 Critical assumptions must resolve before any of these components enter build
+Critical AssumptionBlocksResolution OwnerDeadline
+E-1 — SPP ≠ discriminatory
+selection
+Matching engine (ENG-1 + S1 + S2
++ S3)
+Legal counselBefore Sprint 1
+E-3 — Family notification ≠
+patient-first violation
+Notification pipeline (S6 + ENG-4)Engineering —
+agentic-logic-spec
+Before Sprint 1
+VI-4 — APP 8 resolved by designWhatsApp integration (ENG-2)Privacy counsel + PM
+Lead
+Before Sprint 1
+VI-1 — Agencies pay without
+EMR integration
+Go-to-market / sales motionPM Lead — 2 agency
+owner interviews
+Before launch planning
+If E-1 returns a negative legal opinion (i.e., automated SPP-based filtering is discriminatory), the matching engine
+must be redesigned: SPP becomes advisory (shown to coordinator but not used in ranking), and all filtering remains
+under  coordinator  judgment.  This  does  not  kill  the  product  —  it  changes  the  automation  level  from  auto-rank  to
+auto-present.
+If  VI-1  returns  a  negative  (agencies  require  EMR  integration  before  paying),  the  go-to-market  strategy  must  shift:
+either build an AlayaCare integration before launch (6–9 months delay) or target the subset of agencies not currently
+on any platform (greenfield agencies).
+7. Assumptions Explicitly Deferred
+7. Assumptions Explicitly Deferred
+These have been scored and categorised. They will not receive experiments at this stage.
+IDAssumptionICEReason for Deferral
+VI-5SPP moat drives churn < 2%48Not testable before 6 months of live product data — design cohort
+metric at launch
+E-6No "performing wellness" dynamic90Longitudinal signal only — observable at 6-month review, not
+pre-launch
+GTM-
+5
+"Bus-proof" messaging resonates more90Landing page A/B test appropriate when product is 4–6 weeks from
+launch
+T-5Team applies 75% failure rate honestly84Observable only after first experiment results arrive — revisit post-E1
+8. Downstream Feed
+8. Downstream Feed
+This     prioritisation     directly     determines     what     Skill     9     (ethics-trust-mapping)     and     Skill     11
+(brainstorm-experiments-new) receive:
+→ ethics-trust-mapping (Skill 9)
+•E-1: SPP data fields that enable carer filtering → Green/Yellow/Red classification
+•E-2: SPP data bias risk → audit protocol for preference data capture
+•E-3: Notification pipeline ordering → structural gate requirement
+•E-4: Carer location data → data sensitivity classification
+•E-5: All SPP fields → APP sensitivity classification
+•VI-4: WhatsApp message content → data minimisation check
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 11 of 14
+
+→ agentic-safety-discovery (Skill 10)
+•F-1: Staff availability update → Level 1/2/3 classification for availability-stale event
+•F-2: SPP match confidence scoring → confidence threshold constants
+•E-3: Notification gate → Level 2/3 HITL requirement before family notification
+→ brainstorm-experiments-new (Skill 11)
+Top  15  experiments  from  Priority  Experiment  Queue  (Sections  4  Tier  1–3)  form  the  direct  input.  E1,  E2,  E3
+designs from Artifact 5 are confirmed as the primary pretotypes.
+9. Handshake Table
+9. Handshake Table
+IDFrom ArtifactTo Next SkillWhat Transfers
+HS-DISC-PR
+I-01
+Artifact 8 — Q1
+Critical assumptions
+(E-1, VI-1, VI-4)
+ethics-trust-mapp
+ing (Skill 9)
+Critical ethics and viability risks → data classification + consent
+design
+HS-DISC-PR
+I-02
+Artifact 8 — E-3
+structural gate
+agentic-logic-spe
+c (Execution Plugin)
+coordinator_approved = true required before
+family_notification_triggered = true
+HS-DISC-PR
+I-03
+Artifact 8 — Priority
+Experiment Queue
+Tier 1–3
+brainstorm-experi
+ments-new (Skill 11)
+Top 15 experiments → XYZ hypothesis + pretotype design
+HS-DISC-PR
+I-04
+Artifact 8 — Q4
+confirmed
+assumptions
+startup-canvas
+(Strategy Plugin)
+Confirmed strategic facts (GTM-1 CC champion, S-5 clinical
+intelligence framing) → canvas inputs
+HS-DISC-PR
+I-05
+Artifact 8 — VI-2 unit
+economics gap
+ai-unit-economics
+(Strategy Plugin)
+Cost model required — feeds into subscription pricing + gross
+margin projection
+10. Action Items
+10. Action Items
+DateOwnerAction
+2026-03-27PM LeadEngage privacy counsel — APP 8 + anti-discrimination law review (E-1, VI-4, E-4, E-5) — obtain 3
+quotes (T-3)
+2026-03-27PM LeadRun ethics-trust-mapping (Skill 9) — feed E-1, E-2, E-3, E-4, E-5 + VI-4 into
+Green/Yellow/Red classification
+2026-03-27PM LeadSecondary market research — Australian home care agency count at 20–200 client scale (VI-3)
+2026-03-28PM LeadInterview 2 agency owners using Mom Test (V-5 + VI-1) — recruit via Angela and Tom referral
+2026-03-28EngineerSprint 0 sizing — ENG-1 + ENG-3 3-point estimate (T-2)
+2026-03-28EngineerTechnical spikes — Google Maps API (F-3) + DynamoDB benchmark (F-4)
+2026-03-28PM LeadUnit economics model — AWS Lambda + DynamoDB + Twilio at 3 incidents/week/agency (VI-2)
+2026-03-29PM LeadObtain written consent from Angela + Tom + their agency management (T-4)
+2026-03-29DesignerBegin E3 Figma prototype — 3-tap approval card, 5 vacancy scenarios (U-1 + V-2)
+2026-04-03PM LeadLaunch E1 (concierge pretotype) — 2-week run with Angela + Tom
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 12 of 14
+
+DateOwnerAction
+2026-04-03PM LeadRun E2 (preference extraction session) with Angela — 90 min, 10 clients
+2026-04-07PM LeadRun agentic-safety-discovery (Skill 10) after ethics-trust-mapping completes
+2026-04-07PM LeadRun brainstorm-experiments-new (Skill 11) using Priority Experiment Queue Tier 1–3
+Home-Care-AI · Artifact 8 · Prioritise Assumptions · 2026-03-26
+Home-Care-AI · Artifact 8 · Prioritise AssumptionsPage 13 of 14
+
+---

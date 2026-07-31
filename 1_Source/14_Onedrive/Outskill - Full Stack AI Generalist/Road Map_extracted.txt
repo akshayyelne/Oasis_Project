@@ -1,0 +1,182 @@
+# Extracted from: 14_Onedrive/Outskill - Full Stack AI Generalist/Road Map.pdf
+# Characters: 3681
+# Generated: 2026-07-31T00:07:33.297Z
+
+AI Generalists  
+
+AI Generalists = People who solve problems using AI 
+
+AI will take 4 out 5 Jobs!
+AI Generalist is a full stack problem solver who : 
+1.Has a deep understanding of all the AI models 
+ 
+2.Understands which models to use where and how  
+ 
+3.Has the ability to build solutions to solve complex problems using AI 
+
+No matter who you are, you need to be a rockstar  
+AI Generalist to win in the AI First world! 
+1.Entrepreneurs 2.        Working Professionals 
+Running a  
+startup 
+Running a  
+Business 
+Freelancers / 
+Consultants 
+Currently working for a job and want to be  
+the best at it and grow faster than most. 
+Hustlers!  
+ 
+Doing both 
+together 
+
+AI will take 4 out 5 Jobs!
+Let me share a roadmap to become an  
+AI Generalist  
+
+Foundations of AI and Language Models
+                     Advanced Prompting, Retrieval, and Fine-Tuning
+Automating Tasks with AI Agents
+AI for Image and Video Creation
+ Building AI-Powered Applications
+LEVEL 1
+LEVEL 2
+LEVEL 3
+LEVEL 4
+LEVEL 5
+Roadmap to become an AI Generalist 
+
+Level 1 & Level 2
+Fundamentals of LLMs , RAGs , 
+Advanced Prompt engineering 
+Concepts to be learnt
+Tools to be learnt 
+1. Where did LLMs originate How LLMs work & process 
+language?
+
+2.What is AI & What is Generative AI applications of both
+
+3.Possibilities of Integrating AI with external tools
+
+4.Master advanced prompting techniques
+
+5. Learn about RAG concepts
+
+6.Prompt refining & fine tuning 
+
+
+
+
+Projects to explore
+Create system prompts
+
+Build your own RAG model that summarises your own documents
+
+Build a voice assistant using advanced prompting
+
+Build your own AI workflow for your problem statement Ex: Build your own sales 
+training bot , AI HR etc
+
+Create Claude projects, Build gemini gems 
+
+Build copilot agents 
+
+
+
+
+
+
+Level 3
+ ̧
+1.Diffusion Science 
+2.Introduction stable diffusion & 
+comfy UI 
+3. Style transfer & Upscaling 
+4. Fine Tuning diffusion models 
+using comfy UI
+5.Video Creating & Film making 
+using AI 
+6. Ad film making using AI
+Concepts to learn
+
+Projects to explore
+Build your own Image & video creation website like leonardo ai 
+
+Set up workflows for creating creative marketing collaterals 
+
+Setup your own faceless Youtube channel using AI 
+
+Develop a film using AI 
+
+Create your own deep fake clones & start creating content 
+
+Set up your own money making machine
+
+
+
+
+Level 4
+ ̧
+1.How automation work?
+
+2. How to setup a process that 
+can be automated
+
+3.Setting up automations 
+
+4. Understanding AI agents 
+
+5. Orchestrating AI agents 
+
+6. Connecting multiple agents to 
+build agent army 
+Concepts to learn
+
+Projects to explore
+1.Create your own personal executive assistant 
+2.Build AI agents for marketing , customer support , research etc
+3.Create your own email manager 
+4.Build your own automatic job applier 
+5.Build your own voice agents that can speak & book appoinments 
+6.Create your own automations to automate mundane tasks like email , writing 
+blog etc 
+7.Build your own army of agents that can do all above tasks 
+
+
+Level 5
+ ̧
+1.How to connect the AI & No 
+code tools to build automations 
+
+2.Understanding No code 
+interfaces
+
+3. Learning design thinking UI & 
+UX
+
+4.  Building MVP using low code 
+& AI 
+
+Concepts to learn
+
+Projects to explore
+1.Create apps like data processor , Image generators , travel planners
+2. Deploy application that can work on your mobile phone 
+3. List it on product hunt to get perks & grants 
+
+Level 6 
+Connect the dots for a bigger picture 
+
+Build a super agent
+Build an App that solves a problem 
+
+AI will take 4 out 5 Jobs!
+To future-proof yourself in this AI First World, 
+everyone must master all the 5 Levels  
+
+What superpowers will this 
+give you ? 
+
+
+
+---

@@ -1,0 +1,215 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/plugin 1 - Discovery/Skill 2- Interview Responses/.md files/Artifact_2c_CC_Summary.md
+# Characters: 17730
+# Generated: 2026-07-31T00:07:32.959Z
+
+# Artifact 2c — Care Coordinator (CC) Consolidated Interview Summary
+
+**Project:** Home-Care-AI
+**Stage:** Discovery → Stage 1 (Customer Research)
+**Artifact:** 2c
+**Persona Group:** Care Coordinator (CC)
+**Source Interviews:** CC-001 (Angela Morrison), CC-002 (Tom Bradley)
+**Synthesis Date:** 2026-04-01
+**Interviewer:** PM Lead
+**Next Step:** Feed into `competitive-gap-analysis` alongside Artifacts 2a, 2b, 2d
+
+---
+
+## Header
+
+**Dates:** CC-001: 2026-03-31 (44 min) | CC-002: 2026-04-01 (36 min)
+
+**Participants:**
+- Angela Morrison — Care Coordinator, CareBridge (CC-001). Manages 60+ clients across 12 nurses and 8 care workers. Large, established agency. Responsible for scheduling, family communication, staff coordination, compliance documentation, and crisis response. Experienced, structured; visibly overwhelmed.
+- Tom Bradley — Care Coordinator, HomeFirst Care (CC-002). Sole coordinator for 25 clients and 6 field staff. Small agency. Manages intake, scheduling, rostering, QA, family communication, and fills in as a care worker himself when needed. Lower volume but zero backup — every problem lands entirely on him.
+
+**Background:**
+Both coordinators sit at the operational centre of their respective agencies: all scheduling, all family communication, all escalation, and all compliance flows through them. Angela's volume is higher (60 vs. 25 clients); Tom's isolation is more acute (sole operator). Despite the size difference, they described the same operational failures: staff absence cascades into cancelled visits, families find out when nobody arrives, compliance documentation drifts, and critical knowledge about client preferences exists nowhere except the coordinator's memory. Both are the single point of failure for their agencies.
+
+---
+
+## Current Solution
+
+| Coordinator | Primary Tools | Scale | What Failed |
+|---|---|---|---|
+| Angela (CC-001) | Scheduling calendar, EMR, WhatsApp, credential spreadsheets, sticky notes, personal memory, phone | 60+ clients, 20 staff | EMR too slow for real-time family enquiries; sticky note knowledge is not transferable; no automated absence-to-replacement workflow |
+| Tom (CC-002) | Google Sheets, WhatsApp, calendar reminders (frequently snoozed), paper forms, himself as backup carer | 25 clients, 6 staff | No matching logic; 20% of vacant visits result in cancellation; compliance review reminders consistently snoozed |
+
+---
+
+## What They Like About Current Solution
+
+| Job to Be Done | What Works | Importance | Satisfaction |
+|---|---|---|---|
+| Urgent communication | WhatsApp (both) | High | Medium — fast but informal, no audit trail |
+| Credential tracking | Angela's spreadsheet | Medium | Low — manual, not integrated with scheduling |
+| Staff availability check | Google Sheets (Tom) | Medium | Low — no matching logic, just a list |
+| Compliance calendar | Reminder (Tom) | Low | Very low — snoozed more than acted on |
+
+---
+
+## Problems With Current Solution
+
+### Problem 1 — Staff Absence Triggers a Cascade of Manual Work That Often Ends in Cancellation
+
+**Job:** Fill a vacant visit with a qualified, appropriate, available replacement within a short window (30–90 min).
+**Desired outcome:** Automated replacement detection and proposal, with coordinator approval and automated client/family notification.
+**Importance:** Critical — vacant visits without replacement mean patients miss care; families are not notified; client relationships are damaged; clients churn.
+**Satisfaction:** Very low — replacement is entirely manual, takes 30–60 min per incident, and fails ~20% of the time.
+
+> "Last Tuesday. Jenny called in sick at six-thirty AM. She had three visits booked starting at eight. **I made eleven phone calls.** I found a replacement for two of the three visits. The third had to be cancelled."
+> — Angela, CC-001
+
+> "I had to send three different people in two weeks. Mrs. Henderson didn't recognise any of them. She was distressed. She kept asking where Carol was. **Her daughter called me and said, 'My mother doesn't know who's walking through her door anymore.' They moved her to another agency the following week.**"
+> — Tom, CC-002
+
+*Synthesis: The vacancy-to-cancellation pipeline is the highest-frequency operational crisis in both agencies. Angela's eleven phone calls and Tom's Henderson family loss represent the same failure — the current system has no matching logic. Finding a replacement requires availability (3–4 calls), qualification check (2–3 calls), proximity check (2–3 calls), and client preference check (2–3 calls), in that order, mostly from memory. The first four calls find someone available. The next seven find someone right. If the system could handle the first four steps, coordinators could focus on the final judgment: is this the right person for this patient?*
+
+---
+
+### Problem 2 — Client Preference Knowledge Lives Entirely in the Coordinator's Head (or on Sticky Notes)
+
+**Job:** Match replacement carers to clients based on documented client preferences (gender, familiarity, condition-specific needs, personal triggers).
+**Desired outcome:** Soft matching criteria — trust, continuity, dementia protocols, personal preferences — captured in the system and surfaced automatically during replacement scheduling.
+**Importance:** Critical — incorrect match leads to client distress (Mrs. Henderson), visit refusal (Lin Chen, noted by Angela), or client loss.
+**Satisfaction:** Very low — this knowledge exists nowhere except the coordinator's memory and, for Angela, sticky notes on her monitor.
+
+> "I know that Mrs. Kim only wants female carers. I know that Arthur Kovacs doesn't like new people but will accept them if they're briefed about not moving his things. I know that Lin Chen will refuse entry to anyone she doesn't recognise. **None of this is documented anywhere. If I get hit by a bus tomorrow, half the knowledge about our clients walks out the door with me.**"
+> — Angela, CC-001
+
+> "**It has to know the soft stuff.** Not just 'who's available' — 'who does this patient trust.'"
+> — Angela, CC-001
+
+> "If I'd had a system that automatically found the best available replacement — **someone Mrs. Henderson had met before, or at least someone with dementia experience who'd been briefed on her specific needs** — maybe."
+> — Tom, CC-002
+
+*Synthesis: Both coordinators independently articulated the same gap: scheduling systems know who is available and qualified, but they do not know who a patient will trust. The trust dimension is currently stored in human memory and, for Angela, on paper sticky notes — two of the most fragile information stores in any professional system. Angela's "hit by a bus" framing was said with dark humour but immediately recognised as a genuine business continuity risk. Tom's loss of the Henderson family is the direct cost of that knowledge gap.*
+
+---
+
+### Problem 3 — Families Are Not Notified When Visits Are Cancelled or Changed
+
+**Job:** Communicate visit changes (cancellation, replacement, delay) to families in real time.
+**Desired outcome:** Automated notification to client and family whenever a schedule change is confirmed, without requiring coordinator action.
+**Importance:** High — families find out when nobody shows up; this creates distress for clients, fury in families, and reputational damage for the agency.
+**Satisfaction:** Very low — notification happens manually, if it happens at all.
+
+> "**Sometimes they find out because nobody shows up.** A family called me at nine AM asking why nobody came for their father's eight AM visit. I didn't even know it was cancelled. The carer had texted me at 6 AM but I was dealing with another fire. Nobody told the family."
+> — Tom, CC-002
+
+> "Her father had been waiting in his chair, dressed and ready. **He gets anxious when the routine changes. She was furious, and she was right to be.**"
+> — Angela, CC-001 (describing the same client scenario from Tom's agency)
+
+*Synthesis: The notification failure recurs in both agencies with identical emotional weight — a client sitting in a chair, dressed and ready, waiting for someone who is not coming. Both coordinators described this image with visible regret. The failure is structural: the coordinator is the only notification channel, and when they are managing a crisis, notification falls off. Automated proactive notification — triggered by the confirmed cancellation, not the coordinator's bandwidth — would close this gap entirely.*
+
+---
+
+### Problem 4 — Compliance Documentation Drifts Invisibly Until an Audit
+
+**Job:** Maintain compliance documentation (care plan reviews, credential expiries, visit records) continuously within the quality framework.
+**Desired outcome:** A live compliance dashboard showing overdue items, ranked by criticality, before an auditor finds them.
+**Importance:** High — compliance failures create regulatory risk; care plan gaps create clinical risk.
+**Satisfaction:** Very low — neither coordinator has a system that flags overdue items; both rely on memory and calendar reminders they consistently snooze.
+
+> "I know there are care plans overdue for review. I can feel it. **But I can't quantify them because the system doesn't flag overdue items.** I'd love something that just told me: 'Here are the seventeen things that are out of compliance. Here are the five that are critical.' Give me a list and I'll fix it."
+> — Angela, CC-001
+
+> "The quality framework says every eight weeks. I don't have a system that flags when they're due. I have a calendar reminder that I snooze more often than I act on. **I can feel things slipping through but I can't see them. It's a vague anxiety with no specifics.**"
+> — Tom, CC-002
+
+*Synthesis: Both coordinators described compliance drift in almost identical language — they can "feel" the gaps but cannot see them. Angela's upcoming audit (6 weeks out) gives this pain point acute urgency. Tom's "vague anxiety" is the chronic version of the same problem. The absence of automated compliance flagging means that quality management becomes reactive (responding to an auditor's findings) rather than proactive (fixing gaps before they become findings). The desired product is explicit: a prioritised, quantified list.*
+
+---
+
+## Key Insights
+
+### Insight 1 — "If I Get Hit by a Bus Tomorrow" (Angela, CC-001)
+> "I know that Mrs. Kim only wants female carers. I know that Arthur Kovacs doesn't like new people. I know that Lin Chen will refuse entry to anyone she doesn't recognise. **None of this is documented anywhere. If I get hit by a bus tomorrow, half the knowledge about our clients walks out the door with me. Actually, that scares me.**"
+> — Angela, CC-001
+
+*Angela's sticky-note knowledge is a business continuity risk and a care quality risk simultaneously. The knowledge exists — it has been accumulated over years. The problem is that it is trapped in a single person. This is not a knowledge problem; it is a storage and retrieval problem. The solution is not training a replacement — it is capturing the soft matching criteria that experienced coordinators hold and making them queryable.*
+
+---
+
+### Insight 2 — "Nobody's Father Would Sit in a Chair Waiting" (Tom, CC-002)
+> "If the system detected the absence, found replacements ranked by match quality, sent me one approval click, and then notified the carer, the client, and the family — **nobody's father would sit in a chair waiting for someone who isn't coming.**"
+> — Tom, CC-002
+
+*This is the emotional north star for the CC persona's desired outcome. Tom framed it as a patient dignity issue, not an operational efficiency issue. The image — a client sitting in a chair, dressed and ready, waiting — recurred in both CC interviews. It is the moment where the system's failure becomes visible to the person most vulnerable to it.*
+
+---
+
+### Insight 3 — The 20% Cancellation Rate (Tom, CC-002)
+Tom stated that approximately 20% of vacant visits result in full cancellation — no replacement found, visit does not happen.
+
+*At 25 clients with estimated 3–5 staff absences per week, this is 1–2 cancelled visits per week at a small agency. Scaled to Angela's 60+ client operation: 3–4 cancelled visits per week. Each cancellation carries: clinical risk (patient misses care), reputational risk (family dissatisfaction), and revenue risk (visit not billable). The Henderson family loss is the downstream consequence. This is a quantifiable, high-frequency, high-cost problem.*
+
+---
+
+### Insight 4 — "Vague Anxiety With No Specifics" (Tom, CC-002) / "The Compliance Audit I'm Terrified Of" (Angela, CC-001)
+> "**I know there are care plans overdue for review. I can feel it. But I don't have a list, I don't have a flag, just vague anxiety.**"
+> — Tom, CC-002
+
+> "I know there are documentation gaps. **I can feel where the holes are but I can't quantify them.** I'd love something that just told me: 'Here are the seventeen things that are out of compliance.'"
+> — Angela, CC-001
+
+*"Vague anxiety with no specifics" is the exact experience of managing risk without a risk dashboard. Both coordinators know they have compliance exposure; neither can see where it is. Angela's audit in 6 weeks converts this from abstract anxiety to acute operational risk. The product implication: a live compliance gap list, ranked by severity, is immediately actionable for both coordinators.*
+
+---
+
+### Insight 5 — Coordinator as Single Point of Failure (Both)
+Angela (large agency) and Tom (small agency) both described themselves as the sole integration point for all operational knowledge. Angela has sticky notes; Tom has Google Sheets. Both are the only person who knows the full picture. Both have experienced moments where their bandwidth being consumed by one fire caused another fire to go unaddressed.
+
+*The structural insight: the coordinator is performing three distinct jobs simultaneously — (1) operational scheduling, (2) client relationship management, and (3) compliance oversight. Tools that automate the first job create bandwidth for the second and third. Currently, the first job consumes all available bandwidth, and the other two suffer.*
+
+---
+
+## Cross-Interview Pattern Summary
+
+| Pain Theme | Angela (CC-001) | Tom (CC-002) | Shared? |
+|---|---|---|---|
+| Staff absence → manual replacement cascade | 11 phone calls, 45 min | 30–60 min, 20% cancellation rate | ✅ Both |
+| Soft preference knowledge in memory/sticky notes | Sticky notes + memory | Implicit in Google Sheets workflow | ✅ Both |
+| Families not notified of cancellations | Client sat in chair, family furious | Father in chair, family cancelled service | ✅ Both (same image) |
+| Compliance drift / no flagging system | "Feel the holes, can't quantify" — audit in 6 weeks | "Vague anxiety, no list" | ✅ Both |
+| Single point of failure | 60+ clients through one person | 25 clients through sole operator | ✅ Both |
+
+---
+
+## What They Need (Verbatim Desired Outcomes)
+
+> "If the system could detect the absence, find the best replacement based on qualifications, proximity, and client preferences, propose it to me for approval, and then notify everyone — the replacement carer, the client, and the family — **that would save me forty-five minutes per incident. But it has to know the soft stuff. Not just 'who's available' — 'who does this patient trust.'**"
+> — Angela, CC-001
+
+> "If the system detected the absence, found replacements ranked by match quality, sent me one approval click, and notified everyone — **nobody's father would sit in a chair waiting for someone who isn't coming.**"
+> — Tom, CC-002
+
+---
+
+## Opportunity Signals (Pre-OST)
+
+1. **Automated vacancy detection + smart replacement matching** — qualifications + proximity + soft preferences (trust, continuity, patient-specific protocols). Coordinator approves, system notifies all parties.
+2. **Soft preference capture and retrieval** — structured field for client preferences (carer gender, familiarity requirements, dementia briefing needs) that survives coordinator turnover.
+3. **Automated proactive family notification** — triggered by confirmed schedule change, not coordinator bandwidth.
+4. **Live compliance gap dashboard** — overdue care plan reviews, expired credentials, documentation gaps — ranked by criticality, not detected at audit.
+5. **Escalation priority triage** — differentiates clinical flags (potential fall) from administrative flags (missed medication documentation) so coordinators address safety risks first.
+
+---
+
+## Action Items
+
+| Date | Owner | Action |
+|---|---|---|
+| 2026-04-02 | PM Lead | Feed Artifact 2c into `competitive-gap-analysis` alongside 2a, 2b, 2d |
+| 2026-04-02 | PM Lead | Quantify vacancy-to-cancellation rate across agencies (Tom's 20% estimate needs validation) |
+| 2026-04-02 | PM Lead | Investigate "soft matching" criteria — what fields are needed? What does Angela currently hold in sticky notes? |
+| 2026-04-02 | PM Lead | Model client loss cost from continuity failure (Henderson family = lost revenue + reputation) |
+| 2026-04-02 | PM Lead | Investigate compliance flagging requirements for home care quality framework (care plan review cycle, credential tracking) |
+| 2026-04-02 | PM Lead | Angela's audit in 6 weeks (approx 2026-05-12) — flag as potential design validation opportunity |
+
+---
+
+*Handshake note: The CC cohort's soft matching requirement is a design constraint that must appear in the `agentic-logic-spec` as a named matching algorithm parameter — not just availability and qualification, but trust and continuity scores. The compliance gap dashboard maps to a Level 1 Informer action (surface the list; coordinator acts). The vacancy-fill workflow maps to a Level 2 Verifier action (propose replacement; coordinator approves; system notifies).*
+
+
+---

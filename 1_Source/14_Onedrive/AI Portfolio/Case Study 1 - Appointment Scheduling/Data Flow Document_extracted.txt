@@ -1,0 +1,331 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Case Study 1 - Appointment Scheduling/Data Flow Document.docx
+# Characters: 7234
+# Generated: 2026-07-31T00:07:32.912Z
+
+🧩 Data Flow Document – AI-Powered Appointment Scheduling System
+
+1. Overview
+
+This document explains the data flow across the AI-powered appointment scheduling system designed for optimizing client–provider matching and appointment management. The architecture uses Azure cloud services to ingest, process, and analyze healthcare scheduling data from multiple systems (CRM, FHIR-based EHR, and appointment history).
+
+The flow covers data movement from source systems through machine learning, analytics, and consumption layers, ensuring end-to-end traceability, governance, and responsible AI compliance.
+
+
+
+2. Data Flow Stages
+
+Stage 1: Data Sources
+
+Sources:
+
+Client and Service Provider Data (CRM)
+
+Historical Appointment Data (CRM)
+
+Health Data (FHIR/EMR systems)
+
+Description: These systems contain structured and semi-structured data on clients, appointment histories, provider availability, and relevant clinical parameters that influence appointment suitability (e.g., location, service type, special needs).
+
+Output: Source data ready for extraction via API or connector triggers.
+
+
+
+Stage 2: Data Collection (ETL Trigger)
+
+Services:
+
+Azure Logic Apps (ETL Trigger)
+
+Azure Data Factory
+
+Description: Logic Apps initiate data extraction workflows from CRM and FHIR APIs on a scheduled or event-driven basis (e.g., new appointment request). Data Factory orchestrates ingestion pipelines, fetching and consolidating raw data from multiple systems into the cloud environment.
+
+Output: Raw data streams prepared for secure landing in the Azure Data Lake.
+
+
+
+Stage 3: Landing Zone (Raw Layer)
+
+Service:
+
+Azure Data Lake Storage (Raw Container)
+
+Description: The landing zone stores raw, unprocessed data directly as received from source systems — preserving data fidelity and enabling auditability. Example contents: JSON from FHIR APIs, CSV exports from CRM, or logs from appointment systems.
+
+Purpose: Acts as the immutable “source of truth” for all data entering the analytics ecosystem.
+
+
+
+Stage 4: Ingestion
+
+Service:
+
+Azure Data Factory
+
+Description: Data Factory pipelines clean, transform, and validate raw data for staging. Transformations include:
+
+Mapping FHIR entities (Patients, Appointments, Practitioners) into unified models.
+
+Removing duplicates and incomplete records.
+
+Enriching data with computed fields such as “Appointment No-Show Risk.”
+
+Output: Curated data written to the Staging Zone for model consumption.
+
+
+
+Stage 5: Staging Zone (Clean Layer)
+
+Service:
+
+Azure Data Lake Storage (Curated Container)
+
+Description: Staging Zone stores cleansed and structured data sets optimized for model training and analytics. Data is versioned to support model reproducibility and audit.
+
+Purpose: Acts as the interface between raw data and AI pipelines.
+
+
+
+Stage 6: Model Training
+
+Services:
+
+Azure Machine Learning Service (compute clusters, pipelines)
+
+Microsoft Fabric / Spark Compute
+
+Description: Machine learning pipelines are trained using historical appointment and CRM data to predict:
+
+Best available provider match for a client.
+
+Likelihood of appointment cancellation or reschedule.
+
+Optimal scheduling windows.
+
+Trained models are versioned and registered in the Model Registry for deployment and governance.
+
+Output: Trained models stored in Azure ML Model Registry.
+
+
+
+Stage 7: Model Registry
+
+Service:
+
+Azure Machine Learning Registry
+
+Description: Central repository for all trained models. Manages version control, metadata, and approval workflows for Responsible AI validation before production deployment.
+
+
+
+Stage 8: Model Inferencing
+
+Services:
+
+Online Managed Endpoint (batch scoring)
+
+Real-time Endpoint (live predictions)
+
+Description: The deployed model performs two types of predictions:
+
+Batch Inference: Periodic scoring of appointment datasets to predict high-risk cases and scheduling trends.
+
+Real-time Inference: On-demand scoring for new appointment requests received via PowerApps or chatbot.
+
+Output: Scored datasets and prediction outputs forwarded to the Analytical / Curated Zone.
+
+
+
+Stage 9: Analytical / Curated Zone
+
+Services:
+
+Azure Data Lake Storage (Curated Layer)
+
+Azure Synapse Analytics
+
+Azure Logic Apps (Event-driven orchestration)
+
+Description:
+
+Synapse consolidates scored and contextual datasets for analytical workloads.
+
+Logic Apps handle event-driven notifications or updates, such as alerting staff for high-risk cancellations.
+
+This zone provides curated, analytics-ready data for both visualization (batch) and applications (real-time).
+
+Output: Curated analytical datasets available for consumption via BI tools or applications.
+
+
+
+Stage 10: Customer Model Consumption
+
+Visualization (Batch):
+
+Power BI dashboards visualize appointment trends, provider efficiency, and client satisfaction metrics from Synapse outputs.
+
+Integration (Real-time):
+
+PowerApps integrates with model endpoints to provide live appointment recommendations within the scheduling app.
+
+API Connector and variable payloads enable downstream integration to Copilot Studio / AI bots.
+
+
+
+Stage 11: Dashboarding & Decision Support
+
+Services:
+
+Power BI
+
+Azure Copilot Studio / CareConnect AI Agent
+
+Description:
+
+Power BI delivers data-driven insights for operations and management.
+
+CareConnect AI Agent leverages contextual and analytical data to provide real-time recommendations to front-line staff (e.g., rescheduling suggestions, best provider match).
+
+Output: Actionable insights and decision data routed to CRM.
+
+
+
+Stage 12: ERP / CRM Integration
+
+Service:
+
+Microsoft Dynamics CRM or equivalent
+
+Description: Updated appointment outcomes and AI-driven scheduling decisions are written back to CRM systems. These updates feed future retraining cycles to ensure continuous learning and model improvement.
+
+Output: Updated CRM data re-enters the Data Sources layer, closing the feedback loop.
+
+
+
+Stage 13: Governance & Responsible AI
+
+Scope: Spanning across Data Collection, Model Training, and Model Deployment layers.
+
+Description: Implements governance controls and Responsible AI practices:
+
+Data access monitoring
+
+Bias detection and explainability audits
+
+Model drift tracking and retraining triggers
+
+Policy enforcement for data compliance (HIPAA, GDPR, ISO 27001)
+
+
+
+3. Data Flow Summary Table
+
+Layer
+
+Key Azure Components
+
+Purpose
+
+Data Type
+
+Data Sources
+
+CRM, EHR (FHIR APIs)
+
+Source data for appointments
+
+Structured / Semi-structured
+
+Data Collection
+
+Logic Apps, Data Factory
+
+ETL and orchestration
+
+Raw
+
+Landing Zone
+
+Data Lake Storage
+
+Raw immutable data storage
+
+JSON, CSV
+
+Ingestion
+
+Data Factory
+
+Data cleaning and transformation
+
+Processed
+
+Staging Zone
+
+Data Lake Storage
+
+Clean structured data
+
+Tabular
+
+Model Training
+
+Azure ML, Fabric
+
+Build and register ML models
+
+Feature sets
+
+Model Registry
+
+Azure ML Registry
+
+Model lifecycle management
+
+Metadata
+
+Model Inferencing
+
+Endpoints (Online/Realtime)
+
+Prediction generation
+
+Scored data
+
+Analytical Zone
+
+Synapse, Logic Apps
+
+Curated data for analytics
+
+Aggregated
+
+Consumption
+
+Power BI, PowerApps
+
+Visualization and user interaction
+
+Analytical / Real-time
+
+CRM / ERP
+
+Dynamics CRM
+
+System of record updates
+
+Operational
+
+Governance
+
+Policy, Responsible AI
+
+Compliance, audit, fairness
+
+Cross-domain
+
+
+
+
+
+---

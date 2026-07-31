@@ -1,0 +1,7 @@
+# Extracted from: akshayyelne/State-Based-NLP/.streamlit/config.toml
+# Generated: 2026-07-31T00:49:45.416Z
+
+[server]
+headless = true
+port = 8501
+enableCORS = false

@@ -1,0 +1,103 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] Which LLM Should Power Your AI Agents.pdf
+# Characters: 1690
+# Generated: 2026-07-31T00:07:33.323Z
+
+Which LLM Should Power Your AI Agents?
+ModelGPT 5GPT 4.14.1-miniGrok 4
+Gemini
+2.5 Pro
+Claude
+Sonnet 4
+GPT o3-
+mini
+GPT 5-
+mini
+Opened the
+Kanban board
+YesYesYesYesYesYesYesYes
+Created a new
+list
+Yes
+2nd
+attempt
+2nd
+attempt
+2nd
+attempt
+2nd,
+duplica-
+ted lists
+2nd
+attempt
+2nd
+attempt
+2nd,
+duplica-
+ted lists
+Used Brave
+Search
+YesYesYesYesYesYesYesYes
+Created all
+cards
+Yes (10
+news)
+Yes (10
+news)
+Yes (10
+news)
+Yes (10
+news + 6
+videos)
+Yes (10
+news)
+Only
+3 cards
+Only
+6 cards
+Only
+6 cards
+Created cards in
+pararell
+YesYesYesYesYes
+No, 1 
+at a time
+No, 1 
+at a time
+No, 1 
+at a time
+Used the right
+Kanban list
+YesYesYesYesYesYesYesYes
+Time4m 13s40s33s3m 17s59s45s41s2m 12s
+Tokens66K39K41K149K68K85K74K79K
+The Product Compass Newsletter
+System prompt (high autonomy)
+You are a helpful assistant. When the user gives you a
+task:
+1.Make a plan. What information and tools and in
+which sequence do you need?
+2.Then start executing that plan step-by-step
+3.After each step, review where you are, decide
+whether to update the plan, and continue
+User request
+Think step by step:
+1.Create a new list inside {url} Kanban board with a list
+name equal to your specific LLM model
+2.Next, use web search to find the recent news about
+Amazon
+3.Finally, add ALL the search results to the Kanban list
+you created earlier
+Model comparison (10x tests average)
+Best practices
+Use GPT 5 non-reasoning LLMs by default
+Provide a scratchpad for AI agent to make notes
+Or use solution like Sequential Thinking MCP to
+control the process
+Insights
+GPT 5 >> 4.1 > 4.1-mini > Other models
+GPT-5 is way more error-resilient
+4.1-mini is 83% cheaper than 4.1
+Above 3-5 tools, every model makes mistakes
+Available tools
+
+---

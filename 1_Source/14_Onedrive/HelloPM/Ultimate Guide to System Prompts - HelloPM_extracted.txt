@@ -1,0 +1,83 @@
+# Extracted from: 14_Onedrive/HelloPM/Ultimate Guide to System Prompts - HelloPM.pdf
+# Characters: 4037
+# Generated: 2026-07-31T00:07:33.292Z
+
+The Ultimate Guide to System Prompts 
+ 
+System prompts are the foundation of AI product behavior—they define 
+personality, capabilities, and guardrails. Here's how to craft effective ones. 
+Core Principles 
+Clarity over cleverness.  
+Write instructions as if explaining to a smart but literal colleague. Avoid 
+ambiguity—AI models interpret everything literally. 
+Structure matters.  
+Use XML tags, headers, and clear sections. Well-organized prompts are easier to 
+debug, update, and maintain as your product evolves. 
+Test relentlessly.  
+System prompts behave differently at scale than in isolation. What works for one 
+query may break edge cases you haven't considered. 
+Essential Components 
+Start with identity and role. Define what the AI is, its purpose, and core 
+personality traits. "You are a customer support agent for [Product]" sets context 
+for every interaction. 
+Include behavioral guidelines that cover tone, formatting preferences, and 
+interaction patterns. Specify when to be concise vs. detailed, formal vs. casual, 
+proactive vs. reactive. 
+Add capability boundaries. Explicitly state what the AI should and shouldn't do. 
+Don't just say what to avoid—explain why and what to do instead. "Don't provide 
+
+medical diagnoses; instead, suggest consulting healthcare professionals" is 
+clearer than "don't give medical advice." 
+Define output formatting requirements. If you need structured responses, JSON 
+outputs, or specific citation formats, specify them clearly with examples. 
+Advanced Techniques 
+Use examples liberally. Show both good and bad responses. Few-shot examples 
+dramatically improve consistency, especially for complex formatting or nuanced 
+judgments. 
+Create decision trees for ambiguous scenarios. "If the user asks X, do Y. If they 
+seem frustrated, prioritize Z." This prevents the model from getting stuck or 
+defaulting to generic responses. 
+Layer instructions by priority. Put critical safety and brand guidelines at the top. 
+Less critical preferences can come later—models weight earlier instructions 
+more heavily. 
+Build in self-correction mechanisms. Add phrases like "Before responding, 
+consider whether..." or "Double-check that your response..." to encourage 
+reasoning. 
+Common Pitfalls 
+Overloading with constraints makes the AI overly cautious and robotic. Find the 
+minimum viable set of rules that achieve your goals. 
+Contradictory instructions confuse models. If you say "be concise" but also 
+"provide comprehensive explanations," the AI will struggle. Be consistent. 
+Assuming context carries over between sessions. Each interaction may be 
+fresh—ensure critical context is in the system prompt, not just conversation 
+history. 
+
+Ignoring edge cases until they happen in production. Proactively think through 
+unusual requests, adversarial inputs, and boundary scenarios. 
+Iteration Framework 
+1. Start minimal - Basic identity and core behaviors only 
+2. Log everything - Track where the AI succeeds and fails 
+3. Identify patterns - What types of requests cause problems? 
+4. Add targeted fixes - Address specific failure modes, not general concerns 
+5. A/B test changes - Never deploy major prompt changes without 
+comparison data 
+6. Monitor long-term - User behavior changes, language evolves, new edge 
+cases emerge 
+Evaluation Checklist 
+Before deploying, verify your system prompt handles: 
+● Your top 10 expected use cases with high quality 
+● The 5 most common ways users might misuse the feature 
+● Graceful degradation when asked about out-of-scope topics 
+● Consistent brand voice across technical and casual interactions 
+● Appropriate escalation paths for sensitive or high-stakes requests 
+Remember: Your system prompt is a living document. The best AI products 
+continuously refine their prompts based on real user interactions, not just 
+theoretical best practices. 
+ 
+Examples of real production-grade prompts: 
+1. Anthropic prompts library. 
+2. ChatGPT official prompt engineering. 
+3. System prompts of multiple AI tools 
+4. More system prompts 
+
+---

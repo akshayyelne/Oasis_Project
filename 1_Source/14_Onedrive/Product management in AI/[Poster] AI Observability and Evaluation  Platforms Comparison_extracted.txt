@@ -1,0 +1,117 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] AI Observability and Evaluation  Platforms Comparison.pdf
+# Characters: 2025
+# Generated: 2026-07-31T00:07:33.306Z
+
+AI Observability and Evaluation 
+Platforms Comparison
+The Product Compass Newsletter
+Feature ↓ /
+Platform →
+LangSmithLangfuseArizeWeave (W&B)PromptLayerHeliconeOpenAI EvalsGoogle Stax
+Primary use case
+Observability &
+Evals
+Observability &
+Evals
+Observability &
+Evals
+Observability &
+Evals
+Observability &
+offline evals
+ObservabilityOffline evalsOffline evals
+Capability: Prompt Management
+Prompt
+versioning
+✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes
+⚠ Limited (via
+Vertex AI)
+Prompt
+parameters
+✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes
+Playground✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes
+Capability: Observability
+Logging requests
+and threads
+✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes
+⚠ Limited
+(more of offline
+evals)
+❌ No (offline
+evals only)
+IntegrationsAPI, SDK, OTELAPI, SDK, OTELAPI, SDK, OTELAPI, SDK, OTELAPI, SDK, OTELGatewayAPI, SDKAPI, SDK
+Capability: Evals
+Rule-based evals✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes❌ No✅ Yes✅ Yes
+LLM-as-judge
+evals
+✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes❌ No✅ Yes✅ Yes
+Online,
+automatic evals
+(% of traces)
+✅ Yes✅ Yes✅ Yes✅ Yes❌ No❌ No❌  No (manual)❌ No (manual)
+Labeling queues
+& human evals
+✅ Yes✅ Yes✅ Yes✅ Yes
+⚠ Limited /
+workarounds
+❌ No❌ No
+✅ Yes (feedback
+tasks)
+Tracking
+Agreement
+(Human - Model)
+✅ Yes❌ No (DYI)✅ Yes❌ No (DYI)❌ No (DYI)❌ No❌ No (DYI)✅ Yes
+Error analysis❌ No (DYI)❌ No (DYI)❌ No (DYI)❌ No (DYI)❌ No (DYI)❌ No❌ No (DYI)❌ No (DYI)
+Cross-Cutting Capabilities
+Managing
+datasets
+✅ Yes✅ Yes✅ Yes✅ Yes✅ Yes❌ No✅ Yes✅ Yes
+Reports & online
+monitoring
+       Yes✅ Yes✅ Yes✅ Yes⚠ Basic⚠ Basic❌ No✅ Yes
+Other
+Ease of use (1-5)
+✅✅✅✅
+(complicated UX)
+✅✅✅
+(technical)
+✅✅✅✅✅
+(easy)
+✅✅✅✅✅
+(easy)
+✅✅✅✅✅
+(easy)
+✅✅✅✅✅
+(easy)
+✅✅✅✅
+(complicated UX)
+✅✅✅✅✅
+(easy)
+Cost / Licensing
+✅ Free tier
+ Paid SaaS
+✅ Self-host
+ Cloud
+✅ Free Phoenix
+ Arize (free for
+1 person)
+✅ Free tier
+ Paid SaaS
+✅ Free tier
+ Paid SaaS
+✅ Free tier
+ SaaS
+ Paid (usage-
+based)
+✅ Free (Beta)
+
+. 
+DatasetsMonitoring
+Key Features of 
+AI Observability and Evals Platforms
+The Product Compass Newsletter
+3. Evals
+2. Observability
+1.Prompt Management
+
+---

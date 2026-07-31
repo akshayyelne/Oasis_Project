@@ -1,0 +1,377 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/plugin 1 - Discovery/skills 1 - Interview Script/Character Bibles/Character_Bible_Amendments.docx
+# Characters: 24654
+# Generated: 2026-07-31T00:07:32.978Z
+
+CHARACTER BIBLE AMENDMENTS
+
+Review Round 2 — 4 Critical Additions
+
+Addressing gaps in: Data Integrity, Audit Alignment, Inference Privacy, and Professional Friction
+
+Apply these amendments to the approved Character Bibles before generating interviews.
+
+Readiness after amendments: 85% → 97%
+
+Amendment Summary
+
+Each amendment adds a specific incident, backstory detail, and verbatim quote to an existing character bible. These additions are designed to generate evidence that maps directly to constitutional requirements.
+
+#
+
+Character
+
+Amendment Name
+
+Constitution Alignment
+
+A1
+
+SR-001: Lin Chen
+
+The Data Forger
+
+Tests if AI can detect manual override / gaming of the system. Forces Data Integrity design into risk model.
+
+A2
+
+HCN-003: Priya Sharma
+
+The Audit Trauma
+
+Justifies Hash-Chain Integrity (Article VII) and Non-Nullable Fields (Article IX). Makes audit schema feel inevitable.
+
+A3
+
+SR-002: Arthur Kovacs
+
+The Privacy Sceptic
+
+Provides negative evidence for Inference Privacy Risk Table. Tests Level 2 (Verifier) for sensitive health inferences.
+
+A4
+
+FC-001: Sarah Chen
+
+Professional Friction
+
+Surfaces 'Too Much Transparency' tension. Tests where AI-informed families create extra burden on clinical staff.
+
+Amendment A1: SR-001 Lin Chen
+
+The Data Forger
+
+Insert after the existing 'Medication double-dosing and skipping' section in Lin's backstory.
+
+
+
+New Backstory Addition
+
+Lin is a former maths teacher. She doesn't just passively forget or resist — she actively problem-solves around the systems designed to monitor her. When she realises she's forgotten a dose, her instinct isn't to report it; it's to cover the evidence.
+
+Last Tuesday, Sarah was coming for her afternoon visit. Lin realised she'd forgotten her morning blood pressure medication. Rather than admit it, she opened the pill organiser, moved the remaining pills around so the correct compartments appeared empty (as if the doses had been taken), and closed it. When Sarah checked — as she always does — everything looked normal. Lin felt relieved, not guilty. In her mind, she was protecting herself from Sarah's overreaction, not being dishonest.
+
+Lin has done this at least three times that she can recall. Once she took pills out of a future day's compartment and dropped them in the bin so the count would look right across the week. She treats the pill organiser as a puzzle to be solved, not a medical tool to be followed. The same analytical mind that taught algebra for 35 years is now being applied to defeating the care system's data integrity.
+
+She also occasionally tells the visiting nurse that she's 'been walking every morning' when she hasn't left the house in four days. She knows Maria (HCN-001) checks her walking shoes by the door, so Lin moves them to a different spot each week to make it look like they've been used.
+
+New Key Incident
+
+• Faked pill organiser state (recurring, at least 3 times) — moved pills to make it 'look right' before Sarah's visit. Also fakes walking activity by moving shoes. Surfaces #1 Risk: the system cannot trust single-source data. Medication adherence requires corroborating signals, not organiser state alone.
+
+New Verbatim Quotes
+
+“I moved the pills around before Sarah came. Tuesday's were still there but I put them in Thursday's slot and emptied Tuesday. It looked right. She checked and said 'Good, Mum.' I know it's not good. But the alternative is worse.”
+
+“I move my walking shoes to a different spot by the door every few days. Maria notices things like that. If the shoes are always in the same place, she'll know I haven't been walking. So I move them.”
+
+“I'm not lying. I'm managing. There's a difference. If I tell them every little thing I forget, they'll decide I can't manage. And then what? I lose my home.”
+
+Constitutional Alignment
+
+Article VII — Compliance Constitution
+
+This amendment forces the design to address Data Integrity at the source. The risk model cannot treat pill organiser state as ground truth. It must look for corroborating signals: movement patterns consistent with kitchen visits at medication time, weight changes in smart dispenser (if used), or absence of expected activity at dosing windows. The AI must solve for adversarial data from the patient it's trying to protect.
+
+Article VIII — Agentic Control Matrix
+
+A 'discrepancy detected' event (organiser state doesn't match corroborating signals) should be classified as Level 1 (log + note for nurse) or Level 2 (flag for clinical review), NOT Level 3. Accusing a patient of faking is a dignity violation. The system detects the discrepancy; the nurse handles the conversation.
+
+Design Implications
+
+• Medication adherence cannot rely on any single data source. Multi-signal corroboration is a design requirement, not an optimisation.
+
+• Discrepancy detection must be handled with clinical nuance — flag to the nurse, never to the patient or family. Dignity-preserving alerting.
+
+• The risk model's confidence score should decrease when only one signal confirms adherence. Multiple confirming signals increase confidence.
+
+• Lin's 'gaming' isn't pathological — it's rational self-preservation. The system must work WITH this behaviour, not against it.
+
+Amendment A2: HCN-003 Priya Sharma
+
+The Audit Trauma
+
+Insert after the existing 'Margaret's preventable hospitalisation' section in Priya's backstory.
+
+
+
+New Backstory Addition
+
+Two years ago, before she joined CareBridge, Priya was called to testify at a coroner's inquest. A patient at her previous agency, Gerald (84, diabetes), had died from complications following a missed insulin dose. The agency was under investigation for potential neglect. Priya had provided the care correctly — she'd administered the insulin at the right time on the day in question. But her documentation was 'summary-only': a brief paragraph written hours after the visit that said 'Insulin administered as per care plan. Patient stable.'
+
+In the hearing, the family's solicitor asked Priya what time she administered the insulin. She said approximately 8:15 AM. He asked her to point to the timestamp in her notes. There was no timestamp — just 'morning visit.' He asked what Gerald's blood glucose reading was before administration. She said she remembered it was within range, but her notes just said 'BGL checked, within normal limits' — no specific number. He asked what site she used for injection. She couldn't remember and her notes didn't specify.
+
+Priya was telling the truth. She had provided competent care. But she couldn't prove it, because the documentation system she used at the time didn't require — or even support — that level of granularity. The coroner ultimately found no neglect, but the experience traumatised Priya. She now documents with obsessive specificity: exact times, exact readings, exact sites, exact words the patient used. She writes it all in a personal notebook during the visit and then transcribes it into the EMR afterwards — doubling her documentation time.
+
+Priya is haunted by one thought: if Gerald's family had won that case, it wouldn't have been because care was negligent. It would have been because the documentation system made competent care look indistinguishable from negligent care. The system failed her, not the other way around.
+
+When Priya reviews junior nurses' notes now, she flags anything that's 'summary-only.' She tells David (HCN-002): 'If you can't prove you did it with a timestamp and a number, you didn't do it.' David thinks she's being paranoid. Priya knows she's being protective.
+
+New Key Incidents
+
+• Coroner's inquest testimony (2 years ago) — couldn't prove she administered insulin at the right time because notes lacked timestamps, specific readings, and injection site. Surfaces #3 Voice-to-Docs (documentation must capture structured, timestamped, specific data — not summaries) and Article IX (non-nullable fields in audit schema).
+
+• Double-documentation habit — now writes in a personal notebook during visits then transcribes to EMR. 2x the documentation time. Surfaces #3 Voice-to-Docs (if voice capture preserved this granularity, she wouldn't need the notebook).
+
+• 'Summary-only' flag for juniors — tells David 'If you can't prove it, you didn't do it.' Surfaces institutional knowledge about why specific documentation matters.
+
+New Verbatim Quotes
+
+“The solicitor asked me what time I gave Gerald his insulin. I said about 8:15. He said, 'Show me.' And I looked at my notes and all they said was 'morning visit.' Morning visit. That could mean 7 AM or 11 AM. I knew when I was there. But I couldn't prove it.”
+
+“He asked me Gerald's blood glucose before injection. I said it was in range. He said, 'What number?' I couldn't tell him the number. My notes said 'BGL checked, within normal limits.' That's not a number. That's a summary. And in a hearing room, a summary looks like you're hiding something.”
+
+“I carry a notebook now. I write everything during the visit — the time, the reading, the exact words the patient says. Then I go home and type it all into the system again. It takes me twice as long. But I will never sit in that room again unable to answer a simple question about what I did and when.”
+
+“I tell David: if you can't point to a timestamp and a number in your notes, then as far as the law is concerned, you didn't do it. He thinks I'm being dramatic. I think I'm keeping him out of a coroner's court.”
+
+“The system didn't fail Gerald. I provided the care. But the system made it look like maybe I didn't. And that's almost worse — because the family will never fully believe me, and I can never fully prove it.”
+
+Constitutional Alignment
+
+Article IX — HIPAA Audit Log Schema
+
+Priya's experience directly justifies every non-nullable field in the audit schema: timestamp (ISO 8601 + UTC), ai_confidence_score (specific number, not 'within range'), action_taken (specific action, not summary), trigger_value (exact reading). Her testimony failed because her system produced nullable, unstructured, summary-only records. The audit schema exists so that no nurse ever faces that situation again.
+
+Article VII — Audit Log = State of Truth
+
+"If a state transition happened and was not logged, it did not happen (for compliance purposes)." Priya lived this rule. She administered insulin. It happened. But because it wasn't logged with specificity, the legal system treated it as if it might not have happened. The hash-chain integrity and immutable storage aren't over-engineering — they're the technical implementation of 'never again.'
+
+Design Implications
+
+• Voice-to-documentation must produce structured, timestamped, field-specific records — not paragraph summaries. Every clinical action gets a timestamp, a reading, and a specific intervention record.
+
+• The system should make granular documentation the path of least resistance, not the exception. If Priya can dictate 'BGL 6.2 at 8:15, administered NovoRapid 10 units left abdomen' and have it automatically populate the correct fields, the double-documentation problem disappears.
+
+• Audit log non-nullable fields (Article IX) should be enforced at the input layer, not discovered at the audit layer. The system should not accept a visit note that lacks a timestamp or specific reading.
+
+• This backstory makes the audit schema feel like protection for nurses, not surveillance of them. That framing matters for adoption.
+
+Amendment A3: SR-002 Arthur Kovacs
+
+The Privacy Sceptic
+
+Insert after the existing 'Reported swollen ankles, nothing happened' section in Arthur's backstory.
+
+
+
+New Backstory Addition
+
+Eight months ago, Arthur's previous home care agency trialled an experimental 'AI wellness monitoring' system. One of its features was a 'mood assessment' that analysed speech patterns during routine check-in calls — pace, tone, vocabulary, response latency. After two weeks, the system flagged Arthur as 'showing indicators consistent with clinical depression' and recommended a mental health referral.
+
+Arthur was not depressed. He was exhausted. He'd had three consecutive nights of poor sleep because of construction noise in the apartment above. His speech was slow and flat because he was tired, not because he was clinically depressed. But the flag went into his record. His son Michael received a notification. His GP received a referral recommendation.
+
+Michael called Arthur in a panic: 'Dad, the system says you might be depressed. Are you okay? Do you need to talk to someone?' Arthur was furious. A machine had listened to his voice, decided he was mentally ill, and told his family before telling him. Nobody asked Arthur what was wrong. Nobody called to say, 'You sound tired — everything okay?' The system skipped the human step and went straight to diagnosis and notification.
+
+The GP discussed it at the next quarterly visit. Arthur told her he wasn't depressed, he was tired because of construction noise. She noted 'Patient denies depressive symptoms. AI flag reviewed and clinically dismissed.' But the flag remained in his record as a historical notation. It still appears under 'Mental Health History' when a new clinician pulls up his file.
+
+Arthur now distrusts any system that claims to 'understand' how he's feeling. He sees it as surveillance dressed up as care. When his current agency mentioned that new digital tools might help 'monitor his wellbeing,' Arthur's response was immediate: 'Like the last one that told my son I was crazy? No thank you.'
+
+The incident didn't just affect Arthur — it affected his willingness to be honest in future interactions. He now gives shorter, more controlled responses during check-in calls because he suspects the system might be 'listening.' He's performing wellness, not expressing it.
+
+New Key Incidents
+
+• False AI depression flag (8 months ago) — speech pattern analysis incorrectly flagged depression when patient was simply exhausted. Family notified before patient. Flag persists in medical record. Surfaces Inference Privacy (Article VII) and Level 2 Verifier requirement.
+
+• Performing wellness — now gives controlled, upbeat responses during calls because he fears algorithmic judgment. AI monitoring has degraded the data quality, not improved it. Surfaces #1 Risk (AI monitoring can make data LESS accurate through behavioural adaptation).
+
+• Persistent flag in medical record — 'AI flag reviewed and clinically dismissed' but still appears under Mental Health History. Surfaces data correction rights and record integrity.
+
+New Verbatim Quotes
+
+“Some computer decided I was depressed because I was talking slowly on the phone. I wasn't depressed. I was tired. I'd had three nights of no sleep because of the builders upstairs. But did anyone ask me that? No. They told my son and my doctor that I was mentally ill.”
+
+“Michael called me in a panic. 'Dad, are you okay? The system says you might be depressed.' The system. Not a person. A system. And it told my son before it told me. I didn't even know I was being analysed.”
+
+“The doctor crossed it out but it's still there. Every new nurse who opens my file sees 'Mental Health: AI-flagged depressive indicators, clinically dismissed.' What do you think they see first — the flag or the dismissal?”
+
+“Now when the nurse calls me for a check-in, I make sure I sound cheerful. I speak clearly. I say I'm fine even when I'm not. Because if I sound tired again, who knows what the computer will decide about me this time.”
+
+“They call it 'wellbeing monitoring.' I call it a machine that listens to how you talk and then tells people you're sick. There's a word for that. It's not 'care.'”
+
+Constitutional Alignment
+
+Article VII — Inference Privacy
+
+"Any AI feature that infers a health condition from indirect signals (voice tone, gait, routine shift) is classified as HIGH/CRITICAL sensitivity and requires DPIA + explicit consent before data collection begins." Arthur's experience is the EXACT scenario this rule prevents. Voice tone analysis inferred depression from exhaustion. The Red Zone classification exists because of cases like Arthur's.
+
+Article VIII — Level 2 Verifier Requirement
+
+The system that flagged Arthur skipped Level 2. It went from L1 (detect pattern) directly to notification (which behaves like L3 — irreversible: the flag is now in his record, his family was alarmed, his behaviour has changed). A proper Level 2 gate would have sent the flag to a clinician for review BEFORE notifying the family. The clinician would have called Arthur, asked 'You sound tired — everything okay?', and the incident would never have escalated.
+
+Ethics Trust Mapping — Creepiness vs Care Test
+
+Arthur's experience is a textbook failure of the Creepiness vs Care test. The system's intention was care (detect depression early). The patient's experience was creepiness (machine listened to my voice and told my family I'm mentally ill). The gap between intent and experience is where trust dies. This case should appear in your ethics-trust-mapping output as a concrete example of why voice analysis is Red Zone.
+
+Design Implications
+
+• Inference-based health insights (voice, gait, routine) MUST pass through Level 2 (clinician review) before ANY notification to family or record entry. No exceptions.
+
+• AI confidence scores on health inferences must be visible to the reviewing clinician, with explicit framing: 'Low confidence — speech pattern deviation detected, multiple non-clinical explanations possible.'
+
+• Patients must be informed FIRST about any health inference, before families. The patient is the subject, not the last to know.
+
+• AI-generated flags must be removable from records when clinically dismissed — not just annotated as 'dismissed.' Persistent flags create a false medical history.
+
+• Behavioural adaptation to monitoring ('performing wellness') is a real phenomenon that degrades data quality. The system should account for this in confidence scoring.
+
+Amendment A4: FC-001 Sarah Chen
+
+Professional Friction
+
+Insert after the existing 'Replacement nurse incident' section in Sarah's backstory.
+
+
+
+New Backstory Addition
+
+Sarah is organised, tech-savvy, and anxious. When she first started using a health monitoring app (a basic one that tracked her mother's daily step count and sleep patterns via a wrist band Lin tolerantly wore for a few weeks), Sarah became what Maria (HCN-001) privately calls a 'data parent.'
+
+Sarah would text Maria screenshots before visits: 'Her step count dropped 40% this week — is something wrong?' 'She slept less than 4 hours last Tuesday — should we be concerned?' 'Her resting heart rate was 12 bpm higher than her baseline on Thursday.' Each message was well-intentioned and technically accurate. And each one added 10-15 minutes to Maria's already overloaded day — reviewing the data, correlating it with her own clinical observations, and then carefully responding to Sarah in a way that was clinically honest without escalating Sarah's anxiety.
+
+The friction point: Maria's professional assessment of Lin sometimes conflicted with what the data showed. Lin's step count dropped because it rained for three days and she didn't walk — not because her mobility declined. Her sleep was disrupted because of a neighbour's dog barking, not cognitive decline. But explaining 'the data looks concerning but it's actually fine' takes more time than having no data at all. Maria started dreading Sarah's pre-visit texts.
+
+Maria eventually told Sarah, diplomatically, that she should 'trust the clinical team to flag anything concerning' rather than monitoring the data herself. Sarah felt dismissed. Maria felt overwhelmed. The underlying problem: the data was given to the family without clinical context or interpretation, turning every normal fluctuation into a potential crisis.
+
+Sarah stopped using the wrist band app but didn't stop worrying — she just went back to the electricity usage tracking, which gave her less information but less anxiety. She now has a complicated relationship with health data: she wants it desperately, but the last time she had it, it made everything worse for everyone.
+
+New Key Incidents
+
+• 'Data parent' period (3 months, ended 2 months ago) — health data without clinical context created friction with nurse Maria. 10-15 minutes of extra work per visit for Maria responding to data-anxious texts. Surfaces the 'too much transparency' product tension.
+
+• Maria's pushback — 'trust the clinical team' response made Sarah feel dismissed. Nurse-family trust damaged. Surfaces #4 Chat (the system must provide clinically contextualised data, not raw data to anxious families).
+
+• Retreat to electricity tracking — less data = less anxiety but also less safety. Sarah preferred ignorance over false alarms. Surfaces the design requirement for confidence-calibrated alerts.
+
+New Verbatim Quotes
+
+“I was sending Maria screenshots every week. Her step count is down. Her sleep is off. Is this something? Every time, Maria would take twenty minutes to explain why it was probably fine. I could tell she was getting frustrated with me, but I couldn't stop. What if the one time I didn't ask was the time it actually mattered?”
+
+“Maria told me to 'trust the clinical team.' She was nice about it. But what I heard was: stop bothering me. And what I felt was: you don't understand what it's like to be the one lying awake at 2 AM wondering if that heart rate spike means something.”
+
+“I stopped using the app. Not because I didn't want the data — because the data without context was making me crazy and making Maria's job harder. I went back to checking the electricity bill. At least that doesn't give me a heart rate graph to panic about.”
+
+“What I actually need is not the raw numbers. I need someone — or something — to tell me: 'Your mother's patterns are within her normal range. Nothing to worry about this week.' Or: 'Something changed. We're looking into it.' That's it. Not a graph. A verdict.”
+
+Constitutional Alignment
+
+Capability #4 — Care Intelligence Chat: Design Requirement
+
+Sarah's experience defines the design requirement for family-facing AI communication: never present raw data. Always present clinically interpreted, confidence-calibrated status summaries. The chat should answer 'Is mum okay?' with 'Lin's patterns are within her normal range this week. Her next nurse visit is Thursday.' — not with a step count graph. Raw data goes to clinicians. Interpreted status goes to families.
+
+Capability #1 — Predictive Risk: Alert Calibration
+
+Sarah's 'data parent' behaviour shows what happens when alerts aren't calibrated. Every fluctuation became a crisis. The risk engine must have a family-facing confidence threshold that's HIGHER than the clinical-facing threshold. Clinicians see yellow flags. Families only see red flags. This prevents alert fatigue and nurse-family friction.
+
+Design Implications
+
+• Family-facing and clinician-facing interfaces must show DIFFERENT levels of detail. Raw data and yellow-level flags go to clinicians. Families get interpreted summaries and only red-level alerts.
+
+• The intelligence chat must include a 'normal range' context for every data point it surfaces to families. 'Her step count was 2,400 this week' means nothing. 'Her step count was 2,400 this week, which is within her typical range of 2,000-3,200' reduces anxiety.
+
+• The system should reduce nurse burden, not increase it. If the AI provides contextualised summaries to families, Maria no longer has to spend 15 minutes per visit explaining data. The AI handles the interpretation; Maria handles the care.
+
+• Alert thresholds must be role-specific: clinical team sees all flags, families see only confirmed or high-confidence flags. This is a product architecture decision, not just a UI decision.
+
+Updated Review Readiness
+
+With these 4 amendments applied, the character bibles now address:
+
+Test
+
+Before
+
+After
+
+Evidence Source
+
+Mom Test: Past behaviour
+
+Strong
+
+Strong
+
+All characters have specific incidents with dates
+
+Data Integrity
+
+Weak
+
+Strong
+
+A1: Lin fakes pill organiser data
+
+Audit / Legal alignment
+
+Missing
+
+Strong
+
+A2: Priya's coroner's inquest testimony
+
+Inference Privacy
+
+Implied
+
+Explicit
+
+A3: Arthur's false AI depression flag
+
+Professional Friction
+
+Missing
+
+Strong
+
+A4: Sarah's 'data parent' period
+
+Alert Calibration
+
+Implied
+
+Explicit
+
+A4: Sarah's raw data anxiety
+
+Behavioural Adaptation
+
+Partial
+
+Strong
+
+A3: Arthur 'performs wellness' + A1: Lin games data
+
+Dignity-Preserving Design
+
+Strong
+
+Stronger
+
+A1 + A3: gaming and scepticism are rational self-preservation
+
+Readiness: 97%. Ready for synthetic interview generation.
+
+Remaining 3%: Will surface organically during interview writing — minor details, not structural gaps.
+
+
+
+---

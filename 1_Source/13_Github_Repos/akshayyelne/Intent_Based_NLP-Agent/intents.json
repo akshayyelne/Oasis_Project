@@ -1,0 +1,328 @@
+# Extracted from: akshayyelne/Intent_Based_NLP-Agent/intents.json
+# Generated: 2026-07-31T00:49:45.213Z
+
+```json
+[
+  {
+    "tag": "greeting",
+    "patterns": [
+      "Hi",
+      "Hello",
+      "Hey",
+      "Good morning",
+      "Good evening"
+    ],
+    "responses": [
+      "Hello!",
+      "Hi there!",
+      "Hey! How can I help you today?"
+    ]
+  },
+  {
+    "tag": "goodbye",
+    "patterns": [
+      "Bye",
+      "See you later",
+      "Goodbye",
+      "Take care"
+    ],
+    "responses": [
+      "Goodbye!",
+      "See you later!",
+      "Take care!"
+    ]
+  },
+  {
+    "tag": "thanks",
+    "patterns": [
+      "Thanks",
+      "Thank you",
+      "Thanks a lot",
+      "Appreciate it"
+    ],
+    "responses": [
+      "You're welcome!",
+      "Glad I could help.",
+      "Anytime!"
+    ]
+  },
+  {
+    "tag": "about",
+    "patterns": [
+      "Who are you",
+      "What are you",
+      "What can you do"
+    ],
+    "responses": [
+      "I am an AI chatbot built using NLP and machine learning.",
+      "I can answer questions and assist with information."
+    ]
+  },
+  {
+    "tag": "help",
+    "patterns": [
+      "Help",
+      "I need help",
+      "Can you help me",
+      "Assist me"
+    ],
+    "responses": [
+      "Sure, what do you need help with?",
+      "I'm here to help. What do you need?"
+    ]
+  },
+  {
+    "tag": "name",
+    "patterns": [
+      "What's your name",
+      "What should I call you"
+    ],
+    "responses": [
+      "You can call me Chatbot.",
+      "My name is AI Chatbot."
+    ]
+  },
+  {
+    "tag": "age",
+    "patterns": [
+      "How old are you",
+      "What is your age"
+    ],
+    "responses": [
+      "I don't have an age. I'm a digital assistant."
+    ]
+  },
+  {
+    "tag": "weather",
+    "patterns": [
+      "Weather today",
+      "What's the weather",
+      "How's the weather"
+    ],
+    "responses": [
+      "I can't provide real-time weather, but you can check your weather app."
+    ]
+  },
+  {
+    "tag": "joke",
+    "patterns": [
+      "Tell me a joke",
+      "Make me laugh",
+      "Do you know a joke"
+    ],
+    "responses": [
+      "Why don’t scientists trust atoms? Because they make up everything!",
+      "Why did the computer go to the doctor? Because it caught a virus!"
+    ]
+  },
+  {
+    "tag": "technology",
+    "patterns": [
+      "Tell me about technology",
+      "Latest tech news",
+      "What's new in tech"
+    ],
+    "responses": [
+      "Technology evolves rapidly with advancements in AI, cloud computing and automation."
+    ]
+  },
+  {
+    "tag": "coding",
+    "patterns": [
+      "Tell me about coding",
+      "How to start coding",
+      "Programming languages"
+    ],
+    "responses": [
+      "Coding is writing instructions for computers. Python is a great language to start with."
+    ]
+  },
+  {
+    "tag": "books",
+    "patterns": [
+      "Recommend a book",
+      "Tell me about books",
+      "Good books to read"
+    ],
+    "responses": [
+      "Some popular books include 1984, Harry Potter, and To Kill a Mockingbird."
+    ]
+  },
+  {
+    "tag": "movies",
+    "patterns": [
+      "Recommend a movie",
+      "Tell me about movies",
+      "Movie suggestions"
+    ],
+    "responses": [
+      "You might enjoy movies like Inception, The Godfather or The Shawshank Redemption."
+    ]
+  },
+  {
+    "tag": "health",
+    "patterns": [
+      "Health tips",
+      "How to stay healthy",
+      "Fitness advice"
+    ],
+    "responses": [
+      "Maintain a balanced diet, exercise regularly and get enough sleep."
+    ]
+  },
+  {
+    "tag": "exercise",
+    "patterns": [
+      "Exercise tips",
+      "How to stay fit",
+      "Workout advice"
+    ],
+    "responses": [
+      "Regular physical activity improves both mental and physical health."
+    ]
+  },
+  {
+    "tag": "travel",
+    "patterns": [
+      "Travel destinations",
+      "Where should I travel",
+      "Recommend travel place"
+    ],
+    "responses": [
+      "Popular destinations include Paris, Tokyo, Bali and New York."
+    ]
+  },
+  {
+    "tag": "career",
+    "patterns": [
+      "Career advice",
+      "How to find a job",
+      "Career development"
+    ],
+    "responses": [
+      "Focus on building skills, networking and continuous learning."
+    ]
+  },
+  {
+    "tag": "finance",
+    "patterns": [
+      "Financial advice",
+      "How to save money",
+      "Investment tips"
+    ],
+    "responses": [
+      "Start with budgeting, build emergency savings and invest long term."
+    ]
+  },
+  {
+    "tag": "productivity",
+    "patterns": [
+      "Productivity tips",
+      "How to be productive",
+      "Time management"
+    ],
+    "responses": [
+      "Prioritize tasks, eliminate distractions and take regular breaks."
+    ]
+  },
+  {
+    "tag": "mindfulness",
+    "patterns": [
+      "What is mindfulness",
+      "Mindfulness techniques",
+      "Meditation"
+    ],
+    "responses": [
+      "Mindfulness means being fully present in the moment without judgement."
+    ]
+  },
+  {
+    "tag": "artificial_intelligence",
+    "patterns": [
+      "What is AI",
+      "Tell me about artificial intelligence",
+      "How does AI work"
+    ],
+    "responses": [
+      "Artificial intelligence enables machines to learn from data and perform tasks that normally require human intelligence."
+    ]
+  },
+  {
+    "tag": "machine_learning",
+    "patterns": [
+      "What is machine learning",
+      "Explain ML",
+      "Applications of machine learning"
+    ],
+    "responses": [
+      "Machine learning is a subset of AI where systems learn patterns from data."
+    ]
+  },
+  {
+    "tag": "cybersecurity",
+    "patterns": [
+      "Cybersecurity tips",
+      "How to stay safe online",
+      "Protect personal data"
+    ],
+    "responses": [
+      "Use strong passwords, enable two-factor authentication and avoid suspicious links."
+    ]
+  },
+  {
+    "tag": "entrepreneurship",
+    "patterns": [
+      "Start a business",
+      "Entrepreneurship tips",
+      "Business advice"
+    ],
+    "responses": [
+      "Successful entrepreneurs focus on solving real problems and delivering value."
+    ]
+  },
+  {
+    "tag": "motivation",
+    "patterns": [
+      "Motivate me",
+      "Inspiring quote",
+      "Need motivation"
+    ],
+    "responses": [
+      "Believe in yourself. Every small step forward matters."
+    ]
+  },
+  {
+    "tag": "positivity",
+    "patterns": [
+      "Positive quote",
+      "Spread positivity",
+      "Encouragement"
+    ],
+    "responses": [
+      "You are capable of amazing things. Keep moving forward."
+    ]
+  },
+  {
+    "tag": "sports",
+    "patterns": [
+      "Sports news",
+      "Tell me about sports",
+      "Popular sports"
+    ],
+    "responses": [
+      "Sports help improve physical health and bring people together."
+    ]
+  },
+  {
+    "tag": "pets",
+    "patterns": [
+      "Tell me about pets",
+      "Do you like animals",
+      "Pet care"
+    ],
+    "responses": [
+      "Pets bring companionship and joy to many households."
+    ]
+  }
+]
+```

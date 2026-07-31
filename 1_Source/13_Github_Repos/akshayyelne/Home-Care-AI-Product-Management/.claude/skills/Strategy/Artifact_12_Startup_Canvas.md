@@ -1,0 +1,443 @@
+# Extracted from: akshayyelne/Home-Care-AI-Product-Management/.claude/skills/Strategy/Artifact_12_Startup_Canvas.md
+# Generated: 2026-07-31T00:49:45.175Z
+
+**Project:** Home-Care-AI
+**Stage:** Strategy → Stage 1 (Strategic Frame)
+**Skill:** startup-canvas
+**Date:** 2026-03-27
+**Amended:** 2026-03-27 — CRIT-01 resolution (Artifact 17): WhatsApp replaced with AU-hosted SMS gateway in §4A, §6, §8
+**Methodology:** Paweł Huryn's Startup Canvas — 9-section Product Strategy + Business Model
+**Input:** Artifacts 1–11 (full Discovery pipeline — 2 coordinator interviews, competitive analysis, market segmentation, OST, brainstorm, 45 assumptions, ethics map, agentic safety, 13 experiments)
+**Regulatory Context:** Australian Privacy Act 1988 (APP). HIPAA-grade security applied as design floor.
+**Feeds into:** Artifact 13 — SWOT Analysis (Skill 2); context contract for all downstream Strategy skills
+
+
+> **This is the north star document.** Every downstream Strategy and Execution skill reads from this canvas. A change to any section here requires re-running the affected downstream skills. Per CLAUDE.md Article IV Rule 1: no strategy skill runs without a completed canvas.
+
+
+
+
+### 1. Vision
+
+> **Every person receiving home care should be surrounded by people who know them — not just people who are available.**
+
+We exist to make sure that no vulnerable senior sits alone in a chair because a scheduling system failed to find a replacement in time. We believe that care quality is inseparable from care continuity, and that the knowledge a coordinator holds in her head — who Arthur trusts, what Lin refuses, which carer Mrs. Kim will actually open the door for — is too important to live on sticky notes and die when a coordinator leaves.
+
+**What we uphold:**
+- The client is always first to know. (Arthur Kovacs constraint — no family notified before the client.)
+- Clinical knowledge is never treated as operational noise.
+- Compliance is a design constraint, not an audit checkbox.
+- Trust is built by matching the right person, every time — not by moving the fastest.
+
+**Aspiration:** The coordination layer of Australian home care operates with the same clinical intelligence as the clinical layer — not as a scheduling utility, but as an institutional memory system that makes every new coordinator as good as the best coordinator who ever worked there.
+
+
+### 2. Market Segments
+
+*The market is defined by the problems people have, not by demographics.*
+
+
+#### 2A — Beachhead: Care Coordinator (CC) ✅ Primary
+
+**JTBD:** "When a carer calls in sick, help me find a qualified, trusted replacement before the visit time — without making eleven phone calls — so that no client is left without care and no family finds out before I do."
+
+**Desired outcome (Artifact 5):** "Confidently fill every vacant visit with the right person for that patient — one approval click, zero phone calls, no father sitting in a chair."
+
+**Evidence (YODA — Artifacts 2b, 2c):**
+- Angela (CC-001): 11 calls per incident, 30–60 min time-to-fill, 3 incidents/week, 60+ clients. "I need not just who's available, but who does this patient trust."
+- Tom (CC-002): ~20% cancellation rate, 25 clients, sole operator. 1–2 cancellations/week.
+
+**Why first:**
+- Purchasing authority — CC is the operational buyer. CC adoption is the agency acquisition event.
+- Right to Win — no competitor has a soft preference matching layer; AlayaCare's Vacant Visit Agent matches on availability + qualifications only.
+- Network unlock — solving CC creates the SPP data (structured client preferences, visit history) that unlocks the family communication and clinical intelligence features for secondary segments.
+
+**Constraints:** Works in high-pressure, time-critical conditions (6:30 AM, phone in one hand). Must be completable in under 5 minutes. Must not require training.
+
+
+#### 2B — Secondary: Agency Owner / Operations Manager
+
+**JTBD:** "When my key coordinator leaves, help me ensure the next person can deliver the same quality care to my clients — without a six-month knowledge transfer — so that my agency survives a key-person departure."
+
+**Evidence (Artifacts 2b, 2c):** Tom (CC-002) is the sole coordinator for his agency — the classic "bus problem." Both Angela and Tom carry institutional client knowledge that exists nowhere else. Agency owners are aware this is a risk but have no systematic solution.
+
+**Entry point:** Agency owners become active buyers once they see a coordinator using the product during E1 (concierge phase). They are not the champion — the coordinator is — but they are the budget approver.
+
+**Constraints:** Must not require EMR integration for initial sale (VI-1 assumption — under test via XP-2A). Standalone product must deliver value before any integration exists.
+
+
+#### 2C — Future Segment (post-Beachhead): Family Contact (FC)
+
+**JTBD:** "When my mother's regular carer cancels, I need to know she is in good hands before my phone rings in a panic."
+
+**Evidence (Artifacts 2a, 2d):** Rachel Chen (FC-001): learned about her mother's cancelled visit when nobody showed up. James Osei (FC-002): monitors via calls to the agency, not from the agency. Both experienced the Arthur Kovacs failure case.
+
+**Entry condition:** This segment unlocks only after CC adoption is validated and the E-3 notification gate is implemented. Family communication features depend on the SPP and coordinator approval flow being live and trusted. **Not in scope for v1.**
+
+
+#### 2D — Future Segment (post-Beachhead): Home Care Nurse / Case Manager (HCN)
+
+**JTBD:** "When I review a client's care, help me see whether care continuity has been maintained — so I can spend my clinical review on gaps, not on chasing whether the right carers showed up."
+
+**Entry condition:** Requires the SPP continuity history and compliance dashboard (O4) to be live and validated. HCN adoption depends on coordinator adoption first — the SPP is the prerequisite data source. **Not in scope for v1.**
+
+
+### 3. Relative Costs
+
+**Positioning: Premium value, not low cost.**
+
+Home-Care-AI does not compete on price. The product delivers a measurably better outcome (vacant visit filled in < 5 min vs. 30–60 min; < 2% cancellation vs. ~20%) and the cost of a missed visit — both to the client and to the agency's reputation — is far higher than any subscription fee.
+
+**Cost posture:** Starbucks, not Southwest. We charge for care quality outcomes, not scheduling efficiency. The pricing language is "clinical intelligence," not "admin automation."
+
+**Why this is achievable:** The coordinator's alternative is 11 phone calls and a 20% cancellation rate. $199/month (XP-2B test price) is less than the cost of two missed visits in client churn or agency reputation damage.
+
+**What this means for build decisions:**
+- We invest in SPP data model depth (the quality of the match) over UI breadth (number of screens).
+- We invest in compliance infrastructure (DPIA completion, APP 8 counsel) as a moat-builder, not as overhead.
+- We do not cut corners on the audit log or the E-3 notification gate — these are the product's trust infrastructure.
+
+
+### 4. Value Proposition
+
+
+#### 4A — Care Coordinator (CC)
+
+| | |
+|---|---|
+| **Who** | Home care coordinators at independent Australian agencies (20–200 client scale) |
+| **Why (pain)** | Every carer absence triggers a cascade: 11 sequential calls, 30–60 min scramble, 20% cancellation rate. When a visit is cancelled, the client is stranded, the family is not told, and the coordinator carries the blame. |
+| **What before** | Roster spreadsheet + coordinator memory + sticky notes + 11 phone calls + panic |
+| **How** | Smart Match Engine computes a ranked shortlist in < 30 seconds using three criteria: qualification match (hard gate), proximity (suburb distance), and Soft Preference Profile match (trust/familiarity score). Coordinator sees 3 candidates, taps "Approve," system handles the rest: SMS (AU-hosted gateway) to carer, SMS to client, SMS to family (in that order, E-3 compliant). *(WhatsApp deferred to v2 — Artifact 17 CRIT-01.)* |
+| **What after** | Vacancy filled in < 5 min, 1 approval action, 0 phone calls. < 2% cancellation rate. Every client's preferences documented and transferable. Every replacement decision auditable. No father sitting in a chair. |
+| **Alternatives** | AlayaCare Vacant Visit Agent (availability + qualifications only — no trust layer). Manual calls. Doing nothing (20% cancellation status quo). |
+| **Value curve advantage** | We win on: trust-matching (SPP — unique), time-to-fill (< 5 min), and family notification (automated, E-3 compliant). We are comparable on: qualification matching. We intentionally under-serve on: clinical documentation, billing, and EMR integration — these are out of scope and create focus. |
+
+
+#### 4B — Agency Owner / Operations Manager
+
+| | |
+|---|---|
+| **Who** | Agency owners and operations managers who depend on 1–3 coordinators to maintain care quality for 20–200 clients |
+| **Why (pain)** | All institutional knowledge about client preferences, trust relationships, and care protocols lives in one coordinator's head. When that coordinator leaves, a new coordinator starts from scratch. Continuity quality drops for months. The agency is one bus away from a knowledge gap that costs clients and reputation. |
+| **What before** | No documentation. Knowledge transfer = shadowing. New coordinator makes uninformed replacement decisions. Client complaints. Churn. |
+| **How** | Soft Preference Profile (SPP) makes every client's preference history accessible to any coordinator at any time. Continuity history shows which carers have visited which clients and how many times. New coordinator onboards in hours, not months. |
+| **What after** | Institutional knowledge is a product asset, not a person dependency. Coordinator turnover no longer equals client care disruption. Agency owner sleeps. |
+| **Alternatives** | Nothing systematic. Some agencies use shared Google Docs or bespoke fields in AlayaCare — neither has preference-weighted matching. |
+
+
+### 5. Trade-offs
+
+*What we explicitly will NOT do. These constraints create focus and define the product's identity.*
+
+| Trade-off | What We Won't Build | Why |
+|---|---|---|
+| **Not an EMR** | Clinical documentation, care plans, billing, rostering, payroll | EMR is a 3–5 year moat incumbents (AlayaCare, HCP) have already built. We would be playing on their ground. Our moat is the soft preference layer they do not have and cannot quickly replicate. |
+| **Not for hospitals or residential aged care** | Hospital discharge coordination, RAC scheduling | Entirely different regulatory environment, procurement cycle (12–24 months), and clinical requirements. Beachhead discipline: independent community home care only. |
+| **Not building for the US market first** | HIPAA BAA, US insurance billing, US EMR integrations | APP (Australian) is the operative framework. US expansion requires a full compliance re-architecture. AU market first, US as a future expansion with a separate compliance build. |
+| **No free-text clinical notes in v1** | Free-text SPP fields, unstructured briefing notes, coordinator comment fields | P-9 (free-text) is a Red-zone field under APP — uncontrolled PHI risk. v1 uses structured dropdowns and binary flags only. Free-text is deferred to v2 with a full DPIA. (Artifact 9 §6 — V1 Data Model.) |
+| **No AI health inference in v1** | Cognitive decline detection, behavioural pattern analysis, voice tone classification | All Red-zone data types require DPIA + explicit consent + clinical oversight before collection. Compound combinations CC-1 through CC-5 are structural blockers. (Artifact 9 §4.) |
+| **No auto-dispatch without HITL approval** | Autonomous carer assignment, autonomous family notification | L3 Escalator actions require mandatory human confirmation. HITL double-timeout → VACANCY_UNRESOLVED, not auto-assign. (Artifact 10 §3, EC-10.) |
+| **Not competing on price** | Freemium, race-to-zero, volume-based discounting | Premium value positioning — we charge for outcomes, not seats. Competing on price commoditises the SPP moat. |
+| **No targeting large chains in v1** | Enterprise sales to Bupa, Benetas, or Silver Chain | Sales cycle > 12 months, procurement requirements, IT security reviews. Beachhead is independent agencies 20–200 clients. Chain expansion in year 2 if beachhead is validated. |
+
+
+### 6. Key Metrics
+
+#### North Star Metric (NSM)
+
+**Vacant visits filled without cancellation, per active agency, per week.**
+
+*Why this metric:* It captures the product's core value for both the coordinator (no phone calls, no panic) and the agency owner (no missed care, no client churn). Every other metric is an input to this one.
+
+*Current baseline:* Tom: ~20% cancellation rate (~1–2 cancelled visits/week at 25 clients). Angela: estimated 1–2 cancellations/week at 60+ clients.
+
+*Target:* < 2% cancellation rate per agency per week (Artifact 5 Desired Outcome metric).
+
+
+#### One Metric That Matters — This Quarter (OMTM)
+
+**% of vacancy incidents resolved via 1-tap approval without coordinator-initiated outbound calls.**
+
+*Why now:* Before product-market fit is confirmed, the primary unknown is whether coordinators trust the match enough to act on it. This single metric is the trust signal. If it reaches ≥ 70%, the core value hypothesis (V-1 + V-2) is confirmed and we proceed to build. If it stays below 40%, the shortlist design must be rethought before any code is written.
+
+*Measurement:* XP-1A (E1 concierge) + XP-1B (shadow deviation log) — first-party behavioural data.
+
+*Target:* ≥ 40% by end of E1 (2 weeks). ≥ 70% at steady state (post-trust-building).
+
+
+#### Supporting Metrics
+
+| Metric | Target | Source |
+|---|---|---|
+| Time-to-fill per vacancy incident | < 5 min | Concierge log (XP-1A) |
+| SPP completeness rate | ≥ 80% of active clients with ≥ 3 fields populated | XP-3A self-serve template |
+| Top-candidate acceptance rate | ≥ 70% | E3 Figma / E1 live data |
+| Carer SMS reply rate | ≥ 70% within 15 min | XP-4A *(channel updated: WhatsApp → AU SMS gateway, Artifact 17 CRIT-01)* |
+| Audit log completeness | 100% of state transitions logged | SD-01B (harness-audit-grader gate) |
+| App retention (coordinator) | ≥ 80% weekly active at day 30 | Product analytics |
+
+
+### 7. Growth
+
+#### Go-to-Market Motion: Sales-Led → Coordinator-Champion Model
+
+**Phase 1 — Concierge (now → E1/E2 complete):**
+Deliver the service manually. Angela and Tom are the only customers. Build trust through performance, not demos. The coordinator becomes the champion.
+
+**Phase 2 — Reference Customer → Peer Referral:**
+Angela and Tom, if validated, become named references. GTM-2 assumption (peer referral is the primary acquisition channel) is tested at E1 close: "Would you speak with other coordinators about your experience?" Australian home care coordination is a small professional community. One trusted peer referral is worth 100 cold emails.
+
+**Phase 3 — Agency Owner LOI → Paid Trial:**
+XP-2A: at E1 week 2, present E1 results to agency owners. LOI converts to a 30-day paid trial (GTM-4: 30 days has enough incident volume to demonstrate value). Trial converts to subscription.
+
+**Phase 4 — Network Effect Unlock:**
+If SPP data proves deep moat (XP-3B rebuild probe > 4 weeks), the growth model shifts: SPP data gravity creates lock-in. Every additional client preference documented increases the switching cost. Agencies that leave lose their preference graph — years of structured knowledge. This is the product-led retention mechanism.
+
+**Channels (in priority order):**
+
+| Channel | Stage | Mechanism |
+|---|---|---|
+| **Direct / concierge** | Now | PM Lead runs E1 manually for Angela and Tom. High-touch, zero cost, maximum signal. |
+| **Peer referral** | Phase 2 | Coordinator-to-coordinator referral via professional networks (LinkedIn, aged care associations). GTM-2 — test at E1 close. |
+| **Agency owner direct** | Phase 2–3 | Agency owner sees concierge results → LOI → trial. GTM-1 confirmed: CC is champion, owner is buyer. |
+| **Waitlist / landing page** | Now (parallel) | XP-2B: Carrd.co page targeting coordinators outside Angela/Tom network. Low effort; warm signal if converts. |
+| **Industry events / associations** | Phase 3 | ACSA (Aged Care Services Australia), HAAG (Home and Community Care). Not in Phase 1 — requires a working product. |
+
+**PLG trigger (future):** Once SPP is live and populated, coordinators will want to share their agency's match record with agency owners as a performance tool. This creates an organic expansion path from coordinator seat to agency-level subscription.
+
+
+### 8. Capabilities
+
+#### What We Build
+
+| Capability | v1 Scope | Rationale |
+|---|---|---|
+| SPP data model + capture flow | ✅ v1 | Core moat. Structured fields only (Artifact 9 v1 data model). Coordinator-guided entry. |
+| Smart Match Engine (rule-based) | ✅ v1 | Qualification gate + proximity score + SPP match score. No ML required in v1 — rule-based scoring is sufficient and auditable. Reserve ML for v2 match refinement. |
+| 3-Tap Approval Flow (DES-1) | ✅ v1 | Coordinator UX. Figma-tested in E3. Minimal surface area. Mobile-first. |
+| Automated notifications (SMS gateway — AU-hosted — for all v1: carer, client, family) | ✅ v1 | E-3 notification gate enforced in code. AU-hosted SMS (MessageMedia / AWS SNS ap-southeast-2) — no APP 8 trigger. Channel Wrapper architecture enables v2 migration to Carer App push without code rewrite. *(Artifact 17 CRIT-01.)* |
+| Audit log (HIPAA-grade, APP-compliant) | ✅ v1 — non-negotiable | Every state transition logged. Immutable, append-only. 7-year retention. SD-01B is the merge gate. |
+| Compliance gap dashboard | v1.1 (post-beachhead) | Angela's specific request ("seventeen things out of compliance"). Deferred until SPP + match engine are validated. |
+
+#### What We Partner For
+
+| Partnership | Partner | Rationale |
+|---|---|---|
+| Proximity scoring | Google Maps Distance Matrix API | Proven, accurate for regional AU (F-3 confirmed). Build vs. partner: no reason to build. |
+| AU-hosted SMS gateway | MessageMedia or AWS SNS (ap-southeast-2 Sydney region) | Domestic processing — no APP 8 cross-border trigger. Covers all v1 recipients: carer, client, family. Twilio/WhatsApp Business API deferred to v2 pending APP 8 legal review. *(Artifact 17 CRIT-01.)* |
+| APP 8 compliance counsel | Australian privacy law firm (retainer) | Non-negotiable capability. Cannot be built internally. T-3: obtain 3 quotes this week. VI-4 is a Q2 assumption requiring resolution. |
+| Anti-discrimination legal opinion | Employment + discrimination law counsel | E-1 (Q1, CRITICAL): written opinion on P-2 (gender preference) as matching parameter. Required before matching engine is built. |
+| Cloud infrastructure | AWS | Lambda (event-driven matching), DynamoDB (SPP + availability index), CloudTrail (audit log immutable store), S3 write-once (7-year retention). |
+
+#### What We Hire / Contract
+
+| Role | Timing | Rationale |
+|---|---|---|
+| Privacy counsel (retainer) | Immediately | DPIA-01 through DPIA-07 (Artifact 9). APP 8 WhatsApp review. T-3. |
+| Clinical advisor (part-time) | Before v1 launch | Domain knowledge for SPP field design. T-1: "Are there SPP fields this template misses?" |
+| Designer | Now | E3 Figma prototype. v1 coordinator UX. XP-5A–5D safety scenario screens. |
+| 1–2 Engineers | Sprint 1 (post-experiment gate clear) | Full-stack. AWS experience. Privacy-by-design mindset. T-2: 8-week build estimate. |
+
+
+### 9. Can't / Won't — Defensibility Test
+
+*The full strategy must be difficult to copy — not just one element.*
+
+
+#### What Competitors CAN'T Do (structural barriers)
+
+| Barrier | Why It Holds |
+|---|---|
+| **SPP Data Gravity** | Every agency's SPP is a proprietary preference graph built over months of coordinator input and visit history. A competitor entering an agency already using Home-Care-AI would face a data gap of years. The SPP becomes more valuable — and the switching cost higher — with every visit logged. This is structural lock-in, not feature lock-in. |
+| **Familiarity History Compounding** | Match quality improves with every correctly matched visit. The familiarity history (which carers have visited which clients, how many times) creates a compounding improvement curve that is specific to each agency's data. A new entrant starts at zero. |
+| **Privacy Compliance as a Moat** | APP-compliant soft preference matching requires DPIA completion, legal review, and privacy-by-design architecture. This is 6–12 months of compliance work for any new entrant. We are building this infrastructure now. For incumbents, retrofitting privacy compliance into an existing EMR architecture is harder than building it green-field. |
+
+
+#### What Competitors WON'T Do (strategic inertia)
+
+| Competitor | Why They Won't | Signal |
+|---|---|---|
+| **AlayaCare** | AlayaCare's product philosophy is structured EMR data (clinical records, care plans). Adding soft preference matching requires a fundamentally different data model (preference graph) and a fundamentally different onboarding model (concierge knowledge extraction vs. self-serve form fill). Their customer motion is enterprise (large chains) — they sell top-down to IT and clinical leads, not bottom-up to coordinators. A coordinator-first, habit-forming product is culturally and architecturally alien to their go-to-market. | S-1 assumption: monitor AlayaCare release notes every 6 weeks. 12-month window is the competitive moat clock. |
+| **HCP (Home Care Platform)** | HCP is a rostering and compliance tool for NDIS-registered providers. Their core value is NDIS pricing compliance, not care quality. Soft preference matching is outside their product thesis and would require clinical advisory capability they do not have. | Limited investment in care quality features vs. compliance automation. |
+| **Spreadsheet + Phone** | The incumbent "system" requires no switch cost to stay with. Inertia is the primary competitor. The WTP experiment (XP-2A) and E-3 Figma test confirm that the only reliable override for inertia is a coordinator who has personally experienced the improvement. | GTM-6: blind transition test confirms whether the algorithm sustains trust once the human concierge step is removed. |
+
+
+#### Strategic Coherence Check
+
+*Do all elements reinforce each other?*
+
+```
+Vision (every senior surrounded by people who know them)
+    │
+    ├── Beachhead (CC) is the data source AND the workflow anchor
+    │       → SPP data grows with every vacancy incident → moat deepens
+    │
+    ├── Premium value positioning justifies compliance investment
+    │       → Compliance is a moat builder, not just overhead
+    │       → DPIA completion is a barrier to entry for competitors
+    │
+    ├── Sales-led → coordinator champion → agency owner buyer
+    │       → Aligns with GTM-1 (CC is veto player)
+    │       → Peer referral is the scaling mechanism (small professional community)
+    │
+    ├── Trade-offs (no EMR, no US, no free-text) protect focus
+    │       → Every feature NOT built is a decision to build the matching moat deeper
+    │
+    ├── Agentic safety (L1/L2/L3 classification) enables trust
+    │       → Coordinators trust the system only if it never acts without their approval
+    │       → Trust is the precondition for top-candidate acceptance rate ≥ 70%
+    │
+    └── SPP data gravity + familiarity compounding = retention flywheel
+            → The longer an agency uses the product, the harder it is to leave
+            → Churn protection is structural (data lock-in), not feature lock-in
+```
+
+**Verdict: Coherent.** All nine elements point in the same direction. The weak link is the **CompetItive window assumption (S-1):** if AlayaCare announces a soft preference feature within 12 months, the moat clock resets and speed-to-market becomes the primary strategic variable. Monitor every 6 weeks.
+
+
+
+
+### 10. Cost Structure
+
+*Costs are estimated for a 2-person founding team operating at beachhead scale (2–10 agencies, 2–20 coordinator seats). Figures are AUD unless noted.*
+
+
+#### Fixed / Recurring Costs
+
+| Cost Category | Estimated Monthly (AUD) | Scaling Behaviour |
+|---|---|---|
+| **Engineering** (1–2 engineers, contract) | $15,000–$25,000 | Scales with team size; transitions to full-time at Series A |
+| **Design** (part-time contractor) | $3,000–$5,000 | Reduces post-v1 once design system is stable |
+| **Privacy counsel (retainer)** | $2,000–$4,000 | Reduces after DPIA-01–07 are completed; ongoing for new features |
+| **Legal (employment/discrimination)** | $1,500–$3,000 (one-time E-1 opinion) | One-time cost; recurring only if legal landscape changes |
+| **AWS infrastructure** | $200–$500 | Near-zero at beachhead scale; scales with agency count |
+| **Google Maps API** | $50–$200 | Per-request pricing; scales with incident volume |
+| **Twilio (SMS + WhatsApp)** | $100–$300 | Per-message pricing; scales with notification volume |
+| **Claude API (token costs)** | $50–$200 | L1/L2 actions: Claude Haiku. L3 escalations: Claude Sonnet. Per CLAUDE.md Article V HS-STRAT-03. Est. 1,550–4,000 tokens/agentic action floor. |
+| **PM Lead (founder)** | Deferred / equity | Beachhead phase — founder salary deferred |
+| **Total Estimated Monthly** | **~$22,000–$38,000** | Predominantly team cost at this stage |
+
+
+#### One-Time / Phase Costs
+
+| Cost | Estimate (AUD) | Trigger |
+|---|---|---|
+| DPIA completion (DPIA-01 through -07) | $8,000–$15,000 | Before v1 launch — privacy counsel led |
+| E-1 legal opinion (anti-discrimination) | $3,000–$5,000 | Before matching engine build — employment law counsel |
+| APP 8 WhatsApp review (DPIA-07) | $2,000–$4,000 | Before ENG-2 production build |
+| Clinical advisor (part-time, 3 months) | $5,000–$10,000 | SPP field design review before v1 launch |
+| Concierge onboarding (E1/E2 period) | Founder time (not cash) | First 2 agencies — manual service |
+
+
+#### Unit Economics Preview (to be fully modelled in `ai-unit-economics` Skill 8)
+
+| Metric | Estimate | Note |
+|---|---|---|
+| Token cost per vacancy incident (full agentic flow) | ~$0.02–$0.08 | L1/L2 (Haiku) + 1 L3 (Sonnet). 1,550–4,000 token floor × model pricing. Exact model in ai-unit-economics. |
+| Infrastructure cost per agency/month | ~$5–$15 | AWS + Maps + Twilio at ~30 incidents/month |
+| Compliance overhead per agency/month | ~$150–$250 (amortised) | DPIA + counsel costs amortised over 24-month agency lifetime |
+
+*Full cost-per-user, gross margin projection, and scalability threshold to be completed in `ai-unit-economics` (Strategy Stage 5). Token efficiency strategy and SLM/LLM routing decision deferred to that skill per HS-STRAT-03.*
+
+
+### 11. Revenue Streams
+
+
+#### Primary: Agency Subscription (SaaS — per coordinator seat)
+
+**Pricing:** $199/month per coordinator seat (AUD)
+- Source: XP-2B waitlist landing page price anchor; XP-2A LOI meeting target range ($150–$250/month)
+- Value-based pricing: time-to-fill savings alone justify the price. A coordinator who spends 30–60 min per incident × 3 incidents/week saves ~6–9 hours/week. At even $30/hr coordinator cost, the product pays for itself in < 1 incident.
+- Trial model: 30-day paid trial at $99 (reduced friction entry). GTM-4 confirmed: 30 days has enough incident volume for coordinators to experience value.
+
+**Tiers:**
+
+| Tier | Seats | Price/Month (AUD) | Target |
+|---|---|---|---|
+| **Solo** | 1 coordinator | $199 | Tom-profile agencies (sole coordinator, 20–40 clients) |
+| **Team** | 2–5 coordinators | $149/seat ($298–$745) | Angela-profile agencies (2–3 coordinators, 60–150 clients) |
+| **Agency** | 6+ coordinators | $119/seat (negotiated) | Mid-size agencies (150–200 clients); deferred to Phase 3 |
+
+
+#### Secondary: Onboarding / SPP Migration (one-time)
+
+**Pricing:** $500–$1,500 one-time SPP migration session
+- Covers a facilitated E2-style preference extraction session (90 min per coordinator × client count)
+- Required if XP-3A (self-serve template) fails (<60% completion rate unfacilitated)
+- If XP-3A succeeds (≥80% self-serve), onboarding fee is optional (premium service tier only)
+
+
+#### Revenue Model Assumptions (to validate)
+
+| Assumption | Status | Test |
+|---|---|---|
+| Agencies pay without EMR integration (VI-1) | Q1 — unvalidated | XP-2A LOI meetings |
+| $199/month WTP at beachhead scale | Q2 — partially signalled by waitlist price test | XP-2A LOI conversation |
+| 30-day trial converts to subscription at ≥ 40% | Untested | GTM-4 Q4 confirmed volume; conversion rate unknown |
+| Onboarding fee accepted by agency owners | Untested | XP-2A discussion |
+
+
+#### Market Size Estimate (Unvalidated — Secondary Research)
+
+*Per CLAUDE.md YODA principle: the following are ODP (Others' Data) estimates, not first-party data. Flagged as assumptions pending VI-2/VI-3 research (Artifact 8 Tier 3).*
+
+| Segment | Estimate | Source |
+|---|---|---|
+| Independent home care agencies in AU (20–200 client scale) | ≥ 500 agencies | VI-3 assumption — ACFA / NDIS data pending |
+| Coordinator seats per agency (average) | 1–3 seats | Derived from Angela (3 coordinators) and Tom (1 coordinator) — limited YODA sample |
+| Addressable AU market (beachhead) | ~1,000–1,500 seats | 500 agencies × 2–3 seats |
+| ARR at full beachhead penetration (10%) | ~$2.4M–$3.6M AUD | 100–150 agencies × 2 seats × $199/month × 12 |
+
+*This estimate will be updated with first-party data from agency owner interviews (VI-2/VI-3 research, Artifact 8 Tier 3) before the `ai-unit-economics` skill runs.*
+
+
+
+*Per skill instruction §11: validate that all elements reinforce each other.*
+
+| Canvas Section | Reinforces | Tension / Risk |
+|---|---|---|
+| Vision (care continuity, not scheduling) | Premium positioning, SPP moat, trust-led growth | Risk: if SPP moat is shallow (XP-3B < 2 weeks rebuild), moat story weakens |
+| Beachhead CC | Sales-led motion, coordinator-champion model | Risk: agency owners require EMR integration (VI-1) — would delay beachhead validation |
+| Premium value | Compliance investment, DPIA as moat builder | Risk: if competitors don't face same compliance barrier, DPIA cost is just overhead |
+| SPP trade-off (no free-text, no AI inference) | Clears v1 path, reduces DPIA scope | Risk: structured fields may miss clinical nuance (E2 fidelity test) |
+| Safety architecture (L1/L2/L3, E-3 gate) | Coordinator trust, compliance, Arthur Kovacs principle | Risk: HITL adds latency — XP-5D must confirm coordinators accept no-auto-assign |
+| SaaS per-seat pricing | Simple, scalable | Risk: price sensitivity in small agencies; Solo tier at $199 may need downward pressure |
+
+**Weakest link:** VI-1 (agencies pay without EMR integration). If this assumption fails, the entire go-to-market motion must shift — either build AlayaCare integration before launch (6–9 month delay) or refocus on greenfield agencies not currently using any platform. This is the most important assumption to resolve in XP-2A.
+
+
+
+| # | Hypothesis | Validated By | Status |
+|---|---|---|---|
+| H-1 | Coordinators trust a machine-ranked shortlist enough to approve without calling (V-1 + V-2) | XP-1A/1B — E1 live data | ⬜ Pending |
+| H-2 | Agency owners will pay $150–250/month for a standalone product without EMR integration (VI-1) | XP-2A — LOI meetings | ⬜ Pending |
+| H-3 | SPP can be populated at sufficient completeness to differentiate match quality (V-3 + E2) | XP-3A — self-serve template | ⬜ Pending |
+| H-4 | Carers self-report availability and accept WhatsApp assignments reliably (F-1) | XP-4A/4B — WhatsApp dry run | ⬜ Pending |
+| H-5 | SPP data is sticky enough that switching cost > 4 weeks of rebuild (S-3) | XP-3B — moat probe | ⬜ Pending |
+| H-6 | P-2 (gender preference) is lawful as a matching parameter under Australian anti-discrimination law (E-1) | Legal opinion (Tier 1) | ⬜ Pending |
+| H-7 | APP 8 cross-border disclosure for WhatsApp is resolvable by design (VI-4) | Privacy counsel review (Tier 1) | ⬜ Pending |
+| H-8 | AlayaCare does not announce a soft preference feature within 12 months (S-1) | Monitoring — every 6 weeks | ⬜ Ongoing |
+
+
+
+| ID | From Canvas | To Next Skill | What Transfers |
+|---|---|---|---|
+| **HS-DISC-01** | §2A CC JTBD + pain signals | `startup-canvas` ← Discovery (this artifact) | JTBD, desired outcome, verbatim evidence from Artifacts 2b/2c |
+| **HS-DISC-02** | §2A Beachhead CC | `value-proposition` (Strategy Skill 3) | CC as the primary JTBD lens for value proposition design |
+| **HS-STRAT-CANVAS** | Full canvas | All downstream Strategy skills | This is the context contract. SWOT reads §9 (Can't/Won't) and §2 (Segments). Value prop reads §4. Compliance reads §5 (Trade-offs). Unit economics reads §10–11. |
+| **HS-STRAT-01a** | §4A "What after" (CC) — < 5 min, 1 tap, 0 calls, < 2% cancellation | `value-proposition` → `create-prd` SMART OKRs | "What After" outcome becomes the OKR metric in the PRD (CLAUDE.md Rule 9) |
+| **⚠ SWOT Gate** | Full canvas → `swot-analysis` (next skill) | If SWOT returns PIVOT or EXIT on any quadrant → update this canvas before Stage 2 | CLAUDE.md Article IV Rule 2 |
+
+
+
+| Date | Owner | Action |
+|---|---|---|
+| **2026-03-27** | PM Lead | Run `swot-analysis` (Strategy Skill 2) against this canvas — ⚠ SWOT re-calibration gate must clear before Strategy Stage 2 |
+| **2026-03-27** | PM Lead / Legal | E-1 legal opinion — anti-discrimination review of P-2 matching parameter (H-6) |
+| **2026-03-27** | PM Lead / Privacy | VI-4 APP 8 WhatsApp privacy counsel review (H-7); obtain 3 retainer quotes (T-3) |
+| **2026-03-28** | PM Lead | Launch E1 concierge + XP-2B waitlist page — start collecting H-1 and H-2 signals |
+| **2026-04-10** | PM Lead | Review H-1 through H-8 after experiment data — update canvas if any hypothesis fails |
+
+
+*Canvas note: This artifact is the north star for all downstream Strategy and Execution skills. A change to any section — segments, value proposition, trade-offs, or pricing — requires re-running the affected downstream artifact from that point forward. Per CLAUDE.md Article IV Rule 1: no Strategy skill runs without a completed canvas. Per CLAUDE.md Article IV Rule 2: this canvas is subject to revision if `swot-analysis` returns a PIVOT or EXIT signal on any quadrant.*

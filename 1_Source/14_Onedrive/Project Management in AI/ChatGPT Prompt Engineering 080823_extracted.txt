@@ -1,0 +1,327 @@
+# Extracted from: 14_Onedrive/Project Management in AI/ChatGPT Prompt Engineering 080823.pdf
+# Characters: 9579
+# Generated: 2026-07-31T00:07:33.330Z
+
+ChatGPT Prompt Engineering Guide
+Generative AI for Project Professionals
+
+Tailoring Project Management Prompts for ChatGPT 
+When tailoring prompts for ChatGPT or other AI chatbots, 
+make your instructions as clear and specific as possible. 
+Use short, clear, concise sentences. 
+Limit the scope.
+Revise your questions based on the response you receive.
+EXAMPLE FORMAT:
+Act as a {role}. {Question} with {action} using a {tone}.
+EXAMPLE:
+Act a senior IT project manager for every question that 
+follows and answer with quantifiable resulsts using a personal 
+tone. 
+2Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Most Useful Output Formats
+ChatGPT can generate data in the following formats:
+Plain Text
+ASCII
+HTML
+JavaScript
+CSV
+Table
+Plain Text files store human-readable data without formatting 
+or stying, using simple text editors
+ASCII is a secret code that computers use to understand 
+letters, numbers, and symbols for sharing text
+HTML is the standard language for creatig web pages, with 
+tags for defining structure, layout, and styling
+JavaScript is a programming language used to create 
+dynamic and interactive content on web pages
+CSV stores tabular data as comma-separated values in a 
+simple text-based format, used in spreadsheets
+A table is a way to organize information in rows and columns, 
+making it easy to read and understand
+3Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Make a Decision
+PROMPT:
+I am working with a software 
+development team facing a decision: 
+outsource or hire an in-house designer. 
+Outsourcing would cost $20K up front 
+and $5K per month for 6 months. Our 
+in-house designer would cost $60K in 
+salary. Show me the total cost for each 
+using a detailed cost-benefit analysis in a 
+table format. Explain your suggestion. 
+4Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Create a Persuasive 
+Business Case
+PROMPT:
+Trinidad Foods wants to introduce a new 
+loyalty program to increase customer 
+retention and sales. The program will cost 
+$50K to implement but is projected to 
+increase revenue by 10% in the first year. 
+This means the store will generate an 
+additional $100K in revenue, yielding a 
+net profit of $50K. The ROI for the loyalty 
+program investment is 100%.
+Compose a business case to the decision 
+maker that is clear and concise and uses 
+a persuasive and personal tone. Highlight 
+in bold any important information.
+5Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Create a 
+Project Charter
+PROMPT:
+A 10,000 square meter commercial 
+building in Accra, Ghana is proposed 
+to meet the growing demand for 
+commercial space. It must comply with 
+building codes, meet modern business 
+needs, and stay within a $20M budget 
+and 24-month timeline. Include plans for 
+design and construction, procurement, 
+quality checks, and building code 
+compliance. A project manager leads 20 
+team members. Key stakeholders include 
+the client, government authorities, and 
+the general public. Create a detailed 
+project charter.
+6Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Manage Scope Creep
+PROMPT:
+I am a project manager developing a new 
+mobile app with an original scope of 10 tablets 
+for users. However, the client keeps adding 
+new requirements, including five new tablets, 
+two user roles and three features which include 
+single sign-on, Microsoft Azure cloud security, 
+and ChatGPT bot integration. The client insists 
+the app must meet all these requirements. The 
+team estimated the additions will extend the 
+timeline by 3 months and cost $50K; the original 
+budget was $60K. I need to manage the scope 
+creep and communicate with the client about 
+the impact on the project timeline and budget. 
+Create a requirements traceability matrix in 
+a table format. Help me manage the scope 
+creep and communicate with the client about 
+the impact on the project timeline and budget. 
+Highlight the suggested solution(s).
+7Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Calculate Earned Value 
+Management (EVM)
+PROMPT:
+A software development project has a 
+$100K budget and a timeline of 6 months. 
+After 3 months, the actual cost (AC) is 
+$60K and the project is 50% complete.
+Am I over or under budget? Behind or 
+ahead of schedule? And what is the 
+earned value (EV), Estimate to complete 
+(ETC), and value added control (VAC) 
+Show this in a table format and highlight 
+the explanation in bold.
+8Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Create a 
+Power/Interest Grid
+PROMPT:
+After conducting a stakeholder analysis 
+for our project to build a new solar farm, it 
+is obvious that our Energy Minister, Ken, 
+and project sponsor, Kevin, should be 
+managed closely to ensure their needs 
+are met. Our project coordinator, Carol, 
+does not seem to have much influence 
+on the project, but she does have a keen 
+interest in it. Our vendor, Alyssa, does not 
+have any influence, but she has a high 
+interest in the project.
+Show me, in detail, a power/interest 
+grid in a table format based on “keep 
+satisfied,” “manage closely,” “monitor,” 
+and “keep informed.”
+9Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Identify the Critical Path
+PROMPT:
+I am a project manager for a construction 
+development project. The project has five activities: 
+• Activity 1 {predecessor = start and duration = 3 
+days}
+• Activity 2 {predecessor = Activity 1 and duration 
+= 3 days
+• Activity 3 {predecessor = Activity 1 and duration 
+= 4 days}
+• Activity 4 {predecessor = Activity 2 and duration 
+= 8 days}
+• Activity 5 {predecessor = Activity 3, 4 and 
+duration = 4 days}
+Show me, in a table format, the dependencies 
+between the tasks and their corresponding early 
+start (ES), early finish (EF), late start (LS), late finish 
+(LF) times; float for each task; and all the paths with 
+duration. Solve this and show your work concisely 
+with the critical path and all other paths in days. 
+Highlight the critical path with the shortest duration 
+and least float value of 0 in bold. 
+10Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Create a 
+Project Schedule
+(Continued from Critical Path data) 
+PROMPT:
+With the data from the critical path 
+exercise, create a detailed project 
+schedule with placeholder activity names.
+11Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Create a Cause and 
+Effect Diagram
+PROMPT:
+I am a construction project manager 
+experiencing a delay in completion of a 
+project. I want to identify the root cause(s) 
+of the problem. In a diagram, categorize the 
+possible causes into equipment, material, 
+personnel, and weather-related issues. The 
+quantifiable numeric data should show that 
+material delays are the primary cause of the 
+delay, accounting for 70% of the total project 
+delay, followed by personnel shortages at 
+20% and weather-related issues at 10%.
+Show me how to solve this using a horizontal 
+detailed cause and effect diagram in ASCII 
+and identify ways to mitigate the delay. 
+Highlight the probable root cause in bold.
+12Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Create User Stories
+PROMPT:
+A company requires an airline mobile 
+app to allow frequent flyers to view and 
+manage their upcoming flights. The 
+app should enable users to make flight 
+changes easily and stay organized. 
+Success will be measured by the number 
+of successful logins to the app, the number 
+of flight changes made, and overall user 
+satisfaction with the new feature. This 
+data will inform future improvements to the 
+app’s flight management functionality. 
+Create an agile user story in two tables. 
+Use the following as a guideline:, 
+Use the following guidelines. For the user 
+story, create a sentence using the phrases 
+“As a [persona],” “I want [what],” and “so 
+that” [desired outcome]. The acceptance 
+criteria use the Given-When-Then formula.
+13Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Manage Risk
+PROMPT:
+The Fukushima Daiichi nuclear disaster 
+in 2011 demonstrated poor risk 
+management. Despite a 10% chance 
+of a tsunami exceeding the planned 
+maximum of 5.7 meters, TEPCO did not 
+revise safety measures. The resulting 
+14-meter tsunami caused a level-7 
+nuclear disaster, costing over US$200 
+billion in damages and cleanup.
+Show me how to solve this concisely 
+using a detailed risk analysis table 
+format. Highlight the suggested solution 
+in bold.
+14Generative AI for Project Professionals | Chat GPT Prompt Engineering
+
+Other Project Deliverables with ChatGPT
+Problem-solving 
+techniques
+Generative AI for Project Professionals | Chat GPT Prompt Engineering
+Innovation & 
+Idea Generation
+Competetive 
+Analysis
+Project 
+Summarization
+Project 
+Decision-making
+Business
+Case
+Project 
+Charter
+SOW
+RFP, RFI, RFQ
+Briefing
+Note
+Resource Allocation
+Plan
+Stakeholder 
+Management Plan
+Project 
+Management Plan
+Procurement and Contact 
+Management
+Budget and 
+Financial
+Forecasting
+Communication 
+Plan
+Change 
+Management
+Knowledge
+Management
+Quality
+Assurance
+Feasibility
+Training
+Plan
+Project
+Closure
+Disaster Recovery/
+Contingency Plan
+Vendor
+Management
+Project Audit
+& Guidelines
+Status & 
+Progress
+Requirements 
+Traceability Matrix
+Earned Value
+Management
+Power/Interest
+Grid
+Critical
+Path
+Project
+Schedule
+Cause and Effect
+Diagram
+User
+Stories
+Agile
+Personas
+Risk
+Analysis
+Meeting Minutes &
+Action Items
+Task
+Prioritization
+Change
+Request
+Acceptance
+Form
+Registers
+Post
+Implementation
+Deployment
+15
+
+---

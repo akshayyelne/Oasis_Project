@@ -1,0 +1,49 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] Introduction to AI Product Management Neural Networks, Transformers, and LLMs.pdf
+# Characters: 2099
+# Generated: 2026-07-31T00:07:33.317Z
+
+Introduction to AI Product Management
+                                                                                                                                        Read Full Post
+Weights of a model: Neurons’ connection strength
+Activation function: Determines how each neuron responds
+to its inputs.
+Loss function: evaluates the model's accuracy by comparing
+the predicted outputs to the actual data.
+Backpropagation: Updating weights to reduce  overall loss.
+Recommended tools: TensorFlow Playground.
+Strengths: Transformers  revolutionized  AI  by  effectively
+handling sequential data like text and speech.
+Tokenization: The input data (like text) is split into tokens.
+Positional encoding: Encoding a position to each token so
+the model can understand, e.g., the order of words.
+Self-attention: Used by encoders and decoders. It allows
+each node to interact with all other nodes.
+Feedforward network: Passes the data to the next layer.
+Masked attention: Prevents future tokens from being seen
+during generation.
+Recommended tools: LLM Visualization, OpenAI Tokenizer
+Neural Networks
+Transformers
+The Product Compass Newsletter
+Basic Terms
+Supervised Learning: Model is trained on a labeled dataset
+(input + correct output). This is the basis for fine-tuning.
+Unsupervised  Learning: Model  learns  from  data  without
+labels, discovering patterns and structures independently.
+Reinforcement Learning: Model interacts with an environment,
+receiving rewards or penalties to learn (e.g., AlphaGo).
+Deep Learning: Using neural networks with many layers. Can be
+used in supervised, unsupervised, and reinforcement learning.
+Neural  Networks:  Computational  models  inspired  by  the
+human brain, consisting of layers of interconnected nodes
+("neurons") that process data.
+Transformers: Architecture for sequential data, using self-
+attention to weigh the importance of different input parts.
+Large Language Models (LLMs): Trained on large datasets
+to  generate  and  understand  human-like  text.  Combine
+supervised, unsupervised, and deep learning.
+Naural Networks
+Transformers
+LLMs
+
+---

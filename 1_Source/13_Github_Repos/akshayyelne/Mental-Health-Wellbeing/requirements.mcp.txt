@@ -1,0 +1,4 @@
+# Extracted from: akshayyelne/Mental-Health-Wellbeing/requirements.mcp.txt
+# Generated: 2026-07-31T00:49:45.272Z
+
+mcp

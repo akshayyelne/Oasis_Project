@@ -1,0 +1,133 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] AI PM Learning Roadmap.pdf
+# Characters: 2327
+# Generated: 2026-07-31T00:07:33.310Z
+
+Machine Learning:
+Supervised Learning
+Unsupervised Learning
+Reinforcement Learning
+Deep Learning
+Neural Networks
+Transformers
+LLMs
+Weaviate
+Weaviate
+Unit Tests
+Error Analysis
+LLM Judge
+Human Eval
+Tool use
+Agent Architectures
+MCP
+A2A
+RAG
+OpenRouter
+AI PM Learning Roadmap
+LLMLCMLAMMoE
+VLMSLMMLMSAM
+Llama
+Claude
+DeepSeek
+ChatGPT
+Mistral
+7. Foundational Models
+5. AI Agents & Agentic Workflows
+Techniques:
+Architectures:
+Vector DBs
+Document DBs
+8. AI Evaluation Systems
+No-code first:
+Lovable
+Databutton
+Bolt
+Firebase Studio
+IDE first:
+Replitv0
+Windsurf
+Cursor
+Infrastructure Tools
+Techniques:
+4. RAG (Retrieval-Augmented Gen.)
+Knowledge graphs
+Virtuous Cycle:
+Vector DB vs. Document DB
+AutoGen
++
+Models:
+Methods:
+Supervised (SFT)
+Direct Prefer. Opt. (DPO)
+Terms:
+Training data
+Validation data
+Epoch
+Batch size
+Learning rate 
+Beta (for DPO)
+Key Metric
+Training Loss ↓
+Training Accuracy ↑
+Validation Loss ↓ 
+Validation Accuracy ↑
+What it Tells You
+The model is learning from data.
+Better at predicting tokens it has seen.
+It’s generalizing well to new data.
+It’s predicting new tokens well.
+Best tools:
+3. Fine-Tuning
+OpenAI Platform
+Hugging Face AutoTrain
+LLaMA-Factory
+Free reports:
+Google Agent Companion
+Anthropic Building Agents
+IBM Agentic Process Automation
+Jules
+Codex
+Others:
+GitHub
+Copilot
+Model Eval
+TNRTPR
+Train/Test/DevA/B Tests
+9. Other Resources
+AI PRD: A free PRD template by Miqdad Jaffer (OpenAI)
+Awesome Generative AI Guide (GitHub)
+ChatLLM (abacus.ai): All LLMs in one subscribtion
+MCP.so: The largest collection of MCP servers
+Anthropic MCP Servers:The official Anthropic collection
+microsoft/markitdown: For converting docs to Markdown
+Free resources:
+WTF is AI Product Manager
+LLM Visualization
+Mastering AI Evals: A Free, Complete Guide for PMs
+Free guides & courses:
+GPT-4.1 Prompting Guide
+Anthropic Prompt Eng.
+Prompt Eng. by Google
+System prompt, Claude 4
+Anthropic Prompt Generator
+Anthropic Prompt Library
+Anthropic Prompting Course
+CoT
+Roles
+Examples
+Step-by-Step
+Persist
+Reflect
+XML #
+Constraints
+Chain prompts
+Autonomy
+Techniques:
+2. Prompt Engineering
+Use vector store to store embeddings and perform fast semantic
+search over chunks. Use document DB to store the full content and
+metadata (e.g., document url, author, date).
+1. Basic Concepts
+6. AI Prototyping & Building
+Read the full post 
+
+---

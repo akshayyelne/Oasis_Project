@@ -1,0 +1,49 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] Agentic RAG with Deep Reasoning.pdf
+# Characters: 822
+# Generated: 2026-07-31T00:07:33.304Z
+
+Query
+Response
+   Chain-Based
+Query
+Respo-
+nse
+   Tree-Based
+   Single Agent
+   Centralized Multi-Agent
+Manager
+Agent
+Query
+   Graph-Based
+Response
+   Decentralized Multi-Agent
+A Paradigm Shift in Agentic RAG
+How to combine advanced reasoning with RAG (arXiv)
+Reasoning Workflow TypesAgent Orchestration Types
+Action
+Observation
+Agent
+ReasoningRAG
+Sub Agent 1
+Sub Agent 3
+Sub Agent 2
+RAG
+RAG
+Example techniques:
+Tree-of-Thought (ToT)
+Monte Carlo Tree Search (MCTS)
+Example techniques:
+Walk-on-Graph
+Think-on-Graph
+Example techniques: Prompting (ReAct, Search-O1),
+Supervised Fine-Tuning, Reinforcement Learning
+Example techniques: HM-RAG (hierarchical multi-
+agent multimodal RAG), Chain of Agents
+Agent 1
+Agent 2
+Agent 3
+Agent 4RAG
+Research: M-RAG (multiple partitions), MDocAgent
+(multimodal for doc. understanding)
+
+---

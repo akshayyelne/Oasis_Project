@@ -1,0 +1,83 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] Product Management Risk Checklist.pdf
+# Characters: 2252
+# Generated: 2026-07-31T00:07:33.320Z
+
+VALUE
+Will it create value for the customers?
+Will customers keep using it?
+USABILITY
+Will people figure out how to use it?
+Will people find it?
+Will it increase a cognitive load?
+Can we onboard them fast enough?
+VIABILITY
+Works for different parts of the business?
+Can we sell it?
+Can we finance it?
+Can we monetize it?
+Is it worth the cost?
+Can we support our customers?
+Can we help our customers succeed?
+Can we scale it?
+Will it be compliant?
+What would it cost to scale AI?
+FEASIBILITY
+Can we do it with the current technology?
+Is this integration possible?
+Can it be efficient?
+Can we scale it?
+ETHICS
+Should we do it at all?
+Are there any ethical considerations?
+Will it pose a risk for our customers?
+GO-TO-MARKET
+Can we market it?
+Do we have the required channels?
+Can we convince our customers to try it?
+Is this the right messaging for this channel?
+Is this the right time and  way to launch it?
+STRATEGY AND OBJECTIVES
+What needs to be true for our strategy to work?
+Can others copy our strategy?
+Have  we  considered  political,  economic,  legal,
+technological, and environmental factors?
+Are those the best problems to solve?
+What our AI moat? Data? Distribution? Trust?
+How  can  we  differentiate  our  AI?  Workflow
+integration, UX, domain-specific context,
+community & ecosystem?
+TEAM
+How well will the team work together?
+Do we have the right people?
+Do we have the right tools?
+Will the entire team stay with us long enough?
+What would happen if someone gets sick?
+AI & AUTONOMY
+Will the AI behave as expected in real world?
+Can we control what actions it takes and what
+data it accesses?
+What  happens  if  an  external  model  or  MCP
+server is compromised?
+Do   we   have   monitoring   and   evaluation
+processes to track its performance over time?
+What are the guardrails or human-in-the-loop?
+Can we detect critical failures? How fast?
+The Product Compass Newsletter                                                                                    productcompass.pm
+Product Management Risk Checklist
+Make decisions
+informed by data
+and intuition
+Don’t test
+everything; tackle
+high-risks
+Place bets, 100%
+predictability =
+0% innovation
+Release early. No
+experiment is
+100% conclusive.
+Prioritize two-
+way door
+decisions
+
+---

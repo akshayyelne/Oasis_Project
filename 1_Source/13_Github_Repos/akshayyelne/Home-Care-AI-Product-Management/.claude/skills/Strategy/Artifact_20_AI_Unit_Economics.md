@@ -1,0 +1,559 @@
+# Extracted from: akshayyelne/Home-Care-AI-Product-Management/.claude/skills/Strategy/Artifact_20_AI_Unit_Economics.md
+# Generated: 2026-07-31T00:49:45.191Z
+
+**Project:** Home-Care-AI
+**Stage:** Strategy → Stage 5 (Business Model Validation)
+**Skill:** ai-unit-economics
+**Date:** 2026-03-27
+**Methodology:** Agentic Action cost decomposition; Gross Margin projection; Token Efficiency Strategy; Scalability Threshold; Infrastructure Scaling Roadmap
+**Input:** Artifact 12 (Startup Canvas — pricing tiers, cost preview, Claude Haiku/Sonnet split), Artifact 17 (Remediation — template-based v1, no LLM external content, Channel Wrapper), Artifact 18 (Partnership Mapping — PAC estimates, SMS gateway), Artifact 19 (Positioning — cost advantage 3/5 moat, Artifact 20 pending note), CLAUDE.md Article V HS-STRAT-03 (token budget → model selection)
+**Regulatory Context:** Australian Privacy Act 1988 (APP). HIPAA-grade security applied as design floor. All infrastructure in ap-southeast-2 (Sydney) — no cross-border cost or compliance premium.
+**Feeds into:** `agentic-logic-spec` (HS-STRAT-03 — model selection and token budget per agentic action); `create-prd` (cost constraints, scalability thresholds)
+
+
+> **Skill Pre-Condition Check (CLAUDE.md Article IV Rule 6 — "Price Last"):**
+> - ✅ Compliance costs confirmed: Artifact 16 (DPIA scope), Artifact 17 (SMS gateway selected, LLM-external content deferred)
+> - ✅ Partnership complexity confirmed: Artifact 18 (PAC estimates, SMS provider, Google Maps APP 8 pending)
+> - ✅ Feature set confirmed: Artifact 19 (v1 scope = rule-based matching + template notifications + SPP data model)
+> - ✅ Pricing confirmed: Artifact 12 §11 ($199 Solo / $149 Team / $119 Agency per coordinator seat/month AUD)
+>
+> All three prerequisites are satisfied. Unit economics is valid to run.
+
+
+> **Critical v1 architecture note (from Artifact 17 CRIT-02 resolution):**
+> v1 uses **template-based string interpolation** for all external-facing content. No LLM generates text transmitted to carers, clients, or families. The Smart Match Engine is **rule-based** (Artifact 12 §8: "no ML required in v1 — rule-based scoring is sufficient and auditable"). This means LLM inference costs in v1 are **near-zero for the critical delivery path** — a direct consequence of the compliance-first architecture decision. This is the most important finding in this artifact: **the CRIT-02 resolution is a gross margin windfall.**
+
+
+
+The atomic unit of AI work in Home-Care-AI v1 is the **Vacancy Incident Resolution** — the full automated workflow from vacancy detection to coordinator approval to notification dispatch to audit log closure.
+
+**Action inventory per vacancy incident:**
+
+| Step | Action | Level | LLM? | Primary Cost Driver |
+|---|---|---|---|---|
+| 1 | Vacancy event detection (carer sick, roster gap) | L1 Informer | No — event trigger | Negligible compute |
+| 2 | Qualification gate (hard filter: carer certifications vs. client requirements) | L1 Informer | No — rule-based DB query | DynamoDB read |
+| 3 | Proximity score (Google Maps Distance Matrix) | L1 Informer | No — API call | Google Maps API |
+| 4 | SPP match score (familiarity + preference weighted algorithm) | L1 Informer | No — deterministic algorithm | DynamoDB read |
+| 5 | Shortlist generation and ranking (top 3 candidates) | L1 Informer | No — sort algorithm | Negligible compute |
+| 6 | HITL coordinator presentation (3-Tap Flow push notification) | L2 Verifier | **Haiku** — agentic orchestration layer | Haiku inference + push |
+| 7 | Coordinator approval (ACT-A-02 — taps "Approve") | L2 Verifier | **Haiku** — state machine update | Haiku inference |
+| 8 | Notification dispatch (SMS carer → client → family, E-3 gate enforced) | L1 Informer | No — template interpolation | **SMS gateway** (dominant cost) |
+| 9 | Carer briefing assembly (structured SPP field assembly, P-3 branch) | L1 Informer | No — template, CRIT-02 | SMS gateway |
+| 10 | Audit log entries (8–12 entries per incident, CloudTrail) | L1 Informer | No — structured write | CloudTrail ingestion |
+| 11 | VACANCY_UNRESOLVED escalation (if no candidate accepted) | **L3 Escalator** | **Sonnet** — complex orchestration | Sonnet inference |
+
+**Where LLM appears in v1:**
+- Steps 6–7: Haiku orchestration layer manages state transitions, routes decisions, formats approval card
+- Step 11 (rare): Sonnet handles L3 escalation reasoning (VACANCY_UNRESOLVED — complex, low-frequency)
+- LLM does NOT appear in: matching logic, notification content, briefing content, audit logging
+
+This is the consequence of the CRIT-02 resolution and the rule-based v1 match engine. The LLM is the orchestration wrapper, not the intelligence engine.
+
+
+
+### 2.1 Hidden System Prompt Overhead
+
+Per CLAUDE.md Article V (mandatory calculation):
+
+| Component | Token Estimate | Notes |
+|---|---|---|
+| APP compliance constraints | 250–350 | APP 8 cross-border rules, PHI handling, minimum necessary instruction. Leaner than HIPAA equivalent (scheduling context, not clinical care) |
+| Persona lock + role definition | 100–150 | "Care coordination scheduling agent" — narrow scope, fewer edge cases than clinical agent |
+| Agentic safety level definitions (L1/L2/L3) | 150–250 | HITL trigger conditions, VACANCY_UNRESOLVED protocol, E-3 gate enforcement |
+| Few-shot examples (scheduling decisions) | 300–500 | Required for consistent shortlist presentation format and coordinator approval flow |
+| SPP context injection (dynamic per session) | 400–800 | Candidate SPP match data, client preference summary. Varies with history depth. |
+| Output format constraints (structured JSON) | 80–120 | Action decision + state update format |
+| **Total system prompt floor** | **1,280–2,170 tokens** | Well within CLAUDE.md 1,550–4,000 floor; using **1,550 token floor** per Article V mandatory calculation |
+
+**System Prompt Overhead Cost (Claude Haiku, 1,550 token floor):**
+```
+Without caching: 1,550 × $0.80/1M = $0.00124 per call
+With prompt caching (80% hit rate, 10% of full price for cache):
+  → Cache hit (80%): 1,550 × $0.08/1M = $0.000124
+  → Full price (20%): 1,550 × $0.80/1M = $0.00124
+  → Weighted: (0.80 × $0.000124) + (0.20 × $0.00124) = $0.000099 + $0.000248 = $0.000347/call
+```
+
+Prompt caching reduces system prompt overhead by **72%** — strongly recommended as a Day 1 implementation.
+
+
+### 2.2 Per-Action Token Breakdown
+
+#### Action Type A — L1/L2 Routine (Haiku): Vacancy Orchestration
+
+*Frequency: 2–3 Haiku calls per vacancy incident (state trigger, coordinator presentation, approval processing)*
+
+| Token Component | Tokens | Cost (Haiku, with caching) |
+|---|---|---|
+| System prompt (cached, 80% hit) | 1,550 | $0.000347 |
+| Dynamic context (vacancy data + SPP + shortlist) | 450 | 450 × $0.80/1M = $0.00036 |
+| Output (action decision + JSON) | 200 | 200 × $4.00/1M = $0.0008 |
+| **Total per Haiku call** | **2,200 tokens** | **$0.0015** |
+| **Total for 3 Haiku calls per incident** | **6,600 tokens** | **$0.0045** |
+
+#### Action Type B — L3 Escalation (Sonnet): Vacancy Unresolved
+
+*Frequency: 2–3 times/month per agency (estimated ~20% of incidents where top 3 candidates all decline or are unavailable)*
+
+| Token Component | Tokens | Cost (Sonnet) |
+|---|---|---|
+| System prompt (not cacheable — low frequency) | 1,550 | 1,550 × $3.00/1M = $0.00465 |
+| Escalation context (all candidates tried, reasons, coordinator context) | 1,200 | 1,200 × $3.00/1M = $0.0036 |
+| Output (escalation reasoning + VACANCY_UNRESOLVED decision) | 400 | 400 × $15.00/1M = $0.006 |
+| **Total per Sonnet call** | **3,150 tokens** | **$0.01425** |
+| **Total for 2.5 Sonnet calls per month per agency** | **7,875 tokens** | **$0.036** |
+
+#### Action Type C — SPP Completeness Analysis (Haiku): Daily Check
+
+*Frequency: 1 call/day per agency = 30 calls/month*
+
+| Token Component | Tokens | Cost (Haiku, with caching) |
+|---|---|---|
+| System prompt (cached) | 1,550 | $0.000347 |
+| SPP state data | 350 | 350 × $0.80/1M = $0.00028 |
+| Output (completeness flags for coordinator) | 150 | 150 × $4.00/1M = $0.0006 |
+| **Total per call** | **2,050 tokens** | **$0.00123** |
+| **Total for 30 calls per month per agency** | **61,500 tokens** | **$0.037** |
+
+
+### 2.3 Total Monthly Inference per Agency
+
+| Action Type | Calls/Month | Cost/Call | Monthly Inference Cost |
+|---|---|---|---|
+| L1/L2 Haiku (vacancy orchestration) | 36 (12 incidents × 3 calls) | $0.0015 | $0.054 |
+| L3 Sonnet (vacancy unresolved) | 2.5 | $0.01425 | $0.036 |
+| Haiku (SPP completeness) | 30 | $0.00123 | $0.037 |
+| **Total monthly inference** | **68.5** | — | **$0.127** |
+
+**Finding: AI inference costs $0.13/agency/month in v1.** This is not the cost problem. This is the compliance-first architecture dividend — template-based external content and rule-based matching eliminate the expensive LLM calls from the critical path.
+
+
+
+All storage in **AWS ap-southeast-2 (Sydney)**. No cross-border transfer. No APP 8 premium on storage (data stays domestic).
+
+| Component | Per Agency/Month | Notes |
+|---|---|---|
+| DynamoDB (SPP + carer profiles + availability index) | $1.20 | ~120 KB active data per agency at beachhead scale. On-demand billing. |
+| S3 write-once audit log (7-year retention) | $0.45 | ~8 entries × 12 incidents × 0.5 KB = 48 KB/month. At $0.023/GB/month. |
+| CloudTrail ingestion | $0.02 | 48 KB/month × $0.50/GB ingested |
+| KMS key management | $1.00 | 1 customer-managed key per agency |
+| CloudWatch monitoring + alerting | $0.80 | Log ingestion + metric alarms |
+| Lambda compute (state machine functions) | $0.12 | ~500 invocations/month (incidents + SPP + audit). Well within free tier at beachhead. |
+| API Gateway (coordinator app calls) | $0.08 | ~200 API calls/month per coordinator |
+| S3 object storage (SPP documents, carer certifications) | $0.05 | ~2 GB at $0.023/GB |
+| **Total monthly storage + infrastructure per agency** | **$3.72** | |
+
+**Encryption overhead** (+10–15% compute): +$0.37 → **rounded total: $4.10/agency/month**
+
+
+
+| Component | Per Incident | Incidents/Month | Monthly Cost/Agency |
+|---|---|---|---|
+| SMS to carer (AU domestic, MessageMedia / AWS SNS) | $0.08 AUD | 12 | $0.96 |
+| SMS to client (APP 8 compliant, AU domestic) | $0.08 AUD | 12 | $0.96 |
+| SMS to family (AU domestic) | $0.08 AUD | 12 | $0.96 |
+| SMS: VACANCY_UNRESOLVED coordinator alert | $0.08 AUD | 2.5 | $0.20 |
+| Google Maps Distance Matrix API (1 call × 5 candidates) | $0.025 AUD | 12 | $0.30 |
+| Push notification to coordinator (AWS SNS mobile push) | $0.001 AUD | 12 | $0.012 |
+| **Total channel / notification cost** | **$0.27/incident** | | **$3.42/agency/month** |
+
+**Note:** SMS is the single largest variable cost driver — 83% of per-incident costs. AI inference ($0.004/incident) is 1.5% of per-incident cost. This is the key ratio: **SMS costs 60× more than AI inference per incident.**
+
+
+
+| Cost Component | Monthly Cost/Agency | % of Variable COGS |
+|---|---|---|
+| AI inference (Haiku + Sonnet) | $0.127 | 1.7% |
+| Storage + infrastructure (AWS) | $4.10 | 55.4% |
+| Channel costs (SMS + Maps + push) | $3.42 | **46.2%** — rounding to total |
+| API overhead + monitoring | $0.08 | 1.1% |
+| **Total variable COGS per agency/month** | **$7.41 AUD** | 100% |
+
+*Consistent with Artifact 12 §10 preview estimate of $5–15/agency/month. The range reflects incident volume variation: low-volume agency (6 incidents/month) ≈ $5.20; high-volume agency (25 incidents/month) ≈ $14.80.*
+
+**The dominant cost insight:** Variable AI infrastructure is not the margin problem. At $0.13/month/agency for inference, token costs are negligible at any realistic beachhead scale. The real margin levers are SMS unit price negotiation and compliance fixed cost amortization (§06 below).
+
+
+
+Compliance infrastructure is a fixed operating cost, not a per-unit variable cost. It does not scale with agency count until v2+ feature expansion. Per Artifact 16 and Artifact 12:
+
+| Cost Item | Estimate (AUD/month) | Classification | Notes |
+|---|---|---|---|
+| Privacy counsel retainer (ongoing DPIA, APP guidance) | $2,000–$4,000 | Fixed operating | Reduces after DPIA-01–07 complete. Ongoing for new features. |
+| DPIA completion amortization ($15K one-time / 24 months) | $625 | Amortized | DPIA-01 through DPIA-07 from Artifact 16 |
+| E-1 anti-discrimination legal opinion amortization | $167–$208 | Amortized | $3K–$5K one-time, 24-month amortization |
+| APP 8 counsel (SC-07 Google Maps review, v2 WhatsApp unlock) | $83–$167 | Amortized | $2K–$4K one-time |
+| CRIT-04 AX-01 engineering confirmation + schema audit | $200–$400 | One-time (before Sprint 1) | Not recurring |
+| **Total fixed compliance per month** | **$3,075–$5,000** | Fixed | Peak at launch; reduces as DPIAs are completed |
+
+**Compliance cost per agency at different scale points:**
+
+| Agencies | Compliance Fixed Cost | Per-Agency Compliance | % of $199 Revenue |
+|---|---|---|---|
+| 5 | $4,000 (midpoint) | $800 | 402% — existential |
+| 10 | $4,000 | $400 | 201% — deeply underwater |
+| 25 | $4,000 | $160 | 80% — survivable with team seat revenue |
+| 50 | $3,500 (DPIAs completing) | $70 | 35% |
+| 100 | $3,200 | $32 | 16% |
+| 200 | $3,000 (steady state) | $15 | 7.5% |
+
+**Insight:** Compliance is a start-up tax that amortizes sharply after 25 agencies. Below 25 agencies, compliance cost per agency exceeds the entire subscription price. The founding team must treat compliance as fixed overhead — not COGS — and manage the P&L accordingly until the ~50 agency inflection point.
+
+
+
+### 7.1 Variable Gross Margin (Infrastructure + AI Only)
+
+*Excludes compliance overhead and fixed team costs — pure unit economics of delivering the product.*
+
+| Agencies | Monthly Revenue (Solo $199 avg) | Variable COGS (×$7.41) | Variable GM $ | Variable GM % |
+|---|---|---|---|---|
+| 10 | $1,990 | $74 | $1,916 | **96%** |
+| 50 | $9,950 | $371 | $9,579 | **96%** |
+| 100 | $19,900 | $741 | $19,159 | **96%** |
+| 500 | $99,500 | $3,705 | $95,795 | **96%** |
+
+**Variable gross margin is ~96% and flat across all scales.** The product's core delivery (AI + infrastructure + SMS) costs pennies to serve once built. This is the template-based architecture dividend from CRIT-02 resolution.
+
+
+### 7.2 Blended Gross Margin (Including Fixed COGS Allocation)
+
+*Fixed COGS includes the operations portion of engineering (~30% of $20K midpoint = $6,000/month). Compliance is excluded (operating expense, not COGS). This is the standard SaaS gross margin presentation.*
+
+| Agencies | Monthly Revenue | Variable COGS | Fixed COGS (engineering ops) | Total COGS | Blended GM % |
+|---|---|---|---|---|---|
+| 10 | $1,990 | $74 | $6,000 | $6,074 | **-205%** |
+| 25 | $4,975 | $185 | $6,000 | $6,185 | **-24%** |
+| 50 | $9,950 | $371 | $6,000 | $6,371 | **36%** |
+| 75 | $14,925 | $556 | $6,000 | $6,556 | **56%** |
+| **100** | **$19,900** | **$741** | **$6,000** | **$6,741** | **66% ✓** |
+| 150 | $29,850 | $1,112 | $6,000 | $7,112 | **76%** |
+| 200 | $39,800 | $1,482 | $6,000 | $7,482 | **81%** |
+| 500 | $99,500 | $3,705 | $6,500 (team growth) | $10,205 | **90%** |
+
+*Revenue uses $199/month (conservative Solo-tier baseline). Blended tiers ($330/month average across Solo/Team/Agency) improve all margins by ~40%.*
+
+**SaaS 60% Gross Margin Threshold Crossed:** between 75 and 100 agencies.
+
+**Exact Scalability Threshold (60% GM floor):**
+```
+At 60% target: COGS ≤ 40% of Revenue
+$6,000 + ($7.41 × n) = 0.40 × ($199 × n)
+$6,000 = $79.60n − $7.41n = $72.19n
+n = 83 agencies
+```
+
+**Scalability Threshold: 83 agencies (Solo-tier baseline). 60 agencies if blended tier revenue ($330/month average).**
+
+
+### 7.3 Operating Break-Even (Full P&L)
+
+*Total monthly burn from Artifact 12 §10: $22,000–$38,000. Midpoint: $30,000/month.*
+
+| Revenue per Agency | Break-Even Agency Count | ARR at Break-Even |
+|---|---|---|
+| $199 (Solo only) | $30,000 / $199 = **151 agencies** | $360K |
+| $250 (early blended) | $30,000 / $250 = **120 agencies** | $360K |
+| $330 (mature blended) | $30,000 / $330 = **91 agencies** | $360K |
+
+**Operating break-even range: 91–151 agencies.** At peer-referral GTM velocity (estimated 2–3 new agencies/month post-E1 validation), break-even is achievable within **18–24 months** of first paying customer.
+
+**Total Addressable Beachhead Revenue at Break-Even:**
+- 100–150 agencies × $330 average ARR = **$396K–$594K AUD/year**
+- This is 7–11% beachhead penetration (500 eligible agencies per VI-3 estimate)
+- Entirely achievable without chain expansion or EMR integration dependency
+
+
+
+### Strategy 1: Prompt Caching — Implement Day 1
+
+**Actions it applies to:** All Haiku calls (vacancy orchestration, SPP completeness)
+**Cost reduction:** 72% on system prompt overhead (largest single token spend)
+**Implementation effort:** **Low** — Anthropic prompt caching is a single API parameter change (`cache_control` on static system prompt blocks)
+**Estimated margin improvement:** ~$0.094/agency/month savings (from $0.127 → $0.033 on cached portion)
+**Recommended timeline:** Sprint 1 — before first agency onboards
+
+```
+{
+  "model": "claude-haiku-4-5-20251001",
+  "system": [
+    {
+      "type": "text",
+      "text": "[STATIC APP COMPLIANCE + PERSONA + SAFETY LEVELS]",
+      "cache_control": {"type": "ephemeral"}   // Cache this block
+    },
+    {
+      "type": "text",
+      "text": "[DYNAMIC SPP CONTEXT — DO NOT CACHE]"
+    }
+  ]
+}
+```
+
+*Note: Even at full price without caching, inference at $0.127/agency/month is not the cost problem. Caching is implemented for architectural correctness and future-proofing as agency count scales, not for current margin emergency.*
+
+
+### Strategy 2: SMS Gateway Volume Negotiation — Priority at 50+ Agencies
+
+**Actions it applies to:** All notification dispatches (3 SMS per vacancy incident)
+**Cost reduction:** MessageMedia volume pricing: 15–25% reduction at 50+ agencies; 30–40% at 200+ agencies
+**Current cost:** $0.08/SMS domestic (pay-as-you-go)
+**At 50 agencies:** $0.06/SMS (volume tier) — saves $0.06/incident × 600 incidents/month = $36/month
+**At 200 agencies:** $0.05/SMS — saves $0.12/incident × 2,400 incidents/month = $288/month
+**Implementation effort:** **Low** — negotiation, no engineering change (Channel Wrapper architecture in place)
+**Recommended timeline:** Initiate negotiation at 30 agencies; lock volume pricing at 50 agencies
+
+**Why SMS is the priority, not inference:**
+SMS accounts for **46% of variable COGS** ($3.42/agency/month). A 25% reduction in SMS unit cost saves more per agency than eliminating all LLM inference costs entirely.
+
+
+### Strategy 3: Model Routing (Reserve Sonnet for L3 Only) — Already Specified
+
+**Actions it applies to:** All L1/L2 agentic actions
+**Cost reduction:** Already implemented in v1 architecture (CLAUDE.md HS-STRAT-03). Haiku for L1/L2, Sonnet for L3 only.
+**Current Sonnet cost:** $0.036/agency/month for 2.5 L3 escalations — minimal at this scale
+**If Sonnet were used for all actions:** 68.5 calls × $0.01425 = $0.976/agency/month — 7× more expensive
+**Implementation effort:** Zero — already the specified architecture
+**Recommended timeline:** Maintained as the v1 default; revisit L3 definition in `agentic-logic-spec`
+
+**L3 scope discipline is the key guard:** If the definition of "L3 action" expands in `agentic-logic-spec`, Sonnet costs will increase. VACANCY_UNRESOLVED is the only current L3 action. Any new L3 classification must be justified against the cost impact.
+
+
+### Strategy 4: SLM Distillation for SPP Completeness Checks — v2, Post-Validation
+
+**Actions it applies to:** Daily SPP completeness analysis (Action Type C — 30 calls/month/agency)
+**Cost at Haiku:** $0.037/agency/month — not material
+**Cost at custom SLM:** ~$0.003/agency/month (92% reduction)
+**Implementation effort:** **High** — requires training dataset generation from Haiku completeness judgements, fine-tuning pipeline, evaluation framework
+**Estimated margin improvement at 500 agencies:** $0.034/agency × 500 = $17/month — immaterial at this scale
+**Recommended timeline:** Year 2 only if SPP complexity increases significantly (e.g., SBIs added in v2 requiring more sophisticated completeness analysis)
+
+*Current verdict: SLM distillation has near-zero ROI at beachhead scale. The SPP completeness check costs $0.037/month/agency. This is not a bottleneck. Do not invest engineering time on SLM distillation in v1 or v2 unless agency count exceeds 1,000 and SPP schema complexity grows substantially.*
+
+
+### Strategy 5: Async Batch Processing for SPP Analysis — Not Applicable in v1
+
+**Actions it applies to:** Daily SPP completeness checks (non-time-sensitive)
+**Cost reduction:** 50% on async-eligible calls
+**Implementation effort:** Medium
+**Verdict:** SPP completeness is already non-time-sensitive. Batch processing would save $0.018/agency/month. Not worth implementation overhead at beachhead scale. Reconsider at 500+ agencies.
+
+
+
+| Scale | Architecture | AI Stack | Estimated Monthly Infra Cost (AUD) | Notes |
+|---|---|---|---|---|
+| **0–50 agencies (Beachhead)** | Serverless (Lambda + DynamoDB + S3). Single-region ap-southeast-2. Managed services only. No ops overhead. | Anthropic API (Haiku + Sonnet). Prompt caching enabled Day 1. MessageMedia SMS gateway. | **$200–$750** | Predominantly Lambda invocation + DynamoDB on-demand + SMS. Well within Artifact 12 estimate. |
+| **50–200 agencies (Early Growth)** | Add read replicas for SPP query performance. S3 Intelligent Tiering for 7-year audit log. Consider DynamoDB Reserved Capacity. | Same AI stack. Add model routing classifier (lightweight Lambda). Volume SMS pricing negotiated. | **$750–$3,000** | Infra cost grows sub-linearly with agencies (shared fixed costs amortize). |
+| **200–1,000 agencies (Scale)** | ElastiCache for SPP match query caching. Scheduled batch processing for nightly SPP completeness. Multi-AZ failover for compliance continuity. | Add Claude prompt cache warming for predictable daily patterns (SPP checks). Evaluate Haiku fine-tuning for agency-specific shortlist formatting. | **$3,000–$12,000** | At this scale, infra is 3–4% of revenue — healthy SaaS ratio. Compliance fixed costs have fully amortized. |
+| **1,000+ agencies (Expansion)** | Evaluate multi-region (ap-southeast-2 + ap-southeast-4 Melbourne) for resilience. API gateway throttling per-agency. Advanced CloudTrail anomaly detection. | Evaluate custom SLM distillation for SPP completeness if SPP schema grows. Vector store for longitudinal SPP pattern analysis (v3 feature). | **$12,000+** | Model pricing deflation is likely by this stage. Token costs at scale remain sub-1% of revenue. |
+
+**Scaling cost-per-agency trajectory:**
+
+| Scale | Revenue/Agency | Infra/Agency | Infra % of Revenue |
+|---|---|---|---|
+| 10 agencies | $199 | $20.00 (fixed dominates) | 10.1% |
+| 50 agencies | $199 | $7.41 (variable only) | 3.7% |
+| 200 agencies | $250 (blended) | $4.00 (volume discounts) | 1.6% |
+| 1,000 agencies | $280 (blended, mature) | $3.50 | 1.3% |
+
+Infrastructure becomes an increasingly negligible share of revenue as scale increases. **The margin story at 200+ agencies is excellent.**
+
+
+
+### Recommendation 1 — Raise Average Revenue Per Agency (ARPA) Before 83-Agency Threshold
+
+**Current state:** Modelled at $199/month (Solo tier — conservative beachhead assumption)
+**Target state:** $330/month average (blended Solo + Team + Agency tiers)
+**Mechanism:** At E1 close, present the Agency Owner the "Team tier" value proposition: Angela manages 3 coordinators — 3 seats × $149 = $447/month. The moat story (SPP knowledge portable across coordinators) is the Agency Owner value prop. Every Solo-tier agency that upgrades to Team-tier cuts the break-even agency count.
+**Impact:** Raises threshold from 83 agencies (Solo-only) to ~50 agencies (blended). **33 fewer agencies needed to cross 60% GM.**
+**Implementation owner:** PM Lead (pricing conversation at E1 close)
+**Timeline:** Before first commercial subscription (Q2 2026)
+
+
+### Recommendation 2 — Negotiate Volume SMS Pricing at 30-Agency Milestone
+
+**Current state:** $0.08/SMS pay-as-you-go (MessageMedia / AWS SNS)
+**Target state:** $0.055–$0.06/SMS at volume tier (30–50 agencies committed)
+**Mechanism:** SMS is 46% of variable COGS. A 25–30% reduction moves agency-level COGS from $7.41 → $6.33. At 100 agencies, this saves $108/month in margin — more than eliminating all LLM inference costs.
+**AWS SNS vs. MessageMedia:** AWS SNS (ap-southeast-2) pricing is $0.00581 USD per 1,000 SMS for Australia (~$0.009 AUD per SMS at current rates) — significantly cheaper than MessageMedia. Evaluate SNS as primary gateway; MessageMedia as failover.
+**Impact:** ~$1.08/agency/month variable COGS reduction; ~1.5 percentage points GM improvement at 100 agencies.
+**Implementation owner:** Engineer (gateway switch) + PM Lead (contract)
+**Timeline:** Evaluate at 20 agencies; switch by 30 agencies
+
+
+### Recommendation 3 — Charge for SPP Onboarding Session as a Positive Margin Event
+
+**Current state:** Concierge SPP migration is founder time (unpriced at beachhead)
+**Target state:** $500–$1,500 one-time SPP migration session fee (Artifact 12 §11 secondary revenue stream)
+**Mechanism:** The onboarding session is not a cost centre — it is the product's cold-start mitigation and the moat seeding event. Charging for it:
+  - Recovers founder time cost
+  - Signals premium positioning (care quality costs money)
+  - Filters agencies who are not serious about the SPP (low-value churners)
+  - Partially offsets the compliance amortization cost during the sub-25-agency phase
+**Impact:** $500–$1,500 per new agency = $1,000 average × 12 new agencies in Year 1 = $12,000 AUD in Year 1 onboarding revenue — covers ~0.4 months of compliance overhead
+**Implementation owner:** PM Lead (pricing framing at XP-2A LOI meetings)
+**Timeline:** Q2 2026 — frame in the first LOI conversation
+
+
+
+*Carrying PAC estimates from Artifact 18 §7 into the unit economics model.*
+
+### 11.1 Customer Acquisition Cost (CAC) Model
+
+| Acquisition Channel | CAC Components | Estimated CAC (AUD) | Notes |
+|---|---|---|---|
+| **Concierge (E1/E2 — Angela, Tom)** | Founder time only | $0 cash (time cost) | Pre-revenue — CAC is opportunity cost, not cash |
+| **Peer referral (GTM-2)** | No direct spend | $0–$500 (referral dinner/event) | GTM assumption to validate at E1 close |
+| **ACCPA Advisory (post-beachhead)** | Advisory board equity + annual fee | $2K cash + 0.25% equity / ÷ agencies enabled | If ACCPA endorsement unlocks 20 agencies: $100/agency + equity |
+| **ACCPA Conference / Innovation Awards** | Sponsorship + PM time | $10K per event / ÷ agencies acquired | If conference yields 5 agencies: $2,000/agency (high) |
+| **ACCPA Commercial Endorsement** | $30K–$60K/year | $300–$600/agency (at 100 agencies/year) | Target Year 2+ only; validates after beachhead |
+| **AlayaCare integration (if VI-1 confirmed)** | $30–60K engineering equivalent + ongoing | $300–$600 amortized per agency (at 100 agencies over 2 years) | High cost; only if AlayaCare is the distribution path |
+
+### 11.2 Customer Lifetime Value (LTV) Model
+
+*Assumes 24-month agency average lifetime (conservative — SPP data gravity should extend this substantially)*
+
+| Tier | Monthly ARR | Onboarding Fee | 24-Month LTV | LTV/CAC at Peer Referral |
+|---|---|---|---|---|
+| Solo | $199/month | $750 avg | $199 × 24 + $750 = **$5,526** | $5,526 / $250 = **22:1** |
+| Team (avg 2.5 seats × $149) | $373/month | $1,000 avg | $373 × 24 + $1,000 = **$9,952** | $9,952 / $250 = **40:1** |
+| Agency (avg 7 seats × $119) | $833/month | $1,500 avg | $833 × 24 + $1,500 = **$21,492** | $21,492 / $500 = **43:1** |
+
+**LTV/CAC ratios are excellent at peer referral CAC.** The economics compress significantly if AlayaCare integration is required (CAC rises to $300–$600, LTV/CAC narrows to 9–18:1 — still acceptable for SaaS but not exceptional).
+
+### 11.3 SPP Data Gravity LTV Extension Effect
+
+The SPP moat changes the LTV model materially. Per Artifact 19 §6:
+- By Month 6: switching cost is real (agency loses months of structured preference history)
+- By Month 18: switching cost is structural (years of familiarity data, match quality is demonstrably better)
+
+**Conservative assumption (24-month lifetime) is likely understated.** If SPP data gravity holds (XP-3B probe validates > 4-week rebuild cost), a more realistic churn model is:
+- Month 0–6: Normal SaaS churn risk (product trust building)
+- Month 6–18: Churn rate drops to <5%/year (data gravity engaging)
+- Month 18+: Churn approaches structural minimum (switching cost outweighs any competitor feature gap)
+
+At 36-month average lifetime (conservative for agencies with 18+ months of SPP data):
+- Solo LTV: $199 × 36 + $750 = **$8,214**
+- LTV/CAC at peer referral: **33:1**
+
+The SPP moat is not just a positioning claim — it is a LTV multiplier. Every month of SPP data accumulated is a retention asset that extends the revenue relationship.
+
+
+
+*Per CLAUDE.md Article V: this handshake transfers the Max Token Budget per Agentic Action to `agentic-logic-spec` for model selection specification.*
+
+| ID | Agentic Action | Autonomy Level | Model Specified | Token Budget (Input + Output) | Cost per Action | Rationale |
+|---|---|---|---|---|---|---|
+| **HS-STRAT-03a** | L1/L2 Vacancy orchestration (state management, HITL coordination) | L1 Informer / L2 Verifier | **Claude Haiku 4.5** (`claude-haiku-4-5-20251001`) | 2,200 tokens (1,550 system + 450 dynamic + 200 output) | $0.0015 | Routine, repetitive, narrow input/output structure. Budget comfortably supports Haiku at any realistic scale. |
+| **HS-STRAT-03b** | L2 SPP completeness analysis | L1 Informer | **Claude Haiku 4.5** | 2,050 tokens (1,550 + 350 + 150) | $0.00123 | Structured analysis, daily frequency, well within Haiku capability. |
+| **HS-STRAT-03c** | L3 Vacancy unresolved escalation (VACANCY_UNRESOLVED decision) | L3 Escalator | **Claude Sonnet 4.6** (`claude-sonnet-4-6`) | 3,500 tokens (1,550 + 1,150 + 800) | $0.01650 | Complex, low-frequency, high-stakes (coordinator must understand why matching failed). Sonnet reasoning quality justified. |
+| **HS-STRAT-03d** | Carer briefing assembly (structured SPP field assembly, P-3 branch) | L1 Informer | **No LLM — template only** | 0 tokens | $0.00 | CRIT-02 resolution confirmed. Template-based in v1. |
+| **HS-STRAT-03e** | Notification content (SMS to carer, client, family) | L1 Informer | **No LLM — template only** | 0 tokens | $0.00 | CRIT-02 resolution confirmed. String interpolation only. |
+| **HS-STRAT-03f** | Audit log entry | L1 Informer | **No LLM** | 0 tokens | $0.00 | Structured write. APPAuditLogEntry schema is deterministic. |
+
+**`agentic-logic-spec` model selection rule (binding from this artifact):**
+```
+IF action.level IN ['L1', 'L2'] AND action.type NOT IN ['VACANCY_UNRESOLVED']:
+    USE claude-haiku-4-5-20251001
+    ASSERT token_budget <= 2200
+    ASSERT cost_per_action <= $0.002 AUD
+
+IF action.level == 'L3' OR action.type == 'VACANCY_UNRESOLVED':
+    USE claude-sonnet-4-6
+    ASSERT token_budget <= 3500
+    ASSERT cost_per_action <= $0.017 AUD
+
+IF action.type IN ['NOTIFICATION_DISPATCH', 'BRIEFING_ASSEMBLY', 'AUDIT_LOG']:
+    USE NO_LLM
+    ASSERT content_generation_method == 'TEMPLATE_INTERPOLATION'
+    // Enforcement: CRIT-02 compliance guard — NFR-INJ-* requirements
+```
+
+**Reject criteria for `agentic-logic-spec`:** Any logic spec that:
+- Assigns Sonnet to L1/L2 actions (cost violation — would add $0.013/action premium for no quality gain)
+- Assigns Haiku to L3 VACANCY_UNRESOLVED (quality risk — coordinator needs Sonnet reasoning quality for complex escalation context)
+- Uses LLM for notification content or briefing assembly (CRIT-02 violation — CRITICAL compliance finding)
+
+
+
+*When the following v2 features unlock (per Artifact 17 §07 V2 Unlock Register), the cost model changes:*
+
+| Feature | Unlock Condition | Cost Impact | New Monthly COGS Component |
+|---|---|---|---|
+| **LLM-generated external notifications** | NFR-INJ-01–04 implemented + red-team tested | Adds LLM inference to every notification | +$0.58/agency/month at Haiku (3 notifications × 12 incidents × ~600 tokens each) — immaterial |
+| **WhatsApp channel (CRIT-01 v2 unlock)** | APP 8 legal review complete | WhatsApp Business API pricing (Twilio: ~$0.04–$0.06/message) vs. SMS ($0.05–$0.08) | Roughly cost-neutral or marginally cheaper; architectural improvement, not cost driver |
+| **Carer App (in-app push)** | APP 8 confirmation + engineering build | Replaces SMS ($0.05–$0.08/message) with push ($0.00005/push via SNS) — 1,000× cheaper | **Major cost reduction: SMS drops from $3.42 → $0.001/agency/month.** At 500 agencies, this saves $1,710/month. The Carer App is not just a UX upgrade — it is a **5–7 percentage point gross margin improvement** at scale. |
+| **AlayaCare bi-directional integration (AX-02 confirmed)** | Write-back endpoint confirmed | Additional API calls to AlayaCare per assignment (~$0.001/call) | Negligible — AlayaCare API calls are a trivial cost |
+| **SPP v2 (LLM-assisted field extraction from coordinator notes)** | DPIA v2 + CRIT-04 resolved | Haiku call for extracting structured SPP fields from coordinator input | +$0.003/agency/month — immaterial |
+| **Structured Baseline Indicators (SBI — Future Discovery)** | Separate discovery cycle + DPIA | New PHI fields; compliance infrastructure expansion required | Compliance fixed cost increases by ~$1,500–$2,000/month (additional DPIA + ongoing counsel for clinical monitoring category) |
+
+**Key v2 finding: The Carer App is not just a product feature — it is the biggest single gross margin lever available.** Replacing SMS ($3.42/agency/month) with in-app push ($0.03/agency/month) reduces variable COGS by 99% and saves 46% of current per-agency delivery cost. At 500 agencies, this is worth $16,950/month in recovered margin — far more than any AI inference optimisation.
+
+
+
+### Single-Page Executive View
+
+| Metric | Value | Source |
+|---|---|---|
+| **Variable COGS per agency/month (v1)** | **$7.41 AUD** | §05 |
+| **AI inference component** | $0.13 (1.7% of COGS) | §02 |
+| **SMS / channel component** | $3.42 (46% of COGS) | §04 |
+| **Infrastructure component** | $3.86 (52% of COGS) | §03 |
+| **Variable gross margin** | **96%** | §07.1 |
+| **Blended GM at 100 agencies** | **66%** (above 60% floor) | §07.2 |
+| **Scalability Threshold (60% GM)** | **~83 agencies** (Solo) / **~60 agencies** (blended) | §07.2 |
+| **Operating break-even** | **91–151 agencies** | §07.3 |
+| **LTV/CAC (peer referral channel)** | **22:1–43:1** by tier | §11.2 |
+| **Dominant cost driver** | **SMS**, not AI | §05 |
+| **Largest v2 margin lever** | **Carer App (replace SMS)** | §13 |
+| **Token budget per L1/L2 action** | **2,200 tokens / $0.0015** | §12 |
+| **Token budget per L3 action** | **3,500 tokens / $0.0165** | §12 |
+| **Year 1 PAC (Tier 1 partnerships, cash)** | **$20–90K AUD** | Artifact 18 §7 |
+
+
+
+| ID | From (This Artifact) | To (Execution Plugin) | What Must Transfer |
+|---|---|---|---|
+| **HS-STRAT-03a** | §12 — Haiku budget: 2,200 tokens, L1/L2 | `agentic-logic-spec` model selection | Haiku is the mandatory model for all L1/L2 actions. Any spec that uses Sonnet for L1/L2 is a cost violation. `harness-audit-grader` should flag Sonnet assignments to L1/L2 actions as a cost architecture defect. |
+| **HS-STRAT-03b** | §12 — Sonnet budget: 3,500 tokens, L3 only | `agentic-logic-spec` model selection | Sonnet is reserved exclusively for L3 VACANCY_UNRESOLVED. Adding new L3 actions requires PM Lead sign-off and a cost impact assessment against this artifact. |
+| **HS-STRAT-03c** | §12 — No LLM for notifications/briefings | `agentic-logic-spec` NFR | Template enforcement is a CRIT-02 compliance constraint, not just a cost choice. The logic spec must assert `content_generation_method == TEMPLATE_INTERPOLATION` for all external-facing content. |
+| **HS-STRAT-03d** | §13 — Carer App is the v2 margin lever | `create-prd` v2 roadmap | Carer App is not optional infrastructure — it is the single largest gross margin improvement available in v2. The PRD v2 section should note the $16,950/month margin recovery at 500 agencies. This is a financial priority, not just a UX upgrade. |
+| **HS-STRAT-03e** | §14 — Scalability Threshold: 83 agencies | `create-prd` business context | PRD §1 business context: product becomes unit-economics positive (>60% GM) at 83 agencies. This is the commercial milestone that defines Series A readiness. |
+
+
+
+| Due | Owner | Action | Priority |
+|---|---|---|---|
+| **Sprint 1** | Engineer | Implement Anthropic prompt caching on system prompt static blocks for all Haiku calls. Cache key = `[app_compliance_block + persona_block + safety_levels_block]`. Dynamic SPP context MUST NOT be cached. | HIGH |
+| **Sprint 1** | Engineer | Confirm AWS SNS (ap-southeast-2) SMS pricing vs. MessageMedia. If SNS is cheaper at current volume, implement SNS as primary gateway (MessageMedia as failover). Channel Wrapper architecture already supports this switch. | HIGH |
+| **2026-04-01** | PM Lead | Frame onboarding (SPP migration) session as paid service ($750–$1,500) in all XP-2A LOI conversations. Present as "knowledge architecture session" — the event that starts the moat. | HIGH |
+| **2026-04-01** | PM Lead | Present Agency tier pricing rationale to agency owners with ≥ 2 coordinators. Every Solo → Team upgrade reduces the break-even count by ~0.7 agencies. At Angela's agency (3 coordinators × $149 = $447/month), ARR is 2.2× a Solo agency. | HIGH |
+| **2026-05-01** | PM Lead + Engineer | Validate Artifact 20 COGS model against actuals from first 5 agencies. Specifically confirm: (1) average incidents/month per agency; (2) SMS volume vs. projected 36/month; (3) L3 escalation frequency vs. projected 2.5/month. Re-run §07 with actual data. | MEDIUM |
+| **2026-06-01** | PM Lead | At 20+ agencies: initiate MessageMedia / AWS SNS volume pricing conversation. Target $0.055–$0.06/SMS. 25% reduction in SMS cost yields 0.8 percentage points GM improvement. | MEDIUM |
+| **Year 2** | Engineer + PM Lead | Begin Carer App infrastructure planning. At 100+ agencies, replacing SMS with in-app push recovers $342/month in variable COGS and grows to $16,950/month at 500 agencies. This is the highest-ROI v2 engineering investment available. | HIGH (Year 2) |
+
+
+*Artifact integrity note: This model is grounded in confirmed v1 architecture decisions — rule-based matching (Artifact 12), template-based notifications (Artifact 17 CRIT-02), AU-hosted SMS gateway (Artifact 17 CRIT-01), and partnership PAC estimates (Artifact 18). The model should be re-run after first 5 paying agencies to replace the four key assumptions confirmed here: (1) 12 vacancy incidents/month/agency, (2) 2.5 L3 escalations/month/agency, (3) 3 SMS recipients per incident, and (4) 80% prompt cache hit rate.*
+
+*Per CLAUDE.md Article IV Rule 6: this is the final Strategy Plugin skill. The Strategy Plugin pipeline is now complete. The Execution Plugin (pm-execution) begins with `create-prd`.*
+
+
+
+```
+✅ Startup Canvas (12)             ← context contract
+✅ SWOT Analysis (13)              ← BUILD+DEFEND signal
+✅ Value Proposition (14)          ← "What After" → OKR
+✅ User Journey Map (15)           ← Moment of Truth + L3 interventions
+✅ Compliance Privacy Audit (16)   ← 4 CRITs + 8 HIGHs
+✅ Remediation Decision Record (17) ← Stage 4 gate cleared
+✅ Partnership Mapping (18)        ← Moat Summary → Positioning
+✅ Positioning Statement (19)      ← Geoffrey Moore + ERRC + Moat Assessment
+✅ AI Unit Economics (20)          ← Token budget → model selection ← THIS ARTIFACT
+
+⏭  NEXT: Execution Plugin → create-prd (Artifact 21)
+         Inputs: HS-STRAT-01 (Moment of Truth + L3 interventions from Artifact 15)
+                 HS-STRAT-02 (Compliance NFRs from Artifact 16)
+                 HS-STRAT-04 ("What After" OKRs from Artifact 14)
+                 HS-STRAT-05 (Positioning from Artifact 19)
+                 HS-STRAT-03 (Token budget + model selection from this artifact)
+```

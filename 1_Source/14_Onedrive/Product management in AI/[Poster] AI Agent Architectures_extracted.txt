@@ -1,0 +1,20 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] AI Agent Architectures.pdf
+# Characters: 450
+# Generated: 2026-07-31T00:07:33.304Z
+
+AI Agent Architectures in Practice
+The Product Compass Newsletter
+
+Agentic RAG Architectures in Practice
+The Product Compass Newsletter
+Prep: Add Google Drive files to Pinecone
+Reacts when files are added or modified
+Vanilla RAG
+Reuses user request as a RAG prompt
+Adaptive RAG
+Can answer without RAG, formulates a dedicated RAG prompt
+Hybrid RAG
+Can query multiple data sources. Here, demonstrated for
+Pinecone vector database, GraphQL, and SQL
+
+---

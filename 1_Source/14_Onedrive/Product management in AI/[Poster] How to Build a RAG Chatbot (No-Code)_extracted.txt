@@ -1,0 +1,69 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] How to Build a RAG Chatbot (No-Code).pdf
+# Characters: 1333
+# Generated: 2026-07-31T00:07:33.311Z
+
+Vector
+database
+Embedding
+model
+Vector
+database
+LLM
+Embedding
+model
+RAG systems have 3
+core components:
+        A question
+        Retrieved context
+        An answer
+Q
+C
+A
+          Context Relevance: How well do the
+retrieved chunks address the question's
+information needs?
+CQ
+QA
+          Faithfulness/Groundedness : To what
+extent does the answer restrict itself only to
+claims that can be verified from the context?
+AC
+          Answer Relevance: How directly does
+the answer address the specific information
+need expressed in the question?)
+AQ
+          Context Support Coverage: Does the
+retrieved context contain all the information
+needed to fully support every claim in the
+answer?
+CA
+          Question Answerability: Given the
+context, is it possible to formulate a
+satisfactory answer to the question?
+QC
+webhook request
+document
+chunks
+chunks +
+vectors
+split
+Lovablen8no1-minitext-embedding-3-smallPinecone
+top N ranked
+document chunks
+webhook response
+vectorized
+request
+How to Build a RAG Chatbot (No-Code)?
+n8nGoogle Drive
+1. Generate Embeddings
+2. Handle Retrieval, Generation, and UI
+text-embedding-3-smallPinecone
+3. Evaluate RAG - There Are Only 6 RAG Evals by Jason Liu
+metadata
+          Self-Containment: Can the original
+question be inferred from the answer alone?
+Vanilla RAG
+Example
+productcompass.pm
+
+---

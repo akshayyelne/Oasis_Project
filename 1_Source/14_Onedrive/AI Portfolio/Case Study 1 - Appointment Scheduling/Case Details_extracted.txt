@@ -1,0 +1,295 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Case Study 1 - Appointment Scheduling/Case Details.docx
+# Characters: 5676
+# Generated: 2026-07-31T00:07:32.911Z
+
+Problem
+
+Appointment Scheduling process was manual and inefficient:
+
+Care workers, nurses, and occupational therapists had overlapping or conflicting schedules
+
+Clients experienced delays or missed appointments
+
+High administrative overhead in coordinating appointments and reminders
+
+Limited visibility of provider availability and travel optimization
+
+
+
+Impact: Patient dissatisfaction, wasted resources, and reduced operational efficiency.
+
+
+
+. Results
+
+20–30% reduction in no-shows
+
+Improved clinic utilization
+
+Better patient experience via automated reminders
+
+Lower admin workload
+
+
+
+Visual:
+
+KPI dashboard mockup:
+
+No-show rate ↓
+
+Average wait time ↓
+
+Clinic utilization ↑
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Data Sources
+
+
+
+To predict appointment adherence, you need comprehensive data about clients, care providers, and historical appointment behavior, including cancellations, lateness, and attendance outcomes. This data is typically sourced from:
+
+
+
+Scheduling systems / EMR (appointment logs, status updates)
+
+Provider rosters and shift schedules
+
+Client demographic and contact databases (CRM, ERP)
+
+External context data, such as weather, public holidays, and traffic conditions
+
+
+
+Ingestion
+
+Data ingestion is the process of securely transferring appointment, client, and provider data from various operational systems into the Azure data platform.
+
+
+
+Azure Data Factory (ADF) is used to orchestrate data movement and transformation pipelines.
+
+
+
+ADF connectors can extract data from:
+
+EMR databases or APIs
+
+Care provider management systems
+
+CRM / ERP systems
+
+External APIs (e.g., weather, calendar events)
+
+
+
+Data is then transferred to Azure Data Lake Storage Gen2, where it is cleansed,
+
+standardized, and prepared for further processing.
+
+
+
+Staging Area
+
+
+
+The staging area acts as a temporary zone for data transformation and quality checks before it moves into modeling pipelines.
+
+
+
+Stored in Azure Data Lake Storage (ADLS) or Azure Synapse staging tables
+
+Data is validated for consistency — ensuring that time zones, appointment IDs, and provider references align across systems
+
+Missing values (e.g., unrecorded attendance) are flagged and handled
+
+
+
+This uniform structure ensures that Azure Machine Learning can efficiently process data and train accurate models.
+
+
+
+
+
+Machine Learning Model Training
+
+Model training focuses on identifying patterns of non-adherence across past appointment data to predict future risks.
+
+
+
+Azure Machine Learning (AML) is used to manage the end-to-end lifecycle — including training, deployment, and monitoring.
+
+Training involves:
+
+
+
+Selecting features such as appointment time, provider, client profile, and external conditions
+
+Using classification models like Logistic Regression, Gradient Boosting, or Random Forest to output a “risk of no-show” score
+
+Leveraging ParallelRunStep in AML to train across multiple regions, service types, or provider segments in parallel
+
+
+
+Optionally, Azure Databricks or SynapseML can be used for distributed feature engineering and large-scale model training with Apache Spark.
+
+The best-performing model is registered in the Azure ML Model Registry for deployment.
+
+
+
+
+
+Machine Learning Model Inferencing
+
+Model inferencing applies the trained model to new or upcoming appointments to predict adherence likelihood.
+
+
+
+Two modes of deployment are supported:
+
+Batch scoring: Nightly job predicts next-day appointment risk
+
+Real-time scoring: API endpoint invoked when a new appointment is created or rescheduled
+
+
+
+Azure Managed Online Endpoints host the model for scalable, low-latency inference.
+
+Predicted outputs (e.g., AppointmentID, ClientID, RiskScore, RiskCategory) are written to Azure SQL Database or Dataverse for downstream applications.
+
+
+
+
+
+Customer (Staff) Consumption - Copilot Studio / Azure AI Bot
+
+
+
+
+
+Power Automate sends contextual data (client name, appointment details, risk level) as variables to Copilot Studio through the Bot Framework or Power Virtual Agents API connector.
+
+Example variable payload:
+
+
+
+{ "client_name": "John Smith", "appointment_date": "2025-11-03T10:00", "risk_score": 0.85}
+
+
+
+The predictive insights are internationalised via Copilot Studio or Azure Bot Service, integrated with Power Automate for workflow orchestration.
+
+
+
+
+
+Example operational flow:
+
+
+
+The bot queries the prediction API or SQL table for upcoming high-risk appointments.
+
+If risk exceeds a threshold (e.g., 0.7): 
+
+
+
+Sends an automated SMS/email reminder to the client.
+
+Alerts care coordinators in Teams.
+
+Offers to reschedule via Copilot chat interface.
+
+Confirmation or rescheduling data is written back to the database for tracking.
+
+Power Apps or Copilot UI: For interactive case management
+
+Azure App Service: To expose internal dashboards to admin users securely
+
+
+
+By embedding AI-driven risk predictions directly into Copilot and Power Automate workflows, the organization can reduce missed appointments, maximize care hours, and improve client experience.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What the prediction data represents
+
+
+
+
+
+From the Azure ML model, every upcoming appointment gets a “No-show Probability Score” — for example:
+
+
+
+APT-1001 John Smith 03 Nov 2025 0.85 High 
+
+APT-1002 Maria Lee 03 Nov 2025 0.25 Low
+
+
+
+This score tells the system which appointments are at risk of being missed.If No-show Probability > 0.7 → Trigger Bot conversation / SMS reminder.
+
+
+
+
+
+Customer (Staff) Consumption - Dash-boarding
+
+
+
+Power BI dashboards: For operational insights (risk heatmaps, provider adherence trends)
+
+
+
+ERP/CRM
+
+
+
+The bot’s decision (via Power Automate or Dataverse integration) updates the appointment record in the scheduling system (CRM or EMR).
+
+
+
+
+
+
+
+---

@@ -1,0 +1,59 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] AI PM Learning Path.pdf
+# Characters: 1172
+# Generated: 2026-07-31T00:07:33.307Z
+
+Foundations
+Neural networks, transformers
+LLMs and other architectures
+Prompt Engineering
+Prompting principles
+High-ROI use cases
+Context Engineering
+Context windows
+Types of context
+Information flow inside the context
+Retrieving, compressing, and saving
+context
+RAG for PMs
+Types of RAG
+Vector stores, embeddings
+Retrieval & ranking
+RAG architectures, limitations
+Model Interfaces & API
+Assistants & Responses API
+Requests, responses, tokens
+Latency, cost, reliability tradeoffs
+Interface constraints PMs must
+account for
+ How LLMs Learn & Adapt
+Supervised fine-tuning
+Preference optimization (DPO, ORPO,
+KTO)
+Reinforcement learning (RL) intuition
+How to choose a fine-tuning approach
+ AI Evals & Observability
+AI observability & eval platforms
+AI evals: error analysis process
+Failure modes, types, automatic evals
+Why, when, and how to measure
+human-model agreement, TPR
+ AI Agents for PMs
+LLM workflows vs. agents vs. multi-
+agent systems & architectures
+Planning, reflection, adaptation
+Tools, memory types, MCP
+Guardrails & evals for AI agents
+23
+45
+67
+89
+ AI Product Strategy
+WTF is AI PM?
+1
+10
+AI PM Learning
+Roadmap
+The Product Compass Newsletter
+Paweł Huryn
+
+---

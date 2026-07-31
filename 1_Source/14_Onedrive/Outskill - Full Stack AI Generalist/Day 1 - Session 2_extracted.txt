@@ -1,0 +1,179 @@
+# Extracted from: 14_Onedrive/Outskill - Full Stack AI Generalist/Day 1 - Session 2.docx
+# Characters: 3528
+# Generated: 2026-07-31T00:07:33.296Z
+
+Outskill - Gen-AI Image and Video Class
+
+Class Introduction
+
+Goal: We will create an AI generated commercial.
+
+Execution: Create content from start to finish in a pro Gen-AI workflow.
+
+Workflow Overview
+
+Pre-production 
+
+Ideation
+
+Creative Brief
+
+Scriptwriting
+
+Storyboard
+
+AI Image Gen (insert into storyboard)
+
+Production 
+
+AI Video Gen
+
+AI Voiceover Gen
+
+AI Music Gen
+
+Post-production 
+
+Video Editing
+
+1. Pre-production
+
+Ideation
+
+What kind of ad do we want to create?
+
+WildForm™ by Lululemon
+
+Creative Brief
+
+Purpose: Clarify the strategy behind the advertisement.
+
+What we’re making
+
+A commercial advertisement for the new animal athletic performance gear WildForm™ by Lululemon
+
+Why we’re making it
+
+Generate sales and awareness of the new WildForm™ clothing line, by Lululemon
+
+Who it’s for
+
+Animals
+
+Includes
+
+Background / Context
+
+Lululemon has strong market share in the human market and is looking to expand into new demographics
+
+Objective / Goal
+
+Generate sales and awareness of the new WildForm™ clothing line, by Lululemon
+
+Target Audience
+
+Animals
+
+Their owners (pet owners)
+
+Zoo keepers (for zoo animals)
+
+Key Message
+
+Fit for the wild
+
+Tone & Personality
+
+Professional, elite, elevated, fun, soothing, witty, energetic, high fashion, stylistic, premium
+
+Deliverables & Channels
+
+YouTube and for tv (widescreen 16:9 aspect ratio)
+
+Scriptwriting
+
+We will use an LLM to assist us in generating a script for our commercial.
+
+Use any LLM you prefer.
+
+OpenAI ChatGPT, Perplexity, or Anthropic Claude are some of the top LLMs available.
+
+Final Script:
+
+True performance knows no boundaries. Every stride. Every leap. Every calculated move. WildForm — peak performance gear for wherever the wild takes you. Precision-engineered for those who move fast… and look good doing it. Built for speed… agility… and style. From the jungle… to the backyard… to the living room. For every beast who trains like a legend… and moves like one too. WildForm. Fit for the wild.
+
+Storyboard
+
+AI Image Gen
+
+Now we will create AI images to insert into our storyboard.
+
+In Stage 2 - Production, we will use these images will in our AI image-to-video prompts, to create AI video clips for our commercial.
+
+In Stage 3 - Post-production, we will edit all of our AI video clips together into one final commercial video with a voiceover and music.
+
+Let’s look at some image generator tools:
+
+Midjourney
+
+Krea
+
+Some more information about thee image generator tools we will look at today:
+
+Midjourney is a closed tool and does not offer an API, so we will use Midjourney on their website.
+
+Krea is an aggregator, meaning it hosts many different image and video generator tools on its website.
+
+Tools we will look at on Krea: 
+
+Google - Gemini Flash 2.5 (Nano Banana)
+
+ByteDance - SeeDream 4.0
+
+Black Forest Labs - Flux
+
+Krea 1 (Krea’s own image model)
+
+Image Prompts
+
+2. Production
+
+We will look at different production tools in this stage to create all of our AI generated media assets for our commercial.
+
+AI Video Gen 
+
+Kling
+
+Runway
+
+Google Veo
+
+AI Voiceover Gen 
+
+Eleven Labs (Voice)
+
+AI Music Gen 
+
+Eleven Labs (Music)
+
+3. Post-production
+
+In Stage 3 - Post-production Stage, we will use a video editing tool to compile all of our finalized media assets together (from Stage 2) into a commercial.
+
+You can use whichever video editing tool you prefer. Here are some great options:
+
+Adobe Premiere Pro
+
+Da Vinci Resolve
+
+CapCut
+
+AI Tools Summary
+
+Here is a list of all the tools we used in the AI Image and Video Generator session.
+
+
+
+
+
+---

@@ -1,0 +1,315 @@
+# Extracted from: akshayyelne/Home-Care-AI-Product-Management/.claude/skills/Execution/Artifact_22_Prioritization.md
+# Generated: 2026-07-31T00:49:45.154Z
+
+**Project:** Home-Care-AI
+**Stage:** Execution → Stage A (The Definition — Intent)
+**Skill:** prioritization-frameworks
+**Date:** 2026-03-27
+**Amended:** 2026-03-27 — Five blind spots applied: BS-1 (audit log event taxonomy), BS-2 (F10 compliance data fields), BS-3 (synthetic PHI trust attributes), BS-4 (VACANCY_UNRESOLVED threshold), BS-5 (SPP cold-start edge case)
+**Methodology:** Opportunity Score (Importance × (1 − Satisfaction)); ICE (Impact × Confidence × Ease); RICE (Reach × Impact × Confidence / Effort)
+**Input:** Artifact 21 §7 (PRD feature list), Artifact 15 §5 (pain points ranked by severity × frequency), Artifact 14 §6 (OKR baselines), Artifact 2b/2c (CC verbatim interviews — Importance and Satisfaction signals)
+**Regulatory Context:** Australian Privacy Act 1988 (APP). CLAUDE.md constraint: compliance-blocked features cannot be ranked into Sprint 1 regardless of score.
+**Feeds into:** `agentic-logic-spec` (Execution Skill 3) — only ranked P1 features enter the logic spec; unranked or deferred features do not get a pseudocode gate
+
+
+> **Skill principle (CLAUDE.md Article V):** "Apply to PRD §7 Solution section. Rank using Opportunity Score (Importance × (1−Satisfaction)) or ICE. Only ranked problems enter Stage B."
+>
+> **Core principle (skill instruction):** Never allow customers to design solutions. Prioritize **problems (opportunities)**, not features. Features are mapped to problems *after* problems are ranked.
+
+
+
+Before scoring, the underlying customer problems are extracted from the PRD feature list. Each problem is stated as a customer job-to-be-done failure, grounded in named first-party interview data.
+
+| Problem ID | Customer Problem | Source Evidence |
+|---|---|---|
+| **P-OPP-1** | "I can't find a qualified, trusted replacement without making 11 phone calls." | Angela CC-001: "Not just who's available — who does this patient trust. That's what takes me eleven phone calls." Tom CC-002: ~20% cancellation rate. |
+| **P-OPP-2** | "No system knows which replacement the client will actually accept — that knowledge only lives in my head." | Angela: "Half the critical knowledge about our clients is on sticky notes." Pain Point #1, Artifact 15 §5. |
+| **P-OPP-3** | "When I'm scrambling for a replacement, I forget to notify the client and family — they find out the hard way." | Angela: Arthur Kovacs failure case — "Her father had been waiting in his chair." Pain Point #3, Artifact 15 §5. |
+| **P-OPP-4** | "My replacement decisions are unlogged, undocumented, and indefensible if I'm ever challenged." | Angela: "There's no record of who I called, who declined, who was selected, or why." Pain Point #4, Artifact 15 §5. |
+| **P-OPP-5** | "When I leave this job, all the client knowledge I've built up over years disappears with me." | Angela: "If I get hit by a bus tomorrow, half the knowledge about our clients walks out the door with me. That scares me." |
+| **P-OPP-6** | "I can feel where the compliance gaps are but I have no system to surface them before an auditor does." | Angela: "Vague anxiety, no list. Seventeen things out of compliance — I just can't see them." |
+| **P-OPP-7** | "A new coordinator starting from scratch takes 2–3 months to reach the same decision quality I have now." | Inferred from Angela's bus-factor comment + agency owner JTBD (Artifact 14 §2). Directional — OKR-6 baseline not first-party sourced. |
+
+
+
+**Method:** Coordinator (CC) survey data synthesised from E1/E2 interview transcripts (Artifacts 2b, 2c) and validated pain signals (Artifact 15 §5).
+
+**Scale:** Importance 0–1 (how important is solving this problem?), Satisfaction 0–1 (how satisfied is the coordinator with current solutions?). Both normalised to 0–1.
+
+**Opportunity Score = Importance × (1 − Satisfaction)**
+
+Higher = greater unmet need = prioritise first.
+
+| Problem | Importance | Evidence | Satisfaction | Evidence | **Opp Score** | Quadrant |
+|---|---|---|---|---|---|---|
+| **P-OPP-1** Cascade elimination (11 calls, 30–60 min) | **0.95** | "Three incidents a week — two hours of panicked calls." Frequency: 3–5×/week. Severity: existential daily pain. | **0.05** | Manual phone cascade is the only current solution. Zero automation. | **0.90** | 🔴 Upper-left (high importance, low satisfaction) |
+| **P-OPP-2** Trust matching (who the client accepts) | **0.95** | "The first four calls find availability. The next seven find the right person." Trust is the product's defining gap vs. AlayaCare. | **0.05** | Sticky notes. Coordinator memory. Non-transferable, non-queryable. | **0.90** | 🔴 Upper-left |
+| **P-OPP-3** Automated notification (client + family, in order) | **0.90** | Arthur Kovacs failure case — deepest emotional resonance. "Her father had been waiting in his chair." Family notification gap is universal. | **0.03** | Ad hoc. Frequently forgotten in the cascade. Near-zero systematic coverage. | **0.87** | 🔴 Upper-left |
+| **P-OPP-4** Audit trail for replacement decisions | **0.80** | "There's no record. If I'm challenged, I reconstruct from memory." Compliance liability is felt, if not front-of-mind during an incident. | **0.05** | Zero audit trail currently. Everything reconstructed from memory. | **0.76** | 🔴 Upper-left |
+| **P-OPP-5** Institutional knowledge preservation (SPP moat) | **0.85** | "If I get hit by a bus — that scares me." High importance personally + existentially to the agency. | **0.08** | Sticky notes + memory. Low satisfaction — acknowledged as fragile and untransferable. | **0.78** | 🔴 Upper-left |
+| **P-OPP-6** Compliance visibility dashboard | **0.75** | "Seventeen things out of compliance. I can feel it." Pain is real but lower-frequency than the daily vacancy cascade. | **0.12** | Some EMR reporting exists but not actionable. Vague anxiety rather than acute pain. | **0.66** | 🟡 Upper-left (moderate) |
+| **P-OPP-7** Coordinator knowledge handover | **0.65** | Agency owner pain more than coordinator pain. Angela flagged it, but it's not her daily problem — it's her bus-factor anxiety. | **0.10** | Shadowing, handover docs, ad hoc. Low but non-zero. | **0.59** | 🟡 Upper-left (moderate) |
+
+### Importance vs Satisfaction Map
+
+```
+IMPORTANCE
+(1.0) │
+      │  ●P-OPP-1 (Cascade)
+      │  ●P-OPP-2 (Trust matching)         ← Red Zone: highest priority
+      │
+(0.9) │  ●P-OPP-3 (Notification)
+      │
+      │  ●P-OPP-5 (Knowledge preservation)
+(0.8) │  ●P-OPP-4 (Audit trail)
+      │
+      │  ●P-OPP-6 (Compliance visibility)  ← Yellow Zone: prioritise after red
+(0.7) │
+      │  ●P-OPP-7 (Knowledge handover)
+(0.6) │
+      │
+      └──────────────────────────────────────────────────────────────► SATISFACTION
+       (0.0)    (0.1)    (0.2)    (0.3)    (0.4)    (0.5)
+              ↑
+         Sweet spot:
+         Low satisfaction, high importance
+         (upper-left quadrant)
+         All 7 problems are here.
+         The entire CC problem space is unserved.
+```
+
+**Key finding:** All seven problems sit in the upper-left quadrant — high importance, near-zero satisfaction. This means the entire product opportunity is confirmed: coordinators desperately need this and have nothing that works. There is no prioritisation "misfire" risk here. The ranking question is **sequencing within a confirmed unmet need**, not **whether to build at all**.
+
+**Top 3 ranked problems (Red Zone — Opportunity Score ≥ 0.80):**
+1. P-OPP-1 — Cascade elimination (0.90)
+1. P-OPP-2 — Trust matching (0.90) — *tied, and architecturally inseparable from P-OPP-1*
+3. P-OPP-3 — Automated notification (0.87)
+
+These three problems are addressed by the P1 feature set in PRD §7.2. The Opportunity Score validates the PRD priority classification.
+
+
+
+*Before ICE scoring, each PRD feature is mapped to the problems it addresses. The feature's Impact score in ICE = the Opportunity Score of its primary problem (scaled 0–10).*
+
+| Feature (PRD §7.2) | Primary Problem | Secondary Problem | Primary Opp Score | Priority |
+|---|---|---|---|---|
+| **F1: SPP Data Model + Capture Flow** | P-OPP-2 (trust matching) | P-OPP-5 (knowledge preservation), P-OPP-7 (handover) | 0.90 | P1 |
+| **F2: Smart Match Engine** | P-OPP-1 (cascade) + P-OPP-2 (trust matching) | — | 0.90 | P1 |
+| **F3: 3-Tap Coordinator Approval (Moment of Truth)** | P-OPP-1 (cascade — the HITL mechanism) | — | 0.90 | P1 |
+| **F4: Carer SMS Assignment (ACT-C-01)** | P-OPP-1 (cascade — replaces "call the carer") | — | 0.90 | P1 |
+| **F5: Carer Briefing (ACT-C-02)** | P-OPP-2 (trust matching — briefing is the SPP delivery mechanism) | P-OPP-1 | 0.90 | P1 |
+| **F6: Client Notification with E-3 Gate (ACT-P-01)** | P-OPP-3 (forgotten notification) | — | 0.87 | P1 |
+| **F7: Family Notification with E-3 Gate (ACT-F-01)** | P-OPP-3 (forgotten notification) | — | 0.87 | P1 |
+| **F8: Immutable Audit Log** | P-OPP-4 (audit trail) | — | 0.76 | P1 (non-negotiable) |
+| **F9: VACANCY_UNRESOLVED Escalation** | P-OPP-1 (cascade — failure path) | — | 0.90 | P1 |
+| **F10: Compliance Gap Dashboard** | P-OPP-6 (compliance visibility) | — | 0.66 | P1.1 |
+| **F11: WhatsApp Notifications** | P-OPP-1 (cascade — channel improvement) | — | 0.90 | P2 (blocked) |
+| **F12: Carer App In-App Push** | P-OPP-1 (cascade — channel improvement) | — | 0.90 | P2 (blocked) |
+| **F13: AlayaCare Bi-Directional Integration** | P-OPP-1 (workflow integration) | — | 0.90 | P2 (blocked) |
+
+
+
+**Method:** ICE = Impact × Confidence × Ease
+
+- **Impact (0–10):** Opportunity Score of primary problem × 10
+- **Confidence (1–10):** How confident we are this feature will resolve the problem. Informed by: first-party interview evidence, experiment validation status, compliance certainty.
+- **Ease (1–10):** Implementation complexity inverse (10 = easiest). Informed by: Artifact 12 §8 capabilities, Artifact 20 §07.3 technology stack, v1 architecture decisions.
+
+**Scoring rubric:**
+- Confidence 9–10: Validated in E1/E2 experiments, compliance confirmed, design proven
+- Confidence 7–8: Strong interview evidence, architecture clear, minor unknowns
+- Confidence 5–6: Directional evidence, V-1 or F-1 assumption still unvalidated
+- Ease 9–10: Template/config, no new infrastructure, < 1 week build
+- Ease 7–8: Standard API integration, clear spec, 1–2 weeks
+- Ease 5–6: New data model, multiple API integrations, 2–4 weeks
+- Ease 3–4: Complex architecture, multiple unknowns, > 4 weeks
+
+
+### 4.1 P1 Features — Sprint 1
+
+| Feature | Impact (0–10) | Confidence (1–10) | Ease (1–10) | **ICE Score** | Sprint Seq. | Notes |
+|---|---|---|---|---|---|---|
+| **F8: Immutable Audit Log** | 7.6 | **10** | **9** | **684** | **1st** | No unknowns. Deterministic writes to CloudTrail. No UI. SD-01B is the merge gate — nothing ships without this. Must be built first because it instruments every other feature. |
+| **F4: Carer SMS Assignment (ACT-C-01)** | 9.0 | **9** | **9** | **729** | **2nd** | Template SMS. AU gateway confirmed. Channel Wrapper already designed. Near-zero implementation risk. Confidence docked 1 point for XP-4A (carer reply rate unvalidated). |
+| **F6: Client Notification E-3 Gate (ACT-P-01)** | 8.7 | **9** | **8** | **626** | **3rd** | Template SMS with phrasing branch on P-3. E-3 gate logic is well-specified. Confidence docked 1 point for G-DS-05 phrasing complexity. |
+| **F7: Family Notification E-3 Gate (ACT-F-01)** | 8.7 | **9** | **8** | **626** | **3rd (parallel)** | Template SMS. E-3 gate 2 is a boolean assertion on `client_notified`. Trivially testable. Confidence docked 1 point for family contact data completeness at intake. |
+| **F5: Carer Briefing (ACT-C-02)** | 9.0 | **8** | **8** | **576** | **4th** | Template assembly from SPP fields. CC-6 guard well-specified. Confidence docked 2 points: SPP completeness assumption (XP-3A unvalidated) + briefing phrasing must feel personal, not templated (design risk). |
+| **F3: 3-Tap Coordinator Approval (ACT-A-01/02)** | 9.0 | **7** | **8** | **504** | **5th** | Clear spec from journey map. Confidence docked 3 points: V-1 assumption (will Angela trust the shortlist?) is the single largest unknown in the product. If V-1 fails, this feature design must be rethought. Ease docked 2 for UI complexity (DR-1 through DR-5 non-negotiable design requirements). |
+| **F2: Smart Match Engine (ACT-V-01–07)** | 9.0 | **7** | **7** | **441** | **6th** | Rule-based algorithm. Architecture clear. Confidence docked 3 points: match quality depends on SPP completeness (XP-3A unvalidated) + Google Maps APP 8 review (SC-07 action item — cannot ship ACT-V-03 to production without legal confirmation). Ease docked 3 for Google Maps integration + SPP scoring algorithm design. |
+| **F1: SPP Data Model + Capture Flow (ACT-S-01–03)** | 9.0 | **7** | **5** | **315** | **7th** | The foundation of everything — but also the highest build complexity. Confidence docked 3 points: SPP field completeness is the moat assumption (XP-3A unvalidated — will coordinators actually populate it?). Ease docked 5: new data model + capture UI + concierge migration session + completeness score calculation. This is the most complex feature. |
+| **F9: VACANCY_UNRESOLVED Escalation** | 9.0 | **8** | **7** | **504** | **5th (parallel with F3)** | State machine edge case — well-defined protocol. Sonnet model invocation for L3 escalation. Confidence docked 2 points: VACANCY_UNRESOLVED frequency assumption (2.5×/month/agency — not validated). Ease docked 3 for Sonnet integration + escalation UI. |
+
+**ICE Ranking (Sprint 1):**
+
+| Rank | Feature | ICE Score | Sprint Week Target |
+|---|---|---|---|
+| 1 | F4: Carer SMS Assignment (ACT-C-01) | **729** | Week 1–2 |
+| 2 | F8: Immutable Audit Log | **684** | Week 1 (before anything else — instruments all features) |
+| 3 | F6: Client Notification E-3 Gate (ACT-P-01) | **626** | Week 2–3 |
+| 4 | F7: Family Notification E-3 Gate (ACT-F-01) | **626** | Week 2–3 (parallel) |
+| 5 | F5: Carer Briefing (ACT-C-02) | **576** | Week 3–4 |
+| 6 | F3: 3-Tap Coordinator Approval (ACT-A-01/02) | **504** | Week 3–5 |
+| 6 | F9: VACANCY_UNRESOLVED Escalation | **504** | Week 4–5 (parallel) |
+| 7 | F2: Smart Match Engine (ACT-V-01–07) | **441** | Week 2–6 (runs in parallel; longest feature) |
+| 8 | F1: SPP Data Model + Capture Flow (ACT-S-01–03) | **315** | Week 1–6 (runs in parallel; lowest ICE, highest dependency) |
+
+**Important:** ICE score reflects implementation risk and confidence — not build order. The dependency graph (§05 below) overrides ICE for sequencing. F1 (SPP) has the lowest ICE score but must be started first because every other feature reads from it.
+
+
+### 4.2 P1.1 Feature — Post-Beachhead (60 days post-launch)
+
+| Feature | Impact | Confidence | Ease | ICE | Notes |
+|---|---|---|---|---|---|
+| **F10: Compliance Gap Dashboard** | 6.6 | 7 | 6 | **277** | Angela's specific request. High confidence it will be valued. Ease is low because it requires cross-table compliance logic, not just a display. Deferred correctly — Sprint 1 has higher ICE features. |
+
+**Verdict:** ICE score of 277 confirms the P1.1 deferral in the PRD. The compliance dashboard is a high-value feature — but it ranks 8 of 9 on ICE, validating that Sprint 1 resources are better spent on the cascade elimination features (ICE 315–729).
+
+
+### 4.3 P2 Features — v2 (compliance-blocked)
+
+These features are blocked by unlock conditions (Artifact 17 §07) regardless of ICE score. Ranked here to inform the v2 roadmap priority once unlock conditions are met.
+
+| Feature | Impact | Confidence | Ease | ICE | Unlock Condition | Notes |
+|---|---|---|---|---|---|---|
+| **F12: Carer App In-App Push** | 9.0 | 8 | 5 | **360** | APP 8 confirmation + Carer App build | Highest margin impact (Artifact 20 §13: replaces SMS, saves $16,950/month at 500 agencies). First v2 priority once unlocked. |
+| **F13: AlayaCare Bi-Directional Integration** | 9.0 | 6 | 4 | **216** | AX-02 confirmed + VI-1 validated | Moat multiplier if confirmed. Low Ease (AlayaCare proprietary API + legal agreement). |
+| **F11: WhatsApp Notifications** | 9.0 | 5 | 7 | **315** | APP 8 legal review complete | High Ease once legal cleared (Channel Wrapper already designed). Confidence low because legal timeline is unknown. |
+| **LLM notifications (v2)** | 9.0 | 6 | 5 | **270** | NFR-INJ-01–04 implemented + red-team tested | Personalised notification content. Medium complexity once CRIT-02 unlock conditions met. |
+| **P-2 in scoring (v2)** | 7.5 | 4 | 8 | **240** | E-1 legal opinion obtained | High Ease (one parameter change to scoring function). Confidence low: E-1 timeline unknown. |
+
+
+
+ICE scores tell us which features are most valuable to build. The dependency graph tells us which features must be built first regardless of score. Where ICE and dependencies conflict, **dependencies win**.
+
+```
+DEPENDENCY GRAPH — Home-Care-AI v1
+
+[F8: Audit Log] ──────────────────────────────────────┐
+(Must exist first — instruments every state transition) │
+                                                        │
+[F1: SPP Data Model]                                    │
+ ├── All match scoring reads from SPP                   │
+ ├── All notification phrasing reads P-3, P-5, P-7      │
+ └── All briefing assembly reads P-5, P-6, P-3          │
+        │                                               │
+        ├──► [F2: Smart Match Engine]                   │
+        │     ├──► [F3: 3-Tap Approval Flow] ──────────►│
+        │     │         │                               │
+        │     │         ├──► [F4: Carer SMS (ACT-C-01)] ►│
+        │     │         │         │                     │
+        │     │         │         └──► [F5: Briefing] ──►│
+        │     │         │                               │
+        │     │         ├──► [F6: Client SMS (ACT-P-01)]►│
+        │     │         │         │ E-3 Gate 1          │
+        │     │         │         └──► [F7: Family SMS] ►│
+        │     │         │               E-3 Gate 2      │
+        │     │         │                               │
+        │     │         └──► [F9: VACANCY_UNRESOLVED] ──►│
+        │     │                                         │
+        └─────┘                                         │
+                                                        ▼
+                                              ALL EVENTS WRITTEN
+                                              TO IMMUTABLE AUDIT LOG
+```
+
+**Build sequence (dependency-ordered):**
+
+| Wave | Features | Rationale |
+|---|---|---|
+| **Wave 0 (Day 1)** | F8: Audit Log infrastructure | Every feature writes to the log from its first test invocation. Build this before writing any feature code. |
+| **Wave 1 (Weeks 1–3)** | F1: SPP Data Model + Schema | All other features are blocked without a populated SPP. Schema must be final before Match Engine or Notification can be built. AX-01 confirms no free-text fields before this begins. |
+| **Wave 2 (Weeks 2–5)** | F2: Smart Match Engine (ACT-V-01–07) | Requires SPP schema. Google Maps APP 8 review (SC-07) must be resolved before ACT-V-03 goes to production — build with AU test data, resolve legal in parallel. |
+| **Wave 3 (Weeks 3–5, parallel)** | F6: Client SMS (E-3 Gate 1), F7: Family SMS (E-3 Gate 2) | Can be built and unit-tested without the Match Engine if the E-3 gate logic is stubbed. High ICE, clear spec, parallelisable. |
+| **Wave 4 (Weeks 4–6)** | F3: 3-Tap Approval Flow | Requires Match Engine output. Design-gated: DR-1 through DR-5 wireframes must be approved by PM Lead before coding begins. |
+| **Wave 4 (parallel)** | F4: Carer SMS (ACT-C-01), F5: Carer Briefing (ACT-C-02) | Triggered by F3 approval. Template SMS — can be built and tested with stubbed approval events. |
+| **Wave 5 (Weeks 5–6)** | F9: VACANCY_UNRESOLVED Escalation | Requires F3 (approval flow) to define the failure state. Sonnet integration. |
+| **Integration (Week 7)** | End-to-end integration test: F1 → F2 → F3 → F4/F5 → F6 → F7 → F8 → F9 | Full vacancy incident flow tested with synthetic PHI data (from `synthetic-phi-generator` in Stage C). |
+| **Sprint 1 close (Week 8)** | harness-audit-grader run | SD-01B audit log completeness check. PASS required before any agency sees the product. |
+
+
+
+RICE is used here to compare features across the CC and Agency Owner segments — specifically to answer: should any Agency Owner features be pulled into v1, or is the CC-only focus correct?
+
+**Formula:** RICE = (Reach × Impact × Confidence) / Effort
+- **Reach:** Number of coordinators/owners affected per agency. At beachhead scale (2 agencies, 2–3 coordinators each): CC reach = 4–6 people; Agency Owner reach = 2 people.
+- **Impact:** Opportunity Score (0–10)
+- **Confidence:** % confidence (0–100%)
+- **Effort:** Person-months (1 = ~4 weeks of 1 engineer)
+
+| Feature | Segment | Reach | Impact | Confidence | Effort (person-months) | **RICE Score** |
+|---|---|---|---|---|---|---|
+| **F2+F3: Match Engine + Approval Flow** | CC | 5 coordinators (avg) | 9.0 | 75% | 2.0 | (5 × 9 × 0.75) / 2 = **16.9** |
+| **F1: SPP Data Model** | CC + Owner | 5 + 2 = 7 | 9.0 | 70% | 1.5 | (7 × 9 × 0.70) / 1.5 = **29.4** |
+| **F6+F7: Notification Pipeline** | CC + Client + Family | 5 + direct benefit to clients/families | 8.7 | 85% | 0.8 | (5 × 8.7 × 0.85) / 0.8 = **46.3** |
+| **F8: Audit Log** | CC + Owner (compliance) | 7 | 7.6 | 98% | 0.3 | (7 × 7.6 × 0.98) / 0.3 = **172.8** |
+| **F10: Compliance Dashboard** | Owner | 2 | 6.6 | 70% | 1.5 | (2 × 6.6 × 0.70) / 1.5 = **6.2** |
+| **Agency Owner onboarding UI (v1.1)** | Owner | 2 | 5.9 | 65% | 1.0 | (2 × 5.9 × 0.65) / 1.0 = **7.7** |
+
+**RICE finding:** The Compliance Dashboard (F10) scores 6.2 RICE vs. the notification pipeline's 46.3. **The 7.5× RICE difference confirms the P1.1 deferral of the dashboard.** The Agency Owner features should not displace CC-facing features in Sprint 1 — they serve a smaller segment (2 vs. 5+ coordinators) with lower certainty.
+
+The Audit Log scores highest (172.8) because it is high-reach, near-certain, and extremely low-effort relative to its value. This confirms **the audit log must be built first** (Wave 0).
+
+
+
+*Per CLAUDE.md Article V: "Only ranked problems enter Stage B." This is the authoritative list. `agentic-logic-spec` covers these problems and their associated features only.*
+
+### Problems Entering Stage B (agentic-logic-spec):
+
+| Rank | Problem | Opp Score | Sprint 1 Features | OKR |
+|---|---|---|---|---|
+| **1** | Cascade elimination (P-OPP-1) | 0.90 | F2 Smart Match Engine, F3 Approval Flow, F4 Carer SMS, F9 VACANCY_UNRESOLVED | OKR-1, OKR-2 |
+| **1** | Trust matching — SPP (P-OPP-2) | 0.90 | F1 SPP Data Model, F5 Carer Briefing, F2 SPP match score | OKR-3, OKR-4 |
+| **3** | Notification pipeline (P-OPP-3) | 0.87 | F6 Client SMS (E-3), F7 Family SMS (E-3) | OKR-5 |
+| **4** | Audit trail (P-OPP-4) | 0.76 | F8 Immutable Audit Log | OKR-5 (delivery confirmation) |
+| **5** | Knowledge preservation (P-OPP-5) | 0.78 | F1 SPP (continuity history P-7, P-8) | OKR-4, OKR-6 |
+
+### Problems Deferred to Stage P1.1 / v2 (do NOT enter agentic-logic-spec v1):
+
+| Problem | Opp Score | Reason for Deferral | Entry Trigger |
+|---|---|---|---|
+| P-OPP-6 (compliance visibility) | 0.66 | P1.1 — lower ICE (277) vs. P1 features; OKR-1 and OKR-3 must validate first | OKR-1 + OKR-3 confirmed at E1 |
+| P-OPP-7 (knowledge handover) | 0.59 | OKR-6 baseline not first-party sourced; Agency Owner value prop not yet validated by XP-2A | XP-2A LOI results; VI-1 assumption confirmed |
+
+
+
+The following decisions are recorded here for downstream traceability. `agentic-logic-spec` must not contradict these.
+
+| Decision | Rationale | Override Condition |
+|---|---|---|
+| **Audit log is built before any other feature (Wave 0)** | RICE score 172.8 — highest of any feature. SD-01B is the merge gate. Building it last is a compliance risk. | None — this decision is final. |
+| **SPP data model is Wave 1 despite lowest ICE score (315)** | Dependency constraint overrides ICE. Every other feature reads from SPP. Building match engine before SPP schema is final creates rework risk. | None — dependency is architectural. |
+| **Match Engine built with rule-based algorithm only (no ML in v1)** | Confidence docked for ML approach (V-3 unvalidated). Rule-based is auditable and sufficient for v1. Accuracy improves as SPP is populated. | V-3 validated (≥ 80% SPP completeness at ≥ 2 agencies); sufficient historical data for ML training; PM Lead sign-off. |
+| **Google Maps APP 8 legal review (SC-07) runs in parallel with Wave 2 build** | ACT-V-03 can be built and tested with AU test data before legal review completes. Legal review is blocking for production use, not for dev/test. | SC-07 confirmed → ACT-V-03 ships to production. If SC-07 fails → proximity scoring uses postcode distance fallback (no API call). |
+| **Compliance gap dashboard (F10) deferred to P1.1** | RICE 6.2 vs. notification pipeline 46.3. Sprint 1 resources are 7.5× better spent on P1 features. Angela's request is validated and important — just not Sprint 1. | OKR-1 (< 5 min fill time) + OKR-3 (≥ 70% 1-tap approval) both validated at E1 close. |
+| **F10 compliance data fields ARE planted in Wave 1 schema (BS-2)** | The deferral of F10 covers display logic and computation only. The underlying data fields the dashboard reads from must exist in the Wave 1 schema — adding them later requires a migration. Wave 1 schema must include: `carer.credential_expiry_date` (array — one per certification type), `client.care_plan_review_due_date`, `visit.documentation_complete` (boolean). These fields are dormant in Sprint 1 (no UI, no queries) but present in the schema. `agentic-logic-spec` must declare these as named schema fields even though no pseudocode gate uses them yet. | F10 activation (OKR-1 + OKR-3 validated). |
+| **VACANCY_UNRESOLVED alert threshold: 10% of incidents (BS-4)** | Named constant `VACANCY_UNRESOLVED_ALERT_THRESHOLD = 0.10`. If VACANCY_UNRESOLVED exceeds 10% of incidents at any agency over a rolling 14-day window, the match algorithm is failing — not the roster. At this rate OKR-2 (< 2% cancellation) cannot be achieved regardless of coordinator behaviour. The `agentic-logic-spec` must define this as a named threshold and specify the L1 alert to PM Lead: "Match quality degrading — VACANCY_UNRESOLVED rate at [agency] has exceeded 10% over 14 days. Review shortlist criteria." | If validated first-party VACANCY_UNRESOLVED rate is consistently < 5%, threshold can be relaxed. If rate is structural (roster too small), threshold triggers a GTM conversation — not an engineering fix. |
+| **SPP cold-start is a distinct failure mode from empty shortlist (BS-5)** | When a vacancy fires for a client with P-7 = 0 (zero prior visits by any carer) AND P-5/P-6/P-3 all unpopulated, the Moment of Truth card degrades to availability + proximity only — identical to AlayaCare. This is the highest-risk first-impression failure. It is a different failure mode from EC-02 (empty shortlist — no qualified candidates) and must be handled differently: the coordinator approval card should display "No familiarity data yet for [client first name]. Add their preferences now." with a 1-tap link to ACT-S-01. The vacancy is not blocked — the coordinator can still approve — but the empty state must feel like an invitation, not a broken screen (DR-4). `agentic-logic-spec` must define this as EC-04 (cold-start degradation), distinct from EC-02 (roster exhaustion), EC-03 (SPP empty briefing). | XP-3A validates concierge migration closes cold-start gap before go-live. |
+| **P-2 (gender preference) remains advisory-only in v1 scoring** | CRIT-03 compliance constraint. E1_LEGAL_SIGNOFF = false hardcoded. Cannot be changed without E-1 legal opinion AND PM Lead amendment to Artifact 17. | E-1 legal opinion received; PM Lead amends Artifact 17; agentic-logic-spec updated. |
+| **All notification content is template-based (no LLM) in v1** | CRIT-02 compliance constraint. Cannot be changed without Privacy Counsel sign-off and Artifact 17 amendment. | NFR-INJ-01–04 implemented, red-team tested, Privacy Counsel sign-off, Artifact 17 amended. |
+
+
+
+| ID | From This Artifact | To (Execution Skill 3) | What Transfers |
+|---|---|---|---|
+| **PRIO-01** | §07 Ranked problem list (P-OPP-1 through P-OPP-5) | `agentic-logic-spec` scope | Logic spec covers exactly these 5 problems + their PRD features. Any pseudocode gate for a problem not in this list is out of scope for Sprint 1. |
+| **PRIO-02** | §05 Wave 0 decision (Audit Log first) + **BS-1: Artifact 16 event registry (canonical)** | `agentic-logic-spec` Step 7 (HIPAA Audit Log Schema) | Audit log schema must be the first thing specified in the logic spec. All other feature specs reference it. **The canonical event type registry is Artifact 16 §8 (31 event types, including scheduling-specific: `CARER_NOTIFIED`, `CLIENT_NOTIFIED`, `FAMILY_NOTIFIED`, `VACANCY_UNRESOLVED`, `E3_GATE_BLOCKED`, `CC6_GUARD_FIRED`, `CC8_GUARD_FIRED`, `SPP_COLD_START`). The `agentic-logic-spec` must not invent new event type names. Any event required by a pseudocode gate that is not in the Artifact 16 registry must be flagged to PM Lead before the spec is finalised — divergent event names break audit log schema consistency across all downstream artifacts.** |
+| **PRIO-03** | §05 Wave sequence (1→2→3→4→5→Integration) | `agentic-logic-spec` implementation notes | Build order informs which pseudocode gates have dependencies on others. SPP constants must be defined before scoring constants are specified. |
+| **PRIO-04** | §08 Decision Record | `agentic-logic-spec` threshold constants | E1_LEGAL_SIGNOFF = false, MATCH_ALGORITHM = RULE_BASED, CONTENT_METHOD = TEMPLATE — all are named constants in the spec, not magic values. |
+| **PRIO-05** | §04 ICE Confidence scores (V-1: 7/10, F-1: 9/10, V-3: 7/10) | `agentic-logic-spec` edge cases | Low-confidence assumptions map to mandatory edge cases. V-1 failure path (coordinator doesn't trust shortlist → reaches for phone) is EC-01 in the logic spec. F-1 failure path (carer doesn't reply in 15 min) is EC-02. V-3 failure path (SPP empty → minimal briefing) is EC-03. SPP cold-start (P-7 = 0 for all candidates + P-3/P-5/P-6 all unpopulated) is EC-04. |
+| **PRIO-06** | §08 BS-3 — Trust matching test scenarios required from Stage C | `synthetic-phi-generator` (Execution Skill 5) | Stage C must produce test data covering these trust-matching scenarios — the clinical PHI template alone is insufficient. Required scenarios: **(a)** SPP records with P-7 visit counts at 0, 1, 2, 5+ across a 5-patient set — tests familiarity flag range; **(b)** at least one client with P-3 = `KNOWN_CARERS_ONLY` and zero familiar carers available — forces VACANCY_UNRESOLVED path; **(c)** G-DS-05 scenario: P-3 = `KNOWN_CARERS_ONLY` client with an assigned carer — verify "who has visited you before" phrase is suppressed in ACT-P-01 output; **(d)** data drift scenario: SPP completeness for one patient drops from 80% → 20% mid-dataset (coordinator stops populating) — sensors.json equivalent for scheduling is a visit log where familiarity history entries thin out over time; **(e)** cold-start client: P-7 = 0, P-3/P-5/P-6 all null — triggers EC-04 path in the logic spec. These scenarios are the `synthetic-phi-generator` brief for Stage C. |
+
+
+
+| Due | Owner | Action | Priority |
+|---|---|---|---|
+| **Before Sprint 1** | Engineer | Confirm AX-01 (P-9 free-text absent from v1 schema). Wave 1 (F1 SPP Data Model) cannot start without this. | CRITICAL |
+| **Week 1, Day 1** | Engineer | Build F8 (Audit Log infrastructure) before any feature code is written. Every test invocation from Wave 1 onward must write a log entry. | HIGH |
+| **Week 1** | Designer | Deliver DR-1 through DR-5 wireframes (3-Tap Approval Flow). PM Lead approval required before F3 (Wave 4) coding begins. The Moment of Truth screen cannot be built from spec alone. | HIGH |
+| **Weeks 1–2 (parallel)** | Legal | Progress SC-07 (Google Maps APP 8 review). ACT-V-03 built in dev; cannot ship to production without legal confirmation. Non-blocking for build; blocking for production deployment. | MEDIUM |
+| **Weeks 2–3 (parallel)** | Privacy Counsel | Initiate DPIA-01 scope and kickoff. HIGH-01, HIGH-02, HIGH-03 must be resolved before GA. Sprint 1 can proceed before DPIAs complete — but not before counsel is engaged. | MEDIUM |
+| **E1 Week 1** | PM Lead | Observe Angela's first-use behaviour (XP-1B deviation log). Does she tap Approve without calling? This is the V-1 assumption gate. If she reaches for the phone after approving, the trust gap is not closed — the Moment of Truth card design must be rethought before further Sprint 1 investment. | HIGH |
+
+
+*Prioritization note: This artifact ranks problems, not preferences. The Opportunity Score confirms every CC problem is severely unmet (all scores ≥ 0.59). The ICE and RICE analyses confirm the PRD's P1/P1.1/P2 classification is correct — no features need to be re-tiered. The dependency graph adds the critical sequencing insight the ICE score cannot: the Audit Log (Wave 0) and SPP Data Model (Wave 1) must be built before their ICE scores suggest, because every downstream feature depends on them.*
+
+*Amendment note (2026-03-27): Five blind spots applied post-initial-draft. BS-2 clarifies the F10 deferral is display-logic-only — three dormant schema fields must be planted in Wave 1. BS-4 adds the VACANCY_UNRESOLVED_ALERT_THRESHOLD constant (10% / 14 days) so the logic spec has a named stopping condition for match quality degradation. BS-5 formally names SPP cold-start as EC-04 — distinct from EC-02 (roster exhaustion) so the logic spec handles the two failure modes differently at the coordinator approval card. BS-1 adds the canonical Artifact 16 event registry as the binding reference for all audit log event type names. BS-3 specifies the five trust-matching test scenarios required from Stage C synthetic data generation.*

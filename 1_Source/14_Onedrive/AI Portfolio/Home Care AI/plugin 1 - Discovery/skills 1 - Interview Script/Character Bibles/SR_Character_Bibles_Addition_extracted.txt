@@ -1,0 +1,288 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/plugin 1 - Discovery/skills 1 - Interview Script/Character Bibles/SR_Character_Bibles_Addition.docx
+# Characters: 18165
+# Generated: 2026-07-31T00:07:32.979Z
+
+Persona: Senior Resident (SR)
+
+The end user — the person all care revolves around. Every capability ultimately affects them: risk is predicted about them, care plans are written for them, documentation captures observations of them, intelligence queries are about them, and replacement carers arrive at their door. Their experience, dignity, fears, and resistance patterns fundamentally shape how every feature must be designed.
+
+Two SR interviewees are included, chosen to represent the range of senior experiences:
+
+ID
+
+Name
+
+Profile
+
+Why This Person
+
+SR-001
+
+Lin Chen
+
+78, independent,
+resists monitoring
+
+Surfaces dignity barriers, symptom concealment, technology resistance. Shows why 'clinically correct' doesn't mean 'actually works'.
+
+SR-002
+
+Arthur Kovacs
+
+82, dependent,
+fearful of being forgotten
+
+Surfaces trust needs, stranger anxiety, loneliness, desire to be informed participant. Shows the human cost of care gaps.
+
+
+
+SR-001: Lin Chen
+
+Age / Gender
+
+78, Female
+
+Living situation
+
+Alone in a single-story home, eastern Melbourne suburbs. 40 minutes from daughter Sarah (FC-001).
+
+Conditions
+
+Osteoporosis, mild cognitive decline, hypertension. 5 medications daily.
+
+Mobility
+
+Independent with caution. Uses walls and furniture for support. Refuses a walking frame ('I don't need that yet').
+
+Personality
+
+Fiercely independent, proud, stubborn. Former high school maths teacher. Sharp mind but increasingly forgetful about routine tasks. Hates being treated as fragile. Dry wit. Deflects emotional questions with humour.
+
+Tech comfort
+
+Low-moderate. Uses an iPad for video calls with grandchildren and reading news. Refuses anything that feels like 'surveillance' or makes her feel like a patient in her own home.
+
+Care setup
+
+Visiting nurse (Maria, HCN-001) once weekly. Daughter Sarah visits twice weekly. Pendant alarm purchased by Sarah — Lin put it in a drawer.
+
+Backstory
+
+Lin Chen taught high school mathematics for 35 years. She is precise, logical, and deeply proud of her independence. After her husband passed 6 years ago, she reorganised her life meticulously: meals at fixed times, a walking route through the neighbourhood every morning at 7:30 AM, bridge club on Thursdays, grandchildren on FaceTime every Sunday.
+
+Four months ago, Lin got up at 2 AM to use the bathroom and caught her foot on the hallway rug. She fell hard on her hip and couldn't get up. Her phone was in the bedroom. The pendant alarm Sarah bought her was in a kitchen drawer — she'd stopped wearing it because it made her feel like 'an invalid.' She lay on the floor for five hours until Sarah's morning call went unanswered.
+
+The fall terrified Lin but she processes fear as anger. She's angry at the rug ('stupid thing'), angry at herself ('clumsy'), and angry at Sarah for 'making a fuss' about the pendant. She will not acknowledge the cognitive decline her daughter has noticed — the medication confusion, the occasional repeated stories, the time she left the stove on. In Lin's mind, she is fine. Everyone around her is overreacting.
+
+Lin's medication routine has become unreliable. She has a pill organiser that Sarah fills every Sunday. But Lin sometimes forgets whether she's taken the morning dose, so she either skips it ('better safe than sorry') or takes it again ('just in case'). She doesn't tell Sarah about either scenario because Sarah would worry — and worrying might lead to 'the conversation' about moving into care.
+
+She has been hiding dizzy spells from everyone for about three months. She holds onto the wall when she walks now, but she does it casually so it doesn't look like she needs support. She skipped her last GP appointment because she didn't want the doctor to 'find something' that would give Sarah ammunition to push her into a facility.
+
+Lin likes Maria (HCN-001), her regular nurse. Maria knows to sit down, accept a cup of tea, and chat before doing any clinical work. But last month a different nurse came — someone Lin had never met — and Lin refused to let her in. She told Sarah the nurse 'didn't come' rather than admit she'd turned someone away.
+
+Key Incidents for Interview
+
+• The 2 AM fall (4 months ago) — Lin's perspective: anger, not fear. Refused the pendant long before. Won't admit the fall has changed anything. Surfaces #1 Risk (concealment behaviour changes how we model risk).
+
+• Hidden dizzy spells (ongoing, 3 months) — deliberately conceals symptoms to preserve independence. Skips GP appointments to avoid diagnosis. Surfaces #1 Risk (biggest blind spot: seniors suppress signals).
+
+• Medication double-dosing and skipping — 'Just in case' or 'better safe than sorry' logic. Doesn't tell Sarah. Surfaces #1 Risk (medication adherence data has a honesty gap).
+
+• Pendant alarm rejection — 'It makes me feel like an invalid.' Rejected after 2 days. Surfaces design constraint: anything that feels like surveillance or patienthood will be rejected.
+
+• Replacement nurse refused entry — lied to Sarah about it. Trust is earned over time, not assigned by a coordinator. Surfaces #5 Vacant Visit Agent (trust as matching criteria).
+
+• Skipped GP appointment — avoids medical system to prevent loss of autonomy. Surfaces #1 Risk (data gaps from avoidance behaviour).
+
+• Nurse visit quality — values Maria's 'tea first, clinical work second' approach. Resents nurses who type on phones during visits. Surfaces #3 Voice-to-Docs (care quality angle from patient side).
+
+• Desire for information — nobody tells Lin directly what her care plan says or when her next visit is. She hears it secondhand from Sarah. Surfaces #4 Intelligence Chat (B2C angle).
+
+Predicted Verbatim Quotes
+
+“I didn't tell Sarah about the dizzy spells. She'd have me in a nursing home by Friday. I just hold onto the wall when I walk now. It's fine.”
+
+“That pendant thing — I wore it for two days and caught myself in the mirror looking like a hospital patient. In my own kitchen. I took it off and that was that.”
+
+“I don't always remember if I took my morning pills. So sometimes I take them again, just in case. And sometimes I skip them because I think maybe I already did. I don't tell Sarah because she'd panic.”
+
+“A woman I'd never seen showed up at my door and said she was my nurse for today. I didn't let her in. How am I supposed to know who she is? Maria, I know. This person, I don't.”
+
+“I cancelled the doctor's appointment. If they find something, Sarah finds out, and then it starts — 'Mum, maybe you should move closer, maybe you should have someone full-time.' I'm not ready for that conversation.”
+
+“Maria is lovely. She sits down, she has a cup of tea, she asks about the grandchildren. Then she does her nurse things. The other nurse who came that time — she walked in with her phone out and started asking me questions like I was at a drive-through.”
+
+“Nobody tells me anything directly. Sarah talks to the nurse, the nurse talks to the doctor, then Sarah calls me and tells me what they decided. I taught mathematics for thirty-five years. I can understand my own blood pressure numbers, thank you.”
+
+“I'm not afraid of dying. I'm afraid of losing my home. Everything I do — every pill I take on time, every morning I walk around the block — is proof that I can still live here. The moment I can't prove that, they'll move me.”
+
+Capabilities Surfaced
+
+● #1 Predictive Risk — concealment behaviour, skipped GPs, medication honesty gap, dizzy spells hidden
+
+● #2 Care Plan Recommendation — dignity constraint: plans must respect routine and autonomy
+
+● #3 Voice-to-Documentation — patient-side: nurses on phones degrade visit quality
+
+● #4 Care Intelligence Chat — B2C: senior wants direct access to their own care info
+
+● #5 Vacant Visit Agent — trust: refused unknown nurse, lied about it
+
+Design implications from Lin:
+
+• Risk models must account for signal suppression — absence of data (skipped GP, unreported symptoms) IS a risk signal.
+
+• Any patient-facing technology that feels like monitoring or surveillance will be rejected. 'Invisible' is the design requirement.
+
+• Care plan adherence is a dignity negotiation, not a compliance problem. Plans that disrupt valued routines will be abandoned.
+
+• Replacement carer matching must include trust/familiarity score, not just skills and proximity.
+
+• Seniors need a channel to access their own care information directly — being 'talked about' erodes agency.
+
+SR-002: Arthur Kovacs
+
+Age / Gender
+
+82, Male
+
+Living situation
+
+Alone in a small apartment. Wife passed 18 months ago. Son lives 30 minutes away, visits weekly.
+
+Conditions
+
+Type 2 diabetes, heart failure (stable), mild depression, arthritis in both knees. 8 medications.
+
+Mobility
+
+Uses a walking frame indoors. Rarely leaves the apartment since his wife died. History of 2 falls in the past year (both in the bathroom).
+
+Personality
+
+Gentle, lonely, grateful for human contact. Former mechanical engineer — methodical and observant. Speaks slowly and carefully. Gets emotional when discussing his wife or feeling forgotten. Surprisingly sharp about his own health patterns.
+
+Tech comfort
+
+Very low. Has a basic mobile phone (not a smartphone). Wife used to handle all technology. Son set up a tablet for video calls but Arthur mostly watches it gather dust.
+
+Care setup
+
+Visiting nurse twice weekly (Mon/Thu). Care worker for bathing assistance 3x/week. Son visits Sundays. Meals on Wheels Mon-Fri.
+
+Backstory
+
+Arthur Kovacs was a mechanical engineer at Ford for 38 years. He is methodical, observant, and takes quiet pride in understanding how things work. His wife Elena managed their household, their social life, and his health for 54 years of marriage. When she died of pancreatic cancer 18 months ago, Arthur lost not just his partner but his entire support infrastructure.
+
+Arthur's health has declined notably since Elena's death. His GP suspects the heart failure has progressed slightly, but Arthur has missed his last two cardiology appointments because he can't organise transport on his own and doesn't want to 'bother' his son Michael. His medication routine was impeccable when Elena managed it — she laid out his pills every morning in a specific cup on the kitchen counter. Now Arthur uses a pill organiser that the nurse fills, but he frequently loses track of which day it is, especially on weekends when there are no visitors to anchor his routine.
+
+Arthur has fallen twice in the past year, both times getting out of the bathtub. The first fall, he managed to get up after 20 minutes. The second time, he couldn't get up and pressed the emergency button on the wall unit installed by the agency. The response took 35 minutes. He lay on the wet bathroom floor, cold and embarrassed, wondering if anyone would come. He now avoids bathing on days when no care worker is scheduled.
+
+What Arthur craves most is human connection and feeling like someone is paying attention. He lights up when the nurse arrives and tries to extend the visit with conversation. He has noticed that some nurses spend the entire visit typing on their devices and barely make eye contact. When a care worker he's never met shows up — which has happened three times in the past two months — he lets them in but feels anxious the entire visit. He once found a different care worker had rearranged items in his bathroom without asking, and it upset him for days.
+
+Arthur is aware of his own decline and, unlike Lin (SR-001), he doesn't hide it — he simply doesn't know who to tell or whether anyone cares enough to listen. He once told his visiting nurse that his ankles seemed more swollen than usual, and she documented it but nothing happened. Two weeks later, his GP mentioned it at a scheduled visit as if it were new information. Arthur concluded that what he reports goes nowhere.
+
+His deepest fear is not death — it's dying alone and not being found for days. He sometimes imagines falling at night with nobody scheduled until the morning nurse arrives. Since Elena died, he leaves his hallway light on all night and sleeps with his phone on the pillow.
+
+Key Incidents for Interview
+
+• Bathroom falls (x2, past year) — second fall: 35-minute emergency response, alone on wet floor. Now avoids bathing on non-visit days. Surfaces #1 Risk (fall pattern + avoidance behaviour as risk signal).
+
+• Reported swollen ankles, nothing happened — nurse documented, info didn't reach GP in time. Arthur concluded reporting is pointless. Surfaces #1 Risk (patient-reported signals lost in system) + #4 Chat (information flow failure).
+
+• Missed cardiology appointments — can't organise transport, won't 'bother' his son. Medical follow-up gaps. Surfaces #1 Risk (appointment avoidance as data gap).
+
+• Three different care workers in 2 months — lets them in but feels anxious. One rearranged his bathroom. Surfaces #5 Vacant Visit Agent (continuity, familiarity, respect for personal space).
+
+• Day-of-week confusion on weekends — no visitor anchor, medication schedule drifts. Surfaces #1 Risk + #2 Care Plan (routine structure as intervention).
+
+• Nurses typing during visits — minimal eye contact, visit feels clinical not human. Surfaces #3 Voice-to-Docs (care quality from patient perspective).
+
+• Nobody tells Arthur his own care plan — he doesn't know what his goals are or what the nurses are watching for. Surfaces #4 Chat (patient as informed participant) + #2 Care Plan (patient input).
+
+• Fear of dying alone — hallway light on, phone on pillow. The emotional core of why this product matters. Surfaces the 'why' behind everything.
+
+Predicted Verbatim Quotes
+
+“I told the nurse my ankles were more swollen than usual. She wrote it down. Two weeks later, my doctor mentioned it like it was news. So what was the point of me saying anything?”
+
+“When Elena was alive, my pills were in a little cup on the counter every morning at seven o'clock. Now I open the organiser and I can't always remember if today is Wednesday or Thursday. On weekends it's worse because nobody comes and all the days feel the same.”
+
+“I fell in the bathroom and pressed the button. I lay on the wet floor for thirty-five minutes. Wet. Cold. Wondering if the button actually worked or if I was just going to lie there until someone noticed I was missing.”
+
+“A new girl came last Tuesday. I've never seen her before. She moved my soap and my towel to different hooks. Elena put those there. I didn't say anything but I moved them back after she left.”
+
+“Some of the nurses are wonderful. They sit down, they talk to me, they actually look at me. Others come in, they're on their phone the entire time, they do their checklist, and they leave. I'm not a checklist.”
+
+“My son works hard. He comes on Sundays and he's tired. I don't want to bother him with every little thing — the appointment I missed, the dizziness in the morning, the fact that I haven't been eating properly. He has his own problems.”
+
+“I don't know what my care plan says. Nobody has ever shown it to me. I assume there's a plan because people keep showing up, but what are they looking for? What am I supposed to be doing? I'd like to know.”
+
+“I sleep with the phone on my pillow and the hallway light on. I'm not afraid of dying. I'm afraid of dying and nobody finding me for three days. That's what happened to Frank across the hall. His daughter found him on a Tuesday. The neighbours said they hadn't seen him since Saturday.”
+
+Capabilities Surfaced
+
+● #1 Predictive Risk — falls, reported symptoms lost, missed appointments, behavioural changes
+
+● #2 Care Plan Recommendation — patient doesn't know own plan, routine as intervention, patient input needed
+
+● #3 Voice-to-Documentation — patient-side: phone-typing kills human connection
+
+● #4 Care Intelligence Chat — patient-reported data lost in system, wants direct access to care info
+
+● #5 Vacant Visit Agent — 3 strangers in 2 months, bathroom rearranged, anxiety
+
+Design implications from Arthur:
+
+• Patient-reported signals (swollen ankles) must flow through to the clinical team and be tracked longitudinally — currently lost in documentation.
+
+• Behavioural changes (avoiding baths, missing appointments, not eating) are risk signals that require pattern detection across visit notes, not explicit patient reporting.
+
+• Weekend/unanchored days create medication and routine drift — care plans should account for days without visitor structure.
+
+• Replacement carers must be briefed on patient-specific sensitivities (e.g., don't move personal items) — this is a matching AND briefing problem.
+
+• Seniors should be shown their own care plan in accessible language. They are participants, not subjects.
+
+• The emotional core: loneliness and fear of being forgotten. Technology that increases human presence and attention wins. Technology that replaces it loses.
+
+Cross-Reference: SR Characters to Existing Bibles
+
+These SR characters are connected to existing personas to create a consistent research universe.
+
+SR Character
+
+Connected To
+
+Relationship
+
+SR-001: Lin Chen
+
+FC-001: Sarah Chen
+
+Lin is Sarah's mother. Sarah described the 2 AM fall, the pendant rejection, and the medication confusion. Lin's interview gives us the OTHER SIDE of those same stories — why she hides symptoms, why she rejected the pendant, why she doesn't tell Sarah about the pills.
+
+SR-001: Lin Chen
+
+HCN-001: Maria Santos
+
+Maria is Lin's visiting nurse. Lin likes Maria because she 'has tea first.' Lin refused entry to Maria's replacement. Maria may reference Lin as one of her 14 patients.
+
+SR-002: Arthur Kovacs
+
+HCN-003: Priya Sharma
+
+Arthur is in the same agency's patient panel. Priya's 'Sunday evening risk reviews' would include scanning Arthur's notes. Arthur's reported-but-lost swollen ankles are exactly the kind of signal Priya's predictive risk system should catch.
+
+SR-002: Arthur Kovacs
+
+CC-001: Angela Morrison
+
+Angela coordinates Arthur's care schedule. The 3 different care workers in 2 months is an Angela scheduling problem. The bathroom-items incident is what happens when Angela's 'sticky note knowledge' doesn't transfer to the replacement.
+
+These 2 SR bibles should be added to the main Character Bibles document.
+Total interviewees: 10 across 4 personas (HCN x3, FC x3, CC x2, SR x2).
+
+
+
+---

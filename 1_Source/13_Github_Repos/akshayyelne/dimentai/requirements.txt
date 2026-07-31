@@ -1,0 +1,8 @@
+# Extracted from: akshayyelne/dimentai/requirements.txt
+# Generated: 2026-07-31T00:49:45.086Z
+
+fastapi==0.115.6
+uvicorn==0.34.0
+pydantic==2.10.6
+google-cloud-firestore==2.19.0
+google-auth==2.38.0

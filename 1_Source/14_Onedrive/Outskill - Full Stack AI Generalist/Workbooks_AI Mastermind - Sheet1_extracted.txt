@@ -1,0 +1,11 @@
+# Extracted from: 14_Onedrive/Outskill - Full Stack AI Generalist/Workbooks_AI Mastermind - Sheet1.pdf
+# Characters: 407
+# Generated: 2026-07-31T00:07:33.298Z
+
+Session NameWorkbook Link
+Prompting & Claude Artifacts https://drive.google.com/file/d/1CpptxI3Qpn4iJI3spVteda7fa4oH4qhW/view
+AI Images & Videohttps://drive.google.com/file/d/1wBjv4GLaC-MgmETPZdh0We5nGiY5ZaHV/view
+Creating Gemini Gemshttps://drive.google.com/file/d/15TOAz96QfT-Ll7wS3NHxIEbc9V-eOIFO/view?usp=sharing
+AI Automations https://drive.google.com/file/d/13tZSR9w4QqAcUIGFHCT3QC4GvWYpjWzV/view
+
+---

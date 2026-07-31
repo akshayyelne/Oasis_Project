@@ -1,0 +1,221 @@
+# Extracted from: 14_Onedrive/Project Management in AI/GenAI Tools for PMs 091523.pdf
+# Characters: 6846
+# Generated: 2026-07-31T00:07:33.331Z
+
+Suggested GenAI Tools for Project Work v1.0
+Generative AI for Project Managers
+The gen AI tools recommended in this training are provided for informational purposes and do not constitute an endorsement by the Project Management Institute (PMI). These 
+suggestions have been curated by field experts based on their assessment of available options. PMI does not endorse any specific tool. Users are advised to exercise their own 
+discretion, considering factors such as compatibility, security, and functionality, before adopting any tool. The dynamic nature of technology warrants continuous evaluation to 
+ensure alignment with project management goals.
+
+2Generative AI for Project Managers | Tools
+PLANNING
+Generates diagrams (Gantt charts and network diagrams)
+Generates project timelines, dependencies, and progress 
+visualisation 
+Show Me Diagrams 
+(a ChatGPT Plugin)
+ —
+ —
+GenAI design automates and produces multiple prototype options based on project 
+requirements, helping you explore various possibilities quickly, fostering creativity, and 
+identifying innovative solutions. Aerospace, automotive, architecture, and consumer products are 
+just some of the industries already using GenAI.
+PROTOTYPING
+Generates 3D designs
+Streamlines product development
+Supports sketching, freeform modeling, surface modelling 
+Autodesk Fusion 360
+ —
+ —
+—
+3D modeling and simulation
+Generative Shape Design
+Interaction with the product
+Catia
+ —
+ —
+—
+Enables interactive software models
+Simulation-driven design tool and more
+ 
+Ansys Discovery
+ —
+ —
+Click on the product name 
+visit the tool’s 
+marketing page
+Generative AI (GenAI) offers project practitioners significant support during the project planning 
+phase by automating tasks, analyzing historical data, and providing valuable insights. Through 
+its ability to generate preliminary project plans, optimize resource allocation, assess risks, and 
+predict outcomes, GenAI streamlines the planning process and enhances decision-making. 
+
+GenAI supports efficiencies in time and cost management by automating calculations, optimizing 
+schedules, and predicting risks. It ensures better estimations, cost savings, and on-time project 
+delivery through data analysis and forecasting capabilities.
+3Generative AI for Project Managers | Tools
+TIME AND COST MANAGEMENT
+Generates clear explanations and recommendations 
+Offers business insights
+Generates advanced formulas to streamline the work 
+Smartsheet
+ —
+ —
+—
+In the project control phase, GenAI can help you continuously monitor progress, analyze real-
+time data, identify risks, optimize resource allocation, and provide actionable insights for data-
+driven decision-making to facilitate efficient project management and successful delivery.
+CONTROL MANAGEMENT
+Analyzes and collates relevant information
+Generates improved accurate project-related data
+ 
+WebPilot 
+(a ChatGPT Plugin)
+ —
+ —
+Generative AI tools offer several advantages for risk management in project management by 
+processing and analyzing large volumes of data, identifying patterns and correlations, and 
+generating accurate risk assessments. These tools help project managers identify known and 
+unknown risks, quantify their potential impact, and develop proactive effective risk mitigation 
+strategies.
+RISK MANAGEMENT
+Intelligent issue tracking
+Predictive analysis
+Automating tasks
+Risk identification
+Efficient resource management
+ChatGPT AI 
+Assistant for Jira 
+ —
+ —
+—
+ —
+—
+
+GenAI tools provide valuable advantages for workflow management and automation. These tools 
+automate repetitive tasks, generate intelligent recommendations, and facilitate decision-making, 
+allowing you to focus on higher-value activities and deliver project outcomes.
+4Generative AI for Project Managers | Tools
+WORKFLOW MANAGEMENT
+ AND AUTOMATION
+Generates dependency reports from project plans
+Tracks progress on dependencies
+Identifies potential risks
+Ensures properly formatted and structured content
+Predicts project data
+Generates action items and insights
+ClickUp AI
+ —
+ —
+—
+—
+ —
+—
+Generative image, text, and code generation tools are valuable assets if you want to improve 
+productivity, creativity, and communication. These tools are not specific to project management, 
+but the value they bring to the profession is notable.
+IMAGE, TEXT, CODE GENERATION
+Creates images and videos for construction
+Tracks progress and controls performance
+Midjourney
+ —
+ —
+Helps in developing PM tools and software
+ 
+Dart (Plugin)
+ —
+ 
+Builds intelligent applications such as chatbots, content 
+generators, data augmentation services, and fraud 
+detection services 
+Azure AI (Microsoft 
+cloud platform)
+ —
+ 
+Generates design solutions based on constraints and 
+objectives set by the user
+Optimizes designs
+Generates design alternatives
+Autodesk Revit
+ —
+ —
+—
+Continued on next page
+
+5Generative AI for Project Managers | Tools
+Writes code
+Suggests lines or blocks of code to increase efficiency
+GitHub Copilot
+ —
+ —
+Generative writing assistants help save time and effort and produce high-quality documents. 
+They increase productivity by automating tasks such as writing, editing, and translating; they find 
+errors and inconsistencies and improve communication and document quality.
+WRITING ASSISTANT
+Assists with spelling and grammar, clarity, and readability
+Generates text in a variety of styles, including technical, 
+creative, and conversational
+Generates code in various programming languages
+ 
+Microsoft 365 
+Copilot
+ —
+ —
+—
+Generates synthetic videos 
+Synthesia
+ —
+ 
+Automates video editing tasks
+Generates images from text
+VEED
+ —
+ —
+Generative reading assistants efficiently process and summarize large volumes of project-related 
+documents, research papers, and reports. These AI tools can extract relevant information, 
+generate concise summaries, and highlight key insights, enabling you quickly grasp essential 
+details, make informed decisions, and stay updated on project progress without spending 
+excessive time on reading and analysis.
+READING ASSISTANT
+Retrieves and organizes essential project-related 
+documents and data
+ 
+Access PDFs and 
+Docs (Plugin)
+ —
+Extracts relevant information, data and insights
+Analyzes linked content
+ 
+LinkReader 
+(a ChatGPT Plugin)
+ —
+—
+
+6Generative AI for Project Managers | Tools
+Chatbots can help you automate tasks such as creating status reports, sending email, answering 
+questions, generating ideas, and translating documents. Although not strictly a project 
+management tool, these popular AI tools kickstart productivity, save time, and generate ideas.
+CREATIVE WRITING
+Generates text
+Translates languages
+Writes creative content
+Answers questions in an informative way
+ 
+Google Bard
+ —
+—
+—
+—
+Generates human-like text
+Translates languages
+Writes creative content
+Answers questions in an informative way
+ 
+ChatGPT by OpenAI
+ —
+—
+—
+—
+
+---

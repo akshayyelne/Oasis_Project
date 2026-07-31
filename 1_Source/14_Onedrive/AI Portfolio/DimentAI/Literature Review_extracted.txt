@@ -1,0 +1,285 @@
+# Extracted from: 14_Onedrive/AI Portfolio/DimentAI/Literature Review.docx
+# Characters: 5648
+# Generated: 2026-07-31T00:07:32.943Z
+
+Acoustic/Linguistic	1
+
+Visual-Spatial	1
+
+Oculomotor	2
+
+Gait/Motor	3
+
+Australia-context / support papers	4
+
+Most important Australia-native paper	5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Acoustic/Linguistic
+
+Going Beyond the Cookie Theft Picture Test: Detecting Cognitive Impairments Using Acoustic Features — Springer chapter using Cookie Theft + acoustic/LIWC features, but not Australia-native.https://ouci.dntb.gov.ua/en/works/lmBjg5o9/
+
+
+
+The Case of the Cookie Jar: Differences in Typical Language Use in ... — Cookie Theft-style language paper, but not Australia-native.https://pmc.ncbi.nlm.nih.gov/articles/PMC11380261/
+
+
+
+Stealing Cookies in the Twenty-First Century: Measures of Spoken ... — foundational Cookie Theft discourse-measure review, but not Australia-native.https://pmc.ncbi.nlm.nih.gov/articles/PMC6437702/
+
+
+
+Describing the Cookie Theft picture: Sources of breakdown in ... — older Cookie Theft discourse paper, not Australia-native.https://ira.lib.polyu.edu.hk/bitstream/10397/89985/1/1458_Cookie%20Theft.pdf
+
+
+
+A Swedish Cookie-Theft Corpus — corpus reference only, not Australia-native.https://aclanthology.org/L18-1200.pdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Visual-Spatial
+
+The Clock Drawing Test versus the Kimberley Indigenous Cognitive Assessment ... — Australia-native cohort paper in older Aboriginal and Torres Strait Islander adults; this was the key local paper for CDT.https://dora.health.qld.gov.au/qldresearchjspui/handle/1/10809?mode=full
+
+Associations Between the Digital Clock Drawing Test and Brain ... — digital clock drawing paper, but not Australia-native.https://www.jmir.org/2022/4/e34513/
+
+
+
+Machine Learning Analysis of Digital Clock Drawing Test Performance ... — digital CDT paper, but not Australia-native.https://www.cambridge.org/core/journals/journal-of-the-international-neuropsychological-society/article/abs/machine-learning-analysis-of-digital-clock-drawing-test-performance-for-differential-classification-of-mild-cognitive-impairment-subtypes-versus-alzheimers-disease/F6F665821449C4899D7074275F1C1EAB
+
+
+
+Clock Drawing Test: A Valid Screening Instrument for Dementia ... — general CDT summary, not Australia-native.https://pmc.ncbi.nlm.nih.gov/articles/PMC12732869/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Oculomotor
+
+Post-saccadic eye movement indices under cognitive load — Australian-affiliated eye-movement paper, relevant to latency/cognitive load but not dementia-specific.https://researchers.mq.edu.au/en/publications/post-saccadic-eye-movement-indices-under-cognitive-load-a-path-an/
+
+
+
+
+
+Post-saccadic Eye Movement Indices Under Cognitive Load — same study indexed elsewhere.https://kneopen.com/jovr/article/view/11578/
+
+
+
+
+
+Slowed Prosaccades and Increased Antisaccade Errors As a ... — general oculomotor biomarker paper, not Australia-native.
+
+https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2017.00261/full
+
+
+
+Abnormalities of saccadic eye movements in dementia due to ... — older dementia eye-movement review, not Australia-native.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6710064/
+
+
+
+Eye Movement Latency Coefficient of Variation as a Predictor ... — eye-movement timing paper, not Australia-native.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10204556/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gait/Motor
+
+Landmark Australian study reveals gait is a predictor of dementia — Monash summary of the Australian longitudinal gait study.https://www.monash.edu/medicine/news/latest/2019-articles/landmark-australian-study-reveals-gait-is-a-predictor-of-dementia
+
+
+
+Walking the walk: using gait to gauge dementia — Monash summary of the same Australian gait research line.https://www.monash.edu/medicine/news/latest/2019-articles/walking-the-walk-using-gait-to-gauge-dementia
+
+
+
+Dual-task interference during walking after stroke — Australian Physio article; relevant to dual-task interference, but not dementia-specific.
+
+
+
+https://australian.physio/inmotion/dual-task-interference-during-walking-after-stroke
+
+
+
+Degree and pattern of dual-task interference during walking vary ... — gait/dual-task paper, not Australia-native.
+
+            https://pubmed.ncbi.nlm.nih.gov/34953757/
+
+
+
+Effects of dual-task training on gait variability in individuals with ... — gait variability paper, not Australia-native.
+
+https://pubmed.ncbi.nlm.nih.gov/40610273/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Australia-context / support papers
+
+Alzheimer’s disease research progress in Australia — Australia context review.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9396711/
+
+
+
+Diagnostic challenges for dementia in Australia: are blood ... — Australia-focused diagnostic review.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10946735/
+
+
+
+Early detection of diseases causing dementia using digital ... — broader digital biomarker review, not Australia-native.
+
+
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11032572/
+
+
+
+Alzheimer’s disease digital biomarkers multidimensional landscape ... — broader 2025 review, not Australia-native.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12170881/
+
+
+
+Most important Australia-native paper
+
+The only clear Australia-native validation paper I verified for your four target domains was The Clock Drawing Test versus the Kimberley Indigenous Cognitive Assessment ...
+
+https://dora.health.qld.gov.au/qldresearchjspui/handle/1/10809?mode=full
+
+
+
+The clearest Australia-native longitudinal cohort evidence for your biomarker set remains the Monash/University of Tasmania gait study summarized by Monash.
+
+https://www.monash.edu/medicine/news/latest/2019-articles/landmark-australian-study-reveals-gait-is-a-predictor-of-dementia
+
+For speech and eye tracking, 
+
+https://ouci.dntb.gov.ua/en/works/lmBjg5o9/
+
+
+
+
+
+
+
+---

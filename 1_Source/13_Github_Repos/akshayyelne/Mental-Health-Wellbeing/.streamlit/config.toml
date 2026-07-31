@@ -1,0 +1,9 @@
+# Extracted from: akshayyelne/Mental-Health-Wellbeing/.streamlit/config.toml
+# Generated: 2026-07-31T00:49:45.239Z
+
+[theme]
+primaryColor        = "#7D9D9C"   # Muted Sage
+backgroundColor     = "#FAF9F6"   # Off-white / Cream
+secondaryBackgroundColor = "#F0F4F4"
+textColor           = "#2C3333"
+font                = "sans serif"

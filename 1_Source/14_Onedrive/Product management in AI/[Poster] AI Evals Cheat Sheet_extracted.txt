@@ -1,0 +1,107 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] AI Evals Cheat Sheet.pdf
+# Characters: 1910
+# Generated: 2026-07-31T00:07:33.305Z
+
+Write Unit TestsTest CasesRun & TrackLog TracesLook at TracesModel & Human
+Unlike typical unit
+tests, organize
+these assertions
+for use in other
+places
+For example, data
+cleaning and
+automatic retries
+during inference
+Make them as
+challenging as
+possible
+Represent real
+users’ interactions
+You should not
+aim for a 100%
+pass rate. 100%
+pass is a red flag
+Orchestrate tests
+in a way that
+involves the least
+friction in your
+tech stack
+Start simple and
+leverage your
+existing analytics
+system
+Log sequences of
+events such as
+user session or a
+request flow 
+Often those are
+conversations
+with an LLM
+Example: prompt,
+function, response
+Remove all
+friction from
+looking at data.
+Render your
+traces in domain-
+specific ways
+Keep it simple -
+use what you have
+before investing
+Automatic evals -
+LLM as a judge -
+require humans.
+Use binary
+decisions for
+clarity
+Enhance them
+with detailed
+critiques
+A/B testing
+cost                  frequency
+Unit Tests
+cost                  frequency
+Model & Human Eval
+cost                  frequency
+3
+2
+1
+S1: Log Traces
+S2: Look at Traces
+S3: Model & Human
+Step 1: Write Unit Tests
+Step 2: Create Test Cases
+Step 3: Run & Track Tests Regularly
+     Top-Down Analysis     Bottom-Up Analysis
+Starts with metrics like
+hallucination or toxicity
+Convenient, but often
+misses domain-specific
+issues
+More effective
+Forces you to look at data
+Analyze errors
+Let metrics emerge 
+Never stop looking at data
+AI Evals Cheat Sheet
+THREE LEVELS OF AI EVALS
+3 SUPERPOWERS EVALS UNLOCK
+LET METRICS EMERGE BOTTOM-UP
+Conclusion: Don’t rely on generic evaluation frameworks
+TRACK MODEL VS. HUMAN EVAL
+Fine-Tuning
+Data Synthesis
+Debugging
+START HERE
+AI FLYWHEEL: VIRTUOUS CYCLE 
+Advice: Reuse your existing AI Evals infrastructure
+Author: Paweł Huryn based on Hamel Husain’s post for The Product Compass Newsletter
+LLM <> Human Agreement Rate
+2/204/214/224/234/254/264/274/28
+0%
+20%
+40%
+60%
+80%
+
+---

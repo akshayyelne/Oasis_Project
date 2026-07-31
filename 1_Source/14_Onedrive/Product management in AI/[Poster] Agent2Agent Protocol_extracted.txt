@@ -1,0 +1,26 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] Agent2Agent Protocol.pdf
+# Characters: 585
+# Generated: 2026-07-31T00:07:33.303Z
+
+Repost   
+Agent2Agent Protocol (A2A) by Google
+How A2A Works
+The Product Compass Newsletter
+A2A Agent as an MCP resource
+Example: CrewAI Agent with A2A
+Google recommends sharing A2A agents
+as MCP resources.
+A2A vs MCP (Model Context
+Protocol)
+You can use those standards together:
+MCP for sharing tools and resources
+A2A for enabling agent-agent collab
+An image generation agent built with
+CrewAI and exposed through the A2A.
+Partners
+Facilitates 2 agents’ communication:
+A client agent: formulates tasks
+A remote agent: performs those tasks
+Regardless of the framework or vendor.
+
+---

@@ -1,0 +1,9 @@
+# Extracted from: akshayyelne/LLM-based-NLP/requirements.txt
+# Generated: 2026-07-31T00:49:45.232Z
+
+streamlit
+langchain
+langchain-core
+langgraph
+langchain-groq
+duckduckgo-search

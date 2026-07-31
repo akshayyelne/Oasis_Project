@@ -1,0 +1,93 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/plugin 1 - Discovery/skills 1 - Interview Script/Interview_Field_Kit.pdf
+# Characters: 5344
+# Generated: 2026-07-31T00:07:32.981Z
+
+INTERVIEW FIELD KIT  |  Home-Care-AI  |  Carry into every session
+OPENING (2 min) — Say this first
+"Hi [Name], thanks for making time. We're researching how families and care professionals manage day-to-day care for seniors at home. We're not selling anything —
+we're here to learn from your real experience. No right or wrong answers. Is it okay if I take notes / record? We have [30/45/60] minutes. Does that work?"
+WARM-UP (5 min) — Context & Background
+"Tell me about your role — what does a typical week look like for you?"
+"How long have you been caring for / working with seniors at home?"
+"How many people are you responsible for right now?"
+(FC only) "Are you the primary contact, or are other family members involved?"
+(HCN/CC) "What tools does your agency currently use to track patient status?"
+BLOCK 1: FALLS
+"Walk me through the LAST TIME someone you care for had a fall. What
+happened from the very beginning?"
+"What did you do first? Then what? Who else was involved?"
+"How long did the whole response take?"
+"What was the hardest part of that situation?"
+"What info did you wish you had but didn't?"
+"Was there a moment you weren't sure whether to call 911 or wait?"
+"Have you ever gotten a false alarm? What happened?"
+"What would have made that situation easier or safer?"
+BLOCK 2: MEDICATIONS
+"Tell me about the last time there was a problem with a medication —
+missed dose, wrong dose, confusion."
+"How did you find out? How long after it happened?"
+"What did you do? Who else was looped in?"
+"What's the most frustrating part of keeping track of medications?"
+"What do you use today to manage this? How does it break down?"
+"Have you been unsure whether a dose was taken or not? What did you
+do?"
+"If this worked perfectly, what would that look like day to day?"
+BLOCK 3: COMMUNICATION & ESCALATION
+"When something concerning happens, how does info get to you? Walk
+me through the chain."
+"What's the weakest link — where does info get lost or delayed?"
+"Have you ever second-guessed a decision to escalate or not? Tell me
+about that."
+"How do you decide: emergency vs. watch-and-wait?"
+(HCN/MD) "When you get a device alert, how much do you trust it?"
+BLOCK 4: CURRENT TOOLS & WORKAROUNDS
+"What tools/systems do you use to monitor or coordinate care?"
+"Walk me through how you used [tool] last week."
+"What does it do well? Where does it fall short?"
+"Have you tried anything new in the last year? What happened?"
+"What would you give up to have a system that actually worked?"
+BLOCK 5: WILLINGNESS TO PRIORITIZE (Do NOT pitch — past behavior only)
+"How much time per week do you spend on coordination and communication around care?"
+"Does your agency/family currently pay for any monitoring technology? What?"
+"Have you ever evaluated a care tool and decided NOT to buy? What made you say no?"
+"If a tool solved [biggest pain], what would a fair price look like?"
+When You Hear...Probe With...
+Vague answer"Can you give me a specific example?"
+Strong emotion"Tell me more about that feeling. What was at stake?"
+Surface answer"Why?" (ask gently, up to 3x)
+Story stops short"What happened next?"
+Mentions someone"Who is that person? How did they fit in?"
+Mentions workaround"How long have you done it that way?"
+THE MOM TEST — ACTIVE REMINDERS
+Ask about THEIR LIFE, not your idea
+Ask about THE PAST — never "Would you use X?"
+Talk less, listen more — target 80/20 split
+NEVER PITCH during the interview
+Compliments are noise — "Sounds useful!" = nothing
+Strong emotions = REAL SIGNAL — dig in immediately
+WRAP-UP (3 min)
+"Is there anything I didn't ask that you think is important?" | "Who else should I talk to?" | "Can I follow up with you?" | Thank them. Promise to share findings.
+PAGE 1 of 2 | Print double-sided | Personas: FC (Family Caregiver) / HCN (Nurse) / CC (Coordinator) / MD (Doctor) / SR (Senior)
+
+INTERVIEW NOTES  |  Home-Care-AI  |  Fill in during or immediately after session
+Participant ID:_______________Persona:FC / HCN / CC / MD / SR
+Date:_______________Duration:_______ min
+Interviewer(s):_______________Session #:_______ of _______
+KEY JOBS — What are they fundamentally trying to accomplish?
+CURRENT SOLUTION — What do they use today? (tools, workarounds, people)
+BIGGEST PAIN — Use their EXACT WORDS (verbatim quotes only)
+Rule: Key Insights must use exact customer words. No paraphrasing. Synthesis goes below the quote.
+DESIRED OUTCOME — What does 'good' look like in their own words? (verbatim)
+ESCALATION BEHAVIOUR — How/when do they decide to escalate vs. wait?
+Feeds HITL threshold calibration and Agentic Control Matrix (L1/L2/L3)
+EMOTIONAL INTENSITY — Moments of strong frustration, fear, relief, resignation
+Strong emotions = real signal. These become the priority pain signals.
+WILLINGNESS TO PRIORITIZE — Time/money spent? Paid for anything similar?
+TOOL MENTIONS — Specific products, apps, or systems named
+SURPRISE FINDING — Something unexpected or that challenges an assumption
+REFERRAL — Who else should we talk to?FOLLOW-UP ACTIONS
+NEXT STEP: After 3+ sessions with the same persona, run  summarize-interview  in your Discovery Claude Project
+Upload these raw notes. Output: JTBD map, verbatim quote bank, pain signal ranking → feeds competitive-gap-analysis
+PAGE 2 of 2 | Print one copy per interview | Never store participant's real name — use ID code only (e.g., FC-001)
+
+---

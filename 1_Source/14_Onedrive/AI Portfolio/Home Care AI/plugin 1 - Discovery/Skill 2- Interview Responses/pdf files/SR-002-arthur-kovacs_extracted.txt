@@ -1,0 +1,167 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/plugin 1 - Discovery/Skill 2- Interview Responses/pdf files/SR-002-arthur-kovacs.pdf
+# Characters: 12641
+# Generated: 2026-07-31T00:07:32.974Z
+
+SR-002: Arthur Kovacs — Interview Transcript
+Interview Transcript
+PROJECT INFORMATION
+ProjectHome-Care-AIStageDiscovery → Stage 1 (Customer
+Research)
+Artifact2 (Synthetic Interview Data)Participant IDSR-002
+PersonaSenior ResidentNext StepFeed into `/summarize-interview` with
+other SR interviews
+SESSION DETAILS
+Date2026-04-03Duration52 min
+InterviewerPM LeadSettingFace-to-face, slow pace
+LocationArthur's apartment (small, tidy, photos of wife Elena everywhere)
+PART A — Narrative Transcript
+Opening & Warm-Up
+Q: Tell me about your daily routine --- what does a typical day look like?
+I wake up around seven. Elena always woke up first and made coffee. Now I make it myself. It takes longer
+because my hands aren't as steady. The nurse comes Monday and Thursday. The care worker comes
+Monday, Wednesday, and Friday for bathing and tidying. Michael — my son — comes on Sundays. Meals on
+Wheels delivers lunch on weekdays. The rest of the time\... I'm here. I watch the cricket if it's on. I read
+engineering journals sometimes. I sit.
+[Probe] How long has it been since Elena passed?
+Eighteen months. She had pancreatic cancer. Six weeks from diagnosis to\... [pause] She managed
+everything. The house, the bills, my medications, our social life. When she died, I didn't just lose my wife. I
+lost my whole system. She used to lay out my pills every morning in a little cup on the counter at seven
+o'clock. Now I have the organiser the nurse fills. But I can't always remember what day it is, especially on
+weekends when nobody comes. All the days feel the same.
+[Emotional note] Arthur's eyes filled but he didn't cry. He touched the photo frame on the table next to him. The grief is
+integrated, not raw, but present in everything.
+Block 1: Falls (adapted for SR)
+Q: Can you tell me about the falls you've had?
+Twice, both in the bathroom. The first time, about eight months ago, I slipped getting out of the bath. I
+grabbed the rail and managed to get up after about twenty minutes on the floor. Didn't tell anyone. It was
+embarrassing more than anything. I just thought, 'I need to be more careful.' The second time was four
+months ago. Same thing — getting out of the bath. But this time I couldn't get up. I pressed the emergency
+button on the wall — the agency installed it. And I waited. On the wet floor. Cold. For thirty-five minutes.
+Wondering if the button actually worked or if I was just going to lie there until someone noticed I was missing.
+[Probe] What was going through your mind during those thirty-five minutes?
+Frank. My neighbour across the hall. He died eight months ago. His daughter found him on a Tuesday. The
+neighbours said they hadn't seen him since Saturday. Three days. That's what I was thinking about on the
+
+bathroom floor. Whether I was going to be Frank. I sleep with the phone on my pillow now. And the hallway
+light stays on all night. I'm not afraid of dying. I'm afraid of dying and nobody finding me for three days.
+[Emotional note] Steady voice but his hand trembled on the table. This fear is present every night.
+I don't bathe on days when nobody's scheduled to come. If I fall on a Saturday, the next visit isn't until Monday
+morning. Thirty-six hours. So I only bathe when the care worker is coming.
+Block 2: Medications (adapted for SR)
+Q: How do you manage your medications?
+The nurse fills the organiser. Elena used to put the pills in a cup — just the morning ones, right there on the
+counter when I came to the kitchen. I never missed a dose when she was here. Now I open the organiser and
+sometimes I can't remember if today is Wednesday or Thursday. On weekdays it's easier because someone
+usually comes — the nurse, the care worker, Meals on Wheels. That anchors the day. Weekends are the
+worst. Nobody comes. Every day feels like every other day.
+Q: Have you ever taken a dose twice or skipped one?
+Both, probably. I try to be careful but I can't always be sure. My son Michael set an alarm on the tablet he
+gave me but I don't always hear it. And sometimes I hear it and I think, 'Did I already take them, or is this the
+alarm telling me to take them?' It's confusing. I don't tell Michael because he worries enough as it is. He works
+hard. He has his own problems.
+Block 3: Communication & Information (adapted for SR)
+Q: When you notice something about your health, what do you do?
+I told the nurse last month that my ankles seemed more swollen than usual. She wrote it down. Two weeks
+later, my doctor mentioned it at the regular visit as if it was new information. So what was the point of me
+saying anything? If the information I give the nurse doesn't reach the doctor, then I'm talking into a void. I
+might as well tell the wall.
+[Probe] How did that make you feel?
+Like I don't matter in my own care. The nurse writes it down, the note sits in a system somewhere, and the
+doctor sees whatever the doctor sees. I don't know what my care plan says. Nobody has ever shown it to me.
+I assume there's a plan because people keep showing up, but what are they looking for? What am I supposed
+to be doing? I'd like to know.
+Block 3b: Trust in Technology (adapted for SR --- Amendment A3)
+Q: Has technology ever been used to help monitor your health?
+Yes, and it went badly. My previous agency — about eight months ago — they had some kind of AI system
+that listened to phone calls. 'Wellness monitoring,' they called it. After two weeks, my son got a call saying the
+system detected signs of depression in my voice. The system. Not a person. A computer listened to how I
+talked on the phone and decided I was depressed. I wasn't depressed. I was exhausted. There was
+construction noise upstairs — three nights of jackhammering. Of course I sounded flat. Of course I was
+speaking slowly. But did anyone call to ask, 'Arthur, you sound tired, everything okay?' No. They went straight
+from 'computer says he's depressed' to 'tell his son and his GP.' Michael called me in a panic. 'Dad, are you
+okay? The system says you might be depressed.' I was furious. Absolutely furious. A machine told my son I
+was mentally ill before it told me. Before anyone asked me. The GP discussed it at the next appointment. She
+wrote 'AI flag reviewed and clinically dismissed.' But it's still there in my record. Every new nurse who opens
+my file sees 'Mental Health: AI-flagged depressive indicators.' What do you think they see first — the flag or
+the dismissal?
+[Emotional note] Arthur's hand was flat on the table, pressing down. Controlled anger, not frustration --- this felt like a
+violation to him.
+
+Now when the nurse calls me for a check-in, I make sure I sound cheerful. I speak clearly. I say I'm fine even
+when I'm not. Because if I sound tired again, who knows what the computer will decide about me this time.
+[Probe] So the monitoring changed how you communicate?
+It did. I perform wellness now. That's what I call it. I perform for the phone. And the worst part is — the system
+was supposed to detect when something's wrong, but now I'll never let it detect anything. So it's actually made
+things worse. If I am depressed one day, truly depressed, they won't know, because I'll sound exactly the
+same as every other day. They taught me to hide.
+Block 4: Care Worker Continuity (adapted for SR)
+Q: How many different care workers have visited you recently?
+Three different people in the last two months. My regular is Lisa. She knows where everything is, she knows I
+don't like the bathroom rearranged, she knows I take my coffee black with one sugar. When Lisa doesn't
+come, someone else comes. Last time, the replacement moved my soap and my towel to different hooks.
+Elena put those there. I didn't say anything but I moved them back after she left. Nobody briefs them about
+me. They come in, they do the checklist, they leave. Lisa sits down for five minutes and asks about the
+cricket. The others do the job. There's a difference between being cared for and being processed.
+Block 5: Willingness (adapted for SR)
+Q: If there were something that helped your care team know you better, would you be open to that?
+Depends what it is. If it's another machine that listens to me and makes decisions about my mental health —
+absolutely not. They call it 'wellbeing monitoring.' I call it a machine that listens to how you talk and then tells
+people you're sick. There's a word for that. It's not 'care.' But if it meant that when a new care worker comes,
+they already know: Arthur takes his coffee black, don't move the bathroom things, ask about the cricket, and
+by the way he's a former mechanical engineer so don't talk to him like he's a child — that would be good. That
+would be care.
+Wrap-Up
+Q: Is there anything I didn't ask that's important?
+Ask about loneliness. Nobody does. The care workers come and go. Michael comes on Sundays. The rest of
+the time, it's me and Elena's photos. I'm not asking for company — I know people are busy. But when the
+nurse comes and spends the entire visit on her phone, that half hour was supposed to be human contact. And
+instead it was someone checking boxes in my living room while I watched. Whatever you build, make it so the
+people who come to my home can look at me when they talk to me. That's all I'm asking. Give them whatever
+they need before they walk through my door so they don't have to spend my visit typing. Give me that half
+hour back as a human being, not a data point.
+PART B — Filled Note Template
+Participant IDSR-002
+PersonaSR
+Date2026-04-03
+Duration (min)52
+Interviewer(s)PM Lead
+
+KEY JOBSSurvive safely in his apartment. Not be forgotten. Maintain connection to Elena's memory.
+Be treated as a person, not a checklist. Get through weekends alone. Not become Frank.
+CURRENT SOLUTIONEmergency button (response: 35 min). Pill organiser (confusion on weekends). Meals on
+Wheels (weekday anchor). Care workers 3x/week. Son on Sundays. Phone on pillow.
+Hallway light on all night. Only bathes on visit days. "Some computer decided I was
+depressed because I was talking slowly. I wasn't depressed. I was tired. But they told my
+son and my doctor before they told me." "I sleep with the phone on my pillow and the
+hallway light on. I'm not afraid of dying. I'm afraid of dying and nobody finding me for three
+days." "I perform wellness now. If I am depressed one day, truly depressed, they won't
+know." "When a new care worker comes, they should already know: Arthur takes his
+coffee black, don't move the bathroom things, ask about the cricket." "Give them whatever
+they need before they walk through my door so they don't have to spend my visit typing.
+Give me that half hour back as a human being."
+WILLINGNESSOpen to systems that help care workers know him better. Open to seeing own care plan.
+NOT open to any voice/mood monitoring. NOT open to systems that notify family before
+him. Key: technology should increase human presence during visits, not replace it.
+EMOTIONAL INTENSITYEyes filled but didn't cry when discussing Elena. Hand trembled describing Frank.
+Controlled anger about AI depression flag ('violation'). Grief-integrated loneliness
+throughout. Final request about human connection was the emotional peak.
+ESCALATION BEHAVIORDoesn't escalate. Doesn't tell son about missed appointments, dizziness, eating problems
+('he has his own problems'). Reported swollen ankles once — info was lost — concluded
+reporting is pointless. Now performs wellness on phone calls. Avoids bathing on non-visit
+days (risk avoidance, not risk reporting).
+SURPRISE FINDINGPERFORMS WELLNESS: Arthur deliberately sounds cheerful on check-in calls because
+a previous AI system falsely flagged him as depressed. AI monitoring degraded data
+quality. Also: 'Frank story' — neighbour found dead 3 days later is the emotional anchor.
+Also: reported data (swollen ankles) was lost between nurse and GP. Also: care plan is
+invisible to the patient it's written for.
+TOOL MENTIONSEmergency wall button (35 min response). Pill organiser. Tablet (unused, gifted by son).
+Previous AI wellness monitoring system (negative experience). Phone (on pillow).
+REFERRALLisa (regular care worker — 'she's the only one who asks about the cricket'). Michael (son
+— 'but he'll tell you I'm fine because he needs to believe that').
+FOLLOW-UP ACTIONS[ ] Design patient-visible care plan in accessible language [ ] Care worker briefing system
+with patient preferences + sensitivities [ ] Investigate 'performing wellness' as data quality
+degradation risk [ ] Ensure all health inferences pass L2 clinical review before ANY
+notification [ ] Weekend isolation as medication drift risk factor
+Home-Care-AI · Customer Research · SR-002-arthur-kovacs · 2026-04-03
+
+---

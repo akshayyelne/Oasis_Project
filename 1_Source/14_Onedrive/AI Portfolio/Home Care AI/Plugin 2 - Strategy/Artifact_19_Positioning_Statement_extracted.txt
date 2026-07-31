@@ -1,0 +1,670 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/Plugin 2 - Strategy/Artifact_19_Positioning_Statement.pdf
+# Characters: 32347
+# Generated: 2026-07-31T00:07:32.990Z
+
+Artifact 19 — Positioning Statement
+Strategy · Stage 4 · Go-to-Market Architecture
+DOCUMENT DETAILS
+ProjectHome-Care-AIStageStrategy    →    Stage    4    (Go-to-Market
+Architecture)
+Date2026-03-27MethodologyGeoffrey    Moore    positioning    template;
+ERRC    Grid    (Blue    Ocean    Strategy);
+Messaging   Hierarchy;   Positioning   Moat
+Assessment
+InputArtifact  18  (Partnership  Mapping  —  Moat  Summary),  Artifact  14  (Value  Proposition  —  CC  one-sentence
+VP,  trust  >  speed),  Artifact  13  (SWOT  —  BUILD+DEFEND,  AlayaCare  12-month  window),  Artifact  15
+(User Journey Map — Moment of Truth, trust signals), Artifact 17 (Remediation — AU SMS gateway, P-2
+advisory, template notifications)
+RegulatoryAustralian Privacy Act 1988 (APP). HIPAA-grade security as design floor.
+Feeds intoai-unit-economics (Artifact 20); go-to-market execution; sales deck; landing page
+Partnership  Map  Read-First  check  (CLAUDE.md  Article  IV  Rule  5):  Artifact  18  completed.  Moat  Summary
+confirmed:   -   n   Confirmed   moats   (usable   in   positioning):   SPP   data   gravity   (internal   structural   moat),
+compliance-by-design  architecture  (internal,  6–12  month  competitive  barrier)  -  n  All  partner-derived  moats
+unvalidated:  AlayaCare  SC,  MAC  SC+NE,  ACCPA  NE  —  all  capped  at  3/5  with  n  flags  -  Implication:  This
+positioning statement is grounded in what the product is and does — not in partnerships that do not yet exist. That is
+the honest, defensible position for a pre-launch product.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 1 of 18
+
+Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 2Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 41. Geoffrey Moore Positioning Statement
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 52. One-Sentence Positioning
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 63. Competitive Positioning Map
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 74. ERRC Grid (Blue Ocean Strategy)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 95. Messaging Hierarchy
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9Brand Promise (3–5 words)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9Tagline (7–12 words)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9Elevator Pitch (30 seconds / ~75 words)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9Feature Proof Points (for sales deck and landing page)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10Objection Handlers
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 116. Positioning Moat Assessment
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 137. Positioning Risks
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13Risk 1 — AlayaCare Fast-Follow (12-Month Window)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13Risk 2 — Market Education Burden ("What is a Soft Preference Profile?")
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13Risk 3 — Coordinator Trust Threshold at First Use
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 158. Positioning Validation Plan
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 169. Handshake Table — HS-STRAT-05 (Positioning → Execution)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 1710. Action Items
+Home-Care-AI · Artifact 19 · Positioning StatementPage 2 of 18
+
+Home-Care-AI · Artifact 19 · Positioning StatementPage 3 of 18
+
+1. Geoffrey Moore Positioning Statement
+1. Geoffrey Moore Positioning Statement
+Forhome care coordinators at independent Australian agencies managing 20–200 clients
+wholose  30–60  minutes  and  cancel  1  in  5  visits  every  time  a  carer  calls  in  sick  —  because  no
+system knows which replacement the client will actually open the door for
+Home-Care-AIis a trust-weighted vacancy matching platform
+thatfills every vacant visit in under 5 minutes with the right carer for that client, and automatically
+notifies the carer, the client, and the family in the right order — so that no senior sits in their
+chair waiting, and no family finds out before their parent does
+UnlikeAlayaCare's Vacant Visit Agent, which matches on availability and qualifications only
+our productmatches on who the client trusts — using a Soft Preference Profile built from the coordinator's
+institutional knowledge — so the coordinator approves once, and the right person arrives.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 4 of 18
+
+2. One-Sentence Positioning
+2. One-Sentence Positioning
+For website hero, pitch
+deck, and ACCPA
+submission
+"Home-Care-AI fills vacant home care visits in under 5 minutes — matching
+on  who  the  client  trusts,  not  just  who's  available  —  and  handles  every
+notification automatically, in the right order."
+Journey-informed
+alternative (Artifact 15
+§9 — trust > speed)
+"The  only  home  care  scheduling  tool  that  matches  replacements  on  who
+the  client  trusts  —  not  just  who's  free  —  and  always  notifies  the  client
+before their family."
+The  second  variant  is  preferred  for  coordinator-facing  communication.  The  first  is  preferred  for  agency  owner  and
+industry body (ACCPA) audiences where speed is the entry point and trust is the differentiator.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 5 of 18
+
+3. Competitive Positioning Map
+3. Competitive Positioning Map
+Axes chosen from Artifact 14 §5 Value Curve and Artifact 13 competitive gap analysis
+•X-axis: Matching Intelligence — from Availability-only (left) to Trust-weighted (right)
+•Y-axis: Workflow Automation — from Fully manual (bottom) to Coordinator-approved agentic (top)
+                    WORKFLOW AUTOMATION
+                    (Coordinator-approved agentic)
+                              n
+                              n
+           nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+           n n H HOME-CARE-AI n
+           n n (Trust-weighted + n
+           n n HITL-approved) n
+           n n n
+           n AlayaCare l n n
+           n Vacant Visit n ← WHITE SPACE → n
+           n Agent n n
+           n (automated, n n
+           n trust-blind) n n
+           nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+AVAILABILITY n TRUST-WEIGHTED
+ONLY n MATCHING
+           n l HCP / n n
+           n Brevity n n
+           n (manual- n n
+           n assisted) n n
+           n n n
+           n l Manual calls n n
+           n + spreadsheet n n
+           n (11 calls, n n
+           n 30–60 min) n n
+           nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+                    (Fully manual)
+<b>White  Space  we  own:</b>  High  trust-weighted  matching  +  coordinator-approved  agentic  workflow.  No
+competitor operates in this quadrant. AlayaCare occupies the "automated but trust-blind" quadrant — fast, but it still
+produces  the  7  calls  Angela  makes  after  AlayaCare  suggests  an  unfamiliar  carer.  Manual  calls  are  slow  and
+trust-dependent but rely entirely on coordinator memory. Home-Care-AI is the only product that is both.
+Competitive notes
+•AlayaCare  is  the  primary  reference  competitor  —  not  because  it  is  the  closest  product  but  because  it  is  the
+tool coordinators already compare against. Naming it anchors the differentiation.
+•HCP  /  Brevity  /  Carelink+  are  not  named  in  the  primary  positioning  —  they  are  not  the  mental  model  our
+beachhead uses.
+•Manual calls + spreadsheet is the real competitive alternative — coordinators default to this, not AlayaCare,
+when no better tool exists. Both alternatives must be addressed in messaging.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 6 of 18
+
+4. ERRC Grid (Blue Ocean Strategy)
+4. ERRC Grid (Blue Ocean Strategy)
+ActionFactorRationale
+EliminateThe 11-call phone cascadeIt is the core pain (Artifact 14 §1.1 "What Before"). Every coordinator knows
+the number. Eliminating it is the primary value claim.
+EliminateTribal knowledge on sticky notesAngela: "Half the knowledge about our clients walks out the door with me."
+Structural SPP replacement of coordinator memory is a moat, not a feature.
+EliminatePost-hoc     or     omitted     family
+notification
+The  Arthur  Kovacs  failure  case.  Family  discovers  a  missed  visit  because
+nobody called them. The E-3 gate makes this structurally impossible — not
+a policy, not a reminder, a code constraint.
+EliminateAudit-free replacement decisionsEvery phone cascade today is unlogged, unreviewable, unauditable. Every
+Home-Care-AI assignment is logged with coordinator ID, decision rationale,
+and notification delivery receipts. Compliance becomes automatic.
+ReduceTime-to-fill per vacancy incidentFrom  30–60  minutes  to  under  5  minutes.  Not  incremental  improvement  —
+order-of-magnitude reduction.
+ReduceCancellation rateFrom ~20% (Tom, CC-002 baseline) to < 2% target. Fewer vacancies reach
+the  "no  candidate  found"  failure  state  because  trust-matching  surfaces
+candidates manual calls miss.
+ReduceCoordinator    cognitive    load    at
+6:30 AM
+Angela's  experience:  multi-variable  triage  (qualifications  +  proximity  +
+familiarity)  running  in  her  head  simultaneously.  The  product  does  this
+computation before she opens the app.
+RaiseMatch  quality  —  from  availability
+to trust
+The jump from "available and qualified" (AlayaCare) to "available, qualified,
+and  known  to  this  client"  (Home-Care-AI).  The  7  remaining  calls  Angela
+makes after AlayaCare suggests someone are the trust gap. We close it.
+RaiseNotification        reliability        and
+ordering
+Currently:  client  notification  is  often  forgotten;  family  notification  is  ad  hoc.
+Home-Care-AI:  E-3  gate  enforces  client  →  carer  →  family  order  in  code.
+Every  replacement  is  fully  communicated,  in  the  right  sequence,  without
+coordinator effort.
+RaiseInstitutional                  knowledge
+permanence
+SPP converts sticky-note knowledge into a transferable, structured asset. A
+new  coordinator  onboards  from  the  SPP  on  Day  1  —  not  from  months  of
+shadowing.
+RaiseCompliance and auditabilityEvery  decision  logged.  Audit  trail  immutable  and  append-only.  7-year
+retention. Coordinator override decisions recorded with reason. This is not a
+compliance bolt-on — it is designed in from the first line of logic.
+CreateSoft Preference Profile (SPP)No competitor has a structured, preference-weighted, per-client knowledge
+record that persists across coordinator turnover, drives matching logic, and
+compiles institutional care knowledge into a product asset. This is the moat.
+CreateE-3 notification ordering gateA  structural  code  constraint  (not  a  policy)  that  ensures  client  is  notified
+before family, always. The first product in AU home care to make the Arthur
+Kovacs failure case architecturally impossible.
+CreateFamiliarity-weighted match score"2  prior  visits  with  Mrs.  Kim"  displayed  as  a  trust  signal  at  the  Moment  of
+Truth  (Artifact  15  §4).  Not  a  percentage,  not  a  score  —  a  human  fact  that
+the coordinator can picture.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 7 of 18
+
+ActionFactorRationale
+CreateCompliance-by-design      as      a
+product differentiator
+APP   DPIA   completed.   Privacy-by-design   from   schema   to   notification
+payload. Competitors would need 6–12 months to replicate this compliance
+architecture. First mover in a tightening regulatory environment.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 8 of 18
+
+5. Messaging Hierarchy
+5. Messaging Hierarchy
+Brand Promise (3–5 words)
+Brand Promise (3–5 words)
+"The right person. Every visit."
+Why this: It captures the outcome (right person) and the scope (every visit — not most, not usually, every). It is a
+promise to the client, not to the coordinator. That matters: this product ultimately serves the senior, even though
+the coordinator buys it. The brand promise bridges both.
+Tagline (7–12 words)
+Tagline (7–12 words)
+Coordinator-facing
+(primary)
+"Fill every vacant visit in minutes. With someone they trust."
+Agency owner-facing
+(secondary)
+"Your coordinator's knowledge, in a product that never forgets."
+Industry body /
+ACCPA-facing
+"The care coordination layer Australian home care has been missing."
+Elevator Pitch (30 seconds / ~75 words)
+Elevator Pitch (30 seconds / ~75 words)
+"When a carer calls in sick at 6:30 AM, most home care coordinators spend 45 minutes making 11 calls to
+find a qualified replacement — someone the client will actually accept. One in five visits still gets cancelled.
+Home-Care-AI  solves  it  in  3  taps.  It  matches  on  who  the  client  trusts,  not  just  who's  available,  then
+automatically notifies the carer, the client, and the family — in the right order — without a single call."
+Feature Proof Points (for sales deck and landing page)
+Feature Proof Points (for sales deck and landing page)
+DifferentiatorCoordinator BenefitEvidence
+Trust-weighted
+matching via SPP
+"I see who the client knows before I
+approve  —  not  after  I've  already
+called the wrong person."
+Angela (CC-001, verbatim): "Not just who's available — who
+does  this  patient  trust.  That's  what  takes  me  eleven  phone
+calls."
+1-tap approval (3-Tap
+Flow)
+"I  approve  a  replacement  in  under
+10  seconds.  The  system  handles
+the rest."
+Moment  of  Truth  validated  in  Artifact  15  §4:  familiarity  flag
+("2 prior visits") + qualifications badge + notification preview
+= coordinator confidence to approve without calling.
+E-3 notification gate"The client always knows before the
+family    does.    I    don't    have    to
+remember   to   call   —   it   happens
+automatically."
+Arthur  Kovacs  failure  case  (Angela,  CC-001):  "Her  father
+had been waiting in his chair, dressed and ready." E-3 gate
+is structural code — cannot be bypassed.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 9 of 18
+
+DifferentiatorCoordinator BenefitEvidence
+SPP institutional
+memory
+"If   I   leave,   the   next   coordinator
+starts  from  a  full  client  preference
+record — not from scratch."
+Angela  (CC-001,  verbatim):  "If  I  get  hit  by  a  bus  tomorrow,
+half the knowledge about our clients walks out the door with
+me. That scares me."
+Compliance-by-desig
+n
+"Every   decision   is   logged.   Every
+notification    is    timestamped.    I'm
+audit-ready  without  doing  anything
+extra."
+APP DPIA completed. 7-year immutable audit log. E-3 gate,
+CC-6   guard,   and   P-2   advisory   enforcement   are   code
+constraints, not policies.
+Under 5-minute
+time-to-fill
+"I used to spend 45 minutes on this.
+Now it's done before my coffee gets
+cold."
+Angela  baseline:  11  calls,  30–60  min,  3  incidents/week.
+Target:  <  5  min,  1  approval  action,  0  calls  (Artifact  14
+OKR-1).
+Objection Handlers
+Objection Handlers
+"We already use
+AlayaCare's Vacant
+Visit Agent."
+"AlayaCare matches on availability and qualifications. It doesn't know who Mrs. Kim will
+open  the  door  for.  That's  why  you're  still  making  7  calls  after  AlayaCare  suggests
+someone  —  to  find  the  person  she  trusts.  Home-Care-AI  is  the  trust  layer  AlayaCare
+doesn't have. It doesn't replace your EMR. It replaces the 7 calls."
+"We can't take on
+another tool."
+"Home-Care-AI replaces 11 phone calls with 3 taps. The question isn't whether you have
+time for another tool — it's whether you have time to keep making 11 calls per incident,
+three times a week. Angela said the same thing before she tried it. After the first incident,
+she said it felt like having a second coordinator."
+"How is it different
+from a rostering app?"
+"Rostering apps show you who is available. Home-Care-AI shows you who is available
+and who this specific client has accepted before, who matches their entry protocol, and
+who fits their familiarity threshold. Then it sends the assignment, briefs the carer, notifies
+the client, and tells the family — in the right order — without you touching it again."
+"Is it compliant with
+Australian privacy
+law?"
+"Built  for  APP  from  day  one  —  not  retrofitted.  Data  stays  in  Australia  (AWS  Sydney).
+DPIA completed before any data collection begins. No sensitive client information in any
+external  notification.  Every  assignment  decision  is  in  an  immutable  audit  log.  Our
+compliance architecture is a product feature, not an IT project."
+"What if the AI
+recommends the
+wrong person?"
+"It can't assign anyone without your approval. You see the shortlist, you see the match
+rationale, you tap Confirm. The system only executes what you've approved. You stay in
+control — you just don't have to spend 45 minutes getting there."
+"We're too small for
+enterprise software."
+"Home-Care-AI  is  built  for  agencies  exactly  your  size  —  20  to  200  clients,  one  or  two
+coordinators, no IT team. It runs on your phone. There's no implementation project. You
+set  up  your  client  preferences  in  a  guided  session  and  it's  live.  Angela  and  Tom  were
+both running it within a week."
+Home-Care-AI · Artifact 19 · Positioning StatementPage 10 of 18
+
+6. Positioning Moat Assessment
+6. Positioning Moat Assessment
+Per  Artifact  18  §2  Moat  Summary  and  CLAUDE.md  Article  IV  Rule  5:  moat  scores  reflect  confirmed  evidence  only.
+Partner-derived moats capped at 3/5 and flagged n Unvalidated.
+Moat TypeScoreEvidenceRisk12-month Outlook
+SPP Data Gravity
+(Data Network
+Effect — internal)
+4/5 n Co
+nfirmed
+Structural: preference graph builds
+with  every  visit  logged.  Switching
+to a competitor means losing years
+of  structured  client  knowledge.  No
+partner required — the moat is the
+product itself.
+Cold-start:   the   moat   is
+zero  at  Day  1  and  only
+deepens    over    months.
+Concierge-assisted   SPP
+migration   (XP-3A/3B)   is
+the warm-start mitigation.
+Grows with every active
+agency.   By   month   6,
+switching   cost   is   real.
+By    month    18,    it    is
+structural.
+Compliance-by-De
+sign Architecture
+(Regulatory moat
+— internal)
+4/5 n Co
+nfirmed
+APP  DPIA  completed.  E-3  gate,
+CC-6  guard,  P-2  advisory,  audit
+log immutability are structural code
+constraints   —   not   policies   any
+competitor  can  copy  by  writing  a
+document.  Any  new  entrant  needs
+6–12  months  of  privacy  counsel  +
+DPIA work to reach parity.
+Australian AI regulation is
+hardening  (O4).  Staying
+ahead   requires   tracking
+APP         reform         and
+AI-specific  guidance  as  it
+emerges.
+First-mover  compliance
+advantage.   Harder   to
+replicate   as   regulation
+becomes  more  specific
+to AI in aged care.
+EHR / EMR
+Integration
+Lock-in
+(AlayaCare /
+ShiftCare)
+2/5 n Un
+validated
+AlayaCare     Connect     write-back
+capability      under      investigation
+(AX-02,    Artifact    18).    ShiftCare
+integration  parallel-tracked  but  not
+initiated. No integration confirmed.
+Capped per CLAUDE.md
+Rule;  actual  score  2/5  at
+current         stage.         If
+bi-directional    integration
+confirmed,  score  rises  to
+4/5 — revisit post-AX-02.
+Becomes  a  real  moat  if
+bi-directional  AlayaCare
+integration  is  achieved.
+Without  it,  lock-in  relies
+on   SPP   data   gravity
+alone.
+Clinical Validation
+(ACCPA /
+Dementia
+Australia / Bolton
+Clarke)
+1/5 n Un
+validated
+No   validation   partner   confirmed.
+No  RWE  data.  Angela  and  Tom
+are  qualitative  first-party  evidence
+—   not   publishable   outcomes   at
+scale.
+Cannot     be     used     in
+external  positioning  until
+ACCPA   case   study   or
+Bolton       Clarke       pilot
+produces          quantified
+outcomes     (cancellation
+rate,  fill  time,  coordinator
+NPS).
+Target:               ACCPA
+Innovation          Awards
+submission with E1 data
+by     Q3     2026.     First
+publishable      outcome:
+Q4 2026 at earliest.
+Brand Trust
+(coordinator +
+agency owner
+segment)
+2/5 n As
+pirationa
+l
+No  brand  presence.  No  ACCPA
+endorsement. Angela and Tom are
+the  reference  base.  Peer  referral
+(GTM-2)    is    the    brand-building
+mechanism    —    it    requires    a
+validated reference customer first.
+Brand     trust     in     the
+coordinator   segment   is
+earned                 through
+performance,               not
+advertising.  Peer  referral
+is    the    amplifier.    The
+coordinator's     word     to
+another    coordinator    is
+worth    more    than    any
+brand investment.
+Rises       with       every
+validated         reference
+customer.           ACCPA
+endorsement    (Tier    1
+distribution target) is the
+scale inflection point.
+Cost Advantage
+(AI inference at
+scale)
+3/5
+Template-based      v1      (CRIT-02
+resolution)    has    near-zero    LLM
+inference       costs.       Rule-based
+matching    scales    affordably    at
+beachhead  stage.  Hidden  system
+prompt  overhead  is  minimal  (no
+agentic   LLM   calls   for   external
+content).
+Unit  economics  not  yet
+modelled     (Artifact     20
+pending).                  Cost
+advantage is a function of
+v1   scope   discipline   —
+adding      LLM-generated
+content in v2 changes the
+margin profile.
+Stable  in  v1.  Revisit  in
+Artifact  20  when  token
+budget     per     agentic
+action is calculated.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 11 of 18
+
+Top 2 moat-building recommendations for the next 90 days
+•Deepen  SPP  data  gravity  immediately.  The  SPP  moat  is  the  only  confirmed,  strong  moat  —  and  it  only
+exists once preferences are populated. XP-3A (self-serve SPP template) and the concierge migration session
+must ship in Sprint 1. An agency with 0 SPP records is not in the moat yet.
+•Initiate  ACCPA  relationship  before  the  first  paying  customer.  ACCPA  endorsement  is  the  NE  moat
+pathway. The moment to initiate is before the product launches — when the ask is "would you like early access
+and a named role in shaping a tool for your members?", not "would you endorse a product you've never seen?"
+Angela as the entry path has zero cost. Ask at E1 Week 1.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 12 of 18
+
+7. Positioning Risks
+7. Positioning Risks
+Risk 1 — AlayaCare Fast-Follow (12-Month Window)
+Risk 1 — AlayaCare Fast-Follow (12-Month Window)
+Description:  AlayaCare  ships  a  trust/preference  matching  feature  —  either  organically  or  via  acquisition  —
+before  Home-Care-AI  has  established  data  moat  depth  or  ACCPA  endorsement.  The  primary  differentiator
+("trust layer AlayaCare doesn't have") becomes a temporary advantage, not a structural one.
+Severity: HIGH — this is the single largest strategic risk (Artifact 13 T1).
+Mitigation
+•SPP data gravity is the defence — not the feature, but the accumulated data. AlayaCare can copy the schema;
+they cannot copy 18 months of an agency's structured preference history.
+•ACCPA endorsement creates an industry-level trust anchor that a product feature cannot instantly replicate.
+•Monitoring  signal:  Check  AlayaCare  release  notes  every  6  weeks  (S-1  assumption  from  Artifact  12).  If
+trust-matching  language  appears  in  their  product  announcements,  accelerate  ACCPA  and  standalone
+adoption immediately — do not wait for the integration path.
+Risk 2 — Market Education Burden ("What is a Soft Preference Profile?")
+Risk 2 — Market Education Burden ("What is a Soft Preference Profile?")
+Description:  The  primary  differentiator  requires  explaining  a  concept  that  does  not  exist  in  the  market  yet.
+"Trust-weighted  matching"  and  "Soft  Preference  Profile"  are  not  vocabulary  coordinators  currently  use.  High
+education burden slows the sales cycle and increases CAC.
+Severity: MEDIUM — manageable with the right messaging approach.
+Mitigation
+•Lead  with  the  problem,  not  the  product  concept.  Angela's  11  calls  and  the  Arthur  Kovacs  story  need  no
+explanation — every coordinator has a version of both. The SPP is the solution to a problem they already feel,
+not a new idea they need to adopt.
+•Never say "Soft Preference Profile" in external marketing. Say "who the client trusts" or "what the client needs
+to feel safe." The SPP is the architecture; "trust-weighted matching" is the experience.
+•Objection handlers (§5) are pre-loaded with problem-first language. Sales conversation starts at the pain, not
+the product.
+•Proof point: The Moment of Truth validation (Artifact 15 §4) shows that when Angela sees "2 prior visits with
+Mrs. Kim" on the candidate card, she doesn't need to understand the SPP model. She understands the fact.
+Familiarity facts, not algorithmic concepts, are the external expression of the SPP moat.
+Risk 3 — Coordinator Trust Threshold at First Use
+Risk 3 — Coordinator Trust Threshold at First Use
+Description: The 1-tap approval value proposition depends on Angela trusting the shortlist enough to act on it
+without  calling.  If  first-use  trust  is  not  established  quickly  —  if  coordinators  fall  back  to  calling  to  verify  after
+approving  —  the  OMTM  (≥  70%  1-tap  approvals,  no  outbound  calls)  will  not  be  reached,  and  the  value
+proposition is not confirmed.
+Severity: HIGH — this is the hypothesis the entire product depends on (V-1 + V-2 from Artifact 8). The
+Moment of Truth either validates or kills it.
+Mitigation
+Home-Care-AI · Artifact 19 · Positioning StatementPage 13 of 18
+
+•The three trust signals at the Moment of Truth are non-negotiable (Artifact 15 §4): (1) "2 prior visits" — a fact,
+not a score; (2) Qualifications confirmed 3 — the hard gate ran; (3) Notification preview — no surprises.
+•First-use  SPP  accuracy  is  the  linchpin.  If  the  SPP  is  wrong  on  the  first  use,  Angela's  trust  is  broken  for  all
+subsequent uses. Concierge-assisted SPP population (XP-3A) before the product goes live is not optional — it
+is the trust infrastructure.
+•Signal to watch: XP-1B (shadow deviation log). If Angela approves the top candidate but then calls to verify
+anyway  —  the  product  has  not  yet  closed  the  trust  gap.  This  is  the  most  important  behavioural  signal  in  the
+validation phase.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 14 of 18
+
+8. Positioning Validation Plan
+8. Positioning Validation Plan
+Before investing in marketing assets, validate the positioning with 5–10 target coordinators.
+Validation QuestionMethodTargetTiming
+Does "right person, every time"
+resonate as the core promise?
+E1  concierge  —  ask  Angela
+and  Tom  after  first  incident:
+"Did  that  feel  like  the  right
+person?"
+Both     say     yes     without
+prompting
+E1 Week 1
+Does the one-sentence positioning
+accurately describe what just
+happened?
+Read  it  to  Angela  after  first
+use.  Ask:  "Is  that  what  it  felt
+like?"
+Unprompted  affirmation  or
+correction
+E1 Week 2
+Does "trust, not just availability" capture
+the differentiation in their language?
+XP-1C  (2  new  coordinators,
+E3   Figma):   ask   what   they
+would   tell   a   colleague   the
+product does
+Coordinator                  uses
+trust/familiarity      language
+unprompted
+E3 (XP-1C)
+Is "SPP" ever the right external term, or
+always internal only?
+Listen     to     how     Angela
+describes  the  product  to  a
+peer
+If  she  says  "it  knows  who
+my  clients  trust",  not  "soft
+preference    profile",    keep
+SPP internal
+E1 Week 3
+Does the Agency Owner pitch land?XP-2A: 3 Agency Owner LOI
+meetings.   Use   the   agency
+owner        tagline:        "Your
+coordinator's knowledge, in a
+product that never forgets."
+≥ 1 LOI signedXP-2A (Q2)
+Home-Care-AI · Artifact 19 · Positioning StatementPage 15 of 18
+
+9. Handshake Table — HS-STRAT-05 (Positioning → Execution)
+9. Handshake Table — HS-STRAT-05 (Positioning → Execution)
+IDFrom (This Artifact)To (Execution
+Plugin)
+What Must Transfer
+HS-STRA
+T-05e
+§1  Geoffrey  Moore
+statement
+create-prd    §2
+(Problem
+Statement)
+The "who / who / what / unlike" structure becomes the PRD problem
+statement  and  the  target  segment  definition.  No  PRD  problem
+statement that contradicts this positioning is valid.
+HS-STRA
+T-05f
+§5   Feature   Proof
+Points
+user-stories
+(Execution Plugin)
+Each proof point maps to a user story: "Familiarity flag at Moment of
+Truth"  →  Story  for  ACT-V-07  display;  "E-3  gate"  →  Story  for
+ACT-F-01  with  E-3  acceptance  criterion;  "3-Tap  Flow"  →  Story  for
+ACT-A-01/A-02.  Proof  points  without  a  user  story  are  positioning
+claims without a build plan.
+HS-STRA
+T-05g
+§6                    Moat
+Assessment         —
+SPP   data   gravity
+(4/5)
+create-prd
+§7.2    (Priority    1
+features)
+SPP population flow (ACT-S-01 through ACT-S-03) must be Priority
+1 in the PRD — the moat does not exist until the SPP is populated.
+Concierge migration session is a Day 1 feature, not a v2 feature.
+HS-STRA
+T-05h
+§7     Risk     3     —
+Coordinator      trust
+threshold
+agentic-logic
+-spec
+The    three    Moment    of    Truth    trust    signals    (familiarity    fact,
+qualifications   badge,   notification   preview)   are   mandatory   UI
+elements  in  the  logic  spec.  Their  absence  is  a  Requirement  Drift
+defect at harness-audit-grader.
+Home-Care-AI · Artifact 19 · Positioning StatementPage 16 of 18
+
+10. Action Items
+10. Action Items
+DueOwnerActionPriority
+2026-03-28PM LeadValidate  one-sentence  positioning  with  Angela  (CC-001)  at  E1  Week  1.
+Read it to her after the first incident. Record exact response.
+HIGH
+2026-03-28PM LeadConfirm  "The  right  person.  Every  visit."  brand  promise  lands  with  Tom
+(CC-002)  —  ask  him  what  he  would  want  written  on  the  product's
+homepage. Compare to our brand promise.
+HIGH
+2026-04-01DesignerEnsure the 3 Moment of Truth trust signals (familiarity fact, qualifications
+badge,  notification  preview)  are  present  in  the  coordinator  approval  card
+(DES-1).  These  are  not  design  choices  —  they  are  positioning-critical
+elements.
+HIGH
+2026-04-07PM LeadDevelop Agency Owner pitch using the "Your coordinator's knowledge, in
+a product that never forgets" tagline. Test in XP-2A LOI meetings.
+HIGH
+2026-04-15PM LeadInitiate ACCPA relationship (Angela as entry path). Goal: secure advisory
+board  seat  or  conference  submission  slot  before  product  launch.  See
+Artifact 18 §4 ACCPA deep dive for entry path.
+HIGH
+2026-04-15PM LeadOnce  AX-02  (AlayaCare  Connect  write-back  capability)  is  confirmed  by
+engineer,  revisit  EMR  Integration  Lock-in  moat  score.  If  bi-directional
+confirmed: update §6 score from 2/5 to 4/5 and add AlayaCare integration
+claim to §2 one-sentence positioning for agency owner segment.
+MEDIUM
+Positioning  integrity  note:  This  statement  is  grounded  in  confirmed  product  capabilities  and  first-party  customer
+evidence. It makes no claims that require a partnership to be true. The SPP moat, the E-3 gate, the trust-weighted
+match, and the compliance architecture all exist in the product design — independently of any partner relationship.
+That  is  intentional.  A  position  that  depends  on  a  partner  that  does  not  yet  exist  is  a  liability,  not  a  strategy.  The
+partner relationships in Artifact 18 amplify this position; they do not create it.
+Home-Care-AI · Artifact 19 · Positioning Statement · 2026-03-27
+Home-Care-AI · Artifact 19 · Positioning StatementPage 17 of 18
+
+---

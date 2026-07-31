@@ -1,0 +1,156 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/plugin 1 - Discovery/Skill 2- Interview Responses/pdf files/HCN-001-maria-santos.pdf
+# Characters: 11199
+# Generated: 2026-07-31T00:07:32.971Z
+
+HCN-001: Maria Santos — Interview Transcript
+Interview Transcript
+PROJECT INFORMATION
+ProjectHome-Care-AIStageDiscovery → Stage 1 (Customer
+Research)
+Artifact2 (Synthetic Interview Data)Participant IDHCN-001
+PersonaHome Care NurseNext StepFeed into `/summarize-interview` with
+other HCN interviews
+SESSION DETAILS
+Date2026-03-25Duration42 min
+InterviewerPM LeadSettingFace-to-face, coffee provided
+LocationCareBridge agency office, after shift
+PART A — Narrative Transcript
+Opening & Warm-Up
+Q: Tell me about your role --- what does a typical week look like for you?
+I see fourteen patients a week, give or take. Monday to Friday, four or five visits a day across the eastern
+suburbs. I do clinical assessments, wound care, medication reviews, care plan updates. But honestly, the
+visits are maybe sixty percent of my week. The other forty is documentation. Writing up notes, updating care
+plans, chasing referrals. I probably spend two to three hours every evening after I get home typing up what
+happened during the day.
+Q: Two to three hours every evening? Walk me through that.
+I get home around six. I have dinner, put the kids to bed, and then around eight I open my laptop and start
+typing up the day's visits. I try to do it in the car between visits but the app crashes on mobile and the screen
+is tiny. So I make voice notes on my phone and then transcribe them at night. I'm usually done by ten,
+ten-thirty.
+[Emotional note] Maria said this matter-of-factly, but her jaw tightened. This is clearly a sore point.
+Q: What tools does your agency currently use to track patient status?
+We have an EMR — they upgraded it last year. It's worse than the old one. More fields, slower interface. The
+mobile version crashes constantly. I also use WhatsApp to message families and the coordinator. Paper
+wound charts for some patients because the EMR doesn't handle images well. And honestly, my own
+memory. I remember things about my patients that aren't in any system.
+Block 1: Falls
+Q: Walk me through the last time someone you care for had a fall, or you were concerned they might.
+Three weeks ago. Arthur — he's eighty-two, diabetes and heart failure. But it wasn't a fall exactly. He was
+hospitalised for acute decompensation. When I reviewed his file afterwards, I could see the warning signs. His
+blood pressure had been creeping up over four visits. His ankles were more swollen each time I saw him.
+He'd missed two medication doses that I know of. But I didn't connect it in the moment because each visit felt
+like its own thing. The information was scattered across separate notes.
+
+[Probe] What information did you wish you had that you didn't?
+A trend line. Anything. If someone had shown me 'Maria, here's Arthur's blood pressure over the last four
+weeks, and here's his ankle measurement, and here's his medication adherence' — on one screen, side by
+side — I would have seen it. I knew something was off. I could feel it. But when you're seeing fourteen people
+a week, you can't hold all the patterns in your head. The system should have caught that, not me.
+[Emotional note] Voice dropped. Genuine guilt. This is a wound.
+Q: Have you ever been concerned about a fall specifically?
+I worry about falls with at least half my patients. But I don't know when they happen unless someone calls me
+or I see a bruise at the next visit. Mrs. Chen — Sarah's mother — she fell at two in the morning four months
+ago and nobody knew until seven AM. I visit her once a week. If she falls on a Tuesday and I don't come until
+Thursday, that's two days of potential injury progression that nobody sees.
+Block 2: Medications
+Q: Tell me about the last time there was a problem with a medication.
+Arthur again. He was on a diuretic and his potassium supplement. The diuretic dose was increased by his
+cardiologist, but the potassium wasn't adjusted. I noticed his potassium level was low at my next visit because
+I happened to check. But the dose change was buried in a hospital discharge summary that I didn't see until
+three days after it was issued. Nobody flagged it.
+[Probe] What's the most frustrating part of keeping track of medications across fourteen patients?
+The reconciliation. Every patient has a different GP, a different specialist, a different pharmacy. Changes
+happen and I find out last. I'm supposed to be the one coordinating, but I'm the last person in the chain to
+know when something changes. I spend thirty minutes per patient per month just reconciling medication lists.
+That's seven hours a month on medication admin.
+Block 3: Communication & Escalation
+Q: When something concerning happens with a patient, how does that information get to you?
+It doesn't, usually. I find things out when I walk through the door. Family members sometimes text me on
+WhatsApp — Sarah Chen texts me constantly — but that's informal. There's no system that says 'Maria,
+something happened with your patient since your last visit.' I'm always walking in blind.
+Q: You said Sarah texts you constantly. Tell me more about that.
+Sarah is lovely but she was sending me screenshots of her mother's step count and sleep data from a
+wristband app. Every week: 'Her steps are down forty percent, is something wrong?' 'She slept less than four
+hours Tuesday.' Each one added ten or fifteen minutes to my day because I'd have to look at the data,
+compare it with what I observed, and then respond carefully so I didn't escalate Sarah's anxiety. The data
+wasn't wrong, it just had no clinical context. A step count drop could mean her mother's mobility is declining or
+it could mean it rained for three days. I eventually asked Sarah to trust the clinical team to flag concerns. She
+took it badly. I felt terrible about it.
+[Emotional note] Maria paused for several seconds here. Clearly conflicted --- empathises with Sarah but felt
+overwhelmed.
+Block 4: Tools & Workarounds
+Q: What tools do you currently use to monitor or coordinate care?
+The EMR for official documentation. WhatsApp for quick messages. My phone's voice recorder for notes
+between visits. A paper notebook for wound measurements because the EMR doesn't support photos well.
+Google Maps for routing — the scheduling system doesn't optimise drive times. And my memory for
+everything the system doesn't capture.
+Q: Have you tried anything new in the last year?
+
+The agency tried a new care plan template six months ago. It was supposed to make care plans faster. It
+actually made them slower because it had more mandatory fields. I now spend thirty to forty-five minutes per
+care plan, starting from a blank template every time. There's no intelligence — no 'based on this assessment,
+here are recommended goals.' Just blank fields and my brain. I spend more time writing about care than
+delivering it. By the time I sit down to type up today's visits, I've already forgotten half the details. I'm
+reconstructing, not documenting.
+Block 5: Willingness to Prioritize
+Q: How much time per week do you estimate you spend on coordination and communication?
+Fifteen to eighteen hours a week on documentation, coordination, and admin. That's on top of the twenty-five
+hours of actual patient visits. My contract says thirty-eight hours. I work closer to fifty.
+Q: If a tool solved the pattern-recognition problem you described with Arthur, what would a fair price
+look like?
+I'd kill for something that just told me: 'Here's what's changed since your last visit. Here's what to watch for
+today.' Five sentences. That's all I need before I walk through the door. Fair price? I don't care about price —
+the agency pays for tools. What I care about is whether it actually works on my phone between visits without
+crashing. Every system we've tried was designed for someone sitting at a desk, not someone standing in a
+patient's kitchen.
+Wrap-Up
+Q: Is there anything I didn't ask about that you think is important?
+Time. Nobody asks about time. Every new system, every new form, every new process takes more time. I
+don't need more features. I need my time back. If your system adds thirty seconds to every visit, that's four
+minutes a day, twenty minutes a week, an hour and a half a month. That's a patient visit I'm losing to admin.
+Whatever you build, make it faster than what I do now, not slower.
+Q: Who else should I talk to?
+Priya Sharma — she's our team lead. She sees the systemic stuff I can't. And talk to the patients themselves.
+Mrs. Chen won't tell you what she tells me, and she definitely won't tell Sarah what she tells me. There's a
+whole layer of what patients hide that nobody is designing for.
+PART B — Filled Note Template
+Participant IDHCN-001
+PersonaHCN
+Date2026-03-25
+Duration (min)42
+Interviewer(s)PM Lead
+KEY JOBSDeliver quality clinical care to 14 patients weekly. Accurately document every visit.
+Reconcile medications across multiple providers. Identify deterioration patterns before
+they become emergencies. Coordinate between families, GPs, specialists, and the
+agency.
+
+CURRENT SOLUTIONAgency EMR (crashes on mobile, slow). WhatsApp for family/coordinator messages.
+Voice recorder on phone for between-visit notes. Paper notebook for wound
+measurements. Google Maps for routing. Memory for patient context the system doesn't
+capture. "I spend more time writing about care than delivering it. By the time I sit down to
+type up today's visits, I've already forgotten half the details. I'm reconstructing, not
+documenting." "Every care plan I write starts from scratch. No starting point, no
+suggestion, nothing. Just me and a blank page."
+WILLINGNESS15-18 hrs/week on documentation + coordination (unpaid overtime). Agency pays for
+tools. Previously rejected: new care plan template (slower, more fields). Key criterion:
+must work on mobile between visits without crashing. Price is not the barrier — usability
+is.
+EMOTIONAL INTENSITYGenuine guilt about Arthur's hospitalisation — voice dropped, long pause. Jaw tightened
+when discussing documentation burden. Conflicted about pushing back on Sarah Chen's
+data requests. Frustration at management for rejecting Priya's risk review proposal.
+ESCALATION BEHAVIORFinds out about problems when she walks through the door — no proactive alerting.
+Relies on intuition and visual observation, not data trends. Information chain:
+patient/family → WhatsApp → Maria → GP (if she decides to escalate). Weakest link: time
+delay between events and Maria's next visit.
+SURPRISE FINDINGSarah Chen's 'data parent' behaviour — health data without clinical context created 10-15
+min extra work per visit. Maria diplomatically pushed back and felt terrible about it. Raw
+data to families creates professional friction, not better outcomes.
+TOOL MENTIONSAgency EMR (unnamed, crashes on mobile). WhatsApp. Google Maps. Phone voice
+recorder. Paper wound charts. New care plan template (failed, 6 mo ago).
+REFERRALPriya Sharma (team lead, systemic view). Patients themselves — 'there's a whole layer of
+what patients hide that nobody is designing for.'
+FOLLOW-UP ACTIONS[ ] Interview Priya Sharma (HCN-003) [ ] Investigate mobile EMR usability as adoption
+barrier [ ] Quantify documentation time across agency nurses
+Home-Care-AI · Customer Research · HCN-001-maria-santos · 2026-03-25
+
+---

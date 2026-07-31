@@ -1,0 +1,104 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] How to Build an AI Agent.pdf
+# Characters: 1538
+# Generated: 2026-07-31T00:07:33.313Z
+
+Message
+queues 
+Routes /
+workflows   
+Triggers
+Framework
+OpenAI Agents API
+Google Vertex AI
+Anthropic Agents API
+Microsoft AutoGen
+Autogen Studio
+LangGraph
+LangChain
+CrewAI
+n8n
+Make
+LLM
+OpenAI
+*
+*
+*
+*
+*
+*
+*
+*
+*
+MCP
+       Remote
+       Remote
+       Remote
+       Local, Remote
+       Local, Remote
+       Local, Remote
+       Local, Remote
+       Local, Remote
+       Local, Remote
+       Limited
+Tools (Functions everywhere)
+Predefined (web, file/code)
+Predefined (search, vision, etc.)
+Predefined (web, file/code)
+Predefined (REPL, code)
+Predefined
+LangChain Functions
+Functions (custom-defined)
+Predefined, 40+ integrations
+Predefined, 100+ Integrations
+Predefined, 100+ Integrations
+Agents Orchestration
+Threads
+Flow-based, native A2A
+Tool-calling only
+Programmatic chaining
+Visual agent chaining
+Graph (DAG)-based flow
+Manual (chains/agents)
+Flow- and role-based
+Workflows, sub-workfl.
+Scenarios, sub-scenarios
+No-code
+Agent2
+ Agent 
+Params
+How to Build an AI Agent?
+The 7-Step Process to Build an AI Agent
+Goals Role   Base model,
+parameters 
+2. LLM
+MCP
+server 
+API (web,
+apps, data) 
+AI agent
+as    a tool 
+Simple
+(local) 
+1. System prompt
+Instru-
+ctions 
+3. Tools
+File 
+store 
+SQL DB 
+memory 
+Vector
+database 
+Episodic 
+Working 
+memory 
+4. Memory5. Orchestration
+Interface 
+6. UI
+Analyze
+7. AI Evals
+MeasureImprove
+Common AI Agent Frameworks
+The Product Compass Newsletter                                                                                                                    productcompass.pmRead the full post 
+
+---

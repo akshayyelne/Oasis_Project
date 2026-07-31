@@ -1,0 +1,359 @@
+# Extracted from: 14_Onedrive/Outskill - Full Stack AI Generalist/Day 2 session 4.docx
+# Characters: 12244
+# Generated: 2026-07-31T00:07:33.296Z
+
+Vibe Coding 101 — Resource Guide
+
+A fast, friendly field‑manual for building full‑stack apps with AI, based on the Outskill session you just attended.
+
+
+
+Welcome 👋
+
+Congrats on completing the Vibe Coding foundations session. This guide consolidates the concepts, prompts, tools, and workflows we used live, so you can reproduce everything end‑to‑end and confidently demo it to others.
+
+Quick links:
+
+• “Slide show” site we used: https://new-chat-0lvj.bolt.host/
+
+• Whiteboard drawing (restaurant analogy): https://link.excalidraw.com/l/4M5RvLQENCN/6iG915BfqE7
+
+• Bolt best‑practices for prompting: https://support.bolt.new/best-practices/prompting-effectively
+
+• Premade visual components: https://21st.dev/
+
+
+
+Part 1 — What is Vibe Coding?
+
+Vibe Coding = building software by talking to AI in natural language. You describe the app, features, and style; the AI writes the code, sets up files, and iterates with you. It is messy by design: you iterate, test, fix, repeat.
+
+Mindset rules:
+
+Start with a plan (small, concrete scope).
+
+Build in tiny slices. Test after each slice.
+
+When something breaks, copy the error into the AI and say “fix this.”
+
+Save checkpoints. If needed, roll back and try again.
+
+
+
+Part 2 — The Restaurant Analogy 🍽️
+
+Goal: make tech concepts intuitive for non‑devs.
+
+Frontend = Dining area
+
+What users see and touch (pages, buttons, forms, animations).
+
+Backend = Kitchen
+
+Where work happens out of sight. Business logic, rules, workflows.
+
+Database = Pantry
+
+Where ingredients/data are stored (users, tasks, orders).
+
+API = Waiter
+
+Carries requests/results between the dining area and the kitchen/pantry.
+
+Authentication = Host stand
+
+Checks reservation/ID and hands out room keys (access tokens).
+
+Server = Restaurant manager
+
+Oversees operations, schedules, and the flow of work.
+
+Hosting = The building
+
+The place that houses everything and serves guests on the internet.
+
+Edge functions = Service desks around the hotel/restaurant
+
+Small stations near the guests for fast, specialized actions (e.g., “pool towel desk” → localized compute near the user).
+
+
+
+Part 3 — Core Jargon in Plain English
+
+HTML / CSS / JS → structure / style / interactivity.
+
+CRUD → Create, Read, Update, Delete. The 4 basic data actions.
+
+Domain / DNS / IP → name / phone‑book / numeric address so browsers find your app.
+
+Server vs Hosting → server = the computer running your code; hosting = the service that gives you servers, SSL, deployments, and a public URL.
+
+JSON → simple text format APIs use to send/receive data.
+
+
+
+Part 4 — The Build We Did Live (Project‑Management MVP)
+
+Features we scoped:
+
+Core 1: Task management with boards/columns (drag‑and‑drop Kanban)
+
+Core 2: Team collaboration (assignees, priorities)
+
+Differentiator: AI task breakdown (generate task lists from a short prompt)
+
+What you’ll demo:
+
+Create boards and tasks, move tasks across columns.
+
+Click Generate Tasks with AI, enter a short goal, and auto‑populate a smart checklist.
+
+Sign up / sign in and see data persist via the database.
+
+
+
+Part 5 — The 3‑Stage Prompting Workflow (PRD Journey)
+
+Why this order: Better structure → fewer errors → faster builds.
+
+Stage 1 — Raw ask
+
+“Build me a project‑management app with Kanban boards.”
+
+Stage 2 — Turn it into a PRD
+
+Ask a reasoning model (e.g., Claude/GPT) to write a Project Requirements Document: features, data models, pages, states, edge cases.
+
+Stage 3 — Platform‑optimized prompt
+
+Paste the platform’s best‑practice guidelines (e.g., Bolt’s) into your chat and say, “Rewrite my PRD into a single Bolt‑optimized prompt.”
+
+Use that in Bolt to spin up the whole project structure in one go.
+
+Rule of thumb: Decompose thinking. Use one AI to plan, another to build. Short, iterative follow‑ups beat giant one‑shot prompts.
+
+
+
+Part 6 — Copy‑Paste Prompts from the Session
+
+Use these as is, then tweak language to fit your app.
+
+A) Competitor feature mining → prioritized MVP
+
+I’m a non‑technical builder making a project‑management app via vibe coding.I’ve gathered competitor screenshots (e.g., Monday/Asana/Trello). Analyze themand produce a table of features ranked in descending priority.Select 2 core features and 1 AI differentiator suitable for an MVP. 
+
+B) Create a PRD for our selected scope
+
+Based on those picks, write a concise PRD with: pages, user flows,entities & relationships, data schema, CRUD actions, error states,and acceptance tests for: (1) task boards, (2) team collaboration,(3) AI task breakdown. 
+
+C) Rewrite PRD using Bolt best practices
+
+Here are Bolt’s prompt guidelines: <paste from Bolt docs>Rewrite my PRD into a single Bolt‑optimized prompt that sets up the projectstructure, tech stack, file layout, data models, sample data, and initial UI. 
+
+D) Add AI task generation
+
+Add “Generate tasks with AI” to the board header. Open a modal asking“What are you working on?”. On submit, call an LLM to create 10–15 smart,ordered tasks. Insert into the current board. Provide loading and error states. 
+
+E) Create database + safe API key storage
+
+Create the database tables for users, boards, columns, and tasks.Add an .env holder (or a secure Secret) for OPENAI_API_KEY.Use the secret on the server only; never expose keys to the client. 
+
+F) Add authentication (Bolt’s native or a provider)
+
+Add email/password sign up & sign in as the default route.After login, redirect to /boards. Persist userId on boards/tasks.(Optional) If using Clerk/Auth provider, follow their docs and keep PII off our DB. 
+
+G) Make it pretty
+
+Restyle the app with a minimal, tech‑forward look: modern typography,subtle animations, accessible color palette, hover/focus states,and responsive layout. 
+
+H) Optional hero from 21st.dev (landing page)
+
+Install required UI deps. Replace the landing page hero with 21st.dev’s“Synthetic Hero” animation. Keep routing/auth intact. Ensure SSR/CSR work. 
+
+
+
+Part 7 — Tool Stack You Saw (and why)
+
+Bolt.new — AI code workspace to scaffold apps fast, preview, manage DB, secrets, and deploy.
+
+Claude / ChatGPT — planning and prompt‑engineering copilots (great for PRDs and follow‑up prompts).
+
+Supabase — simple, hosted Postgres + auth + storage (Bolt uses it under the hood for DB).
+
+Clerk (or similar) — third‑party auth to keep sensitive login data off your DB.
+
+OpenAI (or any LLM API) — your app’s AI features (task generation, summaries, etc.).
+
+Stripe — payments for monetization.
+
+GitHub — source of truth; sync your Bolt project and version safely.
+
+Cursor — when you outgrow the MVP, move here to harden code for scale.
+
+Excalidraw — quick diagrams/whiteboarding for communicating architecture.
+
+21st.dev — copy‑prompt beautiful components into Bolt for instant polish.
+
+
+
+Part 8 — Security Basics You Repeatedly Saw
+
+Never expose API keys in the frontend. Store in Secrets or .env on the server.
+
+Use role‑based DB access and validate inputs on the server.
+
+Prefer third‑party auth (Clerk, etc.) so you don’t hold raw passwords.
+
+Back up the DB; keep production data separate from test data.
+
+
+
+Part 9 — Debugging Flow (The “Don’t Panic” Loop)
+
+Reproduce the issue.
+
+Copy the exact error text into your AI builder.
+
+Ask for a fix. If stuck, roll back to a known‑good checkpoint.
+
+Add small changes, test again.
+
+Common errors & quick actions
+
+Module not found → install dependency; check import path.
+
+Undefined variable / prop → verify state/props and component ownership.
+
+DB connection failed → re‑link project to Supabase; verify env/secret names.
+
+Auth not persisting → ensure redirect after login and userId saved on write.
+
+
+
+Part 10 — Deploy & Domains
+
+Click Publish in Bolt for an instant hosted URL.
+
+To use a custom domain, buy one at a registrar, then update DNS (A/CNAME) to point to Bolt’s host.
+
+Enable HTTPS, test signup and AI features in production.
+
+
+
+Part 11 — Monetization Quickstart
+
+Pick a market with a painful problem (Reddit, forums, customer interviews).
+
+Craft an offer so good people feel silly saying no.
+
+Ship an MVP; wire Stripe for checkout.
+
+Let real users in; improve weekly.
+
+
+
+Part 12 — One‑Liner Answers for Q&A
+
+Q: Server vs Hosting — what’s the difference? A: A server is the computer/manager that actually runs your code and jobs. Hosting is the provider and place that keeps your app online and reachable (compute, storage, SSL, deploys). One is the worker, the other is the workplace.
+
+Q: Why keep API keys hidden, and where? A: Keys identify and bill you. Put them in backend environment variables or platform Secrets, never in frontend files. Calls to AI models should originate server‑side or via secure functions.
+
+Q: Can my vibe‑coded site use WordPress as the backend? A: Yes. Treat WordPress as the kitchen and expose data via the WordPress REST API or GraphQL (WPGraphQL). Your React frontend (Bolt) calls those endpoints for posts, users, etc.
+
+Q: Can I use MongoDB or other DBs instead of the built‑in one? A: For MVP speed, use Bolt DB (Supabase). You can integrate Mongo/Postgres yourself, but it’s extra wiring. When you scale, move to a dedicated DB with migrations and observability.
+
+Q: Should users bring their own AI API key? A: Usually no — poor UX. Keep your key in the backend and price the feature to cover usage. For power users, you can offer a “use your own key” toggle.
+
+Q: Why not use Bolt’s AI to also power the in‑app AI feature? A: Bolt’s AI writes your code; it isn’t an API for your users. Your app should call a model provider (OpenAI/Anthropic/etc.) with your server‑side key.
+
+Q: Claude vs GPT — which to plan with? A: Both work. Many builders like Claude for PRDs and prompt rewrites and GPT for deep reasoning. Use whichever feels clearer to you.
+
+Q: Bolt vs Cursor — when do I switch? A: Build and validate in Bolt. When you gain traction or need reliability, push to GitHub and continue in Cursor to harden tests, security, and scale.
+
+Q: Custom domains and DNS — how do I connect them? A: After deployment, add your domain in hosting settings. Copy the required DNS records (A/CNAME) into your domain registrar. Wait for propagation; SSL will auto‑provision.
+
+Q: Free‑tier tricks? A: Start on the free tier to prototype. When credits run out, sync to GitHub so your work is safe. Upgrade only when you need live users or private repos.
+
+Q: Privacy — can I keep my idea offline? A: Yes. Use self‑hosted/open‑source builders or local models through OpenRouter/OLLama. Keep code in private repos and secrets in local env vars.
+
+Q: 21st.dev — how do I insert those fancy sections? A: Copy the component’s prompt, paste into Bolt, and include any listed install commands. Do this early so dependencies install cleanly.
+
+Say it Super Simply Servers work. Hosting is the building. Keys are badges. WordPress can be your kitchen. Use the right tool for the stage you’re in.
+
+
+
+Part 14 — Checklists
+
+MVP Build Checklist
+
+[ ] PRD written and platform‑optimized prompt ready
+
+[ ] Boards, columns, tasks CRUD working
+
+[ ] AI task generator working with server‑side key
+
+[ ] Auth working; userId attached to writes
+
+[ ] DB tables backed up; seed data added
+
+[ ] UI restyled; basic accessibility passes
+
+[ ] Deployed to a live URL; domain wired
+
+Safety & Quality
+
+[ ] Secrets in server storage
+
+[ ] Input validation on server
+
+[ ] Error states and loading states
+
+[ ] Versioned on GitHub
+
+
+
+Part 15 — Your Next 90‑Minute Practice Run
+
+Re‑create the board app from this guide.
+
+Swap AI feature: generate subtasks from task description.
+
+Add a pricing page and connect Stripe test mode.
+
+Replace the hero with a 21st.dev component.
+
+Publish and share the link with 3 friends; gather feedback.
+
+
+
+Appendix — Useful Links
+
+Bolt site from session: https://new-chat-0lvj.bolt.host/
+
+Whiteboard (restaurant analogy): https://link.excalidraw.com/l/4M5RvLQENCN/6iG915BfqE7
+
+Bolt prompting best practices: https://support.bolt.new/best-practices/prompting-effectively
+
+Components: https://21st.dev/
+
+Clerk (Auth): https://clerk.com/
+
+Supabase: https://supabase.com/
+
+Cursor: https://cursor.sh/
+
+Stripe: https://stripe.com/
+
+GitHub: https://github.com/
+
+
+
+Closing
+
+You don’t need to be a career coder to ship software. Use this playbook: plan → PRD → optimized prompt → tiny slices → test → fix → deploy. Keep it scrappy, keep it fun, and iterate your way to something people love.
+
+
+
+
+
+---

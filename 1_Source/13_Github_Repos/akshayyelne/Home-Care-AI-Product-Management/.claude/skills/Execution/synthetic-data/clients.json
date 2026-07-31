@@ -1,0 +1,556 @@
+# Extracted from: akshayyelne/Home-Care-AI-Product-Management/.claude/skills/Execution/synthetic-data/clients.json
+# Generated: 2026-07-31T00:49:45.167Z
+
+```json
+// SYNTHETIC DATA — NOT REAL APP-PROTECTED DATA
+// Generated for AI testing purposes only under Australian Privacy Act 1988
+// All identifiers are random UUIDs; all names, postcodes, and contact details are fictitious
+// No real client or carer data is used or referenced
+// Generated: 2026-03-28T00:00:00.000Z
+// P-9 is explicitly ABSENT from all records (AX-01: blocked — not collected in v1)
+{
+  "data_classification": "SYNTHETIC — NOT REAL APP-PROTECTED DATA",
+  "schema_version": "1.0.0",
+  "generated_at": "2026-03-28T00:00:00.000Z",
+  "generated_for": "Home-Care-AI ECC validation harness — Artifact 25",
+  "privacy_contract": "All names, dates of birth, identifiers, and contact information are entirely fictitious. Generated identifiers are deterministic for test reproducibility, not random UUIDs. Data is statistically plausible but non-attributable.",
+  "compliance_note": "P-9 (disability/medical condition detail) is ABSENT from all records per AX-01 pre-sprint gate. CC-4 guard (E1_LEGAL_SIGNOFF=false): P-2/P-4/P-5 fields are stored but MUST NOT be used in matching logic.",
+  "threshold_constants_ref": "Artifact 23 §3 — all scoring constants below are binding",
+  "scoring_constants": {
+    "SCORING_WEIGHT_FAMILIARITY": 0.60,
+    "SCORING_WEIGHT_PROXIMITY": 0.40,
+    "SHORTLIST_MAX_CANDIDATES": 3,
+    "PROXIMITY_MAX_KM": 25,
+    "SPP_FAMILIARITY_SCALE": "min(visit_count * 0.20, 0.60)",
+    "COORDINATOR_APPROVAL_SLA_MIN": 30,
+    "BACKUP_COORDINATOR_SLA_MIN": 15,
+    "CARER_REPLY_GRACE_MIN": 15,
+    "E1_LEGAL_SIGNOFF": false,
+    "WHATSAPP_APP8_CONFIRMED": false,
+    "SC07_GOOGLE_MAPS_APPROVED": false,
+    "VACANCY_UNRESOLVED_ALERT_THRESHOLD": 0.10,
+    "AUDIT_LOG_RETENTION_YEARS": 7,
+    "MODEL_L1_L2": "claude-haiku-4-5-20251001",
+    "MODEL_L3": "claude-sonnet-4-6",
+    "TOKEN_BUDGET_L1_L2": 2200,
+    "TOKEN_BUDGET_L3": 3500,
+    "THRESHOLD_QUALITY_MIN": 0.70
+  },
+  "clients": [
+    {
+      "client_id": "c1a30001-4a2d-8f3c-0000-000000000001",
+      "scenario": "SYN-01",
+      "display_name": "Margaret Chen",
+      "age": 78,
+      "gender": "Female",
+      "suburb": "Neutral Bay",
+      "postcode": "2089",
+      "state": "NSW",
+      "lat": -33.8282,
+      "lng": 151.2194,
+      "primary_condition": "Mild Cognitive Impairment",
+      "care_requirements": ["domestic_assistance", "personal_care", "social_support"],
+      "funding_type": "HCP",
+      "spp": {
+        "P-1_preferred_gender": null,
+        "P-2_preferred_language": "Cantonese",
+        "P-2_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false; stored only, MUST NOT be used in matching",
+        "P-3_familiarity_threshold": "BRIEFED_ACCEPTABLE",
+        "P-4_cultural_background": null,
+        "P-4_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-5_religion": null,
+        "P-5_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-6_pet_tolerance": true,
+        "P-7_visit_history": {
+          "ca3e0001-4b3c-9d2e-0000-000000000001": 3
+        },
+        "P-7_note": "David Okafor has 3 confirmed prior visits. familiarity_score = min(3 * 0.20, 0.60) = 0.60",
+        "P-8_do_not_send_flag": null,
+        "P-9": "ABSENT — AX-01 pre-sprint gate: not collected in v1",
+        "P-10_spp_completeness_score": 0.64,
+        "P-11_communication_preferences": "SMS"
+      },
+      "family_contact": {
+        "name": "Alan Chen",
+        "relationship": "Son",
+        "phone": "555-0201-001",
+        "consent_to_notify": true
+      },
+      "device_ids": {
+        "alayacare_client_id": "ALC-SYN-001",
+        "sms_number": "555-0100-001"
+      },
+      "data_classification": "SYNTHETIC — NOT REAL APP-PROTECTED DATA",
+      "generated_at": "2026-03-28T00:00:00.000Z"
+    },
+    {
+      "client_id": "c1a30002-4a2d-8f3c-0000-000000000002",
+      "scenario": "SYN-02",
+      "display_name": "Patricia Williams",
+      "age": 82,
+      "gender": "Female",
+      "suburb": "Parramatta",
+      "postcode": "2150",
+      "state": "NSW",
+      "lat": -33.8148,
+      "lng": 151.0017,
+      "primary_condition": "COPD",
+      "care_requirements": ["domestic_assistance", "medication_prompts"],
+      "funding_type": "CHSP",
+      "spp": {
+        "P-1_preferred_gender": "Female",
+        "P-2_preferred_language": null,
+        "P-2_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-3_familiarity_threshold": "NO_PREFERENCE",
+        "P-4_cultural_background": null,
+        "P-4_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-5_religion": null,
+        "P-5_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-6_pet_tolerance": false,
+        "P-7_visit_history": {},
+        "P-7_note": "No prior visits with any carer. All candidates score familiarity_score=0.0",
+        "P-8_do_not_send_flag": null,
+        "P-9": "ABSENT — AX-01 pre-sprint gate: not collected in v1",
+        "P-10_spp_completeness_score": 0.45,
+        "P-11_communication_preferences": "SMS"
+      },
+      "family_contact": {
+        "name": "Barbara Williams-Scott",
+        "relationship": "Daughter",
+        "phone": "555-0201-002",
+        "consent_to_notify": true
+      },
+      "device_ids": {
+        "alayacare_client_id": "ALC-SYN-002",
+        "sms_number": "555-0100-002"
+      },
+      "data_classification": "SYNTHETIC — NOT REAL APP-PROTECTED DATA",
+      "generated_at": "2026-03-28T00:00:00.000Z"
+    },
+    {
+      "client_id": "c1a30003-4a2d-8f3c-0000-000000000003",
+      "scenario": "SYN-03",
+      "display_name": "Dorothy Kumar",
+      "age": 75,
+      "gender": "Female",
+      "suburb": "Chatswood",
+      "postcode": "2067",
+      "state": "NSW",
+      "lat": -33.7972,
+      "lng": 151.1802,
+      "primary_condition": "Osteoporosis",
+      "care_requirements": ["domestic_assistance", "social_support"],
+      "funding_type": "HCP",
+      "spp": {
+        "P-1_preferred_gender": null,
+        "P-2_preferred_language": null,
+        "P-2_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-3_familiarity_threshold": "KNOWN_CARERS_ONLY",
+        "P-3_note": "CRITICAL TEST: Gate 4 must exclude ALL unfamiliar carers. P-7_visit_history is empty, so no carer passes Gate 4. Expected outcome: shortlist_size=0 → VACANCY_UNRESOLVED. Guard G-DS-05 must appear in audit log with guard_passed=false.",
+        "P-4_cultural_background": null,
+        "P-4_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-5_religion": null,
+        "P-5_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-6_pet_tolerance": true,
+        "P-7_visit_history": {},
+        "P-7_note": "EMPTY — no carers have ever visited Dorothy. Combined with P-3=KNOWN_CARERS_ONLY, this forces empty shortlist.",
+        "P-8_do_not_send_flag": null,
+        "P-9": "ABSENT — AX-01 pre-sprint gate: not collected in v1",
+        "P-10_spp_completeness_score": 0.55,
+        "P-11_communication_preferences": "SMS"
+      },
+      "family_contact": {
+        "name": "Priya Kumar",
+        "relationship": "Daughter",
+        "phone": "555-0201-003",
+        "consent_to_notify": true
+      },
+      "device_ids": {
+        "alayacare_client_id": "ALC-SYN-003",
+        "sms_number": "555-0100-003"
+      },
+      "data_classification": "SYNTHETIC — NOT REAL APP-PROTECTED DATA",
+      "generated_at": "2026-03-28T00:00:00.000Z"
+    },
+    {
+      "client_id": "c1a30004-4a2d-8f3c-0000-000000000004",
+      "scenario": "SYN-04",
+      "display_name": "Evelyn Nguyen",
+      "age": 85,
+      "gender": "Female",
+      "suburb": "Randwick",
+      "postcode": "2031",
+      "state": "NSW",
+      "lat": -33.9130,
+      "lng": 151.2400,
+      "primary_condition": "Type 2 Diabetes",
+      "care_requirements": ["nursing", "domestic_assistance", "medication_management"],
+      "funding_type": "HCP",
+      "spp": {
+        "spp_state_T0": {
+          "description": "SPP populated at T=0 (INC-04a). 5 fields non-null.",
+          "P-1_preferred_gender": "Female",
+          "P-2_preferred_language": null,
+          "P-2_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+          "P-3_familiarity_threshold": "BRIEFED_ACCEPTABLE",
+          "P-4_cultural_background": null,
+          "P-4_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+          "P-5_religion": null,
+          "P-5_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+          "P-6_pet_tolerance": false,
+          "P-7_visit_history": {
+            "ca3e0005-4b3c-9d2e-0000-000000000005": 2
+          },
+          "P-7_note": "Michael Santos: 2 prior visits. familiarity_score = min(2 * 0.20, 0.60) = 0.40",
+          "P-8_do_not_send_flag": null,
+          "P-9": "ABSENT — AX-01",
+          "P-10_spp_completeness_score": 0.55,
+          "P-11_communication_preferences": "SMS"
+        },
+        "spp_state_T30": {
+          "description": "SPP decayed at T+30 days (INC-04b). All preference fields null — triggers SPP_COLD_START.",
+          "note": "CRITICAL TEST: P-10=0.0 triggers SPP_COLD_START. Matching must fall back to proximity-only. Coordinator card must NOT show familiarity phrasing. Ranking changes from T=0 (Emma now #1, not Michael).",
+          "P-1_preferred_gender": null,
+          "P-2_preferred_language": null,
+          "P-3_familiarity_threshold": null,
+          "P-4_cultural_background": null,
+          "P-5_religion": null,
+          "P-6_pet_tolerance": null,
+          "P-7_visit_history": null,
+          "P-8_do_not_send_flag": null,
+          "P-9": "ABSENT — AX-01",
+          "P-10_spp_completeness_score": 0.0,
+          "P-11_communication_preferences": null
+        }
+      },
+      "family_contact": {
+        "name": "Thomas Nguyen",
+        "relationship": "Son",
+        "phone": "555-0201-004",
+        "consent_to_notify": true
+      },
+      "device_ids": {
+        "alayacare_client_id": "ALC-SYN-004",
+        "sms_number": "555-0100-004"
+      },
+      "data_classification": "SYNTHETIC — NOT REAL APP-PROTECTED DATA",
+      "generated_at": "2026-03-28T00:00:00.000Z"
+    },
+    {
+      "client_id": "c1a30005-4a2d-8f3c-0000-000000000005",
+      "scenario": "SYN-05",
+      "display_name": "Jean Morrison",
+      "age": 71,
+      "gender": "Female",
+      "suburb": "Bondi Junction",
+      "postcode": "2022",
+      "state": "NSW",
+      "lat": -33.8935,
+      "lng": 151.2508,
+      "primary_condition": "Hip fracture (post-surgical recovery)",
+      "care_requirements": ["personal_care", "domestic_assistance", "rehabilitation_support"],
+      "funding_type": "HCP",
+      "spp": {
+        "P-1_preferred_gender": null,
+        "P-2_preferred_language": null,
+        "P-2_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-3_familiarity_threshold": null,
+        "P-4_cultural_background": null,
+        "P-4_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-5_religion": null,
+        "P-5_cc4_guard": "BLOCKED — E1_LEGAL_SIGNOFF=false",
+        "P-6_pet_tolerance": null,
+        "P-7_visit_history": null,
+        "P-7_note": "NULL — new client. No visit history exists.",
+        "P-8_do_not_send_flag": null,
+        "P-9": "ABSENT — AX-01",
+        "P-10_spp_completeness_score": 0.0,
+        "P-10_note": "CRITICAL TEST: P-10=0.0 triggers EC-04 cold-start path. briefing_mode must be MINIMAL. Coordinator card must show spp_invitation_url and 'Add preferences' prompt.",
+        "P-11_communication_preferences": null
+      },
+      "family_contact": {
+        "name": "Carol Morrison-Blake",
+        "relationship": "Daughter",
+        "phone": "555-0201-005",
+        "consent_to_notify": true
+      },
+      "device_ids": {
+        "alayacare_client_id": "ALC-SYN-005",
+        "sms_number": "555-0100-005"
+      },
+      "data_classification": "SYNTHETIC — NOT REAL APP-PROTECTED DATA",
+      "generated_at": "2026-03-28T00:00:00.000Z"
+    }
+  ],
+  "carers": [
+    {
+      "carer_id": "ca3e0001-4b3c-9d2e-0000-000000000001",
+      "display_name": "David Okafor",
+      "age": 34,
+      "gender": "Male",
+      "suburb": "Cremorne",
+      "postcode": "2090",
+      "state": "NSW",
+      "lat": -33.8093,
+      "lng": 151.2170,
+      "qualifications": ["Cert III Individual Support", "First Aid"],
+      "availability_status": "AVAILABLE",
+      "sms_number": "555-0300-001",
+      "credential_expiry_date": "2027-06-30",
+      "credential_expiry_date_note": "F10 dormant field — planted in schema for Wave 2 Compliance Dashboard; null-permitted in v1",
+      "used_in_scenarios": ["SYN-01"],
+      "distance_from_clients": {
+        "c1a30001": {
+          "distance_km": 2.11,
+          "proximity_score": 0.916,
+          "computation": "Haversine([-33.8282,151.2194], [-33.8093,151.2170]) = 2.11km; 1 - (2.11/25) = 0.916"
+        }
+      }
+    },
+    {
+      "carer_id": "ca3e0002-4b3c-9d2e-0000-000000000002",
+      "display_name": "Sarah Brennan",
+      "age": 41,
+      "gender": "Female",
+      "suburb": "Mosman",
+      "postcode": "2088",
+      "state": "NSW",
+      "lat": -33.8305,
+      "lng": 151.2579,
+      "qualifications": ["Cert III Individual Support", "Manual Handling"],
+      "availability_status": "AVAILABLE",
+      "sms_number": "555-0300-002",
+      "credential_expiry_date": "2026-12-15",
+      "credential_expiry_date_note": "F10 dormant field",
+      "used_in_scenarios": ["SYN-01", "SYN-03"],
+      "distance_from_clients": {
+        "c1a30001": {
+          "distance_km": 3.56,
+          "proximity_score": 0.858,
+          "computation": "Haversine([-33.8282,151.2194], [-33.8305,151.2579]) = 3.56km; 1 - (3.56/25) = 0.858"
+        },
+        "c1a30003": {
+          "distance_km": 8.06,
+          "proximity_score": 0.678,
+          "computation": "Haversine([-33.7972,151.1802], [-33.8305,151.2579]) = 8.06km; 1 - (8.06/25) = 0.678"
+        }
+      }
+    },
+    {
+      "carer_id": "ca3e0003-4b3c-9d2e-0000-000000000003",
+      "display_name": "Thomas Patel",
+      "age": 29,
+      "gender": "Male",
+      "suburb": "Crows Nest",
+      "postcode": "2065",
+      "state": "NSW",
+      "lat": -33.8268,
+      "lng": 151.1917,
+      "qualifications": ["Cert III Individual Support"],
+      "availability_status": "AVAILABLE",
+      "sms_number": "555-0300-003",
+      "credential_expiry_date": "2027-03-01",
+      "credential_expiry_date_note": "F10 dormant field",
+      "used_in_scenarios": ["SYN-01", "SYN-03"],
+      "distance_from_clients": {
+        "c1a30001": {
+          "distance_km": 2.56,
+          "proximity_score": 0.898,
+          "computation": "Haversine([-33.8282,151.2194], [-33.8268,151.1917]) = 2.56km; 1 - (2.56/25) = 0.898"
+        },
+        "c1a30003": {
+          "distance_km": 3.45,
+          "proximity_score": 0.862,
+          "computation": "Haversine([-33.7972,151.1802], [-33.8268,151.1917]) = 3.45km; 1 - (3.45/25) = 0.862"
+        }
+      }
+    },
+    {
+      "carer_id": "ca3e0004-4b3c-9d2e-0000-000000000004",
+      "display_name": "Lisa Wong",
+      "age": 38,
+      "gender": "Female",
+      "suburb": "Merrylands",
+      "postcode": "2160",
+      "state": "NSW",
+      "lat": -33.8346,
+      "lng": 150.9879,
+      "qualifications": ["Cert IV Ageing Support", "First Aid", "Dementia Care"],
+      "availability_status": "AVAILABLE",
+      "sms_number": "555-0300-004",
+      "credential_expiry_date": "2028-01-20",
+      "credential_expiry_date_note": "F10 dormant field",
+      "used_in_scenarios": ["SYN-02"],
+      "distance_from_clients": {
+        "c1a30002": {
+          "distance_km": 2.53,
+          "proximity_score": 0.899,
+          "computation": "Haversine([-33.8148,151.0017], [-33.8346,150.9879]) = 2.53km; 1 - (2.53/25) = 0.899"
+        }
+      }
+    },
+    {
+      "carer_id": "ca3e0005-4b3c-9d2e-0000-000000000005",
+      "display_name": "Michael Santos",
+      "age": 45,
+      "gender": "Male",
+      "suburb": "Kingsford",
+      "postcode": "2032",
+      "state": "NSW",
+      "lat": -33.9165,
+      "lng": 151.2285,
+      "qualifications": ["Cert III Individual Support", "Diabetes Support"],
+      "availability_status": "AVAILABLE",
+      "sms_number": "555-0300-005",
+      "credential_expiry_date": "2026-09-10",
+      "credential_expiry_date_note": "F10 dormant field — note: expiry within 6 months, would trigger F10 alert",
+      "used_in_scenarios": ["SYN-03", "SYN-04", "SYN-05"],
+      "distance_from_clients": {
+        "c1a30003": {
+          "distance_km": 15.20,
+          "proximity_score": 0.392,
+          "computation": "Haversine([-33.7972,151.1802], [-33.9165,151.2285]) = 15.20km; 1 - (15.20/25) = 0.392"
+        },
+        "c1a30004": {
+          "distance_km": 1.13,
+          "proximity_score": 0.955,
+          "computation": "Haversine([-33.9130,151.2400], [-33.9165,151.2285]) = 1.13km; 1 - (1.13/25) = 0.955"
+        },
+        "c1a30005": {
+          "distance_km": 3.28,
+          "proximity_score": 0.869,
+          "computation": "Haversine([-33.8935,151.2508], [-33.9165,151.2285]) = 3.28km; 1 - (3.28/25) = 0.869"
+        }
+      }
+    },
+    {
+      "carer_id": "ca3e0006-4b3c-9d2e-0000-000000000006",
+      "display_name": "Emma Davies",
+      "age": 33,
+      "gender": "Female",
+      "suburb": "Randwick",
+      "postcode": "2031",
+      "state": "NSW",
+      "lat": -33.9143,
+      "lng": 151.2432,
+      "qualifications": ["Cert III Individual Support", "First Aid"],
+      "availability_status": "AVAILABLE",
+      "sms_number": "555-0300-006",
+      "credential_expiry_date": "2027-11-05",
+      "credential_expiry_date_note": "F10 dormant field",
+      "used_in_scenarios": ["SYN-03", "SYN-04", "SYN-05"],
+      "distance_from_clients": {
+        "c1a30003": {
+          "distance_km": 15.16,
+          "proximity_score": 0.394,
+          "computation": "Haversine([-33.7972,151.1802], [-33.9143,151.2432]) = 15.16km; 1 - (15.16/25) = 0.394"
+        },
+        "c1a30004": {
+          "distance_km": 0.33,
+          "proximity_score": 0.987,
+          "computation": "Haversine([-33.9130,151.2400], [-33.9143,151.2432]) = 0.33km; 1 - (0.33/25) = 0.987"
+        },
+        "c1a30005": {
+          "distance_km": 2.41,
+          "proximity_score": 0.904,
+          "computation": "Haversine([-33.8935,151.2508], [-33.9143,151.2432]) = 2.41km; 1 - (2.41/25) = 0.904"
+        }
+      }
+    },
+    {
+      "carer_id": "ca3e0007-4b3c-9d2e-0000-000000000007",
+      "display_name": "Robert Kim",
+      "age": 52,
+      "gender": "Male",
+      "suburb": "Granville",
+      "postcode": "2142",
+      "state": "NSW",
+      "lat": -33.8329,
+      "lng": 151.0120,
+      "qualifications": ["Cert III Individual Support", "Medication Assistance"],
+      "availability_status": "AVAILABLE",
+      "sms_number": "555-0300-007",
+      "credential_expiry_date": "2027-08-14",
+      "credential_expiry_date_note": "F10 dormant field",
+      "used_in_scenarios": ["SYN-02"],
+      "distance_from_clients": {
+        "c1a30002": {
+          "distance_km": 2.22,
+          "proximity_score": 0.911,
+          "computation": "Haversine([-33.8148,151.0017], [-33.8329,151.0120]) = 2.22km; 1 - (2.22/25) = 0.911"
+        }
+      }
+    },
+    {
+      "carer_id": "ca3e0008-4b3c-9d2e-0000-000000000008",
+      "display_name": "Anna Fitzgerald",
+      "age": 39,
+      "gender": "Female",
+      "suburb": "Waverley",
+      "postcode": "2024",
+      "state": "NSW",
+      "lat": -33.8980,
+      "lng": 151.2506,
+      "qualifications": ["Cert IV Ageing Support", "First Aid", "Post-Surgical Care"],
+      "availability_status": "AVAILABLE",
+      "sms_number": "555-0300-008",
+      "credential_expiry_date": "2028-04-22",
+      "credential_expiry_date_note": "F10 dormant field",
+      "used_in_scenarios": ["SYN-04", "SYN-05"],
+      "distance_from_clients": {
+        "c1a30004": {
+          "distance_km": 1.94,
+          "proximity_score": 0.922,
+          "computation": "Haversine([-33.9130,151.2400], [-33.8980,151.2506]) = 1.94km; 1 - (1.94/25) = 0.922"
+        },
+        "c1a30005": {
+          "distance_km": 0.50,
+          "proximity_score": 0.980,
+          "computation": "Haversine([-33.8935,151.2508], [-33.8980,151.2506]) = 0.50km; 1 - (0.50/25) = 0.980"
+        }
+      }
+    },
+    {
+      "carer_id": "ca3e0009-4b3c-9d2e-0000-000000000009",
+      "display_name": "James Sullivan",
+      "age": 47,
+      "gender": "Male",
+      "suburb": "Wentworthville",
+      "postcode": "2145",
+      "state": "NSW",
+      "lat": -33.8020,
+      "lng": 150.9767,
+      "qualifications": ["Cert III Individual Support", "First Aid"],
+      "availability_status": "AVAILABLE",
+      "sms_number": "555-0300-009",
+      "credential_expiry_date": "2027-02-28",
+      "credential_expiry_date_note": "F10 dormant field",
+      "used_in_scenarios": ["SYN-02"],
+      "distance_from_clients": {
+        "c1a30002": {
+          "distance_km": 2.71,
+          "proximity_score": 0.892,
+          "computation": "Haversine([-33.8148,151.0017], [-33.8020,150.9767]) = 2.71km; 1 - (2.71/25) = 0.892"
+        }
+      }
+    }
+  ],
+  "coordinators": [
+    {
+      "coordinator_id": "c00rd001-0000-0000-0000-000000000001",
+      "display_name": "Primary Coordinator",
+      "role": "CARE_COORDINATOR",
+      "sla_min": 30,
+      "tier": 1
+    },
+    {
+      "coordinator_id": "c00rd002-0000-0000-0000-000000000002",
+      "display_name": "Backup Coordinator",
+      "role": "CARE_COORDINATOR",
+      "sla_min": 15,
+      "tier": 2
+    }
+  ]
+}
+
+```

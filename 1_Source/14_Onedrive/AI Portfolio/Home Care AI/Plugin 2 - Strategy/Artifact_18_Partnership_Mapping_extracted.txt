@@ -1,0 +1,1216 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/Plugin 2 - Strategy/Artifact_18_Partnership_Mapping.pdf
+# Characters: 47494
+# Generated: 2026-07-31T00:07:32.989Z
+
+Artifact 18 — Partnership Mapping
+Strategy · Stage 4 · Go-to-Market Architecture
+DOCUMENT DETAILS
+ProjectHome-Care-AIStageStrategy    →    Stage    4    (Go-to-Market
+Architecture)
+Date2026-03-27MethodologyHealthcare      Value      Chain      mapping;
+Moat-Builder  Score  (SC  +  NE);  Tier  1/2/3
+prioritisation
+InputArtifact  12  (Startup  Canvas  —  channels,  capabilities,  confirmed  v1  infrastructure),  Artifact  13  (SWOT  —
+VI-1  EMR  integration  assumption,  12-month  AlayaCare  window,  O2/O6  NDIS  opportunity),  Artifact  17
+(Remediation  Decision  Record  —  MessageMedia/AWS  SNS  v1  confirmed,  Google  Maps  APP  8  review
+pending)
+RegulatoryAustralian  Privacy  Act  1988  (APP).  HIPAA-grade  security  as  design  floor.  APP  8  governs  any  partner
+involving cross-border data processing.
+Feeds intoArtifact   19   —   Positioning   Statement   (mandatory   input   per   CLAUDE.md   Article   IV   Rule   5);
+agentic-logic-spec partner NFRs
+CLAUDE.md  Article  IV  Rule  5:  positioning-statement  cannot  run  before  partnership-mapping.  Moat
+claims  without  confirmed  partners  are  capped  at  3/5  and  flagged  n  Unvalidated.  The  Moat  Summary  for
+Positioning row at the end of §2 is the direct feed to Artifact 19.
+Scope  note:  This  map  is  adapted  entirely  for  the  Australian  home  care  ecosystem.  US-centric  references  (Epic,
+Medicare Advantage, CMS) are replaced by their Australian equivalents (AlayaCare, My Aged Care, ACCPA). The
+product is pre-revenue, pre-launch — most partnerships are aspirational. Tier classification reflects this honestly.
+Home-Care-AI · Artifact 18 · Partnership MappingPage 1 of 19
+
+Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 2Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 41. Partnership Ecosystem Map
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4Australian Home Care Value Chain
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4Partner Categories Summary
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 52. Partnership Prioritisation Matrix
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 5Integration Partners
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6Validation Partners
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7Distribution Partners
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9Moat Summary for Positioning (Artifact 19 Direct Feed)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 103. Value Proposition per Partner Type
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10For Integration Partners (AlayaCare — Primary Target)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10For Validation Partners (ACCPA — Primary Target)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10For Distribution Partners (My Aged Care / Services Australia — Strategic Target)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 114. Top 3 Moat-Building Partnerships — Deep Dive
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11Deep Dive 1 — ACCPA (Aged & Community Care Providers Association) [NE][CV]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11Deep Dive 2 — My Aged Care (MAC) / Services Australia [SC][NE]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 12Deep Dive 3 — AlayaCare (EMR API Integration) [SC]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 155. Partnership Risks & Red Flags
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 166. Handshake Table — HS-STRAT-05
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 177. Action Items
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 17Partnership Investment Summary (PAC Estimates → Artifact 20 inputs)
+Home-Care-AI · Artifact 18 · Partnership MappingPage 2 of 19
+
+Home-Care-AI · Artifact 18 · Partnership MappingPage 3 of 19
+
+1. Partnership Ecosystem Map
+1. Partnership Ecosystem Map
+Australian Home Care Value Chain
+[Senior Client / Family Contact]
+         n
+         nnn Consumer Directed Care (CDC) via My Aged Care portal
+         n (CHSP + HCP Packages Level 1–4)
+         n
+[Independent Home Care Agency] ←nn BEACHHEAD CUSTOMER
+         n
+         nnn Care Coordinator (CC) nnnn HOME-CARE-AI nnnnnn
+         n (scheduling, matching, n
+         n preference management) n
+         n n
+         nnn Registered Nurse / Case Manager n
+         n (clinical oversight, care plan review) n
+         n n
+         nnn Home Care Worker / Carer n
+             (direct service delivery) n
+                      n n
+[EMR / Scheduling Platforms] [Workforce Platforms] n
+AlayaCare, HCP, ShiftCare Humanforce, Deputy n
+Brevity, Carelink+ Mable, Careseekers n
+         n n
+[Government / Regulatory] [Clinical Validation] n
+My Aged Care (MAC) ACCPA, Dementia Australia n
+ACQSC, Dept of Health NARI, Bolton Clarke n
+Services Australia n
+         n n
+[Infrastructure / Channel] nnnnnnnnnnnnnnnnnnnnnnnnnnnn
+MessageMedia (SMS gateway)
+AWS ap-southeast-2 (cloud)
+Google Maps Distance Matrix API
+Partner Categories Summary
+CategoryPartners MappedConfirmed v1Tier 1 (launch)Tier 2 (6–12 mo)Tier 3 (Year 2+)
+Integration83    (MessageMedia,
+AWS,            Google
+Maps)
+431
+Validation50122
+Distribution50221
+Total183774
+Home-Care-AI · Artifact 18 · Partnership MappingPage 4 of 19
+
+2. Partnership Prioritisation Matrix
+2. Partnership Prioritisation Matrix
+Moat-Builder Score = SC Score (Switching Cost, 1–5) + NE Score (Network Effect, 1–5). Max 10.
+Tier 1 (Launch): Score ≥ 6, Complexity Low–Medium, OR confirmed v1 infrastructure.
+Tier 2 (6–12 months): Score 4–6, or strategically critical with High Complexity.
+Tier 3 (Year 2+): Score < 4, aspirational, or conditional on beachhead validation.
+Integration Partners
+Integration Partners
+PartnerMoat TypeS
+C
+N
+E
+Tot
+al
+Strategic RationaleComplexityTimeline
+MessageMedia / AWS
+SNS ap-southeast-2
+(AU SMS gateway)
+[SC]
+Switching   Cost
+(infrastructure
+lock-in)
+213
+v1    confirmed    —    resolves    CRIT-01.
+Domestic  processing,  no  APP  8  trigger.
+All  external  notifications  routed  through
+this layer. Channel Wrapper makes future
+migration  easy  but  creates  mild  lock-in
+through integration depth.
+Low                —
+API-based,  well
+-documented
+v1 confirmed
+AWS ap-southeast-2
+(Lambda,
+DynamoDB,
+CloudTrail, S3
+WORM) [SC]
+Switching   Cost
+(infrastructure
+lock-in   +   audit
+log immutability)
+314
+v1    confirmed    —    CloudTrail    is    the
+immutable  audit  log  store  (CLAUDE.md
+7-year retention requirement). DynamoDB
+for  SPP  +  availability  index.  S3  Object
+Lock  for  WORM  audit  storage.  Migration
+to  another  cloud  =  re-architect  the  audit
+trail.
+Low                —
+standard
+managed
+services
+v1 confirmed
+Google Maps
+Distance Matrix API
+[SC]
+Minimal          —
+commodity
+service
+112
+v1  confirmed  —  proximity  computation
+(ACT-V-03).      Only      carer      postcode
+transmitted.    APP    8    review    pending
+(SC-07  from  Artifact  10).  Low  switching
+cost  —  a  local  geocoding  library  could
+replace it.
+Low   —   single
+API     call     per
+match
+v1 confirmed n
+SC-07 pending
+AlayaCare (EMR API
+integration) [SC]
+Switching   Cost
+(workflow
+embed)
+415
+VI-1  assumption  —  established  agencies
+use     AlayaCare     for     rostering;     an
+integration   means   coordinators   never
+leave   their   existing   workflow   to   use
+Home-Care-AI.   Kills   the   "another   app"
+objection.  Resolves  the  single  most-cited
+adoption    risk    in    Artifact    12    W1.    If
+AlayaCare  offers  exclusivity,  it  flips  from
+partnership to threat (see §5).
+High               —
+FHIR/HL7
+interface;     App
+Marketplace
+listing process
+Tier 2 — initiate
+after E1
+validates
+standalone
+value
+ShiftCare (SME home
+care scheduling) [SC]
+Switching   Cost
+(workflow
+embed)
+314
+Serves  agencies  in  the  5–50  client  range
+—  smaller  than  our  primary  beachhead
+but    strongly    aligned    with    the    O6
+greenfield pivot path (new NDIS agencies
+with  no  existing  EMR).  Lower  integration
+complexity  than  AlayaCare.  VI-1  is  not  a
+barrier for agencies that use ShiftCare —
+they are already on a lightweight platform.
+Locked-gate risk near-zero — ShiftCare
+has no competing Vacant Visit Agent and
+no  incentive  to  block.  Elevated  to  Tier  1
+parallel  track  in  the  event  of  AlayaCare
+denial  (see  §4  AlayaCare  Contingency
+Map).
+Medium          —
+REST          API,
+simpler       than
+AlayaCare
+Tier 1 n —
+parallel track;
+activate if
+AlayaCare
+denies or delays
+Home-Care-AI · Artifact 18 · Partnership MappingPage 5 of 19
+
+PartnerMoat TypeS
+C
+N
+E
+Tot
+al
+Strategic RationaleComplexityTimeline
+HCP (Home Care
+Platform) [SC]
+Switching   Cost
+(workflow
+embed)
+314
+Second-largest  AU  home  care  platform
+after  AlayaCare.  Primarily  NDIS-focused.
+Overlaps   with   O6   greenfield   segment.
+Lower   priority   than   AlayaCare   for   the
+beachhead,     but     relevant     if     NDIS
+expansion is validated.
+Medium          —
+REST API
+Tier 2
+Humanforce (aged
+care workforce
+management)
+[SC][NE]
+Switching   Cost
++  mild  Network
+Effect     (shared
+workforce    pool
+across
+agencies)
+224
+Humanforce  manages  carer  scheduling,
+availability,   and   credential   tracking   for
+large    AU    aged    care    providers.    An
+integration    would    give    Home-Care-AI
+real-time availability data (S-2) rather than
+relying   on   self-reported   postcodes   —
+solving  the  F-1  supply-side  risk  (carer
+availability   reliability).   Only   valuable   if
+Humanforce's  client  base  overlaps  with
+our beachhead agencies.
+MediumTier 2
+Mable / Careseekers
+(peer-to-peer carer
+marketplace) [NE]
+Network    Effect
+(carer      supply
+pool)
+134
+Mable  is  Australia's  largest  peer-to-peer
+care  marketplace  (~20,000  carers).  An
+integration   or   data-sharing   agreement
+would  give  Home-Care-AI  access  to  a
+broad pool of available carers beyond the
+agency's    own    workforce    —    directly
+addressing   the   EC-02   edge   case   (no
+eligible SPP candidate). Complex privacy
+considerations:      Mable      carers      are
+independent    contractors,    not    agency
+employees.    APP    consent    model    is
+different.
+High               —
+two-sided
+marketplace
+with       different
+data
+governance
+Tier 3 —
+requires NDIS
+segment
+validation first
+Validation Partners
+Validation Partners
+PartnerMoat TypeS
+C
+N
+E
+Tot
+al
+Strategic RationaleComplexityTimeline
+ACCPA (Aged &
+Community Care
+Providers
+Association)
+[CV][NE]
+Clinical
+Validation        +
+Network    Effect
+(industry
+endorsement)
+156
+ACCPA   is   the   peak   body   for   1,000+
+community  care  providers  in  Australia,
+formed by the 2022 merger of ACSA and
+LASA.   Membership   covers   the   entire
+independent home care TAM. An ACCPA
+endorsement  or  co-publication  operates
+as: (a) a trust signal that converts agency
+owner  LOIs  (GTM-1),  (b)  a  distribution
+channel     through     ACCPA     member
+communications  and  the  Future  of  Aged
+Care     conference,     and     (c)     clinical
+validation evidence for the Agency Owner
+value      proposition.      Recruiting      an
+ACCPA-connected   clinical   advisor   now
+costs nothing.
+Low    —    start
+with      Advisory
+Board invitation;
+no    commercial
+agreement
+required initially
+Tier 1 — initiate
+at E1 start
+Home-Care-AI · Artifact 18 · Partnership MappingPage 6 of 19
+
+PartnerMoat TypeS
+C
+N
+E
+Tot
+al
+Strategic RationaleComplexityTimeline
+Dementia Australia
+[CV]
+Clinical
+Validation
+(high-P3
+segment
+credibility)
+134
+Clients with P-3 = "known carers only" are
+disproportionately    people    living    with
+dementia.      A      Dementia      Australia
+endorsement     or     co-developed     care
+continuity standard would: (a) validate the
+SPP  familiarity  threshold  feature  for  the
+highest-risk    client    subpopulation,    (b)
+unlock  the  dementia  care  segment  within
+agencies,  and  (c)  strengthen  the  DPIA
+case   for   P-3/P-4   data   collection   by
+demonstrating clinical justification.
+Low–Medium —
+position  product
+as               care
+continuity
+enabler,        not
+clinical tool
+Tier 2
+Aged Care Quality
+and Safety
+Commission
+(ACQSC) [CV]
+Clinical
+Validation
+(regulatory
+alignment)
+123
+The   ACQSC   enforces   the   Aged   Care
+Quality  Standards  (Standard  3:  Personal
+Care   and   Clinical   Care;   Standard   7:
+Human  Resources).  Demonstrating  that
+Home-Care-AI's    E-3    gate    and    SPP
+improve   compliance   with   Standard   3
+(consistency   of   care)   and   Standard   7
+(qualified,  appropriate  carers)  creates  a
+regulatory   alignment   narrative.   Not   a
+commercial  partnership  —  an  alignment
+document.
+Low   —   submit
+product           to
+ACQSC's
+Innovation   Hub
+(AU   Govt);   no
+commercial
+terms
+Tier 2
+Bolton Clarke / Royal
+District Nursing
+Service (RDNS) [CV]
+Clinical
+Validation  (pilot
+data)
+213
+Bolton    Clarke    is    Australia's    largest
+independent    not-for-profit    home    care
+provider    (~100,000    clients).    A    pilot
+agreement   would   produce   Real-World
+Evidence  (RWE)  at  scale:  vacancy  fill
+rates,       cancellation       rates,       client
+satisfaction   scores.   This   data   is   the
+evidence  base  for  Agency  Owner  LOIs
+(OKR-1    at    scale)    and    for    ACCPA
+co-publication. High-effort to initiate (large
+provider      procurement      cycle)      but
+high-value output.
+High    —    large
+provider
+procurement
+cycle,         6–12
+months   to   first
+data
+Tier 2 — initiate
+after beachhead
+(Angela/Tom)
+validation
+NARI (National
+Ageing Research
+Institute, Royal
+Melbourne Hospital)
+[CV]
+Clinical
+Validation
+(academic
+publication)
+123
+NARI   is   Australia's   leading   academic
+aged        care        research        institute.
+Co-authoring  a  study  on  "care  continuity
+and   trust-based   matching"   with   NARI
+would       produce       a       peer-reviewed
+publication   —   the   gold   standard   for
+enterprise   buyer   and   payer   credibility.
+18–24 month timeline.
+High               —
+research
+partnership
+agreement,  IRB
+equivalent
+(HREC),  18–24
+months           to
+publication
+Tier 3 — Year 2
+post-beachhead
+Distribution Partners
+Distribution Partners
+Home-Care-AI · Artifact 18 · Partnership MappingPage 7 of 19
+
+PartnerMoat TypeS
+C
+N
+E
+Tot
+al
+Strategic RationaleComplexityTimeline
+ACCPA (member
+communications +
+conference) [NE]
+Network    Effect
+(industry
+distribution)
+156
+Listed   above   as   validation   partner   —
+ACCPA plays a dual role. As a distribution
+partner,   ACCPA's   member   newsletter
+(1,000+   organisations),   the   Future   of
+Aged  Care  conference,  and  the  ACCPA
+Innovation  Awards  are  the  lowest-CAC
+distribution  channel  for  the  independent
+agency       segment.       A       conference
+demonstration    at    the    right    moment
+(post-E1       validation,       post-reference
+customer)   converts   to   Agency   Owner
+LOIs at scale.
+Low                —
+sponsorship   or
+speaker  slot  at
+industry  events;
+no     integration
+required
+Tier 1 — begin
+relationship at
+E1 start
+My Aged Care (MAC)
+/ Services Australia
+[SC][NE]
+Switching   Cost
++           Network
+Effect
+(government
+data integration)
+437
+My  Aged  Care  is  the  government  portal
+through  which  all  CHSP  and  Home  Care
+Package   (HCP   Level   1–4)   clients   are
+registered.   Every   agency   client   has   a
+MAC   reference   number.   A   MAC   API
+integration  would:  (a)  pre-populate  client
+records (name, package level, care needs
+assessment),   reducing   SPP   cold-start
+time,  (b)  surface  vacancy  events  against
+MAC-registered  visit  schedules,  and  (c)
+provide   a   government-validated   client
+identity  anchor  that  deepens  the  SPP
+moat.   Services   Australia   controls   API
+access     —     this     is     a     government
+partnership,    not    a    commercial    one.
+Access   may   require   a   pilot   program
+application.
+High               —
+government API
+access;       data
+governance
+agreement  with
+Services
+Australia; 12–18
+months
+Tier 1 n —
+highest strategic
+score (7/10);
+initiate
+feasibility
+inquiry NOW,
+build over 12–18
+months
+NDIS Quality and
+Safeguards
+Commission [SC]
+Switching   Cost
+(regulatory
+alignment      for
+NDIS agencies)
+224
+The   NDIS   QSC   oversees   quality   and
+safeguards for NDIS-registered providers.
+Independent  NDIS  agencies  are  the  O6
+greenfield  pivot  path  (new  agencies  with
+no  existing  EMR,  no  VI-1  barrier).  An
+NDIS      QSC      alignment      document
+(demonstrating       that       Home-Care-AI
+supports  compliance  with  NDIS  Practice
+Standards)  de-risks  the  product  for  this
+segment.   Requires   product   to   handle
+NDIS-specific     data     fields     (support
+coordination, plan management) — scope
+expansion from aged care.
+Medium          —
+alignment
+document;     no
+commercial
+terms;   requires
+product
+extension      for
+NDIS fields
+Tier 2 —
+conditional on
+O6 pivot path
+activation
+Bupa Australia /
+Medibank (private
+health insurers with
+home care benefits)
+[NE]
+Network    Effect
+(member
+distribution)
+224
+Both  Bupa  and  Medibank  offer  limited
+home  care  benefits  under  their  health
+insurance       products.       A       product
+endorsement     or     preferred     provider
+arrangement   could   provide   distribution
+access    to    their    home    care    benefit
+members.    Smaller    reach    than    MAC
+(government-funded   home   care   dwarfs
+private),   but   commercially   valuable   for
+premium-tier clients.
+Medium          —
+commercial
+negotiation;
+product      must
+meet     insurer's
+compliance
+requirements
+Tier 3
+Home-Care-AI · Artifact 18 · Partnership MappingPage 8 of 19
+
+PartnerMoat TypeS
+C
+N
+E
+Tot
+al
+Strategic RationaleComplexityTimeline
+Mable / Careseekers
+(carer supply) [NE]
+Network    Effect
+—                 see
+Integration
+section
+235
+Dual-listed    as    both    integration    and
+distribution   partner.   As   a   distribution
+channel,  Mable's  agency-facing  product
+(Mable  for  Business)  could  be  a  referral
+pathway   for   the   product   —   agencies
+already  using  Mable  for  carer  sourcing
+are      experiencing      F-1      (availability
+uncertainty), which is exactly the problem
+Home-Care-AI      addresses      for      the
+coordinator.  Referral  arrangement  rather
+than API integration in the first instance.
+Low-Medium  —
+commercial
+referral
+arrangement,
+no API required
+Tier 2
+Moat Summary for Positioning (Artifact 19 Direct Feed)
+Moat Summary for Positioning (Artifact 19 Direct Feed)
+Moat TypeConfirmed PartnersScoreStatus for Positioning
+[SC]       Switching
+Cost
+AWS  ap-southeast-2  (audit  log  +  SPP  storage),
+MessageMedia (channel layer)
+3–4/5n Confirmed (infrastructure level only)
+[SC]       Switching
+Cost
+AlayaCare API integration4/5n Unvalidated — Tier 2; cap at 3/5 for
+positioning
+[SC]       Switching
+Cost
+My Aged Care (MAC) API integration4/5n Unvalidated — Tier 1 aspirational; cap at 3/5
+for positioning
+[NE]          Network
+Effect
+ACCPA endorsement + member distribution5/5n Unvalidated — relationship not yet initiated;
+cap at 3/5 for positioning
+[NE]          Network
+Effect
+SPP data gravity (internal — not partner-derived)5/5n Confirmed — structural product moat; no
+partner required
+[CV]           Clinical
+Validation
+No partner confirmed yet—n Unvalidated — no validation evidence exists;
+not usable in positioning
+Honest moat position at current stage
+•Confirmed,  usable  in  positioning:  SPP  data  gravity  (internal),  compliance  architecture  (internal),  AWS
+infrastructure switching cost (weak but real)
+•Aspirational, flagged n Unvalidated: AlayaCare SC, MAC SC+NE, ACCPA NE, all clinical validation
+•Implication for Artifact 19: Positioning statement must be grounded in product differentiation (SPP, E-3 gate,
+privacy-by-design), not in partnership-derived moats that do not yet exist.
+Home-Care-AI · Artifact 18 · Partnership MappingPage 9 of 19
+
+3. Value Proposition per Partner Type
+3. Value Proposition per Partner Type
+For Integration Partners (AlayaCare — Primary Target)
+For Integration Partners (AlayaCare — Primary Target)
+"Integrating  Home-Care-AI  into  AlayaCare  means  care  coordinators  fill  every  vacant  visit  using
+trust-weighted  matching  without  leaving  their  existing  scheduling  workflow.  Agencies  that  currently
+use AlayaCare's Vacant Visit Agent — which matches on availability and qualifications only — get a
+trust layer and a client notification chain that AlayaCare does not offer natively. The integration makes
+Home-Care-AI the matching intelligence behind AlayaCare's scheduling engine, not a replacement for
+it."
+The  VI-1  unlock  this  creates:  Agency  owners  currently  resistant  to  "another  tool"  have  no  objection  when
+Home-Care-AI surfaces within their existing AlayaCare workflow. VI-1 (standalone willingness to pay) becomes
+less critical if the product lives inside the coordinator's current environment.
+For Validation Partners (ACCPA — Primary Target)
+For Validation Partners (ACCPA — Primary Target)
+"A  joint  case  study  with  ACCPA,  documenting  vacancy  fill  time,  cancellation  rate  reduction,  and
+coordinator  experience  improvement  across  two  validated  agencies,  gives  every  independent  home
+care  agency  owner  in  Australia  peer  evidence  from  organisations  like  theirs  —  not  from  a  vendor
+white  paper.  ACCPA's  endorsement  converts  coordinator  word-of-mouth  into  an  industry-level  trust
+signal at the moment of agency owner evaluation."
+What  ACCPA  gets:  Content  for  the  Future  of  Aged  Care  conference;  a  technology  innovation  narrative  for
+members; a demonstration that the association is actively shaping AI adoption in the sector (O4 — AI regulatory
+tailwind).
+For Distribution Partners (My Aged Care / Services Australia — Strategic Target)
+For Distribution Partners (My Aged Care / Services Australia — Strategic Target)
+"An API integration between Home-Care-AI and the My Aged Care portal means that when a registered
+CHSP  or  HCP-funded  client  has  a  vacant  visit,  the  coordinator's  match  engine  is  working  from  a
+government-validated  client  profile  —  not  from  a  manual  spreadsheet  entry.  For  Services  Australia,
+this  is  a  demonstration  that  approved  technology  providers  can  improve  visit  completion  rates  for
+government-funded   home   care   packages.   For   Home-Care-AI,   MAC   integration   is   the   deepest
+switching  cost  moat  in  the  product:  agency  data  is  anchored  to  government  client  records,  making
+migration to a competitor a multi-system divorce."
+Home-Care-AI · Artifact 18 · Partnership MappingPage 10 of 19
+
+4. Top 3 Moat-Building Partnerships — Deep Dive
+4. Top 3 Moat-Building Partnerships — Deep Dive
+Deep Dive 1 — ACCPA (Aged & Community Care Providers Association) [NE][CV]
+Deep Dive 1 — ACCPA (Aged & Community Care Providers Association) [NE][CV]
+Moat-Builder Score: 6/10
+Partner overview: ACCPA was formed in 2022 from the merger of ACSA (Aged Care Services Australia) and
+LASA  (Leading  Age  Services  Australia).  It  is  now  the  single  peak  body  representing  1,000+  aged  care  and
+community  care  organisations  across  Australia  —  covering  the  entire  independent  home  care  TAM  and  then
+some.  ACCPA  runs  the  Future  of  Aged  Care  national  conference,  manages  member  communications,
+administers innovation awards, and advises the Department of Health and Aged Care on sector policy.
+Decision-maker profile
+•CEO level for endorsement and conference partnership
+•Innovation / Technology Lead for pilot introduction
+•State chapter leads for grassroots coordinator engagement
+•Entry  path:  ACCPA  runs  an  "Innovation  in  Care"  awards  programme  —  a  submission  is  a  low-cost,
+high-visibility first contact.
+Partnership structure — three stages
+StageActionTimingCost
+Stage 1 —
+Advisory
+Recruit     1     ACCPA-connected     clinical     advisor     to
+Home-Care-AI   advisory   board.   Offers:   early   access,
+named credit, modest equity/retainer.
+Now — before E1Near zero
+Stage 2 —
+Content
+Submit   E1   case   study   (Angela   +   Tom   outcomes)   to
+ACCPA's  Innovation  Awards  or  as  a  conference  session
+abstract.
+Post-E1         validation
+(Q2)
+Conference fee only
+Stage 3 —
+Endorseme
+nt
+Formal     ACCPA     member     communication     featuring
+Home-Care-AI  as  a  recommended  coordination  tool  for
+independent agencies. Requires demonstrated outcomes +
+ACCPA compliance review.
+Post-beachhead
+validation (Q3–Q4)
+Commercial arrangement TBD
+Switching cost /
+network effect
+mechanism:
+ACCPA endorsement creates a trust-based NE: the more agencies adopt because of ACCPA's
+recommendation,  the  stronger  the  association's  own  reputation  as  a  technology  curator  —
+reinforcing both ACCPA's value to members and Home-Care-AI's legitimacy. The network effect
+is mutual.
+Risk:ACCPA  simultaneously  represents  AlayaCare's  existing  customer  base.  If  AlayaCare  lobbies
+ACCPA  for  exclusivity  or  fast-follows  with  a  competing  product,  ACCPA  may  not  endorse  a
+challenger.   Mitigation:   position   Home-Care-AI   as   an   AlayaCare   complement   (matching
+intelligence  layer),  not  a  replacement.  This  is  strategically  true  in  v1  (no  EMR,  no  billing)  and
+reduces the threat perception.
+First step:Search  ACCPA  member  directory  for  clinical  advisors  at  independent  agencies  in  Victoria  or
+NSW. Warm introduction via Angela (CC-001, CareBridge) or Tom (CC-002). Angela's agency is
+likely already an ACCPA member — she is the entry path.
+Deep Dive 2 — My Aged Care (MAC) / Services Australia [SC][NE]
+Deep Dive 2 — My Aged Care (MAC) / Services Australia [SC][NE]
+Home-Care-AI · Artifact 18 · Partnership MappingPage 11 of 19
+
+Moat-Builder Score: 7/10
+Partner overview: My Aged Care is the Australian Government's entry point for all government-funded home
+care. Every client receiving Commonwealth Home Support Programme (CHSP) or Home Care Package (HCP
+Level 1–4) services has a MAC client record, a unique support plan, and a registered provider assigned to them.
+Services  Australia  administers  MAC  and  controls  API  access.  The  Department  of  Health  and  Aged  Care  sets
+the policy framework.
+In FY2023–24, there were approximately 900,000 people receiving CHSP services and 200,000+ receiving HCP
+packages. These are the clients of the agencies we serve.
+Decision-maker profile
+•Services Australia Digital Partnerships team (API access)
+•Department of Health and Aged Care — Aged Care Technology team (policy alignment)
+•Entry   path:   Services   Australia's   Aged   Care   Gateway   Connectivity   Guide;   Digital   Health   CRC   for
+research-backed pilot applications
+Partnership structure — feasibility first
+This is a 12–18 month strategic initiative, not a Q1 task. The sequence:
+PhaseActionTiming
+FeasibilityRequest  MAC  API  documentation  from  Services  Australia.  Identify  which  fields  are
+accessible to registered providers: client ID, package level, care needs assessment
+summary.
+Q2 — immediately after E1
+Pilot
+application
+Apply  to  Services  Australia  Digital  Partnerships  for  a  sandbox  access  agreement.
+Position  as:  "improving  visit  completion  rates  for  government-funded  home  care
+clients."
+Q3
+Limited pilotDeploy  with  2–3  agencies  (Angela,  Tom  +  one  ACCPA-referred  agency).  Measure:
+visits filled per MAC-registered client; cancellation rate; notification compliance.
+Q4–Q1 Y2
+Full
+integration
+MAC  client  data  pre-populates  SPP  at  onboarding.  Vacancy  event  triggers  against
+MAC visit schedule. Government-validated client anchor deepens SPP moat.
+Year 2
+Switching cost /
+network effect
+mechanism:
+Once  an  agency's  client  SPP  records  are  anchored  to  their  MAC  client  IDs,  switching  to  a
+competing tool means re-mapping the preference graph to a new system — and losing the MAC
+integration.  The  switching  cost  is  compound:  SPP  data  +  MAC  linkage  +  institutional  memory.
+The  NE  component:  as  more  agencies  use  the  MAC  integration,  Services  Australia  has  more
+evidence  of  value,  making  the  API  partnership  more  durable  and  harder  for  a  competitor  to
+replicate quickly.
+Risk:Government  APIs  are  notoriously  slow  to  open  and  can  be  unilaterally  revoked  or  changed.
+Policy  changes  to  the  Aged  Care  Act  (ongoing  reform)  could  restructure  MAC  access  rights.
+Mitigation:  build  the  product  so  it  delivers  full  value  without  MAC  integration  (SPP  is  the  core
+moat), and treat MAC as a moat-deepener, not a dependency.
+First step:Download   the   MAC   Provider   Digital   Access   (PDA)   documentation.   Determine   whether
+provider-level  API  access  allows  reading  of  care  needs  assessment  data  or  only  administrative
+data. This is a desk research task — 2 days.
+Deep Dive 3 — AlayaCare (EMR API Integration) [SC]
+Deep Dive 3 — AlayaCare (EMR API Integration) [SC]
+Moat-Builder Score: 5/10 — strategically critical despite moderate score
+Home-Care-AI · Artifact 18 · Partnership MappingPage 12 of 19
+
+Partner overview: AlayaCare is the dominant EMR in Australian home care (estimated 30–40% market share
+among  independent  agencies).  Founded  in  Canada,  with  a  strong  AU  presence.  Key  features:  rostering,  care
+planning,  clinical  documentation,  billing,  and  —  directly  relevant  —  a  Vacant  Visit  Agent  that  matches  on
+availability and qualifications. AlayaCare's Vacant Visit Agent is the product's primary direct competitor for the
+automated matching function.
+Decision-maker profile
+•Partnership / Business Development team (AlayaCare Australia) for commercial integration discussion
+•Product team for API access and App Marketplace (AlayaCare Connect) listing
+•Entry  path:  AlayaCare  Connect  developer  program;  approach  as  complementary  intelligence  layer,  not  a
+competitive threat
+The VI-1 tension:Artifact 12 W1 / Artifact 8 identifies VI-1 (standalone willingness to pay, without EMR integration)
+as  a  critical  assumption  under  test  via  XP-2A.  If  XP-2A  returns  no  LOIs  from  established
+agencies,  VI-1  fails  —  which  means  agencies  will  not  pay  for  a  standalone  tool,  and  the
+AlayaCare  integration  becomes  a  requirement,  not  a  nice-to-have.  If  XP-2A  returns  LOIs,
+standalone  value  is  confirmed  and  the  AlayaCare  integration  is  an  accelerant  rather  than  a
+prerequisite.
+Sequencing
+implication:
+Do  not  approach  AlayaCare  until  XP-2A  data  is  in  hand.  Approaching  as  a  supplicant  needing
+their distribution is a weaker position than approaching as a validated product seeking to extend
+its reach through their marketplace.
+Partnership structure — two scenarios
+ScenarioConditionAlayaCare StanceAction
+Complementar
+y integration
+VI-1                 confirmed
+(standalone            value
+proven)
+AlayaCare  lists  Home-Care-AI  in
+AlayaCare  Connect  as  a  "trust
+matching  add-on."  Coordinators
+access       via       SSO       inside
+AlayaCare.
+Approach as: "We add the trust layer your Vacant Visit Agent
+doesn't have. Combined, you offer care quality matching, not
+just availability matching."
+Competitive
+threat
+AlayaCare   launches   a
+trust/preference
+matching feature
+AlayaCare    rejects    integration;
+may attempt to block
+Accelerate  ACCPA  endorsement  and  standalone  adoption.
+The  12-month  window  (Artifact  13  T1)  is  the  build-moat
+period.  If  AlayaCare  ships  a  competing  feature,  the  moat
+must already be built.
+Switching  cost  mechanism:  If  coordinators  are  trained  on  Home-Care-AI's  matching  interface  within
+AlayaCare's environment, replacing Home-Care-AI means retraining on a new interface within a familiar system
+— SC is moderate (3–4/5) but real, especially for agencies with multiple coordinators who have built SPP data.
+Risk — the highest
+single partnership
+risk in this map:
+AlayaCare  could:  (a)  refuse  integration  and  block  access,  (b)  acquire  a  competitor  to  add  trust
+matching  natively,  or  (c)  copy  the  SPP  feature  with  their  existing  data  moat.  The  12-month
+window  is  the  critical  variable.  AlayaCare's  product  velocity  in  the  AU  market  and  their  next
+conference announcements are the key signals to monitor.
+First step:Register  as  an  AlayaCare  Connect  developer.  Review  their  API  documentation  to  understand
+what data is accessible (roster, client records, visit schedules). Confirm whether read-only access
+to  existing  vacancy  data  is  available  without  a  commercial  agreement.  This  informs  VI-1:  if  the
+API is open, integration is feasible; if it is locked, standalone value must be confirmed first.
+API Capability Investigation — required before scoping the integration
+The  artifact  used  "FHIR/HL7"  language  inherited  from  the  skill  template.  In  Australian  home  care,  AlayaCare
+uses  a  proprietary  REST  API  (AlayaCare  Connect),  not  a  standardised  FHIR  interface.  Two  integration
+Home-Care-AI · Artifact 18 · Partnership MappingPage 13 of 19
+
+models are possible, and only one delivers the "single workflow" value proposition:
+Integration modelWhat the coordinator experiencesSC scorePrerequisite
+Read-onlyVacancy   data   flows   in   →   Home-Care-AI
+computes  match  →  coordinator  approves  in
+Home-Care-AI   UI   →   coordinator   manually
+updates AlayaCare roster
+2–3/5AlayaCare Connect read endpoints only
+Bi-directionalVacancy detected in AlayaCare → match runs
+in   Home-Care-AI   →   coordinator   approves
+within  AlayaCare  workflow  (ACT-A-02  /  3-Tap
+Flow  surfaced  inside  AlayaCare)  →  confirmed
+assignment  written  back  to  AlayaCare  roster
+automatically
+4–5/5AlayaCare      Connect      write-back      endpoints      for
+assignment confirmation
+The  moat  score  of  5/10  and  the  positioning  claim  ("coordinators  never  leave  their  existing  workflow")  assume
+bi-directional integration. If AlayaCare Connect only supports read, the SC score drops to 3/10 and the "kills
+the  another  app  objection"  claim  does  not  hold.  This  must  be  confirmed  before  any  commercial  partnership
+discussion or integration scoping begins. (Action: AX-02 — see §7.)
+AlayaCare Contingency Map
+Three scenarios, three responses — so the product team is never reactive:
+ScenarioSignalResponse
+AlayaCare neutral
+/ open
+API    write-back    confirmed;    App
+Marketplace listing approved
+Proceed   with   bi-directional   integration   (Tier   2   timeline).   Position   as:   "trust
+matching intelligence layer behind AlayaCare's scheduler."
+AlayaCare
+passive denial
+API  read-only;  write-back  blocked;
+App  Marketplace  listing  rejected  or
+ignored
+Standalone  route  only  (VI-1  confirmed  via  XP-2A).  ACCPA  endorsement  is
+primary  distribution.  AlayaCare  integration  deprioritised.  ShiftCare  integration
+activated as the EMR integration path for the beachhead.
+AlayaCare active
+threat
+AlayaCare                        announces
+trust/preference   matching   feature;
+blocks    third-party    integration    via
+T&C change
+Accelerate ACCPA endorsement and SPP moat deepening within the 12-month
+window   (Artifact   13   T1).   Redirect   agencies   already   on   AlayaCare   to   the
+standalone  product  or  ShiftCare  migration.  The  data  moat  (years  of  SPP
+preference   history)   is   the   defence   —   a   copied   feature   without   historical
+preference data is a weaker product.
+ShiftCare as the parallel Tier 1 track: ShiftCare serves agencies in the 5–50 client range, has a simpler REST
+API,  and  has  zero  competitive  incentive  to  block  integration  (no  Vacant  Visit  Agent).  If  AlayaCare  denies  or
+delays, ShiftCare is the integration target — not a fallback of last resort, a prepared parallel track.
+Home-Care-AI · Artifact 18 · Partnership MappingPage 14 of 19
+
+5. Partnership Risks & Red Flags
+5. Partnership Risks & Red Flags
+RiskDescriptionSeverityMitigation
+AlayaCare
+exclusivity /
+competitive
+response
+AlayaCare   adds   trust-matching   natively   and   blocks
+third-party integration. The 12-month window closes.
+n HIGHBuild     SPP     moat     depth     and     ACCPA
+endorsement   within   12   months.   AlayaCare
+cannot    replicate    2+    years    of    structured
+preference  data  even  with  a  copied  feature.
+Data gravity is the defence.
+VI-1 failure —
+standalone WTP
+not confirmed
+Agency  owners  will  not  pay  for  a  tool  that  doesn't
+integrate  with  their  existing  EMR.  XP-2A  returns  zero
+LOIs.
+n HIGHActivate   O6   pivot   path   (greenfield   NDIS
+agencies     with     no     EMR     dependency).
+AlayaCare   integration   becomes   a   parallel
+workstream, not a blocker.
+MAC API access
+denied or too
+slow
+Services  Australia  does  not  grant  API  access,  or  the
+process    takes    24+    months.    The    highest-scoring
+partnership is unreachable in the build timeline.
+n MEDIUMMAC  integration  is  a  moat-deepener,  not  a
+product  dependency.  Full  value  is  delivered
+without  it.  Begin  the  process  now;  do  not  wait
+for it to build v1.
+APP 8 — Google
+Maps
+SC-07 (Artifact 10) — Google's servers are US-hosted.
+Proximity  computation  transmits  carer  postcode.  If  the
+DPA review (SC-07) finds Google Maps non-compliant,
+the proximity feature must use an AU-hosted geocoding
+library.
+n MEDIUMSC-07  is  a  low-effort  legal  review  (Artifact  17
+AX-01  equivalent).  If  Google  fails:  switch  to  a
+local  geocoding  library  (OpenStreetMap  AU,
+postcodes.io).   Postcode   →   suburb   lookup
+does    not    require    Google's    accuracy    or
+freshness.
+ACCPA-AlayaCar
+e proximity
+ACCPA   represents   AlayaCare's   existing   customer
+base.  ACCPA  may  be  cautious  about  endorsing  a  tool
+that   could   challenge   one   of   their   major   vendor
+sponsors.
+n MEDIUMFrame    Home-Care-AI    as    an    AlayaCare
+complement.     Ensure     ACCPA     sees     the
+partnership  as  extending  member  value,  not
+competing with an existing vendor relationship.
+Single
+infrastructure
+provider
+dependency
+(AWS)
+All  infrastructure  (compute,  storage,  audit  log)  lives  in
+AWS   ap-southeast-2.   An   AWS   outage   or   pricing
+change creates operational and commercial risk.
+n MEDIUMCloudTrail     and     S3     Object     Lock     are
+AWS-proprietary — the audit log is structurally
+dependent   on   AWS.   Design   the   SPP   and
+matching     engine     to     be     cloud-portable
+(DynamoDB → any document store). Audit log
+dependency   on   AWS   is   acceptable   given
+7-year retention requirements.
+Data ownership in
+co-development
+agreements
+If  a  validation  partner  (Bolton  Clarke,  NARI)  provides
+patient data for research, they may claim co-ownership
+of  model  insights  or  SPP  data  enhancements  derived
+from that data.
+n MEDIUMAll co-development agreements must explicitly
+state:   (a)   no   transfer   of   SPP   schema   or
+matching  algorithm  IP,  (b)  research  data  is
+de-identified  and  cannot  be  re-identified  using
+Home-Care-AI's systems, (c) publication rights
+are  joint;  model  IP  rights  are  Home-Care-AI's
+exclusively.   Legal   review   of   all   research
+agreements before signing.
+Carer marketplace
+(Mable) data
+governance
+complexity
+Mable's   carers   are   independent   contractors   with
+different  APP  consent  models  to  agency  employees.
+Integrating   Mable   carer   availability   data   into   the
+matching   engine   requires   a   separate   consent   and
+disclosure architecture.
+n MEDIUMDo      not      integrate      Mable      until      the
+agency-employee carer model is fully validated
+and  the  SPP  data  model  is  stable.  Tier  3  —
+Year 2+.
+Home-Care-AI · Artifact 18 · Partnership MappingPage 15 of 19
+
+6. Handshake Table — HS-STRAT-05
+6. Handshake Table — HS-STRAT-05
+Per  CLAUDE.md  Article  IV  Rule  5:  positioning-statement  must  read  this  map  before  running.  Moat  claims
+without confirmed partners are capped at 3/5 and flagged n Unvalidated.
+IDFrom (This Artifact)To (Execution
+Plugin)
+What Must Transfer
+HS-STRAT-
+05a
+§2  Moat  Summary  for
+Positioning
+positioning-sta
+tement (Artifact 19)
+Confirmed moats (SPP internal, AWS SC) vs. aspirational moats (AlayaCare
+SC  n,  MAC  SC+NE  n,  ACCPA  NE  n).  Positioning  must  be  grounded  in
+confirmed moats only. Aspirational moats capped at 3/5 with n flags.
+HS-STRAT-
+05b
+§4    AlayaCare    deep
+dive          —          VI-1
+sequencing
+create-prd
+(Execution Plugin)
+CLAUDE.md  Rule  8:  no  user  story  is  "Ready  for  Dev"  if  it  depends  on
+AlayaCare  integration  until  XP-2A  validates  VI-1.  Integration  stories  are
+backlog items, not sprint items, until VI-1 is confirmed.
+HS-STRAT-
+05c
+§4  MAC  deep  dive  —
+initiate NOW
+Action ItemPM  Lead  to  download  MAC  Provider  Digital  Access  documentation  and
+confirm  API  field  access  within  Q2.  MAC  integration  is  the  highest-scoring
+strategic  opportunity  (7/10)  and  a  12–18  month  initiative  —  the  clock  starts
+now.
+HS-STRAT-
+05d
+§4  ACCPA  deep  dive
+—   Angela   as   entry
+path
+Action ItemPM  Lead  to  identify  ACCPA  membership  status  of  CareBridge  (Angela
+CC-001) and request warm introduction to ACCPA Innovation or Technology
+contact. First step: ask Angela directly at E1 week 1.
+Home-Care-AI · Artifact 18 · Partnership MappingPage 16 of 19
+
+7. Action Items
+7. Action Items
+DueOwnerActionPriority
+2026-03-28PM LeadContact AlayaCare Connect developer program — request API documentation and
+App Marketplace listing requirements. Do NOT propose commercial partnership yet
+— confirm API accessibility first.
+HIGH
+2026-03-28PM LeadAsk Angela (CC-001) whether CareBridge is an ACCPA member and request warm
+introduction to ACCPA contact. This is the lowest-cost, highest-distribution-leverage
+step available.
+HIGH
+2026-03-31PM LeadDownload   MAC   Provider   Digital   Access   (PDA)   documentation   from   Services
+Australia.  Determine  which  client  data  fields  are  API-accessible  for  registered
+providers.
+HIGH
+2026-03-31LegalSC-07: Review Google Maps Distance Matrix API DPA against APP 8 requirements
+(carried  from  Artifact  10).  Confirm  only  carer  postcode  is  transmitted;  determine  if
+DPA is sufficient.
+MEDIUM
+2026-04-07PM LeadResearch  ACCPA  Innovation  Awards  submission  timeline.  If  a  call  for  entries  is
+open, submit E1 case study data (Angela + Tom vacancy fill improvements).
+MEDIUM
+2026-04-15PM LeadAfter XP-2A results are in hand (Agency Owner LOI experiment): determine whether
+to   approach   AlayaCare   as   a   complement   (VI-1   confirmed)   or   accelerate
+ACCPA/standalone adoption (VI-1 failed). Do not approach AlayaCare before XP-2A
+data exists.
+HIGH —
+timing-gated
+2026-03-28EngineerAX-02   —   AlayaCare   Connect   API   investigation:   confirm   whether   write-back
+endpoints  exist  for  assignment  confirmation  (bi-directional  integration).  If  read-only
+only:  update  AlayaCare  SC  moat  score  from  5  to  3  in  this  artifact,  and  remove  the
+"coordinators  never  leave  their  workflow"  claim  from  §3  Value  Proposition.  Report
+findings to PM Lead by 2026-04-01.
+HIGH
+Partnership Investment Summary (PAC Estimates → Artifact 20 inputs)
+Partnership Investment Summary (PAC Estimates → Artifact 20 inputs)
+Rough  Partnership  Acquisition  Cost  (PAC)  estimates  per  partner.  These  are  inputs  to  the  AI  Unit  Economics  model
+(Artifact 20) — not final figures. Nature column distinguishes cash outlay from time/opportunity cost.
+PartnerPAC CategoryRough Estimate
+(AUD)
+NatureTiming
+ACCPA Advisory Board
+seat
+Equity + retainer~0.25%      equity      +
+$2K/year cash
+Low cash; equity costNow
+ACCPA conference /
+Innovation Awards
+Marketing$5–15K one-offCash  —  conference  sponsorship
+or submission fee
+Post-E1
+ACCPA Commercial
+Endorsement
+Membership       +
+marketing
+contribution
+$20–60K/year
+recurring
+Cash  —  significant  at  pre-revenue
+stage; high distribution ROI
+Post-beachhead
+AlayaCare Connect
+integration (read-only)
+Engineering time$15–25K      equivalent
+(3–5   weeks   engineer
+time)
+Time costPost-VI-1
+AlayaCare Connect
+integration
+(bi-directional)
+Engineering   time
++      legal      (API
+agreement)
+$30–60K      equivalent
+(6–10   weeks   +   legal
+review)
+Time + cashPost-VI-1;  subject  to  AX-02
+confirmation
+ShiftCare integrationEngineering time$10–20K      equivalent
+(2–4   weeks   engineer
+time)
+Time cost — simpler APITier 1 parallel track
+Home-Care-AI · Artifact 18 · Partnership MappingPage 17 of 19
+
+PartnerPAC CategoryRough Estimate
+(AUD)
+NatureTiming
+MAC Government
+Partnership
+PM bandwidth3–6  months  PM  time
+(opportunity cost)
+Time  cost  —  competes  with  build
+sprints; no cash outlay
+Q2 initiation → Year 2 build
+Bolton Clarke PilotPM time + legal +
+subsidised
+access
+$20–50K equivalentTime  +  possible  revenue  deferral
+during pilot
+Post-beachhead validation
+NARI Research
+Partnership
+HREC  application
++ PM time
+$5K    cash    +    18–24
+months PM time
+Cash + very long horizon; Year 2+
+only
+Year 2+
+Dementia Australia
+endorsement
+Relationship       +
+co-content
+$5–15K equivalentMostly            time;            possible
+co-publication costs
+Tier 2
+Total  estimated  PAC  for  Tier  1  partnerships  (cash  only,  Year  1):  $30–90K  AUD  —  primarily  driven  by  ACCPA
+commercial  endorsement  if  pursued  at  full  commercial  tier.  Advisory  board  +  conference  entry  route  keeps  Year  1
+PAC under $20K and delivers the distribution signal needed to validate the endorsement investment.
+Full PAC → CAC → LTV model to be built in Artifact 20 (AI Unit Economics).
+Partnership  moat  note:  At  the  current  stage  (pre-revenue,  pre-launch),  Home-Care-AI's  most  durable  moat  is
+entirely  internal  —  the  SPP  data  model  depth  and  the  compliance-by-design  architecture  that  competitors  cannot
+quickly replicate. No partnership-derived moat is yet confirmed. The positioning statement (Artifact 19) must reflect
+this honestly: the product earns trust through what it does and how it is built, not through who it is partnered with.
+Partnerships amplify a moat that already exists — they do not create it from scratch.
+Home-Care-AI · Artifact 18 · Partnership Mapping · 2026-03-27
+Home-Care-AI · Artifact 18 · Partnership MappingPage 18 of 19
+
+---

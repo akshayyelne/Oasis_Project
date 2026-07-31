@@ -1,0 +1,22 @@
+# Extracted from: akshayyelne/dimentai/samples/schemas/gait_protocol.json
+# Generated: 2026-07-31T00:49:45.088Z
+
+```json
+{
+  "user_id": "sit_patient_99",
+  "session_duration_s": 30,
+  "gait_telemetry": [
+    {
+      "timestamp_ms": 1000,
+      "cadence_steps_min": 92.5,
+      "stride_length_m": 0.68,
+      "asymmetry_index": 0.04,
+      "sensor_data": {
+        "accel_x": 0.12,
+        "accel_y": 9.81,
+        "accel_z": -0.45
+      }
+    }
+  ]
+}
+```

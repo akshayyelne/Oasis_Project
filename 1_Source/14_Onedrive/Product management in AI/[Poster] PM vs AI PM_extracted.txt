@@ -1,0 +1,53 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] PM vs AI PM.pdf
+# Characters: 1881
+# Generated: 2026-07-31T00:07:33.319Z
+
+Responsible for
+Two key risk areas:
+Customer value: Do customers want this? Will it create value for them?
+Business viability: Will it work for different parts of the business?
+ Key activities
+Product Discovery with a cross-functional team
+(aka “Product Trio”). It results in a validated product backlog.
+Ensuring everyone has the context they need to make decisions
+       (strategic context, objectives, discovery).
+Communicating with stakeholders and managing expectations.
+ Needs to succeed
+Strong communication skills.
+Understanding the market, customers, and users.
+Understanding how the company's business works.
+Data literacy and data intuition: you can’t fully outsource analytics
+ Trends
+Participating in shaping strategy (bottom-up).
+Driving value for the business. Satisfying customers is not enough.
+Tech literacy and tech intuition (you do not code, but you should understand what
+HTML or JSON is when working on a web product).
++ Needs to succeed
+Tech literacy and tech intuition from the AI area. Depending 
+       on a product: prompting, fine-tuning, RAG, agents, MCP servers, etc.
++ AI evals 
+What are AI evals?
+Closely related to the Customer value and Business value.
+Unlike traditional unit tests, they are non-deterministic.
+Eval types: Unit tests; Human/model evals; A/B testing.
+An AI PM, even if supported by others (e.g., Data Analyst), should be:
+Looking at the data (LLM traces)
+Labeling data properly
+Performing basic error analysis (many of which are undesired behaviors)
+Experimenting with prompts
+What is an AI Product Manager?
+Product Manager
+AI Product Manager
+AI PM is a PM who works on AI-powered products or features. On top of core competencies:
+Mastering AI Evals: A
+Complete Guide for PMs.
+ bit.ly/4lOKfdr
+What Is Product Discovery?
+The Ultimate Guide.
+bit.ly/3Ux9BBn
+Free Resources (No Email)
+Read the full post 
+
+PMAI PMAI-Powered PM
+
+---

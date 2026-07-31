@@ -1,0 +1,165 @@
+# Extracted from: akshayyelne/Intent_Based_NLP-Agent/data/alayacare_mock_payloads.json
+# Generated: 2026-07-31T00:49:45.208Z
+
+```json
+{
+  "_comment": "DRAFT MOCK PAYLOADS — Home-Care-AI AlayaCare Write-Back (AX-02)",
+  "_status": "DRAFT — validate every field against AlayaCare sandbox before setting HOMECARE_AI_AX02_STATUS=CONFIRMED",
+  "_contract_version": "DRAFT-AX02-v0.1",
+  "_generated_at": "2026-03-28T00:00:00.000Z",
+  "_reference": "Artifact 25 §10 Gap 3; Artifact 26 AX-02-001; .env.example HOMECARE_AI_AX02_CONTRACT_VERSION",
+  "_validation_instructions": [
+    "1. When AlayaCare sandbox access is confirmed (AX-02 gate due 2026-04-01), send the write_back_request payload to the sandbox endpoint.",
+    "2. Compare the live response shape against write_back_success_response below. Update any field names or types that differ.",
+    "3. Bump contract_version from 'DRAFT-AX02-v0.1' to 'v1.0' in this file AND in .env HOMECARE_AI_AX02_CONTRACT_VERSION.",
+    "4. Only then set HOMECARE_AI_AX02_STATUS=CONFIRMED in .env.",
+    "5. If AlayaCare uses OAuth 2.0 rather than API key auth, update ALAYACARE_API_KEY to ALAYACARE_CLIENT_ID + ALAYACARE_CLIENT_SECRET in .env.example."
+  ],
+  "write_back_request": {
+    "_description": "PATCH request ECC sends to AlayaCare when a vacancy is resolved (state = COORDINATOR_APPROVED). Sent immediately after COORDINATOR_APPROVED event is logged.",
+    "_endpoint_draft": "PATCH /api/v1/visits/{alayacare_visit_id}",
+    "_auth_draft": "Bearer token via API key (confirm OAuth vs API key with AlayaCare sandbox)",
+    "_http_method": "PATCH",
+    "body": {
+      "visit_id": "{alayacare_visit_id}",
+      "status": "CONFIRMED",
+      "assigned_carer": {
+        "carer_id": "{alayacare_carer_id}",
+        "assigned_at": "{ISO_8601_UTC_timestamp}",
+        "assigned_by_coordinator_id": "{alayacare_coordinator_id}"
+      },
+      "visit_window": {
+        "scheduled_start": "{ISO_8601_UTC_timestamp}",
+        "scheduled_end": "{ISO_8601_UTC_timestamp}"
+      },
+      "homecare_ai_metadata": {
+        "_note": "homecare_ai_metadata block — confirm AlayaCare accepts custom metadata fields. If not, strip this block and log fields to APPAuditLogEntry.hitl_notes instead.",
+        "vacancy_id": "{homecare_ai_vacancy_uuid}",
+        "composite_score": "{float_0_to_1}",
+        "selection_method": "COORDINATOR_APPROVED",
+        "shortlist_rank": "{integer_1_to_3}",
+        "audit_log_id": "{APPAuditLogEntry_log_id}"
+      }
+    },
+    "_field_validation_checklist": [
+      "visit_id: confirm field name — AlayaCare may use 'id', 'visit_id', or 'shift_id'",
+      "assigned_carer.carer_id: confirm field name — may be 'employee_id' or 'worker_id'",
+      "status value 'CONFIRMED': confirm exact enum — may be 'confirmed', 'ASSIGNED', or 'booked'",
+      "homecare_ai_metadata: confirm AlayaCare accepts arbitrary metadata blocks — if not, document alternative"
+    ]
+  },
+  "write_back_success_response": {
+    "_description": "Expected HTTP 200 response from AlayaCare on successful write-back. ECC mock MUST return this exact shape during test harness runs.",
+    "_http_status": 200,
+    "body": {
+      "visit_id": "{alayacare_visit_id}",
+      "status": "CONFIRMED",
+      "assigned_carer_id": "{alayacare_carer_id}",
+      "updated_at": "{ISO_8601_UTC_timestamp}",
+      "sync_status": "CONFIRMED",
+      "alayacare_reference": "{alayacare_internal_reference_id}"
+    },
+    "_required_fields_for_APPAuditLogEntry": {
+      "action_taken": "alayacare_write_back=CONFIRMED",
+      "hitl_notes": "alayacare_reference={alayacare_internal_reference_id}; sync_status=CONFIRMED"
+    },
+    "_mock_contract_assertion": "ECC mock must return this body shape. The harness validates that action_taken in the RESOLVED APPAuditLogEntry contains 'alayacare_write_back=CONFIRMED'."
+  },
+  "write_back_failure_responses": {
+    "_description": "Expected failure responses. Each has a required action_taken value for the APPAuditLogEntry. ECC must handle all three — a silent failure (no log entry) is a CRITICAL SD-01B finding.",
+    "http_404_visit_not_found": {
+      "_http_status": 404,
+      "_trigger": "AlayaCare visit_id does not exist or has been cancelled upstream",
+      "body": {
+        "error": "visit_not_found",
+        "message": "No visit found for the provided visit_id",
+        "visit_id": "{alayacare_visit_id}"
+      },
+      "_required_action_taken": "alayacare_write_back=FAILED_404",
+      "_required_coordinator_alert": true,
+      "_note": "Coordinator must be notified that the AlayaCare record is out of sync. Do NOT cancel the carer assignment — that is a separate human decision."
+    },
+    "http_422_invalid_assignment": {
+      "_http_status": 422,
+      "_trigger": "Carer is not credentialed for this visit type, or visit window conflicts with another assignment in AlayaCare",
+      "body": {
+        "error": "invalid_assignment",
+        "message": "Carer is not eligible for this visit or has a scheduling conflict",
+        "carer_id": "{alayacare_carer_id}",
+        "conflict_reason": "{string}"
+      },
+      "_required_action_taken": "alayacare_write_back=FAILED_422",
+      "_required_coordinator_alert": true,
+      "_note": "This indicates a data drift between Home-Care-AI carer eligibility data and AlayaCare. Log conflict_reason in APPAuditLogEntry.hitl_notes. Coordinator must resolve manually."
+    },
+    "http_500_server_error": {
+      "_http_status": 500,
+      "_trigger": "AlayaCare server error or network timeout",
+      "body": {
+        "error": "internal_server_error",
+        "message": "AlayaCare server error — please retry"
+      },
+      "_required_action_taken": "alayacare_write_back=FAILED_500",
+      "_required_retry_policy": "3 retries with exponential backoff (2s, 4s, 8s). After 3 failures: FAILED_500_EXHAUSTED + coordinator alert.",
+      "_required_coordinator_alert": "only after retry exhaustion",
+      "_note": "Transient error — retry before alerting. The carer assignment and SMS notifications are NOT rolled back during retry window."
+    }
+  },
+  "test_harness_mock_behavior": {
+    "_description": "Specifies what the ECC test harness mock must return for each scenario. The mock intercepts all AlayaCare API calls and returns deterministic responses — no real API calls are made during test runs.",
+    "when_ax02_status_is_UNAVAILABLE": {
+      "behaviour": "Mock is not invoked. trigger_source in VACANCY_DETECTED = MANUAL_COORDINATOR_ENTRY. No write-back call is made or expected.",
+      "APPAuditLogEntry_action_taken": "alayacare_write_back=NOT_APPLICABLE (AX02_UNAVAILABLE)"
+    },
+    "when_ax02_status_is_CONFIRMED": {
+      "behaviour": "Mock intercepts PATCH call. Returns write_back_success_response for all scenarios except SYN-05 (VACANCY_UNRESOLVED — no write-back attempted).",
+      "APPAuditLogEntry_action_taken": "alayacare_write_back=CONFIRMED"
+    },
+    "contract_version_check": {
+      "behaviour": "Harness reads HOMECARE_AI_AX02_CONTRACT_VERSION from env. Compares against this file's _contract_version field. If mismatch: log ADVISORY_WARNING. Do not abort.",
+      "mismatch_log_message": "AX-02 contract version mismatch: env={env_value} file={file_value}. Update alayacare_mock_payloads.json after AlayaCare sandbox validation before setting AX02_STATUS=CONFIRMED."
+    }
+  },
+  "pre_sprint_gate_checklist": {
+    "_description": "Steps required to graduate this file from DRAFT to v1.0. All must be complete before HOMECARE_AI_AX02_STATUS=CONFIRMED.",
+    "steps": [
+      {
+        "step": 1,
+        "action": "Obtain AlayaCare sandbox credentials from integration lead",
+        "owner": "AlayaCare integration lead",
+        "due": "2026-04-01"
+      },
+      {
+        "step": 2,
+        "action": "Send write_back_request body to sandbox PATCH endpoint",
+        "owner": "ECC engineer",
+        "due": "2026-04-01"
+      },
+      {
+        "step": 3,
+        "action": "Compare live response shape against write_back_success_response. Update any mismatched field names or enum values.",
+        "owner": "ECC engineer",
+        "due": "2026-04-01"
+      },
+      {
+        "step": 4,
+        "action": "Confirm whether AlayaCare accepts homecare_ai_metadata block. If not, document alternative (hitl_notes field).",
+        "owner": "ECC engineer",
+        "due": "2026-04-01"
+      },
+      {
+        "step": 5,
+        "action": "Bump _contract_version to 'v1.0' in this file AND update HOMECARE_AI_AX02_CONTRACT_VERSION=v1.0 in .env.example",
+        "owner": "ECC engineer",
+        "due": "after step 3-4 complete"
+      },
+      {
+        "step": 6,
+        "action": "Set HOMECARE_AI_AX02_STATUS=CONFIRMED in .env (not .env.example — this is a local setting)",
+        "owner": "ECC engineer",
+        "due": "after step 5 complete"
+      }
+    ]
+  }
+}
+```

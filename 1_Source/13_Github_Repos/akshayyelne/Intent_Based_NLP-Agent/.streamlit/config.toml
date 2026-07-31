@@ -1,0 +1,5 @@
+# Extracted from: akshayyelne/Intent_Based_NLP-Agent/.streamlit/config.toml
+# Generated: 2026-07-31T00:49:45.209Z
+
+[server]
+headless = true

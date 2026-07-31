@@ -1,0 +1,19 @@
+# Extracted from: akshayyelne/Home-Care-AI-Product-Management/.claude/settings.json
+# Generated: 2026-07-31T00:49:45.108Z
+
+```json
+{
+  "enabledPlugins": {
+    "pm-product-discovery@pm-skills": true,
+    "pm-product-strategy@pm-skills": true,
+    "pm-execution@pm-skills": true
+  },
+  "permissions": {
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(DROP TABLE *)",
+      "Bash(DELETE FROM *)"
+    ]
+  }
+}
+```

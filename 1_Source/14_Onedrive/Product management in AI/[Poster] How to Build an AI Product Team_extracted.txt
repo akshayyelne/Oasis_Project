@@ -1,0 +1,98 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] How to Build an AI Product Team.pdf
+# Characters: 2437
+# Generated: 2026-07-31T00:07:33.314Z
+
+Role \ StageEarlyMiddleLater
+Full-Stack Engineer
+Data Scientist/Data Analyst
+Product Manager
+Product Designer
+AI Infra / Platform
+ML Engineer
+Ship the first vertical slice,
+add basic logging, safe
+fallbacks
+Harden endpoints, add
+structured telemetry for
+evals, basic cost controls
+Performance tuning, rate-
+limits, rollout guards
+Drive evals, weekly traces
+review, failure taxonomy
+Drive segmenting failure
+modes, binary checks in
+CI or pre-release gates
+Own dashboards for
+quality, drift, and
+experiment results
+User value and business
+viability risks
+Define KPIs, e.g., by user
+journey
+Sequence experiments by
+ROI and risk
+Reduce “AI confusion”,
+tackle the usability risk,
+work closely with a PM
+Dialogue patterns,
+explanation flows,
+learnable controls
+Guardrails in UX,
+explainability patterns for
+high-stakes flows
+Observability, eval
+infrastructure, shared
+data pipelines
+Test gates in CI, shared
+tools, governance,
+incident playbooks
+-
+Fine-tuning, custom
+pipelines, safety and
+robustness experiments
+-
+-
+b. Expect Roles to Blur
+The collaboration is even closer than in
+traditional products, e.g.:
+PM reviews traces with data
+scientist and domain experts.
+Product designer experiments with
+vibe-engineering tools.
+Engineers deepen domain expertise
+to interpret outputs and suggest
+solutions.
+     The key trait is curiosity. Also, screen  
+     hard for: data intuition, product sense, 
+     and urgency.
+c. Test for AI Thinking
+Skip theory trivia. Use hands-on
+exercises. For example:
+Give a small, messy slice from evals
+or user logs. 
+Ask to review traces, identify failure
+modes, and propose evaluators.
+Ask to design the smallest agent.
+Discuss observability, guardrails,
+evals, etc.
+     What matters is how candidates
+     reason, collaborate, use judgement and 
+     adapt in ambiguous problem spaces.
+Bryan Bischof for The Product Compass Newsletter
+How to Build an AI Product Team
+Role \ StageEarlyMiddleLater
+Full-Stack Engineer
+Data Scientist/Data Analyst
+Product Manager
+Product Designer*
+AI Infra / Platform
+ML Engineer
+a. The Hiring Thesis
+Define: why this role, why now, why not
+someone already on the team?
+2. How to Interview AI Team Members
+Start centralized to concentrate scarce expertise and build shared infra and evaluators. As product teams adopt a common
+platform, embed AI into each product team while keeping a lean platform team for tooling, eval suites, and governance.
+1. Stages and Hiring Gates
+
+---

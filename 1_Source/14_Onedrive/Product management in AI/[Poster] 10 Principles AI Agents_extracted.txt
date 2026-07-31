@@ -1,0 +1,78 @@
+# Extracted from: 14_Onedrive/Product management in AI/[Poster] 10 Principles AI Agents.pdf
+# Characters: 1505
+# Generated: 2026-07-31T00:07:33.301Z
+
+SupportManagerVerifier
+Specialist 1
+Specialist 2
+Agent
+Notion Tool (Create)
+<Location?>
+Writer
+Convert Markdown
+to a PDF Tool
+Document 
+Writer
+Document
+Reviewer
+document ID
+document BLOB
+Research 
+subagent N
+Web 
+scrapper 1
+Web 
+scrapper 2
+Orchestration: Do we need those calls?
+Prompt Engineering
+Zero-shot instructions
+Few-shot examples
+Techniques like CoT
+?
+Convert Markdown 
+to a PDF
+10 Principles of Building AI Agents
+Learned By Building 50+ AI Agents And Copying Anthropic Research
+The Product Compass Newsletter                                                                                                                   productcompass.pm
+1. Don’t Use Agents Just to Say You Did
+6. Prompt Engineering > Fine-Tuning
+2. Small, Specialized, and Decoupled
+3. Enforce Structured Output
+5. Orchestration > Autonomy
+4. Explain the Why, Not Just the What
+7. Double Down on Tool Descriptions
+8. Cache Like You Mean It
+9. Use Shared Artefacts
+10. Log Everything (Seriously)
+Why
+How
+What
+## Role
+You're one of many researcher
+sub-agents exploring working
+on the larger initiative:
+{research_context}.
+Upload to Google
+Drive
+productName: ...
+netPrice: $12.15
+properties: [...]
+This Samsung flat TV
+(60) is just 12,15
+USD with 20%...
+The Behavior Path
+The Knowledge P
+ath
+Retrieval-Augmented Generation (RAG)
+Basic RAG
+Query transformations, re-ranking, chunking
+HyDE (hypothetical documents)
+Fine-Tuning 
+How to use it
+When to use it
+What to avoid
+Examples
+Constraints
+How to use it with other tools
+
+---

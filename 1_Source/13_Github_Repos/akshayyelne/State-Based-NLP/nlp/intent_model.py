@@ -1,0 +1,41 @@
+# Extracted from: akshayyelne/State-Based-NLP/nlp/intent_model.py
+# Generated: 2026-07-31T00:49:45.426Z
+
+```python
+import json
+import streamlit as st
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from config import INTENTS_PATH
+
+
+@st.cache_resource
+def load_model():
+
+    with open(INTENTS_PATH) as file:
+        intents = json.load(file)
+
+    vectorizer = TfidfVectorizer()
+    clf = LogisticRegression(max_iter=1000)
+
+    tags = []
+    patterns = []
+
+    for intent in intents:
+        for pattern in intent["patterns"]:
+            patterns.append(pattern.lower())
+            tags.append(intent["tag"])
+
+    x = vectorizer.fit_transform(patterns)
+    clf.fit(x, tags)
+
+    return vectorizer, clf
+
+
+def predict_intent(text):
+
+    vectorizer, clf = load_model()
+
+    return clf.predict(vectorizer.transform([text.lower()]))[0]
+
+```

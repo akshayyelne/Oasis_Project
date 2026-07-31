@@ -1,0 +1,67 @@
+# Extracted from: akshayyelne/Mental-Health-Wellbeing/docker-compose.yml
+# Generated: 2026-07-31T00:49:45.247Z
+
+```yaml
+version: '3.9'
+networks:
+  internal:
+    driver: bridge
+    internal: true
+  public:
+    driver: bridge
+services:
+  mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile.mcp
+    container_name: mcp_wellbeing_server
+    restart: unless-stopped
+    networks:
+      - internal
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mental_wellbeing_api
+    restart: unless-stopped
+    ports:
+      - '8000:8000'
+    networks:
+      - internal
+      - public
+    env_file:
+      - .env
+    environment:
+      MCP_SERVER_HOST: mcp
+      USE_MCP: 'true'
+    depends_on:
+      - mcp
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - '-c'
+        - import urllib.request; urllib.request.urlopen('http://localhost:8000/health')
+      interval: 30s
+      timeout: 10s
+      retries: 3
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    container_name: mental_wellbeing_frontend
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    networks:
+      - public
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    volumes:
+      - ./frontend/public:/app/public:ro
+    depends_on:
+      - backend
+
+```

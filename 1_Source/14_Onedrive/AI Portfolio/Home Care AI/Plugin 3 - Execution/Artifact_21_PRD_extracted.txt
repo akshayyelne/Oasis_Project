@@ -1,0 +1,1182 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/Plugin 3 - Execution/Artifact_21_PRD.pdf
+# Characters: 61134
+# Generated: 2026-07-31T00:07:32.993Z
+
+Artifact 21 — Product Requirements Document
+(PRD)
+Execution · Stage A · The Definition — Intent
+<b>Source of Truth:</b> This document is the Source of Truth for all Execution Plugin artifacts. A change
+to  any  section  requires  restarting  from  Stage  A.  Per  CLAUDE.md  Article  V:  "If  PRD  changes,  restart  from
+Stage A."
+DOCUMENT DETAILS
+ProjectHome-Care-AIStageExecution  →  Stage  A  (The  Definition  —
+Intent)
+Date2026-03-27Methodology8-section  PRD  template;  SMART  OKRs;
+Priority 1/2/3 feature classification
+RegulatoryAustralian  Privacy  Act  1988  (APP).  HIPAA-grade  security  as  design  floor.  All  data  processing  in  AWS
+ap-southeast-2 (Sydney). No cross-border transmission in v1.
+Handshake Inputs Consumed
+IDSourceWhat Transferred
+HS-STR
+AT-01
+Artifact  15  §6  (L3  interventions)  +
+§4 (Moment of Truth)
+Moment of Truth → P1 feature; all L3 interventions → P1 features (§7.2)
+HS-STR
+AT-02
+Artifact 16 (Compliance NFRs)Mitigation Requirements → Constraints §7.4 and NFR table
+HS-STR
+AT-03
+Artifact  20  §12  (Token  budget  +
+model selection)
+Haiku for L1/L2, Sonnet for L3 → §7.3 Technology
+HS-STR
+AT-04
+Artifact 14 §6 "What After" OKRsOKR-1 through OKR-6 → §4 Objectives (exact, no substitution)
+HS-STR
+AT-05
+Artifact   19   §1   Geoffrey   Moore
+statement
+→ §3 Background problem definition; §5 market segment
+Feeds into
+•prioritization-frameworks (Execution Stage A, Skill 2) — ranks PRD §7 features
+•agentic-logic-spec (Execution Stage B, Skill 3) — NFRs + compliance constraints
+•user-stories (Execution Stage B, Skill 4) — features as testable stories
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 1 of 27
+
+Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 2Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 51. Summary
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 62. Contacts
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 73. Background
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7What is this about?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7Why now?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 84. Objective
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8What are we trying to achieve?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8How does this align with the product vision?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8SMART OKRs (Source: Artifact 14 §6 — HS-STRAT-04, no substitution permitted)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9How will success benefit customers and the business?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 105. Market Segments
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10Who are we building this for?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 116. Value Proposition
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11What problem do we solve — and better than the alternatives?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11What do customers gain?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11What pains do we take away?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 12How are we better than the alternatives?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 137. Solution
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 137.1 UX / Prototypes
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 147.2 Key Features
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 14Feature 1: Soft Preference Profile (SPP) Data Model + Capture Flow [P1]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 15Feature 2: Smart Match Engine [P1]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 16Feature 3: 3-Tap Coordinator Approval Flow — The Moment of Truth [P1]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 16Feature 4: Automated Carer Assignment + Briefing [P1 — L3 Actions]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 17Feature 5: Client + Family Notification Pipeline with E-3 Gate [P1 — L3 Actions]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 18Feature 6: Immutable Audit Log [P1 — Non-Negotiable]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 19Feature 7: Vacancy Unresolved Escalation [P1 — L3 Edge Case]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  . 19Feature 8: Compliance Gap Dashboard [P1.1 — Post-Beachhead, 60 Days After Launch]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 19Feature 9: WhatsApp Notifications [P2 — v2, Blocked Pending CRIT-01 Unlock]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 19Feature 10: AlayaCare Bi-Directional Integration [P2 — Blocked Pending AX-02]
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 207.3 Technology
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 207.4 Assumptions + Constraints
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 20Assumptions (what we believe but haven't fully proven)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 21Compliance Constraints (binding from Artifact 16 + Artifact 17 — cannot be overridden)
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 2 of 27
+
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 238. Release Plan
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 23What goes in v1?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 23How long will it take?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 24What comes before Sprint 1 starts?
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 259. Open Questions
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 2610. Handshake Table — PRD → Execution Skills
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 3 of 27
+
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 4 of 27
+
+1. Summary
+1. Summary
+Home-Care-AI is a trust-weighted vacancy matching platform for independent Australian home care agencies.
+When a carer calls in sick, it automatically finds the best replacement — based not only on qualifications and
+proximity, but on who the client knows and trusts — presents a ranked shortlist to the coordinator for one-tap
+approval, then handles every notification automatically in the right order.
+This PRD covers the v1 product: the Smart Match Engine, the Soft Preference Profile (SPP) data model, the
+3-Tap  Coordinator  Approval  Flow,  and  the  automated  E-3-compliant  notification  pipeline.  Together,  these  four
+features eliminate the 11-call phone cascade that currently causes 20% of home care visits to be cancelled.
+This  document  is  the  Source  of  Truth  for  all  engineering,  design,  and  QA  work  in  Sprint  1  and  beyond.  Any
+feature  not  in  this  document  is  out  of  scope  for  v1.  Any  compliance  constraint  in  this  document  cannot  be
+overridden without PM Lead approval and a corresponding update to Artifact 17 (Remediation Decision Record).
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 5 of 27
+
+2. Contacts
+2. Contacts
+NameRoleResponsibility
+PM Lead (founder)Product       Manager       +
+Strategy
+Owner of this document. Approves all scope changes.
+Angela Morrison
+(CC-001)
+Beachhead  Customer  —
+Care Coordinator
+Primary user representative. Validates match quality and UX at E1.
+Tom Bradley (CC-002)Beachhead  Customer  —
+Care Coordinator
+Solo-operator validation. Validates Solo-tier usability.
+EngineerFull-Stack            Engineer
+(Sprint 1)
+Builds  the  system  against  this  PRD.  Confirms  AX-01  (CRIT-04)  and  AX-02
+(AlayaCare API investigation) before Sprint 1.
+DesignerUX/Product DesignerOwns the 3-Tap Approval Flow wireframes and all coordinator-facing screens.
+Privacy CounselAustralian    Privacy    Law
+Retainer
+Signs off on DPIA completion before v1 data collection begins.
+Legal CounselEmployment                    +
+Discrimination Law
+E-1  opinion  on  P-2  (gender  preference  as  matching  parameter)  —  required
+before matching engine is built.
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 6 of 27
+
+3. Background
+3. Background
+What is this about?
+What is this about?
+Independent Australian home care agencies send carers to visit elderly clients at home. When a carer calls in
+sick, the coordinator — often a single person — must find a qualified replacement before the visit starts.
+Today, this means making up to 11 phone calls over 30 to 60 minutes. One in five visits is still cancelled. When
+a  visit  is  cancelled,  an  elderly  client  waits  alone  —  sometimes  dressed  and  ready  in  their  chair  —  and  their
+family finds out when nobody shows up.
+The coordinator also carries all the knowledge about what each client needs in her head: which carers the client
+trusts, who needs a calm introduction, who requires ID at the door, who has difficulty with strangers. When that
+coordinator leaves, all of that knowledge goes with her.
+Home-Care-AI  solves  both  problems.  It  replaces  the  11  phone  calls  with  a  3-tap  approval  on  a  phone.  And  it
+stores the coordinator's client knowledge in a structured profile that any coordinator can read on Day 1.
+Why now?
+Why now?
+Three conditions are true simultaneously for the first time:
+1
+Customer  confirmation  (first-party  data).  Angela  Morrison  (CC-001)  described  the  exact  workflow
+she  wants:  "If  the  system  could  detect  the  absence,  find  the  best  available  replacement  based  on
+qualifications, proximity, and client preferences, propose it to me for approval, and then notify everyone
+—  the  replacement  carer,  the  client,  and  the  family  —  that  would  save  me  forty-five  minutes  per
+incident." Tom Bradley (CC-002) is cancelling 1 in 5 visits per week. Both have signalled willingness to
+pay (XP-2A in progress).
+2
+A  genuine  product  gap.  AlayaCare's  Vacant  Visit  Agent  matches  on  availability  and  qualifications
+only — it has no trust or preference layer. This is confirmed from competitor analysis (Artifact 3). After
+AlayaCare  suggests  a  candidate,  Angela  still  makes  7  more  calls  to  find  someone  the  client  will
+actually accept. That gap is the product.
+3
+Compliance infrastructure is ready to build. The four critical compliance blockers (Artifact 16) have
+been resolved (Artifact 17). The product can be built legally and compliantly — with Australian Privacy
+Act  (APP)  sign-off,  an  AU-hosted  SMS  gateway,  and  a  data  model  that  contains  no  free-text  health
+fields.
+Why this matters to the business
+•A validated beachhead (Angela and Tom as paying reference customers) enables peer referral — the primary
+growth channel in Australia's small, trust-driven home care coordinator community.
+•The  Soft  Preference  Profile  (SPP)  builds  a  data  moat  that  deepens  with  every  visit  logged.  At  18  months,
+switching costs are structural.
+•Compliance-by-design  is  a  6–12  month  barrier  to  entry  for  any  new  entrant.  Building  it  first  is  a  strategic
+advantage, not just overhead.
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 7 of 27
+
+4. Objective
+4. Objective
+What are we trying to achieve?
+What are we trying to achieve?
+We want every home care coordinator at an independent Australian agency to be able to fill a vacant visit with
+the right carer — the person the client knows and trusts — in under 5 minutes, with one approval tap, without
+making a single phone call.
+And  we  want  every  client's  preferences  and  history  to  be  stored  in  the  system,  so  that  knowledge  never  lives
+only in one coordinator's head.
+How does this align with the product vision?
+How does this align with the product vision?
+From Artifact 12 §1: "Every person receiving home care should be surrounded by people who know them — not
+just people who are available."
+The v1 product is the first step: make sure no vacant visit is filled with the wrong person, and no client sits in
+their chair waiting for someone who isn't coming.
+SMART OKRs (Source: Artifact 14 §6 — HS-STRAT-04, no substitution permitted)
+SMART OKRs (Source: Artifact 14 §6 — HS-STRAT-04, no substitution permitted)
+These  are  the  exact  "What  After"  outcomes  from  the  value  proposition.  They  are  the  success  criteria  for  this
+PRD.
+OKROutcomeTargetBaselineMeasured ByTime-Bound
+OKR-1Vacancy time-to-fill<  5  minutes  per
+incident
+30–60      min      (Angela
+CC-001)
+E1      concierge      stopwatch
+(XP-1A)
+Within 30-day trial
+OKR-2Cancellation rate<  2%  per  agency
+per week
+~20% (Tom CC-002)Incident logWithin 30-day trial
+OKR-3Coordinator    1-tap
+trust
+≥        70%        of
+top-ranked
+candidates
+approved  without
+verification calls
+0% (no system exists)Deviation log (XP-1B)Steady-state
+(post-SPP
+migration)
+OKR-4SPP completeness≥  80%  of  active
+clients   with   ≥   3
+SPP             fields
+populated
+~0% (sticky notes only)SPP     completeness     score
+(P-10)
+Within  90  days  of
+onboarding
+OKR-5Family   notification
+rate
+100%                of
+confirmed
+replacements
+trigger automated
+family notification
+Ad   hoc   /   ~0%   (Arthur
+Kovacs failure case)
+Audit  log  ACT-F-01  delivery
+confirmation
+v1 launch
+OKR-6
+nn
+Knowledge
+survivability
+New   coordinator
+effective   in   <   5
+days   with   SPP
+handover
+2–3 months shadowingAgency  owner  assessment  at
+30 days
+Within  30  days  of
+coordinator
+onboarding
+nn OKR-6 note: Baseline is directional — not sourced from a named agency owner interview. Will be updated after
+XP-2A agency owner interviews. OKR-6 does not gate Sprint 1.
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 8 of 27
+
+How will success benefit customers and the business?
+How will success benefit customers and the business?
+Coordinators (CC): Angela goes from a 45-minute panic every morning to a 5-minute task. She stops making
+11  calls  she  didn't  want  to  make.  She  stops  forgetting  to  call  the  family.  She  stops  worrying  that  the  next
+coordinator won't know what she knows.
+Agency owners: Client preferences become a product asset — not a people dependency. The agency survives
+a coordinator departure. The agency owner stops taking furious calls from families who found out when nobody
+showed up.
+Business:  Two  validated  reference  customers  become  peer  referrals.  Peer  referral  is  the  primary  growth
+channel  in  a  small  professional  community.  The  SPP  moat  deepens  with  every  active  agency.  Gross  margin
+crosses 60% at ~83 agencies (Artifact 20 §07.2).
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 9 of 27
+
+5. Market Segments
+5. Market Segments
+Who are we building this for?
+Who are we building this for?
+Primary — Care Coordinator (CC) n Beachhead
+Home  care  coordinators  at  independent  Australian  agencies  with  20–200  active  clients.  One  to  three
+coordinators per agency. Sole operator (Tom: 25 clients, 1 coordinator) through team lead (Angela: 60+ clients,
+3 coordinators).
+They  work  under  constant  schedule  pressure.  They  operate  on  their  phone.  They  carry  all  client  preference
+knowledge  in  their  heads.  They  are  personally  responsible  for  both  care  quality  and  compliance  —  with  no
+system that unifies both.
+Entry  point:  The  coordinator  is  the  product  champion.  They  feel  the  pain  directly,  every  morning.  The  agency
+owner is the budget approver — they enter later (XP-2A).
+Defining constraint: The product must work on a 5-inch phone screen, one-handed, at 6:30 AM, before coffee.
+Every  design  decision  is  evaluated  against  this  constraint  (Artifact  15  DR-5).  Any  feature  that  requires  a
+desktop, a login process longer than 15 seconds, or more than 3 taps to complete the core action is out of scope
+for the coordinator's primary workflow.
+Secondary — Agency Owner / Operations Manager
+Owners and operations managers who depend on 1–3 coordinators to maintain care quality for 20–200 clients.
+Often the founder. Personally liable for care quality and compliance under the Aged Care Quality Standards.
+Entry  point:  Agency  owners  become  active  buyers  after  seeing  the  coordinator  use  the  product  during  E1
+(concierge phase). They are not the champion — the coordinator is — but they sign the purchase order.
+v1 value: Institutional knowledge is no longer a person dependency. The SPP is the agency's knowledge record,
+not the coordinator's memory.
+Future — Family Contact (FC) [NOT IN v1]
+Unlocks  after  CC  adoption  is  validated  and  the  E-3  notification  gate  is  live.  The  family  contact  receives  an
+automated SMS after a replacement is confirmed — before they have to call the agency. Not in scope for v1.
+Future — Home Care Nurse / Case Manager (HCN) [NOT IN v1]
+Unlocks after SPP and continuity history data is live. Not in scope for v1.
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 10 of 27
+
+6. Value Proposition
+6. Value Proposition
+What problem do we solve — and better than the alternatives?
+What problem do we solve — and better than the alternatives?
+(Source: Artifact 14 §1, Artifact 19 §1. HS-STRAT-05 transfer from Artifact 19 positioning.)
+For  home  care  coordinators  at  independent  Australian  agencies  managing  20–200  clients,  who  lose
+30–60 minutes and cancel 1 in 5 visits every time a carer calls in sick — because no system knows
+which  replacement  the  client  will  actually  open  the  door  for  —  Home-Care-AI  is  a  trust-weighted
+vacancy matching platform that fills every vacant visit in under 5 minutes with the right carer for that
+client,  and  automatically  notifies  the  carer,  the  client,  and  the  family  in  the  right  order  —  so  that  no
+senior sits in their chair waiting, and no family finds out before their parent does.
+Unlike  AlayaCare's  Vacant  Visit  Agent,  which  matches  on  availability  and  qualifications  only,  Home-Care-AI
+matches  on  who  the  client  trusts  —  using  a  Soft  Preference  Profile  built  from  the  coordinator's  institutional
+knowledge — so the coordinator approves once, and the right person arrives.
+What do customers gain?
+What do customers gain?
+GainEvidence
+45 minutes back per
+incident
+Angela  (CC-001):  "Three  incidents  a  week  —  that's  over  two  hours  of  panicked  phone  calls  I  don't
+have to make."
+Zero cancelled visits
+(target < 2%)
+From Tom's ~20% cancellation baseline — trust-matching surfaces candidates manual calls miss.
+No more Arthur Kovacs
+failure cases
+E-3  gate  ensures  client  is  notified  before  family,  automatically,  every  time  —  not  when  Angela
+remembers.
+Client knowledge that
+survives staff turnover
+Angela: "If I get hit by a bus tomorrow, half the knowledge about our clients walks out the door with
+me." SPP eliminates that single point of failure.
+Every decision logged and
+auditable
+Every  replacement  decision  written  to  an  immutable  audit  log.  No  more  personal  liability  for
+undocumented choices.
+What pains do we take away?
+What pains do we take away?
+PainCurrent StateAfter v1
+11-call morning
+cascade
+30–60 min, 3–5 times per week3 taps, < 5 minutes
+Mental triage (who
+trusts who)
+Angela's        memory        —        fragile,
+untransferable, unreliable at 6:30 AM
+SPP triage panel: instant, accurate, available to any coordinator
+Forgotten
+client/family
+notification
+Ad hoc — forgotten in the cascadeAutomated, E-3 compliant, structured in code
+Knowledge locked
+in one person's
+head
+Sticky  notes  and  memory  walk  out  the
+door with the coordinator
+SPP: structured, searchable, transferable from Day 1
+No audit trailUndocumented,     reconstructed     from
+memory if challenged
+Immutable, append-only, 7-year retention
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 11 of 27
+
+How are we better than the alternatives?
+How are we better than the alternatives?
+FactorManual CallsAlayaCare Vacant VisitHome-Care-AI v1
+Time to fill30–60 minFaster — but trust-blind< 5 min
+Trust / preference
+matching
+High           (coordinator
+knows)         —         but
+unsystem atised
+NoneHigh — SPP-driven, transferable
+Family notificationForgottenNone100% automated, E-3 gated
+Institutional
+knowledge capture
+Sticky notes + memoryPartial   —   custom   fields,
+no matching
+Full SPP — structured, matched, transferable
+APP complianceImplicitPartialDPIA-complete, by design
+Works standalone
+(no EMR needed)
+YesNo (preferred)Yes — standalone v1
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 12 of 27
+
+7. Solution
+7. Solution
+7.1 UX / Prototypes
+7.1 UX / Prototypes
+Primary workflow — Exception Handling (vacancy incident)
+The coordinator's primary workflow is a 10-step sequence from absence detection to incident resolution (Artifact
+15 §3). The product's job is to collapse Steps 1–9 from 30–45 minutes to under 10 minutes, while keeping the
+coordinator in control of the single most important decision: who goes to which client.
+Screen sequence (v1 coordinator app, mobile-first)
+1. [PUSH NOTIFICATION]
+   "Jenny called in sick — 3 visits affected.
+   Replacements ready for review."
+   [Tap to open → ]
+ 
+2. [VACANCY OVERVIEW SCREEN]
+   Three visit cards: Mrs. Kim (8:00 AM) · Arthur Kovacs (9:30 AM) · Lin Chen (11:00 AM)
+   Each card shows: Client name · Visit time · SPP summary (familiarity threshold label)
+   [Tap Mrs. Kim's card → ]
+ 
+3. [CANDIDATE SHORTLIST — Mrs. Kim]
+   TOP MATCH: David Kim
+   3 Qualified · 2.1 km · 2 prior visits with Mrs. Kim
+   [Secondary: Sarah Ng — 3 Qualified · 4.3 km · 0 prior visits]
+   [Third: Marco Torres — 3 Qualified · 5.8 km · 1 prior visit]
+   [Tap David Kim → ]
+ 
+4. [H MOMENT OF TRUTH — COORDINATOR APPROVAL CARD]
+   David Kim
+   nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+   n 3 Qualified for Mrs. Kim's care n
+   n n 2.1 km — Surry Hills n
+   n H 2 prior visits with Mrs. Kim n ← FAMILIARITY FLAG (largest element, DR-1)
+   nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+   If you approve, this is what will be sent:
+   → David: "CareBridge needs you to cover a visit in Surry Hills at 8 AM. Reply YES/NO."
+   → Mrs. Kim: "Your visit today will be with David Kim, who has visited you before."
+   → Margaret (daughter): "Your mother's visit today will be covered by David Kim..."
+      [Sent AFTER Mrs. Kim is notified — guaranteed]
+   [APPROVE] ← single tap
+ 
+5. [RESOLUTION SCREEN]
+   3 David Kim assigned — awaiting reply
+   3 Mrs. Kim notified — SMS delivered
+   3 Margaret Chen notified — SMS delivered
+   "This incident has been logged with timestamp and decision rationale."
+   [Done]
+Design requirements (binding — from Artifact 15 §7)
+RefRequirementWhy Non-Negotiable
+DR-1Familiarity flag ("2 prior visits with Mrs. Kim") is the
+largest element on the candidate card — above the
+match score
+This single element is the trust trigger. A score ("94% match") without
+context creates verification calls; a human fact creates approval. Per
+Moment of Truth (Artifact 15 §4).
+DR-2Notification preview (what will be sent to David, Mrs.
+Kim, and Margaret) appears before the Approve tap
+Angela  must  see  downstream  consequences  before  committing.
+Removes first-use anxiety. Makes E-3 constraint visible as a promise,
+not a background rule.
+DR-3Resolution   screen   is   emotionally   satisfying   —
+client-centred   language   ("Mrs.   Kim   has   been
+notified  and  knows  David  is  coming"),  not  system
+language ("ACT-P-01 delivered")
+This  is  the  product's  emotional  payoff  —  the  closure  Angela  never
+gets from 11 phone calls. Design investment here is proportionate to
+the product's core promise.
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 13 of 27
+
+RefRequirementWhy Non-Negotiable
+DR-4SPP  empty  state  feels  like  an  invitation  ("Add  Mrs.
+Chen's preferences now — 2 min"), not a dead end
+Empty  SPP  =  empty  briefing  =  product  feels  worse  than  calling.
+Empty state must convert coordinator anxiety into a population action.
+DR-5Full   3-Tap   Flow   (candidate   review   →   approval
+preview  →  confirm)  completable  one-handed  on  a
+5-inch phone screen in under 60 seconds
+Angela  is  standing  in  her  kitchen  at  6:30  AM.  No  desktop.  No  form
+entries. No text fields. If it requires a 4th tap for any reason, justify it to
+PM Lead before merging.
+7.2 Key Features
+7.2 Key Features
+Feature priority classification:
+P1
+P1 — Must ship v1: Product does not exist without these. A Level 3 intervention absent from this list
+breaks  the  safety  chain  (CLAUDE.md  HS-STRAT-01).  An  OKR  without  its  P1  feature  cannot  be
+measured.
+P1.1
+P1.1   —   Post-beachhead   (60   days   after   first   paying   customer):   Specifically   requested   by
+beachhead users; deferred to protect Sprint 1 focus.
+P2
+P2  —  v2  (after  beachhead  validation  +  compliance  unlock):  Requires  a  v2  unlock  condition  per
+Artifact 17 §07.
+[P1]
+Feature 1: Soft Preference Profile (SPP) Data Model + Capture Flow
+Feature 1: Soft Preference Profile (SPP) Data Model + Capture Flow [P1]
+What  it  is:  A  structured,  per-client  knowledge  record.  Replaces  sticky  notes  and  coordinator  memory  with  a
+database that any coordinator can read on Day 1.
+v1 schema (structured fields only — no free text anywhere)
+FieldTypeDescriptionCompliance Note
+P-1Client         identity
+(pseudonymised)
+UUID + first name only in appPHI — pseudonymised
+P-2Gender
+preference
+Categorical    dropdown    (Female    /    Male    /    No
+preference)
+Advisory   only   —   NOT   in   scoring   algorithm
+(CRIT-03).   Displayed   as   "Client   preference
+(advisory — not scored)."
+P-3Familiarity
+threshold
+Categorical: Known carers only / Briefed-acceptable
+/ Any
+Key     matching     parameter.     Drives     client
+notification phrasing (G-DS-05).
+P-4Cultural/religious
+considerations
+Structured     multi-select     (dietary,     observance,
+language)
+Yellow zone — explicit opt-in required.
+P-5Personal
+sensitivities
+Structured  max-100-char  field  (e.g.  "Do  not  move
+items in lounge")
+Not  free-text  health  information  —  structured,
+coordinator-entered.
+P-6Entry        protocol
+(replacement)
+Dropdown: ID check required / Introduction call first
+/ No special requirement
+Operational, not clinical.
+P-7Visit      history      /
+familiarity
+Auto-populated: carer ID, visit count, last visit dateSource of "2 prior visits" familiarity flag.
+P-8Binary carer flagsPer-carer   flag:   "Client   has   accepted   this   carer
+before"
+Used in shortlist scoring.
+P-10SPP
+completeness
+score
+Calculated: % fields populated / total fieldsOKR-4 measurement input.
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 14 of 27
+
+FieldTypeDescriptionCompliance Note
+P-11Client suburbText (suburb only — not full address)Used for proximity scoring only. Not disclosed to
+carer.
+What it is NOT: A clinical record. A free-text notes field. A health diagnosis store. P-9 (free-text SPP notes) is
+explicitly excluded from v1 (CRIT-04 resolution, Artifact 17 §05). No exceptions.
+Capture flows
+•ACT-S-01: SPP entry at client intake — coordinator-guided structured form
+•ACT-S-02:  Concierge-assisted  SPP  migration  session  (coordinator  +  PM  Lead  for  existing  clients).  Note
+(B3-B):  ACT-S-02  uses  AlayaCare's  existing  read-only  CSV  export  —  it  does  NOT  require  write-back
+capability.  AX-02  outcome  does  not  affect  this  flow.  If  AX-02  confirms  write-back  unavailable,  ACT-S-02  is
+replaced by Artifact 24 US-15 (self-service CSV import) for Sprint 2.
+•ACT-S-03:  Visit-triggered  completeness  prompt  —  system  surfaces  empty  fields  after  a  vacancy  incident
+involving that client ("Add Lin Chen's preferences now — it will help next time")
+OKR it measures: OKR-4 (≥ 80% of active clients with ≥ 3 SPP fields populated within 90 days).
+[P1]
+Feature 2: Smart Match Engine
+Feature 2: Smart Match Engine [P1]
+What it is: An algorithm that, when a vacancy is recorded, automatically ranks available and qualified carers in
+order of suitability for the specific client — in under 30 seconds.
+Algorithm (rule-based in v1 — no ML, fully auditable)
+STEP 1 — Qualification Gate (hard binary — pass/fail):
+  → Carer credentials match client care requirements
+  → No expired certifications
+  → Available (not already scheduled at this time)
+  → Only carers who pass this gate appear in the shortlist
+ 
+STEP 2 — Proximity Score (weighted):
+  → Google Maps Distance Matrix API: carer suburb → client suburb
+  → Lower distance = higher score
+  → Suburb only — no GPS tracking, no full address disclosure (APP compliant)
+ 
+STEP 3 — SPP Match Score (weighted — the trust layer):
+  → P-7 familiarity history: prior visit count with this specific client (highest weight)
+  → P-8 binary acceptance flag: client has accepted this carer before
+  → P-3 familiarity threshold: "known only" clients de-rank unfamiliar carers
+  → P-2 (gender preference): NOT in scoring function (CRIT-03 compliance guard)
+ 
+FINAL RANK: Qualification pass + highest (Proximity + SPP Match) = #1 candidate
+Algorithm constraint (binding from Artifact 17 §04)
+E1_LEGAL_SIGNOFF: bool = false // default until legal sign-off obtained
+IF E1_LEGAL_SIGNOFF == false:
+    ASSERT P2 NOT IN scoring_weights
+    DISPLAY P2 to coordinator as advisory: "Client preference (advisory — not scored)"
+    LOG guard_id = 'G-CC-4', guard_passed = true
+Actions in this feature
+•ACT-V-01: Detect vacancy event (absence recorded by coordinator or triggered by carer)
+•ACT-V-02: Run qualification gate against carer database
+•ACT-V-03: Compute proximity score (Google Maps API — APP 8 review required before production — SC-07
+action item)
+•ACT-V-04: Compute SPP match score
+•ACT-V-05: Generate and send coordinator push notification ("3 replacements ready")
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 15 of 27
+
+•ACT-V-06: Serve ranked shortlist to coordinator app
+•ACT-V-07: Display match explanation (SPP field labels that contributed — no full SPP disclosure, CC-6 guard)
+OKR it measures: OKR-1 (< 5 min time-to-fill), OKR-2 (< 2% cancellation rate), OKR-3 (≥ 70% 1-tap trust).
+[P1]
+Feature 3: 3-Tap Coordinator Approval Flow — The Moment of Truth
+Feature 3: 3-Tap Coordinator Approval Flow — The Moment of Truth [P1]
+What  it  is:  The  single  most  important  feature  in  the  product.  Angela  reviews  the  shortlist,  taps  her  chosen
+candidate, sees the full notification preview, and taps Approve. The system executes everything after that tap —
+without Angela touching the phone again.
+This is the HITL gate. It cannot be bypassed. It cannot be automated away. Every L3 action downstream of
+this tap requires this tap first.
+Actions
+•ACT-A-01: Serve the coordinator approval card (familiarity flag + qualifications badge + notification preview)
+•ACT-A-02: Record coordinator approval (sets coordinator_approved = true, writes HITL_CONFIRMED
+audit entry)
+What ACT-A-01 must display (non-negotiable UI elements — from HS-STRAT-05h): 1. Familiarity count: "2
+prior  visits  with  Mrs.  Kim"  —  this  exact  format,  this  exact  prominence  2.  Qualifications  confirmed  badge:  "3
+Qualified  for  [client  first  name]'s  care  requirements"  3.  Full  notification  preview:  what  message  David  will
+receive,  what  Mrs.  Kim  will  receive,  what  the  family  will  receive  —  in  that  order,  with  the  E-3  note:  "[Family
+name] will be notified after [client name]"
+What the approval card must NOT contain
+•Raw  match  percentage  or  score  as  the  primary  element  (destroys  trust  —  Angela  sees  a  number  with  no
+context)
+•Any  SPP  field  that  discloses  sensitive  health  information  to  the  coordinator  in  this  context  (CC-6  guard:  the
+briefing assembly, not the approval card, is where SPP details flow to the carer)
+•The reason P-2 was or was not applied (G-CC-4 guard: P-2 advisory is shown separately, not embedded in
+match rationale)
+OKR it measures: OKR-3 (≥ 70% 1-tap trust rate, measured by XP-1B deviation log).
+[P1]
+Feature 4: Automated Carer Assignment + Briefing
+Feature 4: Automated Carer Assignment + Briefing [P1 — L3 Actions]
+What  it  is:  After  coordinator  approval,  the  system  sends  the  replacement  carer  two  messages:  (1)  the
+assignment request and (2) the client briefing. Both are template-based (no LLM). Both require prior coordinator
+approval (ACT-A-02 = true).
+ACT-C-01  —  Carer  Assignment  SMS:  Template:  "Hi [carer_first_name], [agency_name] needs
+you to cover a visit for a client in [client_suburb] at [visit_time]. Reply YES to
+confirm or NO if unavailable."
+What ACT-C-01 must NOT include (CC-8 guard)
+•Client full name
+•Client full address
+•Any SPP data
+•Any health information
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 16 of 27
+
+ACT-C-02  —  Carer  Briefing  SMS  (sent  after  carer  confirms):  Template  assembled  from  SPP  structured
+fields:
+•Entry protocol label (P-6): e.g. "Please knock and wait — client takes a moment to answer"
+•Personal sensitivities (P-5): e.g. "Please don't move any items in the lounge"
+•Familiarity phrasing (P-3): If threshold = "known carers only", add "This client prefers familiar carers — please
+introduce yourself clearly and take a calm, steady approach."
+ACT-C-02 guard (CC-6, mandatory)
+ASSERT match_explanation_in_payload = false
+ASSERT gender_preference_in_payload = false
+IF SPP empty for this client:
+    SEND minimal briefing ("Client prefers a calm, steady approach")
+    ALERT coordinator: "Mrs. Chen's preferences haven't been added yet. Add them now (2 min)."
+Failure handling
+•ACT-C-01  delivery  failure  →  L1  alert  to  Angela:  "SMS  to  David  failed  —  call  him  directly  by  [visit_time  -  30
+min]"
+•Carer declines (replies NO) → re-surface shortlist with next candidate, do not auto-assign
+•Carer  no-reply  after  15  minutes  →  L1  alert  to  Angela:  "David  hasn't  replied  —  confirm  or  pick  another
+candidate"
+[P1]
+Feature 5: Client + Family Notification Pipeline with E-3 Gate
+Feature 5: Client + Family Notification Pipeline with E-3 Gate [P1 — L3 Actions]
+What it is: After coordinator approval (and carer has confirmed), the system automatically sends an SMS to the
+client and then to the family — in that exact order, guaranteed in code.
+The E-3 gate is a structural code constraint, not a policy. It cannot be bypassed by any configuration, user
+action, or edge case. This is the Arthur Kovacs constraint.
+ACT-P-01 — Client Notification SMS: Template (phrasing branch on P-3 familiarity threshold):
+•If  P-7  visit  count  >  0  (carer  has  visited  before):  "Good  morning,  this  is  [agency_name].  Your
+visit today will be with [carer_first_name], who has visited you before. They'll
+arrive at [visit_time]."
+•If  P-3  =  "briefed-acceptable"  AND  visit  count  =  0:  "Good morning, this is [agency_name]. Your
+visit  today  will  be  covered  by  [carer_first_name].  They  know  about  your
+preferences and will introduce themselves when they arrive at [visit_time]."
+•If P-3 = "known carers only" AND carer is unfamiliar: DO NOT assign this carer. This client should not reach
+ACT-P-01  with  an  unfamiliar  carer  —  the  shortlist  algorithm  should  have  excluded  them.  If  this  state  is
+somehow reached → escalate to coordinator as VACANCY_UNRESOLVED.
+ACT-P-01 note on P-3 ≥ 2 (cognitively impaired clients): G-DS-05 guard: clients with P-3 familiarity threshold
+= "known carers only" must never receive the phrase "who has visited you before" if the assigned carer is not
+actually  known.  The  phrasing  branch  above  enforces  this,  but  the  agentic-logic-spec  must  assert  this
+guard explicitly.
+E-3 Gate 1
+BEFORE ACT-P-01:
+    ASSERT coordinator_approved = true
+    SET client_notified = false
+ 
+AFTER ACT-P-01 delivery confirmed:
+    SET client_notified = true
+ 
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 17 of 27
+
+IF ACT-P-01 delivery fails:
+    SET client_notified = false
+    ALERT coordinator: "[client_first_name] has no notification channel — please call them directly before
+family is notified."
+ACT-F-01     —     Family     Notification     SMS:     Template:     "Hi   [family_contact_first_name],
+[agency_name] is letting you know that [client_first_name]'s visit today will be
+covered  by  [carer_first_name],  who  has  visited  [client_pronoun]  before.  Arranged
+by [coordinator_first_name]. — [agency_name]"
+E-3 Gate 2 (the Arthur Kovacs constraint — non-bypassable)
+BEFORE ACT-F-01:
+    ASSERT client_notified = true
+    IF client_notified = false:
+        SUPPRESS ACT-F-01
+        ALERT coordinator: "Family notification held — [client_first_name] has not yet been notified. Notify
+them manually to release."
+        LOG event_type = 'E3_GATE_BLOCKED', guard_id = 'G-E3-1'
+OKR it measures: OKR-5 (100% of confirmed replacements trigger automated family notification).
+[P1]
+Feature 6: Immutable Audit Log
+Feature 6: Immutable Audit Log [P1 — Non-Negotiable]
+What  it  is:  Every  state  transition  in  every  vacancy  incident  is  written  to  an  immutable,  append-only  audit  log.
+This is not a feature the coordinator notices — it is the product's compliance and trust infrastructure.
+Why non-negotiable: Per CLAUDE.md Article IX: "If a state transition happened and was not logged, it did not
+happen (for compliance purposes)." SD-01B (audit log completeness) is the merge gate — no feature ships if its
+state transitions are not 100% logged.
+Audit   log   schema:   Full   HIPAAAuditLogEntry   schema   from   CLAUDE.md   Article   IX,   extended   with
+APP-specific fields (Artifact 16 §7):
+•cross_border_disclosure: false (all data stays in ap-southeast-2)
+•app8_basis: "Domestic — no cross-border transmission"
+•consent_record_id: link to consent record where applicable
+•guard_id: which compliance guard fired (G-CC-4, G-DS-05, G-E3-1, CC-6, CC-8)
+•guard_passed: boolean
+Minimum state transitions that must be logged per vacancy incident
+EventState BeforeState After
+Vacancy detectedNORMALALERT_PENDING
+Coordinator notified (shortlist sent)ALERT_PENDINGHITL_PENDING
+Coordinator approvedHITL_PENDINGALERT_DISPATCHED
+Carer SMS sent (ACT-C-01)ALERT_DISPATCHEDALERT_DISPATCHED
+Carer confirmedALERT_DISPATCHEDALERT_DISPATCHED
+Client notified (ACT-P-01)ALERT_DISPATCHEDALERT_DISPATCHED
+Family notified (ACT-F-01)ALERT_DISPATCHEDALERT_DISPATCHED
+Incident resolvedALERT_DISPATCHEDRESOLVED
+Vacancy unresolvedanyVACANCY_UNRESOLVED
+E-3 gate blockedALERT_DISPATCHEDALERT_DISPATCHED (with guard_id E3_GATE_BLOCKED)
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 18 of 27
+
+Infrastructure:  AWS  CloudTrail  +  write-once  S3  (ap-southeast-2).  7-year  retention.  No  application  role  may
+DELETE or UPDATE a log entry. Any role with UPDATE access on the log table is a CRITICAL security finding.
+[P1]
+Feature 7: Vacancy Unresolved Escalation
+Feature 7: Vacancy Unresolved Escalation [P1 — L3 Edge Case]
+What it is: When no suitable candidate is found (all shortlist candidates decline or are unavailable), the system
+escalates to the coordinator as VACANCY_UNRESOLVED — it does not auto-assign, it does not pick a fourth
+option silently, and it does not leave the incident in a hanging state.
+VACANCY_UNRESOLVED Protocol
+IF all shortlist candidates decline OR timeout:
+    SET incident_state = VACANCY_UNRESOLVED
+    ALERT coordinator (L3 escalation — Sonnet model, see §7.3):
+        "No suitable replacement found for [client] at [visit_time].
+        Candidates tried: [list]. Reason each declined: [if provided].
+        Options: Extend search criteria / Call manually / Mark as cancelled."
+    LOG event_type = 'VACANCY_UNRESOLVED', state_after = 'VACANCY_UNRESOLVED'
+The  system  NEVER  auto-cancels  a  visit  without  coordinator  confirmation.  VACANCY_UNRESOLVED  is  a
+signal to the coordinator — the decision is theirs.
+Why this is P1: Per CLAUDE.md Article VIII: "The system must never be left in a hanging ALERT_PENDING
+state."  VACANCY_UNRESOLVED  is  the  resolution  path  for  the  failure  case  that  currently  produces  the  20%
+cancellation rate.
+[P1.1]
+Feature 8: Compliance Gap Dashboard
+Feature 8: Compliance Gap Dashboard [P1.1 — Post-Beachhead, 60 Days After Launch]
+What it is: Angela's exact specification (Artifact 2c): "Here are the seventeen things that are out of compliance.
+Here are the five that are critical."
+A  real-time  prioritised  list  of  compliance  items:  overdue  care  plan  reviews,  expiring  carer  credentials,  visit
+documentation gaps. One-tap remediation path.
+Why  deferred:  Sprint  1  focus  must  be  on  the  replacement-matching  flow  (Features  1–7).  The  compliance
+dashboard adds significant data model work and is not required to validate OKR-1 through OKR-5. Deferred to
+post-beachhead to avoid Sprint 1 scope inflation.
+Trigger for activation: OKR-1 and OKR-3 both validated in E1 (Angela confirms time-to-fill < 5 min AND ≥ 70%
+1-tap approval rate).
+[P2]
+Feature 9: WhatsApp Notifications
+Feature 9: WhatsApp Notifications [P2 — v2, Blocked Pending CRIT-01 Unlock]
+Unlock condition (Artifact 17 §07): APP 8 legal review completed — Privacy Counsel confirms provider's DPA
+satisfies  APP  8  "substantially  similar"  protection.  OR  Carer  App  in-app  push  is  ready  (preferred  v2  path  —
+replaces SMS entirely, no APP 8 issue, and reduces COGS by 99% per Artifact 20 §13).
+Why  not  v1:  WhatsApp  routes  via  Meta's  US-hosted  servers  —  APP  8  cross-border  disclosure  without
+confirmed legal basis. Resolved by AU-hosted SMS gateway for v1 (Artifact 17 CRIT-01).
+[P2]
+Feature 10: AlayaCare Bi-Directional Integration
+Feature 10: AlayaCare Bi-Directional Integration [P2 — Blocked Pending AX-02]
+Unlock   condition:   Engineer   confirms   AlayaCare   Connect   write-back   endpoint   availability   (AX-02,   due
+2026-04-01).  If  read-only  only,  integration  is  deferred.  If  bi-directional  confirmed,  integration  scoping  begins
+post-beachhead.
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 19 of 27
+
+7.3 Technology
+7.3 Technology
+Infrastructure stack: AWS ap-southeast-2 (Sydney). No data leaves Australia. Chosen for APP 8 compliance
+(no cross-border trigger), not cost.
+ComponentServiceWhy
+State machine +
+agentic orchestration
+AWS Lambda (event-driven)Serverless;  scales  to  zero  at  beachhead;  supports  step  function  for
+vacancy incident workflow
+SPP + carer data
+(structured)
+Amazon DynamoDBLow-latency  reads  for  shortlist  generation  (<  200ms  confirmed  —  F-4,
+Artifact 7); HIPAA-grade encryption at rest
+Audit log (immutable)AWS CloudTrail + write-once S3Append-only  by  infrastructure  design;  7-year  retention;  no  application
+can UPDATE or DELETE
+Proximity scoringGoogle   Maps   Distance   Matrix
+API
+Proven  accuracy  for  Australian  geography  (F-3  confirmed).  APP  8
+review  required  before  production  (AX-01  action  item  from  SC-07  —
+Artifact 10 §9). Sends carer postcode only — no client address.
+SMS notifications
+(AU-hosted)
+MessageMedia  OR  AWS  SNS
+(ap-southeast-2)
+Domestic  processing  —  no  APP  8  trigger.  Evaluate  AWS  SNS  pricing
+vs.  MessageMedia  at  20+  agencies  (Artifact  20  §10  Recommendation
+2).  Channel  Wrapper  architecture:  SMS  is  a  configuration  parameter,
+not hardcoded.
+Encryption + key
+management
+AWS KMS (ap-southeast-2)SSE-KMS for all stored data. 1 customer-managed key per agency.
+AI model selection (binding from HS-STRAT-03, Artifact 20 §12)
+Action TypeModelToken BudgetCost/ActionConstraint
+L1/L2 routine orchestration
+(all state management,
+HITL coordination)
+Claude  Haiku  4.5  (
+claude-haiku-4
+-5-20251001)
+2,200 tokens~$0.0015Prompt  caching  enabled  Day  1.  Cache  static
+system prompt blocks.
+L3 —
+VACANCY_UNRESOLVED
+escalation
+Claude  Sonnet  4.6  
+(claude-sonnet-
+4-6)
+3,500 tokens~$0.0165Sonnet reserved exclusively for this action. Any
+new    L3    classification    requires    PM    Lead
+sign-off.
+Notification content
+(ACT-C-01, ACT-C-02,
+ACT-P-01, ACT-F-01)
+No        LLM        —
+template
+interpolation
+0 tokens$0CRIT-02   compliance   constraint.   Cannot   be
+changed   without   Artifact   17   amendment   +
+Privacy Counsel sign-off.
+Audit log entriesNo LLM0 tokens$0Structured  write.  APPAuditLogEntry  schema  is
+deterministic.
+All  v1  external-facing  content  (notifications,  briefings)  uses  template-based  string  interpolation.  No  LLM
+generates  text  transmitted  to  carers,  clients,  or  families  in  v1.  Any  code  that  passes  notification  text
+through an LLM API is a CRITICAL compliance finding.
+7.4 Assumptions + Constraints
+7.4 Assumptions + Constraints
+Assumptions (what we believe but haven't fully proven)
+Assumptions (what we believe but haven't fully proven)
+IDAssumptionStatusTest
+V-1Coordinators    trust    a    machine-ranked    shortlist
+enough to approve without verification calls
+n PendingXP-1A/1B — E1 live data
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 20 of 27
+
+IDAssumptionStatusTest
+V-2The familiarity flag ("2 prior visits") is the trust trigger
+— not the match score
+n PendingE1 first-use observation (deviation log)
+V-3SPP can be populated at sufficient completeness (≥
+80%) to differentiate match quality
+n PendingXP-3A — self-serve template
+VI-1Agency  owners  will  pay  for  a  standalone  product
+without EMR integration
+n PendingXP-2A — LOI meetings
+F-1Carers reply to SMS assignment requests within 15
+minutes at ≥ 70% rate
+n PendingXP-4A — SMS dry run
+S-3SPP  data  is  sticky  enough  that  switching  cost  >  4
+weeks of rebuild
+n PendingXP-3B — moat probe
+E-1P-2  (gender  preference)  is  lawful  as  a  matching
+parameter
+n Legal
+review
+pending
+Employment + discrimination law counsel opinion
+AX-01P-9 (free-text field) is confirmed absent from v1 data
+schema
+n
+Engineering
+confirmation
+pending
+Engineer confirms in writing before Sprint 1
+AX-02AlayaCare      Connect      supports      bi-directional
+write-back
+n
+Engineering
+investigatio
+n pending
+API    documentation    review    (due    2026-04-01).
+Branching  plan  (B3-C):  If  write-back  confirmed  →
+AlayaCare integration scoping enters v2 roadmap. If
+write-back unavailable → Artifact 24 US-14 (Manual
+Absence  Record)  and  US-15  (Bulk  SPP  Import  via
+CSV)  enter  Sprint  2  backlog;  v1  operates  fully
+standalone. Either answer is fine — the unknown is
+the risk.
+Compliance Constraints (binding from Artifact 16 + Artifact 17 — cannot be overridden)
+Compliance Constraints (binding from Artifact 16 + Artifact 17 — cannot be overridden)
+CRITICAL — must be implemented before Sprint 1 data collection begins
+IDConstraintSourceImplementation Rule
+CRIT-01All v1 notifications via AU-hosted SMS gateway
+only. No WhatsApp/Twilio/Meta-hosted channel
+in v1.
+Artifact 17 §02Channel                  Wrapper                  architecture.
+channel_config.v1  =  'SMS_AU'.  Hardcoding
+any channel is prohibited.
+CRIT-02All   external   content   (notifications,   briefings)
+generated  by  template  interpolation  only.  No
+LLM  call  generates  text  sent  to  carers,  clients,
+or families.
+Artifact 17 §03content_generation_method           ==
+TEMPLATE_INTERPOLATION         asserted         in
+agentic-logic-spec.     Any     LLM     assignment     to
+notification actions = CRITICAL defect.
+CRIT-03P-2  (gender  preference)  carries  zero  weight  in
+the  matching  algorithm.  Displayed  as  advisory
+only:   "Client   preference   (advisory   —   not
+scored)."
+Artifact 17 §04E1_LEGAL_SIGNOFF = false  constant  in  code.
+ASSERT P2 NOT IN scoring_weights.  Guard
+logged as G-CC-4.
+CRIT-04
+(PENDING
+AX-01)
+P-9 (free-text SPP notes) does not exist in the
+v1  schema.  No  unstructured  text  field  of  any
+name.  Engineer  must  confirm  in  writing  before
+Sprint 1.
+Artifact 17 §05AX-01  engineering  confirmation  before  any  data
+model is finalised. Schema review at PR gate.
+HIGH — must be resolved before GA (any feature shipping to production)
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 21 of 27
+
+IDConstraintSourceBlocks
+HIGH-01Consent  framework  for  sensitive  information  (P-2,  P-3,  P-4,
+P-5) not yet specified.
+Artifact 16 §5GA
+HIGH-02Lawful basis for carer SPP disclosure (ACT-C-02 briefing) not
+yet documented.
+Artifact 16 §5GA
+HIGH-03DPIA for CC-1 compound (P-3 + P-4 + P-5 combination) not
+yet initiated.
+Artifact 16 §5GA
+HIGH-04Google  Maps  API  APP  8  review  not  confirmed.  ACT-V-03
+transmits carer postcode to Google's US-hosted servers.
+Artifact    16    +
+Artifact         10
+SC-07
+Production use of ACT-V-03
+HIGH-05RAG  vector  store  isolation  not  architecturally  specified.  (v2
+feature — not a Sprint 1 blocker, but must be specified before
+any RAG build begins.)
+Artifact 16 §5Any RAG build
+HIGH-06Cross-session coordinator memory isolation not specified.Artifact 16 §5Sprint 1
+HIGH-07CC-6  guard  (match  explanation  absent  from  carer  briefing)
+not yet in code.
+Artifact 16 §5Sprint 1
+HIGH-08E-3 structural gate not yet in code.Artifact 16 §5Sprint 1
+HIGH-06, HIGH-07, and HIGH-08 are Sprint 1 requirements — they block sprint completion, not just GA.
+High-Risk Compound Combinations (from Artifact 16 §4 — per CLAUDE.md Article IV Rule 7)
+These must appear in the PRD Constraints so engineers cannot unknowingly build illegal data flows:
+CC IDCombinationWhat It CreatesPRD Constraint
+CC-1P-3  (familiarity  threshold)  +
+P-4  (cultural/religious)  +  P-5
+(personal             sensitivities)
+combined  in  any  report,  API
+response, or notification
+Near-complete            cognitive
+vulnerability  profile  —  clinical
+monitoring  classification  under
+APP
+Do NOT combine CC-1 fields in any single API response,
+notification  payload,  or  report.  If  combined,  must  trigger
+CC1_COMPOUND_BLOCKED event and DPIA gate.
+CC-2ACT-P-01   client   notification
+phrasing    +    P-3    familiarity
+threshold
+For  P-3  =  "known  carers  only"
+(proxy           for           cognitive
+impairment),  specific  phrasing
+creates undue distress
+G-DS-05  guard:  "who  has  visited  you  before"  phrase
+BLOCKED  for  P-3  ≥  2  clients.  Phrasing  must  branch
+(Feature 5 above).
+CC-3P-3  +  P-5  +  P-7  in  shortlist
+display
+Full          cognitive          profile
+reconstructible
+Shortlist displays P-7 visit count as "X prior visits" — not
+P-3 label or P-5 content.
+CC-4Carer  briefing  (ACT-C-02)  +
+P-2 + P-3 + P-5
+Health   information   disclosure
+to carer without lawful basis
+CC-6 guard mandatory on all briefing payloads (Feature
+4 above).
+CC-5Any combination of carer ID +
+client  ID  +  visit  history  in  a
+single plaintext log entry
+PHI        correlation        without
+pseudonymisation
+Audit  log  uses  UUIDs  only  —  no  first  names,  no  DOBs,
+no addresses in any log field.
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 22 of 27
+
+8. Release Plan
+8. Release Plan
+What goes in v1?
+What goes in v1?
+v1 is the smallest thing that delivers the coordinator's core job: fill a vacant visit with the right carer, in under 5
+minutes, with one tap, and notify everyone automatically in the right order.
+In v1
+•SPP data model + capture flow (P1)
+•Smart Match Engine — rule-based (P1)
+•3-Tap Coordinator Approval Flow (P1)
+•Carer SMS assignment + briefing (P1 — L3)
+•Client SMS notification with E-3 gate (P1 — L3)
+•Family SMS notification with E-3 gate (P1 — L3)
+•Vacancy Unresolved escalation (P1)
+•Immutable audit log — every state transition (P1)
+•Mobile-first coordinator app — iOS/Android (P1)
+In v1.1 (60 days post-launch, post-OKR-1/OKR-3 validation)
+•Compliance gap dashboard ("seventeen things out of compliance" — Angela's request)
+•SPP empty state population flow improvements (informed by XP-3A results)
+In v2 (post-beachhead validation + compliance unlock conditions met)
+•WhatsApp notifications (unlock: APP 8 legal review complete, Artifact 17 §07)
+•Carer App in-app push notifications (unlock: APP 8 confirmation + Carer App build — largest COGS reduction
+lever, Artifact 20 §13)
+•AlayaCare bi-directional integration (unlock: AX-02 confirmed, VI-1 validated)
+•LLM-generated   external   content   —   personalised   notifications   (unlock:   NFR-INJ-01–04   implemented   +
+red-team tested)
+•P-2 in matching algorithm (unlock: E-1 legal opinion obtained)
+•Agency owner dashboard (coordinator performance, SPP completeness across agency)
+•Family Contact portal (unlock: CC beachhead validated + E-3 gate live)
+How long will it take?
+How long will it take?
+This PRD does not set exact dates. The following phases give relative timeframes. All phases are gated by the
+conditions listed — not by calendar pressure.
+PhaseWhat HappensCondition to StartRelative Length
+Pre-Sprint GateAX-01   (CRIT-04   engineering   confirmation)   +
+Google Maps APP 8 review (SC-07) initiated
+Engineering lead available1 week
+Sprint 1Build    Features    1–7.    HIGH-06,    HIGH-07,
+HIGH-08 resolved. Audit log 100% complete.
+AX-01 confirmed, design wireframes
+approved by PM Lead
+6–8 weeks
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 23 of 27
+
+PhaseWhat HappensCondition to StartRelative Length
+E1/E2 ConciergePM  Lead  manually  runs  the  product  for  Angela
+and Tom. OKR-1 through OKR-5 measured.
+Sprint 1 PASS (harness-audit-grader
+verdict)
+4 weeks
+First Paid TrialAgency Owner LOI converts to 30-day paid trial
+($99 reduced entry).
+OKR-1  AND  OKR-3  validated  at  E1
+(<  5  min  fill  time  AND  ≥  40%  1-tap
+approval without calls)
+30 days
+v1 GAFirst  commercial  subscription.  SPP  onboarding
+session priced.
+OKR-1  through  OKR-5  all  validated.
+HIGH-01 through HIGH-05 resolved.
+DPIA-01–07 complete.
+After trial close
+v1.1Compliance  gap  dashboard.  SPP  population
+improvements.
+OKR-1     and     OKR-3     validated
+post-trial.
+~60 days post-GA
+What comes before Sprint 1 starts?
+What comes before Sprint 1 starts?
+The following are pre-Sprint 1 gates — the product cannot be coded until these are confirmed:
+•AX-01: Engineer confirms in writing that free_text_notes field does not exist in the v1 SPP schema and no
+unstructured text field of any name exists in the v1 data model. (CRIT-04 completion.)
+•AX-02  result  known:  Either  bi-directional  AlayaCare  integration  is  scoped  (v2  roadmap  item)  or  scoping  is
+deferred. Either answer is fine — the unknown is the problem.
+•Privacy Counsel briefed: On DPIA-01 scope and timeline. Sprint 1 can begin before DPIAs are complete, but
+the counsel relationship must be active.
+•Design  wireframes  for  3-Tap  Approval  Flow  (sketch-gate):  The  Moment  of  Truth  screen  cannot  be  built
+from  spec  alone.  Minimum  acceptable  fidelity:  PM  Lead-approved  sketch  showing  element  order,  DR-1
+font-size  annotations,  tap  target  dimensions  ≥  44×44px,  and  notification  preview  above  Approve  button.  Full
+Figma polish required before E1 but not before Wave 4 coding start (Artifact 24 US-10 AC-6).
+•Copy  Approval  (B1-B):  Privacy  Counsel  confirms  all  four  SMS  template  strings  (ACT-C-01,  ACT-C-02,
+ACT-P-01,  ACT-F-01  —  Artifact  23  §4.1)  are  APP-compliant.  Angela  (CC-001)  has  reviewed  all  four  for
+coordinator and client clarity. Templates are committed to config/sms_templates.py with approved_by
+and  approved_date  fields  set.  No  notification  story  passes  harness-audit-grader  SD-01B  until  this
+gate is closed.
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 24 of 27
+
+9. Open Questions
+9. Open Questions
+IDQuestionOwnerDueImpact if Wrong
+AX-01Does  a  free-text  field  of  any  name  exist  in  the
+current v1 SPP schema?
+EngineerBefore  Sprint
+1
+CRITICAL    —    CRIT-04    compliance
+blocker
+AX-02Does  AlayaCare  Connect  support  write-back
+endpoints for assignment confirmation?
+Engineer2026-04-01AlayaCare moat score, positioning claim,
+v2 integration scoping
+SC-07Does  Google  Maps  Distance  Matrix  API  DPA
+satisfy   APP   8   —   is   only   carer   postcode
+transmitted (no client data)?
+Legal2026-04-01ACT-V-03   cannot   ship   to   production
+without this confirmed
+V-1Will  Angela  approve  the  top-ranked  candidate
+without calling to verify — at first use?
+E1
+observation
+E1 Week 1If  no:  the  product  is  a  search  tool,  not  a
+decision  tool.  Product-market  fit  is  not
+confirmed.
+VI-1Will agency owners pay $150–250/month for a
+standalone product without EMR integration?
+XP-2AQ2 2026If   no:   the   entire   go-to-market   motion
+must   shift.   EMR   integration   required
+before launch — 6–9 month delay.
+HIGH-01What  is  the  consent  framework  for  collecting
+P-2, P-3, P-4, P-5?
+Privacy
+Counsel
+Before GACannot ship without consent mechanism
+HIGH-02What  is  the  lawful  basis  for  disclosing  carer
+SPP briefing (ACT-C-02)?
+Privacy
+Counsel
+Before GAACT-C-02       cannot       ship       without
+documented lawful basis
+HIGH-03DPIA for CC-1 compound (P-3 + P-4 + P-5) —
+when initiated?
+Privacy
+Counsel
+Sprint          1
+initiation
+Cannot   collect   compound   CC-1   data
+without DPIA
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 25 of 27
+
+10. Handshake Table — PRD → Execution Skills
+10. Handshake Table — PRD → Execution Skills
+IDFrom PRDTo Next SkillWhat Transfers
+PRD-01§7.2  Feature  list  +
+P1/P1.1/P2
+classification
+prioritization-fr
+ameworks   (Execution
+Skill 2)
+Feature  list  for  opportunity  scoring  (Importance  ×  1-Satisfaction).  Only
+ranked P1 features enter agentic-logic-spec.
+PRD-02§7.2 All P1 features
++            compliance
+constraints    +    CC
+guards
+agentic-logic-spe
+c (Execution Skill 3)
+Features → pseudocode. Guards → IF-THEN gates. Constraints → NFRs.
+Threshold constants (E1_LEGAL_SIGNOFF, etc.)
+PRD-03§7.3               Model
+selection
+(Haiku/Sonnet/No
+LLM per action)
+agentic-logic-spe
+c       §6       (Autonomy
+Classification)
+Binding  model  assignment  per  action  type.  Any  deviation  =  cost  violation
+or CRIT-02 compliance violation.
+PRD-04§4  OKR-1  through
+OKR-6
+user-stories
+acceptance criteria
+Every P1 story's "Given/When/Then" must trace to a named OKR. A story
+with no OKR link is a Requirement Drift defect.
+PRD-05§7.4      Compliance
+constraints  +  CC-1
+through            CC-5
+compound guards
+agentic-logic-spe
+c NFR section
+Each  compound  combination  becomes  an  explicit  IF-THEN  guard  with  a
+named guard_id in the pseudocode.
+PRD  integrity  note:  This  document  is  the  Source  of  Truth.  Every  downstream  artifact  —  agentic-logic-spec,
+user-stories,  synthetic-phi-generator,  harness-audit-grader  —  traces  back  to  a  section  of  this
+PRD.  If  a  downstream  artifact  contains  a  feature,  constraint,  or  OKR  not  present  here,  it  is  a  Requirement  Drift
+defect. If this PRD changes, Stage A restarts.
+Home-Care-AI · Artifact 21 · Product Requirements Document · 2026-03-27
+Home-Care-AI · Artifact 21 · Product Requirements DocumentPage 26 of 27
+
+---

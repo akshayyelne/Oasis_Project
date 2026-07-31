@@ -1,0 +1,935 @@
+# Extracted from: akshayyelne/Home-Care-AI-Product-Management/.claude/skills/Execution/synthetic-data/incidents.json
+# Generated: 2026-07-31T00:49:45.173Z
+
+```json
+// SYNTHETIC DATA — NOT REAL APP-PROTECTED DATA
+// Generated for Home-Care-AI ECC validation harness — Artifact 25
+// All identifiers are deterministic for test reproducibility; all names are fictitious
+// Generated: 2026-03-28T00:00:00.000Z
+// Instruction to ECC: "Build this feature so it passes the tests in incidents.json, including the SPP decay scenarios (SYN-04)."
+{
+  "data_classification": "SYNTHETIC — NOT REAL APP-PROTECTED DATA",
+  "schema_version": "1.0.0",
+  "generated_at": "2026-03-28T00:00:00.000Z",
+  "total_incidents": 6,
+  "scenario_coverage": ["SYN-01", "SYN-02", "SYN-03", "SYN-04a", "SYN-04b", "SYN-05"],
+  "clients_ref": "clients.json",
+  "ground_truth_ref": "expected_audit.sql",
+  "gap_resolutions": {
+    "amendment": "3-A",
+    "description": "Three implementation stubs identified post-Artifact-25 initial generation. Addressed below.",
+    "GAP-1_copy_approval": {
+      "gap": "SMS template verbatim text not legally vetted — Copy Approval (B1-B) pending Privacy Counsel",
+      "status": "ADVISORY — synthetic tests pass on template name assertions only",
+      "resolution": "All SMS body assertions in this file are marked advisory=true until B1-B is cleared. ECC MUST NOT treat a passing SMS-body assertion as proof of APP compliance. The binding gate is config/sms_templates.py: approved_by and approved_date fields must be non-null before Sprint 1 starts. harness-audit-grader (Artifact 26) check group CP-01 enforces this.",
+      "binding_gate": "config/sms_templates.py.approved_by IS NOT NULL AND config/sms_templates.py.approved_date IS NOT NULL",
+      "affects_scenarios": ["SYN-01", "SYN-02", "SYN-03", "SYN-04a", "SYN-04b", "SYN-05"]
+    },
+    "GAP-2_is03_postcode_fallback": {
+      "gap": "SC07_GOOGLE_MAPS_APPROVED=false — system must use IS-03 postcode centroid fallback, not Maps API. Synthetic data includes lat/lng derived from ABS postcode centroids but ECC could incorrectly attempt a live Maps API call.",
+      "status": "BINDING — assertion applies to all scenarios immediately",
+      "resolution": "Every SHORTLIST_GENERATED audit entry must include IS-03:POSTCODE_CENTROID_FALLBACK in threshold_applied when SC07_GOOGLE_MAPS_APPROVED=false. A Maps API call with SC07 blocked is a CRITICAL finding (data leaves AU jurisdiction without APP 8 basis). Data source: data/au_postcode_centroids.csv (ABS open licence). Formula: Haversine(client_lat_lng, carer_postcode_centroid).",
+      "binding_assertion": "audit_log[event_type=SHORTLIST_GENERATED].threshold_applied CONTAINS 'IS-03:POSTCODE_CENTROID_FALLBACK' WHEN SC07_GOOGLE_MAPS_APPROVED=false",
+      "affects_scenarios": ["SYN-01", "SYN-02", "SYN-03", "SYN-04a", "SYN-04b", "SYN-05"]
+    },
+    "GAP-3_ax02_trigger_source": {
+      "gap": "All 6 incidents use trigger_source=alayacare_absence_api. AX-02 result due 2026-04-01. If write-back is unavailable, vacancy detection uses manual_coordinator_entry (US-14). Tests run against wrong trigger_source would produce a false pass.",
+      "status": "CONDITIONAL — must be resolved before test harness executes",
+      "resolution": "Test harness MUST read env var HOMECARE_AI_AX02_STATUS before running. If AX02_STATUS=CONFIRMED: use alayacare_absence_api trigger_source as specified. If AX02_STATUS=UNAVAILABLE: substitute trigger_source=manual_coordinator_entry for all incidents and assert VACANCY_DETECTED.trigger_sensor=MANUAL_COORDINATOR_ENTRY in audit log. If AX02_STATUS is unset: harness MUST abort with exit code 2 (AX02_NOT_CONFIRMED — ambiguous test state). Never run with unconfirmed AX-02 status.",
+      "pre_test_check": "ASSERT env.HOMECARE_AI_AX02_STATUS IN ['CONFIRMED', 'UNAVAILABLE'] ELSE abort(exit_code=2, reason='AX02_NOT_CONFIRMED')",
+      "false_pass_guard": "IF trigger_source_in_audit != trigger_source_expected_for_ax02_status THEN mark as FALSE_POSITIVE and fail merge gate",
+      "affects_scenarios": ["SYN-01", "SYN-02", "SYN-03", "SYN-04a", "SYN-04b", "SYN-05"]
+    }
+  },
+  "global_validation_assertions": [
+    {
+      "assertion_id": "GLOBAL-IS03",
+      "description": "IS-03 postcode centroid fallback — applies to ALL scenarios. Every SHORTLIST_GENERATED audit entry must record IS-03 in threshold_applied when SC07_GOOGLE_MAPS_APPROVED=false.",
+      "type": "audit_field_contains",
+      "event_type": "SHORTLIST_GENERATED",
+      "field": "threshold_applied",
+      "required_contains": "IS-03:POSTCODE_CENTROID_FALLBACK",
+      "condition": "SC07_GOOGLE_MAPS_APPROVED=false",
+      "severity": "CRITICAL",
+      "failure_message": "Maps API called without APP 8 basis — CRITICAL data sovereignty violation"
+    },
+    {
+      "assertion_id": "GLOBAL-AX02",
+      "description": "AX-02 trigger source guard — applies to ALL scenarios. trigger_sensor in VACANCY_DETECTED must match the confirmed AX-02 status.",
+      "type": "conditional_trigger_source",
+      "event_type": "VACANCY_DETECTED",
+      "field": "trigger_sensor",
+      "when_ax02_confirmed": "alayacare_absence_api",
+      "when_ax02_unavailable": "MANUAL_COORDINATOR_ENTRY",
+      "when_ax02_unset": "ABORT_TEST_HARNESS",
+      "severity": "CRITICAL",
+      "failure_message": "Wrong trigger_source — test ran against incorrect AX-02 integration state; result is a false pass",
+      "mock_payload_ref": "data/alayacare_mock_payloads.json",
+      "contract_version_assertion": "DRAFT-AX02-v0.1",
+      "contract_version_env_var": "HOMECARE_AI_AX02_CONTRACT_VERSION",
+      "contract_version_mismatch_action": "ADVISORY_WARNING",
+      "contract_version_mismatch_message": "AX-02 mock contract version mismatch — env HOMECARE_AI_AX02_CONTRACT_VERSION does not match alayacare_mock_payloads.json _contract_version. Update the mock file after AlayaCare sandbox validation. AX-02 cannot be set to CONFIRMED with a stale contract version."
+    },
+    {
+      "assertion_id": "GLOBAL-COPY",
+      "description": "SMS copy approval advisory — applies to ALL scenarios using CARER_NOTIFIED, CLIENT_NOTIFIED, FAMILY_NOTIFIED. Body assertions are advisory until B1-B signed off.",
+      "type": "advisory_gate",
+      "applies_to_events": ["CARER_NOTIFIED", "CLIENT_NOTIFIED", "FAMILY_NOTIFIED", "BRIEFING_SENT"],
+      "advisory_until": "config/sms_templates.py.approved_by IS NOT NULL",
+      "severity": "ADVISORY",
+      "note": "SMS body content assertions in individual scenarios are informational until Privacy Counsel approves templates"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "1nc00001-5c4d-7e3f-0000-000000000001",
+      "scenario_id": "SYN-01",
+      "scenario_description": "Happy path — familiarity ranking. David Okafor (3 prior visits, P-3=BRIEFED_ACCEPTABLE) must rank #1 with composite_score=0.726. Coordinator card must show '3 prior visits'. Client SMS must use 'who has visited you before' phrasing.",
+      "client_id": "c1a30001-4a2d-8f3c-0000-000000000001",
+      "client_name_ref": "Margaret Chen",
+      "vacancy_details": {
+        "shift_date": "2026-04-15",
+        "shift_start_time": "09:00",
+        "shift_end_time": "13:00",
+        "duration_hours": 4,
+        "service_type": "domestic_assistance",
+        "trigger_source": "alayacare_absence_api",
+        "regular_carer_id": "ca3e0001-4b3c-9d2e-0000-000000000001",
+        "vacancy_created_at": "2026-04-15T07:30:00.000Z"
+      },
+      "pre_conditions": {
+        "spp_snapshot": "T=0",
+        "P-3": "BRIEFED_ACCEPTABLE",
+        "P-7_visit_history": {"ca3e0001-4b3c-9d2e-0000-000000000001": 3},
+        "P-10": 0.64,
+        "E1_LEGAL_SIGNOFF": false,
+        "SC07_GOOGLE_MAPS_APPROVED": false
+      },
+      "qualified_candidate_pool": [
+        {
+          "carer_id": "ca3e0001-4b3c-9d2e-0000-000000000001",
+          "carer_name_ref": "David Okafor",
+          "distance_km": 2.11,
+          "familiarity_score": 0.60,
+          "proximity_score": 0.916,
+          "gate4_passes": true,
+          "gate4_reason": "P-3=BRIEFED_ACCEPTABLE; carer is in P-7_visit_history with count=3"
+        },
+        {
+          "carer_id": "ca3e0003-4b3c-9d2e-0000-000000000003",
+          "carer_name_ref": "Thomas Patel",
+          "distance_km": 2.56,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.898,
+          "gate4_passes": true,
+          "gate4_reason": "P-3=BRIEFED_ACCEPTABLE; unfamiliar carers permitted"
+        },
+        {
+          "carer_id": "ca3e0002-4b3c-9d2e-0000-000000000002",
+          "carer_name_ref": "Sarah Brennan",
+          "distance_km": 3.56,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.858,
+          "gate4_passes": true,
+          "gate4_reason": "P-3=BRIEFED_ACCEPTABLE; unfamiliar carers permitted"
+        }
+      ],
+      "expected_shortlist": [
+        {
+          "rank": 1,
+          "carer_id": "ca3e0001-4b3c-9d2e-0000-000000000001",
+          "carer_name_ref": "David Okafor",
+          "familiarity_score": 0.60,
+          "proximity_score": 0.916,
+          "composite_score": 0.726,
+          "composite_score_computation": "(0.60 * 0.60) + (0.40 * 0.916) = 0.360 + 0.366 = 0.726",
+          "familiarity_label": "3 prior visits",
+          "phrasing_variant": "G-DS-05 — uses 'who has visited you before' in client SMS"
+        },
+        {
+          "rank": 2,
+          "carer_id": "ca3e0003-4b3c-9d2e-0000-000000000003",
+          "carer_name_ref": "Thomas Patel",
+          "familiarity_score": 0.0,
+          "proximity_score": 0.898,
+          "composite_score": 0.359,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.898) = 0.000 + 0.359 = 0.359"
+        },
+        {
+          "rank": 3,
+          "carer_id": "ca3e0002-4b3c-9d2e-0000-000000000002",
+          "carer_name_ref": "Sarah Brennan",
+          "familiarity_score": 0.0,
+          "proximity_score": 0.858,
+          "composite_score": 0.343,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.858) = 0.000 + 0.343 = 0.343"
+        }
+      ],
+      "expected_state_transitions": [
+        {"seq": 1, "from": "NORMAL", "to": "VACANCY_DETECTED", "event_type": "VACANCY_DETECTED"},
+        {"seq": 2, "from": "VACANCY_DETECTED", "to": "SHORTLIST_READY", "event_type": "SHORTLIST_GENERATED"},
+        {"seq": 3, "from": "SHORTLIST_READY", "to": "HITL_PENDING", "event_type": "HITL_REQUESTED"},
+        {"seq": 4, "from": "HITL_PENDING", "to": "COORDINATOR_APPROVED", "event_type": "COORDINATOR_APPROVED"},
+        {"seq": 5, "from": "COORDINATOR_APPROVED", "to": "COORDINATOR_APPROVED", "event_type": "CC8_FIELD_STRIPPED", "guard_id": "CC-8"},
+        {"seq": 6, "from": "COORDINATOR_APPROVED", "to": "CARER_NOTIFIED", "event_type": "CARER_NOTIFIED", "carer_id": "ca3e0001-4b3c-9d2e-0000-000000000001"},
+        {"seq": 7, "from": "CARER_NOTIFIED", "to": "BRIEFING_SENT", "event_type": "BRIEFING_SENT"},
+        {"seq": 8, "from": "BRIEFING_SENT", "to": "CLIENT_NOTIFIED", "event_type": "CLIENT_NOTIFIED"},
+        {"seq": 9, "from": "CLIENT_NOTIFIED", "to": "FAMILY_NOTIFIED", "event_type": "FAMILY_NOTIFIED"},
+        {"seq": 10, "from": "FAMILY_NOTIFIED", "to": "RESOLVED", "event_type": "INCIDENT_RESOLVED"}
+      ],
+      "expected_terminal_state": "RESOLVED",
+      "validation_assertions": [
+        {
+          "assertion_id": "SYN01-A1",
+          "description": "David Okafor must be shortlist rank 1",
+          "type": "equality",
+          "field": "shortlist[0].carer_id",
+          "expected": "ca3e0001-4b3c-9d2e-0000-000000000001"
+        },
+        {
+          "assertion_id": "SYN01-A2",
+          "description": "David's composite_score must equal 0.726 (tolerance ±0.001)",
+          "type": "numeric_tolerance",
+          "field": "shortlist[0].composite_score",
+          "expected": 0.726,
+          "tolerance": 0.001
+        },
+        {
+          "assertion_id": "SYN01-A3",
+          "description": "Coordinator approval card must display visit count = 3",
+          "type": "string_contains",
+          "field": "coordinator_card.familiarity_label",
+          "expected_contains": "3 prior visits"
+        },
+        {
+          "assertion_id": "SYN01-A4",
+          "description": "Client SMS (ACT-C-01) must use familiarity phrasing — G-DS-05 variant A",
+          "type": "string_contains",
+          "field": "client_sms_body",
+          "expected_contains": "who has visited you before"
+        },
+        {
+          "assertion_id": "SYN01-A5",
+          "description": "Audit log must contain CC8_FIELD_STRIPPED event with guard_id=CC-8",
+          "type": "audit_event_present",
+          "field": "audit_log",
+          "expected_event_type": "CC8_FIELD_STRIPPED",
+          "expected_guard_id": "CC-8"
+        },
+        {
+          "assertion_id": "SYN01-A6",
+          "description": "E-3 Gate 2 must fire: CLIENT_NOTIFIED event precedes FAMILY_NOTIFIED in audit log",
+          "type": "event_sequence",
+          "before": "CLIENT_NOTIFIED",
+          "after": "FAMILY_NOTIFIED"
+        },
+        {
+          "assertion_id": "SYN01-A7",
+          "description": "All L1/L2 audit entries must use model_id = claude-haiku-4-5-20251001",
+          "type": "model_id_check",
+          "field": "audit_log[*].model_id",
+          "expected": "claude-haiku-4-5-20251001",
+          "scope": "all_non_vacancy_unresolved_events"
+        },
+        {
+          "assertion_id": "SYN01-A8",
+          "description": "P-2 (Cantonese) must NOT appear in any matching logic or audit field",
+          "type": "field_absent",
+          "prohibited_field": "matching_criteria.P-2",
+          "guard": "CC-4"
+        },
+        {
+          "assertion_id": "SYN01-A9",
+          "advisory": true,
+          "advisory_note": "ADVISORY UNTIL B1-B CLEARED — config/sms_templates.py approved_by IS NOT NULL",
+          "description": "ACT_C_01 carer SMS body must match template from config/sms_templates.py ACT_C_01. Suburb only (no full address). Carer first name only.",
+          "type": "sms_body_match",
+          "template_key": "ACT_C_01",
+          "expected_contains": ["Neutral Bay", "9:00 AM"],
+          "expected_absent": ["Chen", "full_address", "composite_score", "0.726"],
+          "max_chars": 160,
+          "guard": "CC-8"
+        },
+        {
+          "assertion_id": "SYN01-A10",
+          "advisory": true,
+          "advisory_note": "ADVISORY UNTIL B1-B CLEARED",
+          "description": "ACT_P_01 client SMS body must use Variant A phrasing (visit_count=3 > 0). Must contain 'who has visited you before' (G-DS-05 Variant A). Must NOT use Variant B phrasing.",
+          "type": "sms_body_match",
+          "template_key": "ACT_P_01_VARIANT_A",
+          "expected_contains": ["who has visited you before"],
+          "expected_absent": ["know about your preferences", "composite_score", "Okafor"],
+          "max_chars": 160,
+          "guard": "G-DS-05"
+        },
+        {
+          "assertion_id": "SYN01-A11",
+          "advisory": true,
+          "advisory_note": "ADVISORY UNTIL B1-B CLEARED",
+          "description": "ACT_F_01 family SMS body must use Variant A (visit_count=3 > 0). Must reference 'who has visited' the client. Family contact first name only. Client first name only.",
+          "type": "sms_body_match",
+          "template_key": "ACT_F_01_VARIANT_A",
+          "expected_contains": ["who has visited", "Margaret"],
+          "expected_absent": ["Chen", "composite_score", "SPP", "0.726"],
+          "max_chars": 200,
+          "guard": "G-E3-1"
+        },
+        {
+          "assertion_id": "SYN01-A12",
+          "advisory": true,
+          "advisory_note": "ADVISORY UNTIL B1-B CLEARED",
+          "description": "ACT_C_02 briefing SMS body must use Variant A (FULL mode, P-3=BRIEFED_ACCEPTABLE). Must NOT contain match score, familiarity_score value, or any scoring explanation (CC-6).",
+          "type": "sms_body_match",
+          "template_key": "ACT_C_02_VARIANT_A",
+          "expected_contains": ["Margaret"],
+          "expected_absent": ["composite_score", "0.726", "familiarity_score", "match explanation", "ranked"],
+          "max_chars": 480,
+          "guard": "CC-6"
+        }
+      ],
+      "event_timestamps": {
+        "base": "2026-04-15T07:30:00.000Z",
+        "VACANCY_DETECTED": "2026-04-15T07:30:00.000Z",
+        "SHORTLIST_GENERATED": "2026-04-15T07:30:15.000Z",
+        "HITL_REQUESTED": "2026-04-15T07:30:16.000Z",
+        "COORDINATOR_APPROVED": "2026-04-15T07:35:00.000Z",
+        "CC8_FIELD_STRIPPED": "2026-04-15T07:35:01.000Z",
+        "CARER_NOTIFIED": "2026-04-15T07:35:02.000Z",
+        "BRIEFING_SENT": "2026-04-15T07:40:00.000Z",
+        "CLIENT_NOTIFIED": "2026-04-15T07:40:30.000Z",
+        "FAMILY_NOTIFIED": "2026-04-15T07:40:45.000Z",
+        "INCIDENT_RESOLVED": "2026-04-15T07:41:00.000Z"
+      }
+    },
+    {
+      "incident_id": "1nc00002-5c4d-7e3f-0000-000000000002",
+      "scenario_id": "SYN-02",
+      "scenario_description": "All 3 shortlist candidates decline within CARER_REPLY_GRACE_MIN=15. Coordinator SLA also expires twice (primary 30 min, backup 15 min) → HITL_DOUBLE_TIMEOUT → VACANCY_UNRESOLVED. Sonnet 4.6 must be invoked for VACANCY_UNRESOLVED analysis (token_budget ≤ 3500). No auto-assignment must occur.",
+      "client_id": "c1a30002-4a2d-8f3c-0000-000000000002",
+      "client_name_ref": "Patricia Williams",
+      "vacancy_details": {
+        "shift_date": "2026-04-16",
+        "shift_start_time": "10:00",
+        "shift_end_time": "14:00",
+        "duration_hours": 4,
+        "service_type": "domestic_assistance",
+        "trigger_source": "alayacare_absence_api",
+        "regular_carer_id": null,
+        "vacancy_created_at": "2026-04-16T08:00:00.000Z"
+      },
+      "pre_conditions": {
+        "spp_snapshot": "current",
+        "P-3": "NO_PREFERENCE",
+        "P-7_visit_history": {},
+        "P-10": 0.45,
+        "E1_LEGAL_SIGNOFF": false
+      },
+      "qualified_candidate_pool": [
+        {
+          "carer_id": "ca3e0007-4b3c-9d2e-0000-000000000007",
+          "carer_name_ref": "Robert Kim",
+          "distance_km": 2.22,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.911,
+          "composite_score": 0.364,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.911) = 0.364",
+          "gate4_passes": true
+        },
+        {
+          "carer_id": "ca3e0004-4b3c-9d2e-0000-000000000004",
+          "carer_name_ref": "Lisa Wong",
+          "distance_km": 2.53,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.899,
+          "composite_score": 0.360,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.899) = 0.360",
+          "gate4_passes": true
+        },
+        {
+          "carer_id": "ca3e0009-4b3c-9d2e-0000-000000000009",
+          "carer_name_ref": "James Sullivan",
+          "distance_km": 2.71,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.892,
+          "composite_score": 0.357,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.892) = 0.357",
+          "gate4_passes": true
+        }
+      ],
+      "expected_shortlist": [
+        {"rank": 1, "carer_id": "ca3e0007-4b3c-9d2e-0000-000000000007", "composite_score": 0.364},
+        {"rank": 2, "carer_id": "ca3e0004-4b3c-9d2e-0000-000000000004", "composite_score": 0.360},
+        {"rank": 3, "carer_id": "ca3e0009-4b3c-9d2e-0000-000000000009", "composite_score": 0.357}
+      ],
+      "expected_state_transitions": [
+        {"seq": 1, "from": "NORMAL", "to": "VACANCY_DETECTED", "event_type": "VACANCY_DETECTED"},
+        {"seq": 2, "from": "VACANCY_DETECTED", "to": "SHORTLIST_READY", "event_type": "SHORTLIST_GENERATED"},
+        {"seq": 3, "from": "SHORTLIST_READY", "to": "HITL_PENDING", "event_type": "HITL_REQUESTED"},
+        {"seq": 4, "from": "HITL_PENDING", "to": "COORDINATOR_APPROVED", "event_type": "COORDINATOR_APPROVED"},
+        {"seq": 5, "from": "COORDINATOR_APPROVED", "to": "COORDINATOR_APPROVED", "event_type": "CC8_FIELD_STRIPPED", "guard_id": "CC-8", "carer_candidate": 1},
+        {"seq": 6, "from": "COORDINATOR_APPROVED", "to": "CARER_NOTIFIED", "event_type": "CARER_NOTIFIED", "carer_id": "ca3e0007-4b3c-9d2e-0000-000000000007"},
+        {"seq": 7, "from": "CARER_NOTIFIED", "to": "COORDINATOR_APPROVED", "event_type": "CARER_DECLINED", "carer_id": "ca3e0007-4b3c-9d2e-0000-000000000007", "after_grace_min": 15},
+        {"seq": 8, "from": "COORDINATOR_APPROVED", "to": "COORDINATOR_APPROVED", "event_type": "CC8_FIELD_STRIPPED", "guard_id": "CC-8", "carer_candidate": 2},
+        {"seq": 9, "from": "COORDINATOR_APPROVED", "to": "CARER_NOTIFIED", "event_type": "CARER_NOTIFIED", "carer_id": "ca3e0004-4b3c-9d2e-0000-000000000004"},
+        {"seq": 10, "from": "CARER_NOTIFIED", "to": "COORDINATOR_APPROVED", "event_type": "CARER_DECLINED", "carer_id": "ca3e0004-4b3c-9d2e-0000-000000000004", "after_grace_min": 15},
+        {"seq": 11, "from": "COORDINATOR_APPROVED", "to": "COORDINATOR_APPROVED", "event_type": "CC8_FIELD_STRIPPED", "guard_id": "CC-8", "carer_candidate": 3},
+        {"seq": 12, "from": "COORDINATOR_APPROVED", "to": "CARER_NOTIFIED", "event_type": "CARER_NOTIFIED", "carer_id": "ca3e0009-4b3c-9d2e-0000-000000000009"},
+        {"seq": 13, "from": "CARER_NOTIFIED", "to": "HITL_PENDING", "event_type": "CARER_DECLINED", "carer_id": "ca3e0009-4b3c-9d2e-0000-000000000009", "note": "All 3 declined — re-escalate to HITL for VACANCY_UNRESOLVED decision"},
+        {"seq": 14, "from": "HITL_PENDING", "to": "HITL_PENDING", "event_type": "HITL_REQUESTED", "hitl_tier": 1, "sla_min": 30},
+        {"seq": 15, "from": "HITL_PENDING", "to": "HITL_PENDING", "event_type": "HITL_TIMEOUT", "hitl_tier": 1, "elapsed_min": 30},
+        {"seq": 16, "from": "HITL_PENDING", "to": "HITL_PENDING", "event_type": "HITL_TIER_ESCALATED", "from_tier": 1, "to_tier": 2, "sla_min": 15},
+        {"seq": 17, "from": "HITL_PENDING", "to": "VACANCY_UNRESOLVED", "event_type": "HITL_DOUBLE_TIMEOUT", "note": "VACANCY_UNRESOLVED is the terminal state — system MUST NOT auto-assign", "model_required": "claude-sonnet-4-6"}
+      ],
+      "expected_terminal_state": "VACANCY_UNRESOLVED",
+      "validation_assertions": [
+        {
+          "assertion_id": "SYN02-A1",
+          "description": "Terminal state must be VACANCY_UNRESOLVED — not RESOLVED, not auto-assigned",
+          "type": "equality",
+          "field": "incident.terminal_state",
+          "expected": "VACANCY_UNRESOLVED"
+        },
+        {
+          "assertion_id": "SYN02-A2",
+          "description": "HITL_DOUBLE_TIMEOUT audit entry must use model_id = claude-sonnet-4-6",
+          "type": "equality",
+          "field": "audit_log[event_type=HITL_DOUBLE_TIMEOUT].model_id",
+          "expected": "claude-sonnet-4-6"
+        },
+        {
+          "assertion_id": "SYN02-A3",
+          "description": "Sonnet token budget must not exceed 3500",
+          "type": "numeric_max",
+          "field": "audit_log[event_type=HITL_DOUBLE_TIMEOUT].token_count",
+          "max": 3500
+        },
+        {
+          "assertion_id": "SYN02-A4",
+          "description": "CARER_DECLINED event count must be exactly 3",
+          "type": "count",
+          "field": "audit_log[event_type=CARER_DECLINED]",
+          "expected_count": 3
+        },
+        {
+          "assertion_id": "SYN02-A5",
+          "description": "No assignment must be created for client c1a30002",
+          "type": "absence",
+          "field": "assignment",
+          "prohibited_state": "CARER_ASSIGNED"
+        },
+        {
+          "assertion_id": "SYN02-A6",
+          "description": "Agency owner alerted via PM Lead channel after VACANCY_UNRESOLVED",
+          "type": "audit_event_present",
+          "expected_event_type": "VACANCY_UNRESOLVED",
+          "expected_action": "alert_pm_lead"
+        }
+      ],
+      "event_timestamps": {
+        "VACANCY_DETECTED": "2026-04-16T08:00:00.000Z",
+        "SHORTLIST_GENERATED": "2026-04-16T08:00:15.000Z",
+        "HITL_REQUESTED_1": "2026-04-16T08:00:16.000Z",
+        "COORDINATOR_APPROVED": "2026-04-16T08:05:00.000Z",
+        "CARER_NOTIFIED_1": "2026-04-16T08:05:02.000Z",
+        "CARER_DECLINED_1": "2026-04-16T08:20:02.000Z",
+        "CARER_NOTIFIED_2": "2026-04-16T08:20:05.000Z",
+        "CARER_DECLINED_2": "2026-04-16T08:35:05.000Z",
+        "CARER_NOTIFIED_3": "2026-04-16T08:35:08.000Z",
+        "CARER_DECLINED_3": "2026-04-16T08:50:08.000Z",
+        "HITL_REQUESTED_2": "2026-04-16T08:50:10.000Z",
+        "HITL_TIMEOUT": "2026-04-16T09:20:10.000Z",
+        "HITL_TIER_ESCALATED": "2026-04-16T09:20:11.000Z",
+        "HITL_DOUBLE_TIMEOUT": "2026-04-16T09:35:11.000Z",
+        "VACANCY_UNRESOLVED": "2026-04-16T09:35:11.001Z"
+      }
+    },
+    {
+      "incident_id": "1nc00003-5c4d-7e3f-0000-000000000003",
+      "scenario_id": "SYN-03",
+      "scenario_description": "P-3=KNOWN_CARERS_ONLY + empty P-7 visit_history. Gate 4 must remove ALL candidates (0 in shortlist). System must reach VACANCY_UNRESOLVED immediately without contacting any carer. Guard G-DS-05 must appear in SHORTLIST_GENERATED audit entry with guard_passed=false.",
+      "client_id": "c1a30003-4a2d-8f3c-0000-000000000003",
+      "client_name_ref": "Dorothy Kumar",
+      "vacancy_details": {
+        "shift_date": "2026-04-17",
+        "shift_start_time": "14:00",
+        "shift_end_time": "18:00",
+        "duration_hours": 4,
+        "service_type": "social_support",
+        "trigger_source": "alayacare_absence_api",
+        "regular_carer_id": null,
+        "vacancy_created_at": "2026-04-17T12:00:00.000Z"
+      },
+      "pre_conditions": {
+        "P-3": "KNOWN_CARERS_ONLY",
+        "P-7_visit_history": {},
+        "P-10": 0.55,
+        "note": "CRITICAL: P-7 is empty. P-3=KNOWN_CARERS_ONLY means Gate 4 removes all candidates regardless of proximity."
+      },
+      "qualified_candidate_pool_before_gate4": [
+        {
+          "carer_id": "ca3e0003-4b3c-9d2e-0000-000000000003",
+          "carer_name_ref": "Thomas Patel",
+          "distance_km": 3.45,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.862,
+          "gate4_passes": false,
+          "gate4_rejection_reason": "P-3=KNOWN_CARERS_ONLY; carer not in P-7_visit_history"
+        },
+        {
+          "carer_id": "ca3e0002-4b3c-9d2e-0000-000000000002",
+          "carer_name_ref": "Sarah Brennan",
+          "distance_km": 8.06,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.678,
+          "gate4_passes": false,
+          "gate4_rejection_reason": "P-3=KNOWN_CARERS_ONLY; carer not in P-7_visit_history"
+        },
+        {
+          "carer_id": "ca3e0005-4b3c-9d2e-0000-000000000005",
+          "carer_name_ref": "Michael Santos",
+          "distance_km": 15.20,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.392,
+          "gate4_passes": false,
+          "gate4_rejection_reason": "P-3=KNOWN_CARERS_ONLY; carer not in P-7_visit_history"
+        }
+      ],
+      "expected_shortlist": [],
+      "expected_shortlist_size": 0,
+      "expected_state_transitions": [
+        {"seq": 1, "from": "NORMAL", "to": "VACANCY_DETECTED", "event_type": "VACANCY_DETECTED"},
+        {"seq": 2, "from": "VACANCY_DETECTED", "to": "SHORTLIST_READY", "event_type": "SHORTLIST_GENERATED",
+          "shortlist_size": 0,
+          "guard_id": "G-DS-05",
+          "guard_passed": false,
+          "guard_block_reason": "P-3=KNOWN_CARERS_ONLY: no familiar carers in qualified pool (P-7_visit_history is empty)"},
+        {"seq": 3, "from": "SHORTLIST_READY", "to": "VACANCY_UNRESOLVED", "event_type": "VACANCY_UNRESOLVED",
+          "note": "No HITL escalation — shortlist empty, no carers to contact; system flags immediately"}
+      ],
+      "expected_terminal_state": "VACANCY_UNRESOLVED",
+      "validation_assertions": [
+        {
+          "assertion_id": "SYN03-A1",
+          "description": "Shortlist must be empty (shortlist_size=0) after Gate 4",
+          "type": "equality",
+          "field": "shortlist.length",
+          "expected": 0
+        },
+        {
+          "assertion_id": "SYN03-A2",
+          "description": "SHORTLIST_GENERATED audit entry must have guard_id=G-DS-05 and guard_passed=false",
+          "type": "audit_field_check",
+          "event_type": "SHORTLIST_GENERATED",
+          "field": "guard_id",
+          "expected": "G-DS-05"
+        },
+        {
+          "assertion_id": "SYN03-A3",
+          "description": "guard_block_reason in SHORTLIST_GENERATED audit entry must reference P-3=KNOWN_CARERS_ONLY",
+          "type": "string_contains",
+          "field": "audit_log[event_type=SHORTLIST_GENERATED].guard_block_reason",
+          "expected_contains": "KNOWN_CARERS_ONLY"
+        },
+        {
+          "assertion_id": "SYN03-A4",
+          "description": "No CARER_NOTIFIED event must be present — no carer must be contacted",
+          "type": "absence",
+          "field": "audit_log",
+          "prohibited_event_type": "CARER_NOTIFIED"
+        },
+        {
+          "assertion_id": "SYN03-A5",
+          "description": "No HITL_REQUESTED event — VACANCY_UNRESOLVED must fire directly from empty shortlist",
+          "type": "absence",
+          "field": "audit_log",
+          "prohibited_event_type": "HITL_REQUESTED"
+        }
+      ],
+      "event_timestamps": {
+        "VACANCY_DETECTED": "2026-04-17T12:00:00.000Z",
+        "SHORTLIST_GENERATED": "2026-04-17T12:00:10.000Z",
+        "VACANCY_UNRESOLVED": "2026-04-17T12:00:11.000Z"
+      }
+    },
+    {
+      "incident_id": "1nc0004a-5c4d-7e3f-0000-00000000004a",
+      "scenario_id": "SYN-04a",
+      "scenario_description": "SPP DECAY — T=0 baseline. Evelyn Nguyen has P-10=0.55 with Michael Santos (2 prior visits). Michael must rank #1 at T=0 (composite=0.622) due to familiarity. Reference baseline for comparison against SYN-04b.",
+      "client_id": "c1a30004-4a2d-8f3c-0000-000000000004",
+      "client_name_ref": "Evelyn Nguyen",
+      "spp_snapshot": "T=0",
+      "vacancy_details": {
+        "shift_date": "2026-04-18",
+        "shift_start_time": "08:00",
+        "shift_end_time": "12:00",
+        "duration_hours": 4,
+        "service_type": "domestic_assistance",
+        "trigger_source": "alayacare_absence_api",
+        "vacancy_created_at": "2026-04-18T06:00:00.000Z"
+      },
+      "pre_conditions": {
+        "spp_snapshot": "T=0",
+        "P-3": "BRIEFED_ACCEPTABLE",
+        "P-7_visit_history": {"ca3e0005-4b3c-9d2e-0000-000000000005": 2},
+        "P-10": 0.55,
+        "SPP_COLD_START_triggered": false
+      },
+      "qualified_candidate_pool": [
+        {
+          "carer_id": "ca3e0006-4b3c-9d2e-0000-000000000006",
+          "carer_name_ref": "Emma Davies",
+          "distance_km": 0.33,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.987,
+          "composite_score": 0.395,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.987) = 0.395"
+        },
+        {
+          "carer_id": "ca3e0005-4b3c-9d2e-0000-000000000005",
+          "carer_name_ref": "Michael Santos",
+          "distance_km": 1.13,
+          "familiarity_score": 0.40,
+          "proximity_score": 0.955,
+          "composite_score": 0.622,
+          "composite_score_computation": "(0.60 * 0.40) + (0.40 * 0.955) = 0.240 + 0.382 = 0.622"
+        },
+        {
+          "carer_id": "ca3e0008-4b3c-9d2e-0000-000000000008",
+          "carer_name_ref": "Anna Fitzgerald",
+          "distance_km": 1.94,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.922,
+          "composite_score": 0.369,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.922) = 0.369"
+        }
+      ],
+      "expected_shortlist": [
+        {"rank": 1, "carer_id": "ca3e0005-4b3c-9d2e-0000-000000000005", "composite_score": 0.622, "familiarity_label": "2 prior visits"},
+        {"rank": 2, "carer_id": "ca3e0006-4b3c-9d2e-0000-000000000006", "composite_score": 0.395},
+        {"rank": 3, "carer_id": "ca3e0008-4b3c-9d2e-0000-000000000008", "composite_score": 0.369}
+      ],
+      "expected_state_transitions": [
+        {"seq": 1, "from": "NORMAL", "to": "VACANCY_DETECTED", "event_type": "VACANCY_DETECTED"},
+        {"seq": 2, "from": "VACANCY_DETECTED", "to": "SHORTLIST_READY", "event_type": "SHORTLIST_GENERATED", "spp_cold_start": false},
+        {"seq": 3, "from": "SHORTLIST_READY", "to": "HITL_PENDING", "event_type": "HITL_REQUESTED"},
+        {"seq": 4, "from": "HITL_PENDING", "to": "COORDINATOR_APPROVED", "event_type": "COORDINATOR_APPROVED"},
+        {"seq": 5, "from": "COORDINATOR_APPROVED", "to": "COORDINATOR_APPROVED", "event_type": "CC8_FIELD_STRIPPED", "guard_id": "CC-8"},
+        {"seq": 6, "from": "COORDINATOR_APPROVED", "to": "CARER_NOTIFIED", "event_type": "CARER_NOTIFIED", "carer_id": "ca3e0005-4b3c-9d2e-0000-000000000005"},
+        {"seq": 7, "from": "CARER_NOTIFIED", "to": "BRIEFING_SENT", "event_type": "BRIEFING_SENT", "briefing_mode": "STANDARD"},
+        {"seq": 8, "from": "BRIEFING_SENT", "to": "CLIENT_NOTIFIED", "event_type": "CLIENT_NOTIFIED"},
+        {"seq": 9, "from": "CLIENT_NOTIFIED", "to": "FAMILY_NOTIFIED", "event_type": "FAMILY_NOTIFIED"},
+        {"seq": 10, "from": "FAMILY_NOTIFIED", "to": "RESOLVED", "event_type": "INCIDENT_RESOLVED"}
+      ],
+      "expected_terminal_state": "RESOLVED",
+      "validation_assertions": [
+        {
+          "assertion_id": "SYN04a-A1",
+          "description": "Michael Santos must be shortlist rank 1 (familiarity boost dominates)",
+          "type": "equality",
+          "field": "shortlist[0].carer_id",
+          "expected": "ca3e0005-4b3c-9d2e-0000-000000000005"
+        },
+        {
+          "assertion_id": "SYN04a-A2",
+          "description": "Michael composite_score must equal 0.622 (tolerance ±0.001)",
+          "type": "numeric_tolerance",
+          "field": "shortlist[0].composite_score",
+          "expected": 0.622,
+          "tolerance": 0.001
+        },
+        {
+          "assertion_id": "SYN04a-A3",
+          "description": "SPP_COLD_START event must NOT be present",
+          "type": "absence",
+          "field": "audit_log",
+          "prohibited_event_type": "SPP_COLD_START"
+        },
+        {
+          "assertion_id": "SYN04a-A4",
+          "description": "briefing_mode must be STANDARD (not MINIMAL)",
+          "type": "equality",
+          "field": "briefing.mode",
+          "expected": "STANDARD"
+        }
+      ],
+      "event_timestamps": {
+        "VACANCY_DETECTED": "2026-04-18T06:00:00.000Z",
+        "SHORTLIST_GENERATED": "2026-04-18T06:00:15.000Z",
+        "HITL_REQUESTED": "2026-04-18T06:00:16.000Z",
+        "COORDINATOR_APPROVED": "2026-04-18T06:08:00.000Z",
+        "CARER_NOTIFIED": "2026-04-18T06:08:02.000Z",
+        "BRIEFING_SENT": "2026-04-18T06:15:00.000Z",
+        "CLIENT_NOTIFIED": "2026-04-18T06:15:30.000Z",
+        "FAMILY_NOTIFIED": "2026-04-18T06:15:45.000Z",
+        "INCIDENT_RESOLVED": "2026-04-18T06:16:00.000Z"
+      }
+    },
+    {
+      "incident_id": "1nc0004b-5c4d-7e3f-0000-00000000004b",
+      "scenario_id": "SYN-04b",
+      "scenario_description": "SPP DECAY — T+30 days. Same client (Evelyn Nguyen) but SPP has decayed to P-10=0.0 (all null). SPP_COLD_START must fire. Matching falls back to proximity-only. CRITICAL: ranking changes — Emma Davies now ranks #1 (not Michael Santos). Coordinator card must NOT show familiarity phrasing.",
+      "client_id": "c1a30004-4a2d-8f3c-0000-000000000004",
+      "client_name_ref": "Evelyn Nguyen",
+      "spp_snapshot": "T+30",
+      "vacancy_details": {
+        "shift_date": "2026-05-18",
+        "shift_start_time": "08:00",
+        "shift_end_time": "12:00",
+        "duration_hours": 4,
+        "service_type": "domestic_assistance",
+        "trigger_source": "alayacare_absence_api",
+        "vacancy_created_at": "2026-05-18T06:00:00.000Z"
+      },
+      "pre_conditions": {
+        "spp_snapshot": "T+30",
+        "P-3": null,
+        "P-7_visit_history": null,
+        "P-10": 0.0,
+        "SPP_COLD_START_triggered": true,
+        "note": "P-10=0.0 → familiarity_score=0.0 for all candidates. Proximity-only scoring."
+      },
+      "qualified_candidate_pool": [
+        {
+          "carer_id": "ca3e0006-4b3c-9d2e-0000-000000000006",
+          "carer_name_ref": "Emma Davies",
+          "distance_km": 0.33,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.987,
+          "composite_score": 0.395,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.987) = 0.395",
+          "note": "SPP_COLD_START forces familiarity_score=0.0 for all"
+        },
+        {
+          "carer_id": "ca3e0005-4b3c-9d2e-0000-000000000005",
+          "carer_name_ref": "Michael Santos",
+          "distance_km": 1.13,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.955,
+          "composite_score": 0.382,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.955) = 0.382",
+          "note": "Prior visit history exists but P-10=0.0 means SPP unavailable — familiarity suppressed"
+        },
+        {
+          "carer_id": "ca3e0008-4b3c-9d2e-0000-000000000008",
+          "carer_name_ref": "Anna Fitzgerald",
+          "distance_km": 1.94,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.922,
+          "composite_score": 0.369,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.922) = 0.369"
+        }
+      ],
+      "expected_shortlist": [
+        {"rank": 1, "carer_id": "ca3e0006-4b3c-9d2e-0000-000000000006", "composite_score": 0.395, "note": "RANKING CHANGE vs SYN-04a: Emma now #1"},
+        {"rank": 2, "carer_id": "ca3e0005-4b3c-9d2e-0000-000000000005", "composite_score": 0.382, "note": "Michael drops to #2 — familiarity suppressed"},
+        {"rank": 3, "carer_id": "ca3e0008-4b3c-9d2e-0000-000000000008", "composite_score": 0.369}
+      ],
+      "expected_state_transitions": [
+        {"seq": 1, "from": "NORMAL", "to": "VACANCY_DETECTED", "event_type": "VACANCY_DETECTED"},
+        {"seq": 2, "from": "VACANCY_DETECTED", "to": "VACANCY_DETECTED", "event_type": "SPP_COLD_START",
+          "trigger_value": "P-10=0.0",
+          "note": "SPP_COLD_START fires before shortlist generation; matching falls to proximity-only"},
+        {"seq": 3, "from": "VACANCY_DETECTED", "to": "SHORTLIST_READY", "event_type": "SHORTLIST_GENERATED",
+          "scoring_mode": "PROXIMITY_ONLY",
+          "all_familiarity_scores": 0.0},
+        {"seq": 4, "from": "SHORTLIST_READY", "to": "HITL_PENDING", "event_type": "HITL_REQUESTED",
+          "coordinator_card_note": "Card must NOT show familiarity phrasing; must show 'SPP unavailable — proximity only'"},
+        {"seq": 5, "from": "HITL_PENDING", "to": "COORDINATOR_APPROVED", "event_type": "COORDINATOR_APPROVED"},
+        {"seq": 6, "from": "COORDINATOR_APPROVED", "to": "COORDINATOR_APPROVED", "event_type": "CC8_FIELD_STRIPPED", "guard_id": "CC-8"},
+        {"seq": 7, "from": "COORDINATOR_APPROVED", "to": "CARER_NOTIFIED", "event_type": "CARER_NOTIFIED", "carer_id": "ca3e0006-4b3c-9d2e-0000-000000000006"},
+        {"seq": 8, "from": "CARER_NOTIFIED", "to": "BRIEFING_SENT", "event_type": "BRIEFING_SENT", "briefing_mode": "STANDARD"},
+        {"seq": 9, "from": "BRIEFING_SENT", "to": "CLIENT_NOTIFIED", "event_type": "CLIENT_NOTIFIED"},
+        {"seq": 10, "from": "CLIENT_NOTIFIED", "to": "FAMILY_NOTIFIED", "event_type": "FAMILY_NOTIFIED"},
+        {"seq": 11, "from": "FAMILY_NOTIFIED", "to": "RESOLVED", "event_type": "INCIDENT_RESOLVED"}
+      ],
+      "expected_terminal_state": "RESOLVED",
+      "validation_assertions": [
+        {
+          "assertion_id": "SYN04b-A1",
+          "description": "SPP_COLD_START event must be present in audit log",
+          "type": "audit_event_present",
+          "expected_event_type": "SPP_COLD_START"
+        },
+        {
+          "assertion_id": "SYN04b-A2",
+          "description": "Emma Davies must be shortlist rank 1 (ranking change from SYN-04a)",
+          "type": "equality",
+          "field": "shortlist[0].carer_id",
+          "expected": "ca3e0006-4b3c-9d2e-0000-000000000006"
+        },
+        {
+          "assertion_id": "SYN04b-A3",
+          "description": "All candidates must have familiarity_score=0.0 when P-10=0.0",
+          "type": "all_equal",
+          "field": "shortlist[*].familiarity_score",
+          "expected": 0.0
+        },
+        {
+          "assertion_id": "SYN04b-A4",
+          "description": "Coordinator card must NOT contain familiarity label or visit count phrasing",
+          "type": "string_absent",
+          "field": "coordinator_card",
+          "prohibited_contains": ["prior visits", "visit_count", "familiar"]
+        },
+        {
+          "assertion_id": "SYN04b-A5",
+          "description": "SPP_COLD_START audit entry trigger_value must indicate P-10=0.0",
+          "type": "string_contains",
+          "field": "audit_log[event_type=SPP_COLD_START].trigger_value",
+          "expected_contains": "P-10"
+        }
+      ],
+      "event_timestamps": {
+        "VACANCY_DETECTED": "2026-05-18T06:00:00.000Z",
+        "SPP_COLD_START": "2026-05-18T06:00:05.000Z",
+        "SHORTLIST_GENERATED": "2026-05-18T06:00:20.000Z",
+        "HITL_REQUESTED": "2026-05-18T06:00:21.000Z",
+        "COORDINATOR_APPROVED": "2026-05-18T06:09:00.000Z",
+        "CARER_NOTIFIED": "2026-05-18T06:09:02.000Z",
+        "BRIEFING_SENT": "2026-05-18T06:16:00.000Z",
+        "CLIENT_NOTIFIED": "2026-05-18T06:16:30.000Z",
+        "FAMILY_NOTIFIED": "2026-05-18T06:16:45.000Z",
+        "INCIDENT_RESOLVED": "2026-05-18T06:17:00.000Z"
+      }
+    },
+    {
+      "incident_id": "1nc00005-5c4d-7e3f-0000-000000000005",
+      "scenario_id": "SYN-05",
+      "scenario_description": "New client EC-04 path. Jean Morrison (P-10=0.0, all SPP null). SPP_COLD_START triggers. briefing_mode=MINIMAL. Coordinator card must show 'Add preferences now' with spp_invitation_url. Anna Fitzgerald ranks #1 (proximity-only).",
+      "client_id": "c1a30005-4a2d-8f3c-0000-000000000005",
+      "client_name_ref": "Jean Morrison",
+      "vacancy_details": {
+        "shift_date": "2026-04-19",
+        "shift_start_time": "10:00",
+        "shift_end_time": "14:00",
+        "duration_hours": 4,
+        "service_type": "personal_care",
+        "trigger_source": "alayacare_absence_api",
+        "regular_carer_id": null,
+        "vacancy_created_at": "2026-04-19T08:00:00.000Z"
+      },
+      "pre_conditions": {
+        "spp_snapshot": "new_client",
+        "P-3": null,
+        "P-7_visit_history": null,
+        "P-10": 0.0,
+        "SPP_COLD_START_triggered": true,
+        "briefing_mode": "MINIMAL",
+        "ec04_path": true,
+        "note": "EC-04 (cold start) is distinct from EC-02 (all carers decline). EC-04 path uses MINIMAL briefing template and shows SPP invitation on coordinator card."
+      },
+      "qualified_candidate_pool": [
+        {
+          "carer_id": "ca3e0008-4b3c-9d2e-0000-000000000008",
+          "carer_name_ref": "Anna Fitzgerald",
+          "distance_km": 0.50,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.980,
+          "composite_score": 0.392,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.980) = 0.392"
+        },
+        {
+          "carer_id": "ca3e0006-4b3c-9d2e-0000-000000000006",
+          "carer_name_ref": "Emma Davies",
+          "distance_km": 2.41,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.904,
+          "composite_score": 0.362,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.904) = 0.362"
+        },
+        {
+          "carer_id": "ca3e0005-4b3c-9d2e-0000-000000000005",
+          "carer_name_ref": "Michael Santos",
+          "distance_km": 3.28,
+          "familiarity_score": 0.0,
+          "proximity_score": 0.869,
+          "composite_score": 0.348,
+          "composite_score_computation": "(0.60 * 0.0) + (0.40 * 0.869) = 0.348"
+        }
+      ],
+      "expected_shortlist": [
+        {"rank": 1, "carer_id": "ca3e0008-4b3c-9d2e-0000-000000000008", "composite_score": 0.392},
+        {"rank": 2, "carer_id": "ca3e0006-4b3c-9d2e-0000-000000000006", "composite_score": 0.362},
+        {"rank": 3, "carer_id": "ca3e0005-4b3c-9d2e-0000-000000000005", "composite_score": 0.348}
+      ],
+      "expected_state_transitions": [
+        {"seq": 1, "from": "NORMAL", "to": "VACANCY_DETECTED", "event_type": "VACANCY_DETECTED"},
+        {"seq": 2, "from": "VACANCY_DETECTED", "to": "VACANCY_DETECTED", "event_type": "SPP_COLD_START",
+          "trigger_value": "P-10=0.0; new_client=true",
+          "action_taken": "set briefing_mode=MINIMAL; set spp_invitation_link=true"},
+        {"seq": 3, "from": "VACANCY_DETECTED", "to": "SHORTLIST_READY", "event_type": "SHORTLIST_GENERATED",
+          "scoring_mode": "PROXIMITY_ONLY",
+          "briefing_mode": "MINIMAL"},
+        {"seq": 4, "from": "SHORTLIST_READY", "to": "HITL_PENDING", "event_type": "HITL_REQUESTED",
+          "coordinator_card_must_contain": ["Add preferences now", "spp_invitation_url"]},
+        {"seq": 5, "from": "HITL_PENDING", "to": "COORDINATOR_APPROVED", "event_type": "COORDINATOR_APPROVED"},
+        {"seq": 6, "from": "COORDINATOR_APPROVED", "to": "COORDINATOR_APPROVED", "event_type": "CC8_FIELD_STRIPPED", "guard_id": "CC-8"},
+        {"seq": 7, "from": "COORDINATOR_APPROVED", "to": "CARER_NOTIFIED", "event_type": "CARER_NOTIFIED", "carer_id": "ca3e0008-4b3c-9d2e-0000-000000000008"},
+        {"seq": 8, "from": "CARER_NOTIFIED", "to": "BRIEFING_SENT", "event_type": "BRIEFING_SENT",
+          "briefing_mode": "MINIMAL",
+          "template_note": "ACT-C-02 Variant A (MINIMAL) — no client history, no personal details, basic shift info only"},
+        {"seq": 9, "from": "BRIEFING_SENT", "to": "CLIENT_NOTIFIED", "event_type": "CLIENT_NOTIFIED"},
+        {"seq": 10, "from": "CLIENT_NOTIFIED", "to": "FAMILY_NOTIFIED", "event_type": "FAMILY_NOTIFIED"},
+        {"seq": 11, "from": "FAMILY_NOTIFIED", "to": "RESOLVED", "event_type": "INCIDENT_RESOLVED"}
+      ],
+      "expected_terminal_state": "RESOLVED",
+      "validation_assertions": [
+        {
+          "assertion_id": "SYN05-A1",
+          "description": "SPP_COLD_START event must be present with new_client trigger",
+          "type": "audit_event_present",
+          "expected_event_type": "SPP_COLD_START",
+          "expected_trigger_value_contains": "new_client"
+        },
+        {
+          "assertion_id": "SYN05-A2",
+          "description": "BRIEFING_SENT audit entry must record briefing_mode=MINIMAL",
+          "type": "equality",
+          "field": "audit_log[event_type=BRIEFING_SENT].trigger_value",
+          "expected_contains": "MINIMAL"
+        },
+        {
+          "assertion_id": "SYN05-A3",
+          "description": "Coordinator card must include spp_invitation_url field",
+          "type": "field_present",
+          "field": "coordinator_card.spp_invitation_url"
+        },
+        {
+          "assertion_id": "SYN05-A4",
+          "description": "Coordinator card must contain 'Add preferences' prompt",
+          "type": "string_contains",
+          "field": "coordinator_card.body",
+          "expected_contains": "Add preferences"
+        },
+        {
+          "assertion_id": "SYN05-A5",
+          "description": "Anna Fitzgerald must be shortlist rank 1",
+          "type": "equality",
+          "field": "shortlist[0].carer_id",
+          "expected": "ca3e0008-4b3c-9d2e-0000-000000000008"
+        },
+        {
+          "assertion_id": "SYN05-A6",
+          "description": "E-3 Gate 2: CLIENT_NOTIFIED must precede FAMILY_NOTIFIED",
+          "type": "event_sequence",
+          "before": "CLIENT_NOTIFIED",
+          "after": "FAMILY_NOTIFIED"
+        }
+      ],
+      "event_timestamps": {
+        "VACANCY_DETECTED": "2026-04-19T08:00:00.000Z",
+        "SPP_COLD_START": "2026-04-19T08:00:05.000Z",
+        "SHORTLIST_GENERATED": "2026-04-19T08:00:20.000Z",
+        "HITL_REQUESTED": "2026-04-19T08:00:21.000Z",
+        "COORDINATOR_APPROVED": "2026-04-19T08:10:00.000Z",
+        "CARER_NOTIFIED": "2026-04-19T08:10:02.000Z",
+        "BRIEFING_SENT": "2026-04-19T08:17:00.000Z",
+        "CLIENT_NOTIFIED": "2026-04-19T08:17:30.000Z",
+        "FAMILY_NOTIFIED": "2026-04-19T08:17:45.000Z",
+        "INCIDENT_RESOLVED": "2026-04-19T08:18:00.000Z"
+      }
+    }
+  ]
+}
+
+```

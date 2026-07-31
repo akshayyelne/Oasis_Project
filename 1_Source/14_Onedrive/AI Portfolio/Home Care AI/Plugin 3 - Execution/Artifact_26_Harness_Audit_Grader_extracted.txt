@@ -1,0 +1,830 @@
+# Extracted from: 14_Onedrive/AI Portfolio/Home Care AI/Plugin 3 - Execution/Artifact_26_Harness_Audit_Grader.pdf
+# Characters: 30299
+# Generated: 2026-07-31T00:07:32.998Z
+
+Artifact 26 — Harness Audit Grader
+Execution · Stage D · Pre-ECC-Build Specification Audit
+DOCUMENT DETAILS
+FeatureHome-Care-AI   Scheduling   Platform   —
+Pre-ECC-Build Specification Audit
+Audit Date2026-03-28
+AuditorHarness   Audit   Grader   (pm-execution
+skill)
+FrameworkAustralian Privacy Act 1988 (APP) — HIPAA
+architecture as design floor
+PRDArtifact 21 (v1.0)Logic SpecArtifact 23 (v1.0)
+User
+Stories
+Artifact 24 (v1.0)Synth DataArtifact      25      (v1.0)      —      clients.json,
+incidents.json, expected_audit.sql
+<b>Schema   Naming:</b>   Implementation   class   is   <font   name="Courier">APPAuditLogEntry</font>.   <font
+name="Courier">HIPAAAuditLogEntry</font> is the field-structure design floor only — no production code may use
+the HIPAA name. See CLAUDE.md Article IX Naming Convention.
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 1 of 19
+
+Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 2Table of Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4Overall Verdict
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 51. Security Debt Findings
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 5SD-02 — Authentication & Authorization (Deferred by Design)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 5SD-03 — Prompt Injection (CRIT-02 Satisfied)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6SD-04 — RAG / Vector Store Isolation
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6SD-05 — Secrets & Credentials
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 72. Requirement Drift Findings
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 93. Low-Severity Findings
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 104. Passed Checks
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 125. Agent Fix Queue
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 12FIX-001 [CRITICAL] SD-01B-001
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 12FIX-002 [HIGH] RD-02-001
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13FIX-003 [HIGH] RD-04-001 + RD-06-001
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13FIX-004 [HIGH] CP-01-001
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 156. Regression Test Recommendations
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 167. Pre-Sprint Gate Status
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 178. Spec Coverage Map
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 2 of 19
+
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 3 of 19
+
+Overall Verdict
+Overall Verdict
+AUDIT VERDICT
+CONDITIONAL PASS
+CRITICAL
+1
+HIGH
+3
+MEDIUM
+2
+LOW
+2
+PASS
+16 / 24
+total
+checks
+Merge  gate:  SD-01B  —  BLOCKED  until  CRITICAL  finding  resolved.  ECC  build  MAY  commence  for  the  6
+implemented scenarios. ECC build MUST NOT ship to production until:
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 4 of 19
+
+1. Security Debt Findings
+1. Security Debt Findings
+IDCheckSeverityFile PathLine(s)FindingFix Instruction
+SD-01B-001Audit                    Log
+Completeness        —
+Event Coverage
+CRITICALExecution/
+synthetic-
+data/incid
+ents.json
+all5   canonical   events   from   the
+Artifact  23  §8  31-event  registry
+and   2   logic   execution   paths
+have no synthetic test scenario.
+ECC  has  no  ground  truth  to
+validate           against           for:
+COORDINATOR_OVERRIDE
+(Gate                                   7b),
+E3_GATE_BLOCKED,    DUPLI
+CATE_VACANCY_SUPPRES
+SED (Gate 0), CARER_NOTIFI
+CATION_FAILED, CLIENT_NO
+TIFICATION_UNAVAILABLE,
+P-8=true  FAMILIARITY_BINAR
+Y_FLOOR  path,  EC-03  partial
+SPP path (0 < P-10 < 0.80).
+See     FIX-001     —     add
+SYN-06,  SYN-07,  SYN-08
+scenarios                     with
+corresponding
+APPAuditLogEntry  ground
+truth            rows            to
+expected_audit.sql.
+SD-01B-002Unit     Test     Fixture
+Files
+MEDIUMtests/—No  tests/  directory  exists  in
+the  repository.  Artifact  23  §11
+Integration  Test  Requirements
+reference  unit  test  fixtures  for
+hash-chain  validation,  Gate  4
+filter,    and    familiarity    score
+computation. Without these, the
+SD-01B  merge  gate  query  in
+expected_audit.sql  is  the  only
+automated guard — and it only
+runs at integration level.
+Create        tests/unit/
+with     fixtures     for:     (a)
+familiarity_score    formula
+(visit_count 0–6), (b) Gate
+4  P-3=KNOWN_CARERS
+_ONLY         filter,         (c)
+hash-chain  entry_hash  ==
+SHA-256(all   fields).   See
+TEST-001              through
+TEST-003.
+CP-01-001SMS  Copy  Approval
+Gate (B1-B)
+HIGHconfig/sms
+_templates
+.py
+45–46APPROVED_BY  =  None   and
+APPROVED_DATE  =  None.
+The           harness-audit-grader
+CP-01  check  asserts  both  are
+non-null     before     production
+deploy.
+assert_copy_approved()
+correctly  blocks  in  production
+mode  and  logs  WARNING  in  H
+OMECARE_AI_TEST_MODE=tr
+ue  —  the  gate  mechanism  is
+implemented  correctly  but  the
+approval   itself   has   not   been
+obtained.
+Process    action:    Privacy
+Counsel                 reviews
+ACT_C_01,  ACT_C_02_V
+ARIANT_A/B/C, ACT_P_0
+1_VARIANT_A/B,   ACT_F
+_01_VARIANT_A/B.     On
+approval,                       set
+APPROVED_BY        =
+"Privacy  Counsel  —
+[Full   Name]"      and
+APPROVED_DATE      =
+"YYYY-MM-DD".  Also  set  
+COORDINATOR_PROXY_R
+EVIEW_BY  =  "Angela
+CC-001"   on   coordinator
+clarity   review.   This   is   a
+process  action  —  not  an
+ECC code fix.
+SD-02
+Authentication & Authorization (Deferred by Design)
+SD-02 — Authentication & Authorization (Deferred by Design)
+No authentication, RBAC, or JWT specification is present in Artifact 21 PRD or Artifact 23 Logic Spec. This is
+not  filed  as  a  HIGH  finding  because  v1  is  explicitly  scoped  as  a  coordinator-desktop  tool  with  no  public  API
+endpoints  and  no  multi-tenant  access.  However,  the  spec  does  not  document  this  deferral  explicitly.  LOW
+finding filed below (IS-AUTH-001).
+SD-03
+Prompt Injection (CRIT-02 Satisfied)
+SD-03 — Prompt Injection (CRIT-02 Satisfied)
+config/sms_templates.py            enforces            CRIT-02            at            the            structural            level:
+template.replace("{variable}",  sanitized_value)  sequential  substitution  only.  No  format()
+calls with unvalidated input, no f-strings with user data, no LLM in the SMS rendering path. get_template()
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 5 of 19
+
+raises   ValueError   on   any   None   template   key,   preventing   accidental   rendering   of   the   unreachable
+ACT_P_01_VARIANT_C branch. PASS.
+SD-04
+RAG / Vector Store Isolation
+SD-04 — RAG / Vector Store Isolation
+Not  applicable  in  v1.  No  RAG  component,  no  vector  store,  no  embeddings  pipeline.  Scheduling  logic  is
+rule-based (Artifact 23 §2). PASS.
+SD-05
+Secrets & Credentials
+SD-05 — Secrets & Credentials
+No  hardcoded  API  keys,  connection  strings,  or  credentials  found  in  any  file.  APPROVED_BY  =  None  in
+config/sms_templates.py is an intentional approval placeholder, not a credential. AWS credentials, SMS
+gateway  keys,  and  AlayaCare  API  tokens  are  correctly  documented  as  environment  variable  references  in
+Artifact  23  §9  Infrastructure.  HOMECARE_AI_TEST_MODE  and  HOMECARE_AI_AX02_STATUS  are  environment
+variable gates — correct pattern. PASS. Minor gap filed as LOW (see AX-02-001 below).
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 6 of 19
+
+2. Requirement Drift Findings
+2. Requirement Drift Findings
+IDCheckSeverityPRD RefFile PathLine(s)FindingFix Instruction
+RD-02-001Logic  Gate  Fidelity
+—  familiarity_score
+formula
+HIGHArtifact  23  §3
+Threshold
+Constants
+Execution
+/syntheti
+c-data/cl
+ients.jso
+n
+20,  63,
+107,
+200
+scoring_constants
+documents SPP_FAMILIA
+RITY_SCALE:
+"min(visit_count   *
+0.20,  0.60)"    which
+caps  familiarity  at  0.60  for
+all visit counts ≥ 3. Artifact
+23          §3          specifies
+familiarity_score  =
+min(1.0,
+visit_count  /  FAMIL
+IARITY_VISIT_CAP)
+where  FAMILIARITY_VI
+SIT_CAP=5. The formulas
+agree  for  visit_count  1–3
+(both    yield    0.20,    0.40,
+0.60)     but     diverge     at
+visit_count  4  (spec:  0.80,
+clients.json:  0.60  capped)
+and  visit_count  5+  (spec:
+1.0,     clients.json:     0.60
+capped).  All  current  test
+assertion      scores      are
+correct       because       no
+scenario  uses  visit_count
+≥    4    —    but    if    ECC
+implements                   the
+clients.json  formula,  carer
+selection  will  be  wrong  for
+established                carer
+relationships.               The
+P-7_note     on     line     63
+(min(3 * 0.20, 0.60)
+=     0.60)         further
+propagates   the   incorrect
+formula.
+See      FIX-002      —
+correct  SPP_FAMILI
+ARITY_SCALE  in  sc
+oring_constants
+and       update       all
+P-7_note   fields   to
+use      the      correct
+formula.
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 7 of 19
+
+IDCheckSeverityPRD RefFile PathLine(s)FindingFix Instruction
+RD-04-001Data           Schema
+Conformance      —
+P-8 field semantics
+HIGHArtifact        21
+PRD           §5;
+Artifact  23  §4
+Gate 4
+Execution
+/syntheti
+c-data/cl
+ients.jso
+n
+64,
+108,
+153,
+201,
+216,
+261
+P-8_do_not_send_fla
+g  is  semantically  inverted
+vs.  the  PRD.  Artifact  21
+PRD  §5  defines  P-8  as:
+"Binary    carer    flags    —
+Per-carer  flag:  'Client  has
+accepted       this       carer
+before'"    —    a    positive
+signal        that        floors
+familiarity_score   at   
+FAMILIARITY_BINARY_
+FLOOR=0.80     for     that
+specific  carer.  clients.json
+labels                               it
+do_not_send_flag
+which          implies          a
+negative/exclusion
+signal    —    the    opposite
+semantic.   If   ECC   reads
+clients.json   as   the   data
+model  specification,  it  will
+implement    P-8    as    an
+exclusion  filter  rather  than
+a familiarity floor, breaking
+matching   logic   for   any
+client  with  an  established
+preferred                   carer.
+Additionally,  FAMILIARIT
+Y_BINARY_FLOOR=0.80
+is           absent           from
+scoring_constants
+(line 15–34).
+See      FIX-003      —
+rename    field,    add
+constant,    add    test
+scenario.
+RD-06-001Detection  Accuracy
+— P-8 FAMILIARIT
+Y_BINARY_FLOO
+R path
+MEDIUMArtifact  23  §3;
+Gate    4    P-8
+branch
+Execution
+/syntheti
+c-data/in
+cidents.j
+son
+allNo     synthetic     scenario
+exercises    the    P-8=true
+path.  FAMILIARITY_BIN
+ARY_FLOOR=0.80    is    a
+named  threshold  constant
+in  Artifact  23  §3  but  it  is
+never  tested.  ECC  could
+implement           familiarity
+scoring   correctly   for   the
+min(1.0,
+visit_count  /  FAMIL
+IARITY_VISIT_CAP)
+formula          and          still
+mishandle  the  P-8  binary
+floor with no test failure.
+Addressed             by
+FIX-003              (add
+SYN-09        scenario
+with  P-8=true  carer).
+The  scenario  should
+verify   that   a   carer
+with       visit_count=1
+but               P-8=true
+achieves familiarity_s
+core=0.80 (not 0.20).
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 8 of 19
+
+3. Low-Severity Findings
+3. Low-Severity Findings
+IDCheckSeverityFile PathLine(s)FindingFix Instruction
+IS-03-001IS-03           Postcode
+Centroid             Data
+Coverage
+LOWdata/au_po
+stcode_cen
+troids_see
+d.csv
+all    (13
+rows)
+Seed  file  contains  only  the  13
+postcodes       referenced       in
+clients.json.                 Proximity
+calculations   for   any   client   or
+carer  outside  these  postcodes
+will fail with a missing-postcode
+error   at   runtime.   Production
+deployment   requires   the   full
+ABS     Postal     Areas     ASGS
+Edition    3    dataset    (~18,000
+rows).
+Acceptable       for       test
+harness.                  Before
+production:  replace  seed
+with  full  ABS  dataset  (CC
+BY  4.0).  Download  URL
+documented in file header.
+No    ECC    code    change
+required — same schema.
+IS-AUTH-00
+1
+SD-02  Auth  Deferral
+Not Documented
+LOWExecution/
+Artifact_2
+1_PRD.md
+—v1        auth        deferral        is
+architecturally                   sound
+(coordinator-desktop   only,   no
+public  API)  but  is  not  explicitly
+stated as a documented design
+decision  in  the  PRD.  Without  a
+documented       deferral,       v2
+engineers may not know to add
+auth  before  exposing  any  API
+endpoint.
+Add a single paragraph to
+PRD   §8   Non-Functional
+Requirements:
+"Authentication and RBAC
+are   deferred   to   v2.   v1
+operates           as           a
+coordinator-desktop     tool
+with      no      public      API
+endpoints. No multi-tenant
+access  is  provided.  Auth
+must  be  specified  before
+any     API     surface     is
+exposed."
+AX-02-001AX-02 Env Var Not in
+CI Config
+LOWCI/CD
+configuration
+(not            yet
+written)
+—HOMECARE_AI_AX02_STATUS
+is     correctly     referenced     in
+Artifact   25   §10   Gap   3   and
+incidents.json   gap_resoluti
+ons.GLOBAL-AX02     —     but
+there  is  no  .env.example  file
+or       CI       pipeline       config
+documenting      this      variable
+alongside
+HOMECARE_AI_TEST_MODE.
+An  engineer  running  the  test
+harness without this context will
+get  exit_code=2  with  no  clear
+explanation.
+Create      .env.example
+with  at  minimum:  HOMECA
+RE_AI_TEST_MODE=tru
+e,   HOMECARE_AI_AX02_
+STATUS=UNAVAILABLE
+(safe default for test runs),
+and    a    comment    block
+referencing Artifact 25 §10
+Gap 3.
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 9 of 19
+
+4. Passed Checks
+4. Passed Checks
+PASSED CHECKS
+n
+SD-01 (PHI in SMS)
+All   4   template   groups   omit:   client   surname,   full   address,   diagnosis,   match   score,
+composite_score,      algorithm      weights.      CC-8      enforcement      documented      in
+config/sms_templates.py header.
+n
+SD-01 (PHI in audit log)
+APPAuditLogEntry stores patient_id (UUID) only. No plaintext name, DOB, or condition in
+any log field. expected_audit.sql confirms no PHI literals in INSERT values.
+n
+SD-01B (Transition
+coverage
+SYN-01–SYN-05)
+All    6    implemented    scenarios    generate    complete,    unbroken    event    chains    in
+expected_audit.sql. SD-01B merge gate query structure is correct: "0 rows = PASS".
+n
+SD-01B (Hash chain
+schema) entry_hash
+(SHA-256) and
+previous_hash fields
+present in
+synthetic_expected_audit_events DDL. Hash-chain integrity is structural, not procedural.
+n
+SD-01B (7-year
+retention)
+AUDIT_LOG_RETENTION_YEARS=7  in  scoring_constants.  Write-once  S3  +  CloudTrail
+architecture confirmed in Artifact 23 §9 Infrastructure Requirements.
+n
+SD-01B (Append-only)
+Immutable  store  architecture:  no  UPDATE/DELETE  path  exists  in  the  Logic  Spec  for  any
+audit log entry.
+n
+SD-02 (v1 scope)
+Auth  deferral  architecturally  consistent  with  coordinator-  desktop  v1.  No  multi-tenant
+access, no public API. Documented as LOW gap (IS-AUTH-001) not security failure.
+n
+SD-03 (CRIT-02
+satisfied)
+config/sms_templates.py  uses  template.replace()  only.  No  f-strings  with  user  data,  no
+format() with unvalidated input, no LLM in any SMS rendering path.
+n
+SD-04 (RAG isolation)
+Not  applicable  —  v1  is  rule-based.  No  vector  store,  no  embeddings  pipeline,  no  RAG
+component.
+n
+SD-05 (Secrets)
+Zero    hardcoded    credentials    in    any    file.    All    external    service    keys    (AWS,
+MessageMedia/SNS, AlayaCare) are environment variable references in Artifact 23 §9.
+n
+SD-06 (Input validation)
+get_template() raises ValueError on invalid key or None template (ACT_P_01_VARIANT_C
+unreachable guard). Template rendering is safe by construction (CRIT-02).
+n
+RD-01 (Feature
+completeness) All 10
+user stories (US-01
+through US-10, Artifact
+24)
+are traceable to named Logic Spec gates in expected_audit.sql event chains.
+n
+RD-02 (Threshold
+constants) FAMILIARIT
+Y_VISIT_CAP=5, PROXI
+MITY_MAX_KM=25,
+SHORTLIST_MAX_CANDIDATES=3,     SPP_COMPLETENESS_THRESHOLD=0.80     all
+present  in  scoring_constants  and  correctly  applied  in  all  6  scenario  assertion  scores.
+(Formula constant is correct; documentation string is wrong — see RD-02-001.)
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 10 of 19
+
+n
+RD-03 (HITL
+checkpoint)
+Gate   7   (COORDINATOR_APPROVED)   correctly   gates   all   Level   3   actions:   carer
+notification   (ACT_C_01),   briefing   (ACT_C_02),   client   notification   (ACT_P_01),   family
+notification (ACT_F_01). No notification fires before COORDINATOR_APPROVED event.
+n
+RD-04 (APP extension
+schema)
+APPAuditLogEntry
+correctly extended
+with:
+cross_border_disclosure,   app8_basis,   consent_record_id,   consent_version,   guard_id,
+guard_passed,  guard_block_reason.  All  APP-specific  fields  present  in  expected_audit.sql
+DDL.
+n
+RD-05 (Output format)
+TEMPLATES     dispatch     dict     correctly     keyed     for     all     10     template     variants.
+assert_copy_approved()    advisory    mode    (HOMECARE_AI_TEST_MODE)    correctly
+implemented. VERSION logged for audit traceability.
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 11 of 19
+
+5. Agent Fix Queue
+5. Agent Fix Queue
+Ordered CRITICAL → HIGH. Execute in sequence — each fix may affect test assertion counts.
+FIX-001 [CRITICAL]
+SD-01B-001
+FIX-001 [CRITICAL] SD-01B-001
+Files: Execution/synthetic-data/clients.json, Execution/synthetic-data/incidents.json,
+Execution/synthetic-data/expected_audit.sql
+Action:     Add     three     synthetic     scenarios     to     close     coverage     gaps     for     canonical     events
+COORDINATOR_OVERRIDE,       E3_GATE_BLOCKED,       and       DUPLICATE_VACANCY_SUPPRESSED.
+Additionally close EC-03 partial SPP path (see FIX-003 note).
+Scenario SYN-06 —
+COORDINATOR_OVERRIDE
+(Gate 7b)
+Coordinator receives shortlist, overrides system ranking, selects the 2nd-ranked carer
+(not    top-ranked).    The    COORDINATOR_OVERRIDE    event    must    fire    before
+CARER_NOTIFIED.  Demonstrates  that  the  system  logs  the  override  and  proceeds
+with the coordinator's chosen carer — not the highest-scoring candidate.
+Expected events: VACANCY_DETECTED → SHORTLIST_GENERATED →
+  HITL_ESCALATED → COORDINATOR_OVERRIDE → CARER_NOTIFIED →
+  BRIEFING_SENT → CLIENT_NOTIFIED → FAMILY_NOTIFIED → RESOLVED
+Add   to   clients.json:   new   client   record   with   scenario="SYN-06"   Add   to   incidents.json:   incident   with
+coordinator_selection_rank:  2  (overrides  rank  1)  Add  to  expected_audit.sql:  9  APPAuditLogEntry
+INSERTs with guard_id='G-7B' on COORDINATOR_OVERRIDE event
+Scenario SYN-07 —
+E3_GATE_BLOCKED
+Family  notification  attempted  but  client_notified=false  at  time  of  family  send
+attempt.  Gate  12  E-3  guard  fires  E3_GATE_BLOCKED.  The  incident  must  halt  at
+CLIENT_NOTIFIED  state  —  family  notification  is  not  sent.  Demonstrates  the  E-3
+ordering constraint.
+Expected events: VACANCY_DETECTED → ... → CARER_NOTIFIED →
+  BRIEFING_SENT → E3_GATE_BLOCKED (family send rejected) → [alert to coordinator]
+Add    to    clients.json:    client    record    with    scenario="SYN-07"    Add    to    incidents.json:    incident    with
+force_e3_violation: true  in  test  pre-conditions  Add  to  expected_audit.sql:  APPAuditLogEntry  INSERT
+for                               E3_GATE_BLOCKED                               with                               guard_passed=false,
+guard_block_reason='client_notified=false at Gate 12 execution'
+Scenario SYN-08 — DUPLIC
+ATE_VACANCY_SUPPRESS
+ED (Gate 0)
+A second VACANCY_DETECTED event fires for a vacancy ID that already exists in
+state     SHORTLIST_READY     or     later.     Gate     0     idempotency     guard     fires
+DUPLICATE_VACANCY_SUPPRESSED. Processing halts — no duplicate shortlist is
+generated.
+Expected events: DUPLICATE_VACANCY_SUPPRESSED (terminal — single event)
+Add  to  clients.json:  reuse  existing  client,  add  scenario="SYN-08"  section  Add  to  incidents.json:  incident  with
+duplicate_of:   "SYN-01-incident-id"     in     pre_conditions     Add     to     expected_audit.sql:     1
+APPAuditLogEntry               INSERT               for               DUPLICATE_VACANCY_SUPPRESSED               with
+state_before='SHORTLIST_READY', state_after='SHORTLIST_READY'
+FIX-002 [HIGH]
+RD-02-001
+FIX-002 [HIGH] RD-02-001
+File: Execution/synthetic-data/clients.json
+Action: Correct the documented familiarity score formula in scoring_constants and all P-7_note fields.
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 12 of 19
+
+BEFORE (line 20):
+  "SPP_FAMILIARITY_SCALE": "min(visit_count * 0.20, 0.60)"
+ 
+AFTER (line 20):
+  "SPP_FAMILIARITY_SCALE": "min(1.0, visit_count / FAMILIARITY_VISIT_CAP)"
+ 
+Also add to scoring_constants (after line 20):
+  "FAMILIARITY_VISIT_CAP": 5
+Update P-7_note fields to use the correct formula:
+BEFORE (line 63):
+  "P-7_note": "David Okafor has 3 confirmed prior visits. familiarity_score = min(3 * 0.20, 0.60) = 0.60"
+ 
+AFTER (line 63):
+  "P-7_note": "David Okafor has 3 confirmed prior visits. familiarity_score = min(1.0, 3/5) = 0.60"
+Apply  same  correction  to  P-7_note  on  lines  107  and  200.  Note:  computed  scores  in  expected_shortlist
+blocks are unaffected — all current test scenarios use visit_count ≤ 3, so the numeric outputs do not change.
+Only the documentation string changes.
+FIX-003 [HIGH]
+RD-04-001 + RD-06-001
+FIX-003 [HIGH] RD-04-001 + RD-06-001
+File:  Execution/synthetic-data/clients.json,  Execution/synthetic-data/incidents.json,
+Execution/synthetic-data/expected_audit.sql
+Step 1 — Correct field name (clients.json lines 64, 108, 153, 201, 216, 261)
+BEFORE: "P-8_do_not_send_flag": null
+AFTER: "P-8_binary_acceptance_flag": {}
+P-8  is  a  dict  keyed  by  carer_id  (same  structure  as  P-7_visit_history),  not  a  scalar  null.  Value  structure:  {
+"carer_id":  true  }  means  "client  has  explicitly  accepted  this  carer  before  —  floor  familiarity  at
+FAMILIARITY_BINARY_FLOOR=0.80 for this carer."
+Step 2 — Add FAMILIARITY_BINARY_FLOOR to scoring_constants (clients.json line 20 block)
+Add after FAMILIARITY_VISIT_CAP:
+  "FAMILIARITY_BINARY_FLOOR": 0.80
+Step 3 — Add SYN-09 scenario (new entries in clients.json, incidents.json, expected_audit.sql)
+SYN-09    tests    the    P-8    binary    acceptance    floor:    client    has    P-8_binary_acceptance_flag:  {
+"ca3e0001-...":  true  }    for    a    carer    with    only    visit_count=1    (which    would    normally    yield
+familiarity_score=0.20).      The      SHORTLIST_GENERATED      event      must      show      this      carer      with
+familiarity_score=0.80 (floor applied), not 0.20. Assert in expected_audit.sql:
+threshold_applied = 'FAMILIARITY_BINARY_FLOOR=0.80 (P-8_binary_acceptance_flag=true)'
+FIX-004 [HIGH]
+CP-01-001
+FIX-004 [HIGH] CP-01-001
+File: config/sms_templates.py, lines 45–46
+Type: Process action — NOT an ECC code change
+Current state (lines 45–46):
+  APPROVED_BY = None # ← BLOCKS go-live
+  APPROVED_DATE = None # ← BLOCKS go-live
+ 
+Required state (set by Privacy Counsel after review):
+  APPROVED_BY = "Privacy Counsel — [Full Name]"
+  APPROVED_DATE = "YYYY-MM-DD" # ISO 8601
+Additionally (lines 49–50), set on coordinator clarity review:
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 13 of 19
+
+  COORDINATOR_PROXY_REVIEW_BY = "Angela CC-001"
+  COORDINATOR_PROXY_REVIEW_DATE = "YYYY-MM-DD"
+Templates requiring review (4 groups)
+•ACT_C_01 — Carer assignment SMS (Gate 8): no PHI, 133 chars max
+•ACT_C_02_VARIANT_A/B/C  —  Carer  briefing  SMS  (Gate  9):  includes  client  first  name  +  full  address
+(released post-confirmation only)
+•ACT_P_01_VARIANT_A/B — Client notification SMS (Gate 11): no surname, no SPP reference
+•ACT_F_01_VARIANT_A/B — Family notification SMS (Gate 12): client first name only, pronoun-safe
+<b>Dependency     chain:</b>     CP-01     unblocks     production     go-live.     Test     harness     is     unaffected
+(HOMECARE_AI_TEST_MODE=true  bypasses  assert_copy_approved()  with  WARNING  log).  No  code  change
+needed — gate mechanism is correctly implemented.
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 14 of 19
+
+6. Regression Test Recommendations
+6. Regression Test Recommendations
+For each CRITICAL and HIGH fix, the following tests must pass before the SD-01B merge gate is re-run.
+TEST-001 [after FIX-001 / SYN-06]: Assert that when coordinator_selection_rank=2,
+  the COORDINATOR_OVERRIDE event fires with action_taken containing the overridden
+  carer_id, and CARER_NOTIFIED fires with the rank-2 carer — not rank-1.
+ 
+TEST-002 [after FIX-001 / SYN-07]: Assert that when client_notified=false at
+  Gate 12 execution, E3_GATE_BLOCKED fires and no ACT_F_01 template is rendered.
+  The family contact must receive no SMS.
+ 
+TEST-003 [after FIX-001 / SYN-08]: Assert that a second VACANCY_DETECTED with
+  an existing vacancy_id fires DUPLICATE_VACANCY_SUPPRESSED and does not advance
+  state or generate a second shortlist.
+ 
+TEST-004 [after FIX-002]: Unit test familiarity_score for visit_count values
+  0, 1, 2, 3, 4, 5, 6:
+    visit_count=0 → 0.0
+    visit_count=1 → 0.20
+    visit_count=3 → 0.60
+    visit_count=4 → 0.80 ← key regression case (was capped at 0.60 with wrong formula)
+    visit_count=5 → 1.0
+    visit_count=6 → 1.0 ← capped at 1.0
+ 
+TEST-005 [after FIX-003]: Unit test P-8 binary floor:
+    carer with visit_count=1, P-8_binary_acceptance_flag[carer_id]=true
+    → familiarity_score = 0.80 (floor applied)
+    carer with visit_count=1, no P-8 entry
+    → familiarity_score = 0.20 (normal formula)
+ 
+TEST-006 [after FIX-003 / SYN-09]: Integration test asserting SHORTLIST_GENERATED
+  event for SYN-09 has threshold_applied containing 'FAMILIARITY_BINARY_FLOOR=0.80'
+  for the P-8=true carer.
+ 
+TEST-007 [SD-01B merge gate re-run]: After FIX-001, re-run the SD-01B merge gate
+  query in expected_audit.sql. Must return 0 rows. Any row returned = CRITICAL,
+  blocks merge.
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 15 of 19
+
+7. Pre-Sprint Gate Status
+7. Pre-Sprint Gate Status
+Findings in this audit that have external dependencies (not resolvable by ECC alone):
+GateStatusOwnerDueBlocks
+AX-01 — P-9 absent from v1
+schema
+CONFIRMED nEngineer—clients.json header, line 6
+AX-02 — AlayaCare write-back
+confirmation
+PENDING nAlayaCare
+integration lead
+2026-04-01Production deploy
+SC-07 — Google Maps DPA vs
+APP 8
+PENDING nLegal  /  Privacy
+Counsel
+2026-04-01Full ABS dataset replacement
+B1-B — SMS Copy ApprovalPENDING nPrivacy Counsel
++             Angela
+CC-001
+TBDProduction deploy (FIX-004)
+Sketch-gate — Coordinator card
+wireframe
+PENDING nDesignerTBDUS-10 build
+ECC may build against the 6 existing synthetic scenarios immediately. All external gates are non-blocking
+for the development build. They are blocking for production deploy only.
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 16 of 19
+
+8. Spec Coverage Map
+8. Spec Coverage Map
+Summary of what the synthetic test scenarios cover vs. the full Logic Spec event registry:
+Canonical EventArtifact 23 §8Covered by
+Synthetic
+Scenario
+VACANCY_DETECTEDGate 1
+n
+SYN-01 through SYN-05
+SHORTLIST_GENERATEDGate 6
+n
+SYN-01, 02, 04a, 04b, 05
+VACANCY_UNRESOLVED (no
+candidates)
+Gate 4 terminal
+n
+SYN-03
+HITL_ESCALATED (coordinator
+approval)
+Gate 7
+n
+SYN-01, 02, 04a, 04b, 05
+COORDINATOR_APPROVEDGate 7a
+n
+SYN-01, 02, 04a, 04b, 05
+COORDINATOR_OVERRIDEGate 7b
+n
+FIX-001 → SYN-06
+CARER_NOTIFIEDGate 8
+n
+SYN-01, 02, 04a, 04b
+CARER_CONFIRMEDGate 10
+n
+SYN-01, 02, 04a
+CARER_DECLINEDGate              10
+declined
+n
+SYN-04b
+BRIEFING_SENTGate 9
+n
+SYN-01, 02, 04a
+CLIENT_NOTIFIEDGate 11
+n
+SYN-01, 02
+FAMILY_NOTIFIEDGate 12
+n
+SYN-01, 02
+E3_GATE_BLOCKEDGate 12 guard
+n
+FIX-001 → SYN-07
+RESOLVEDGate 13
+n
+SYN-01
+VACANCY_UNRESOLVED (all
+declined)
+Gate 14
+n
+SYN-05
+DUPLICATE_VACANCY_SUPPRESS
+ED
+Gate 0
+n
+FIX-001 → SYN-08
+CARER_NOTIFICATION_FAILEDGate 8 failure
+n
+Not yet scheduled
+CLIENT_NOTIFICATION_UNAVAILAB
+LE
+Gate 11 failure
+n
+Not yet scheduled
+P-8 FAMILIARITY_BINARY_FLOOR
+path
+Gate     4     P-8
+branch
+n
+FIX-003 → SYN-09
+EC-04 cold-start (P-10=0.0)Briefing
+MINIMAL
+n
+SYN-05
+EC-03 partial SPP (0 < P-10 < 0.80)Briefing partial
+n
+Not yet scheduled
+IS-03 postcode centroid fallbackProximity gate
+n
+All scenarios (SC07=false)
+AX-02 write-back gatePost-RESOLVE
+D
+n (advisory)
+Asserted in GLOBAL-AX02
+SMS advisory body assertionsB1-B gate
+n (advisory)
+SYN-01-A9 through A12
+<b>Coverage rate:</b> 15 / 24 distinct paths = 62.5% before FIX-001 through FIX-003. After fixes: 19 / 24 = 79.2%.
+Remaining  5  gaps  (CARER_NOTIFICATION_FAILED,  CLIENT_NOTIFICATION_UNAVAILABLE,  EC-03,  and  2
+others) are lower-priority and may be deferred to a v1.1 test sprint.
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 17 of 19
+
+Artifact 26 produced by: Harness Audit Grader (pm-execution skill)
+Audit  inputs:  Artifact  21  (PRD),  Artifact  23  (Logic  Spec),  Artifact  24  (User  Stories),  Artifact  25  (Synthetic  PHI
+Generator), config/sms_templates.py, data/au_postcode_centroids_seed.csv
+Next action: ECC executes FIX-001 through FIX-003. FIX-004 is routed to Privacy Counsel.
+Re-audit required after fixes before SD-01B merge gate is cleared.
+Home-Care-AI · Artifact 26 · Harness Audit Grader · 2026-03-28
+Home-Care-AI · Artifact 26 · Harness Audit GraderPage 18 of 19
+
+---

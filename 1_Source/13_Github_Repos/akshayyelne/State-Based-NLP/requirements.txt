@@ -1,0 +1,8 @@
+# Extracted from: akshayyelne/State-Based-NLP/requirements.txt
+# Generated: 2026-07-31T00:49:45.428Z
+
+streamlit
+nltk
+scikit-learn
+pandas
+numpy
